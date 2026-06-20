@@ -4,15 +4,14 @@ date: "2026-06-20"
 excerpt: "An examination of the classical doctrine of divine simplicity — one of the most contested yet essential doctrines in the Christian theological tradition."
 tags:
   - "Classical Theism"
-  - "Reformed"
 author: "NoblemanPH"
 updatedAt: "2026-06-20"
-updateCount: 3
+updateCount: 4
 ---
 
 *A guest post from a friend, NoblemanPH, a student of [IRBS](https://www.facebook.com/IRBSTheologicalSeminary). The reader may read this article in [Academia](https://www.academia.edu/145479802/On_the_Classical_Doctrine_of_Divine_Simplicity).*
 
-### GOD'S SIMPLICITY
+## GOD'S SIMPLICITY
 
 Perhaps one of the most neglected and misunderstood doctrines in theology proper is the *Doctrine of Divine Simplicity*. Were it not for the recent resurgence of interest, the idea that God is simple (i.e, that there is no composition in God) would be virtually absent from modern Christian literature. On the rare occasions it is mentioned, it's either muddled with confusion or stated very succinctly that its profound implications are lost. As modern theology grapples with some theological difficulties, mainly on the doctrine of God, it has become evident that one of the key solutions to address these issues is to look in the past, consider the faith that was handed down to us, and glean from it in order to advance Christian orthodoxy in the present theological discussions. In this context, the doctrine of divine simplicity can be considered a doctrinal recovery from yesterday, intended to rectify and provide a remedy for today's theological diseases.
 
@@ -20,7 +19,7 @@ In this two-part article series, I will argue why the doctrine of divine simplic
 
 ---
 
-### DIVINE SIMPLICITY DEFINED
+## DIVINE SIMPLICITY DEFINED
 
 The 1689 Second London Baptist Confession of Faith provides a classical definition of divine simplicity, stating: "The Lord God is but one only living and true God…a most holy spirit, invisible, without body, parts, or passions…" At its core, to say that God is simple is to affirm that *God is not composed of parts*. Positively stated, it means that "*all that is in God is God*."[^2] Divine simplicity acknowledges and confesses God as the most absolute, that "God cannot depend on what is not God in order to be God",[^3] and that in Him belongs all the perfections as the most simple being. In creaturely language, divine simplicity means that God is fundamentally unlike His creation. Because He is the efficient cause of all things, in Him belongs the most absolute "quality of being uncomplicated, uncompounded or unmixed."[^4] In God, there is no division whatsoever. There is nothing more basic than God's own essence in virtue of which that essence exists or is explained. As such, existence and essence must be identical in God.
 
