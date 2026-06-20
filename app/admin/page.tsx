@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-const DEFAULT_TAGS = ['Classical Theism', 'Reformed', 'Baptist', '1689 Federalism', 'Covenant Theology', 'Biblical Languages', 'Devotional', 'Book Review']
 const ADMIN_KEY = '1689Federal!sm'
 
 interface PostMeta { slug: string; title: string; date: string; draft?: boolean }
@@ -10,6 +9,8 @@ interface PostMeta { slug: string; title: string; date: string; draft?: boolean 
 export default function AdminPage() {
   const [auth, setAuth] = useState(false)
   const [password, setPassword] = useState('')
+
+  // Post form
   const [editingSlug, setEditingSlug] = useState<string | null>(null)
   const [title, setTitle] = useState('')
   const [excerpt, setExcerpt] = useState('')
@@ -20,12 +21,25 @@ export default function AdminPage() {
   const [updatedAt, setUpdatedAt] = useState('')
   const [updateCount, setUpdateCount] = useState(0)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
-  const [availableTags, setAvailableTags] = useState<string[]>(DEFAULT_TAGS)
-  const [newTag, setNewTag] = useState('')
+
+  // Data lists
   const [posts, setPosts] = useState<PostMeta[]>([])
   const [authors, setAuthors] = useState<string[]>([])
+  const [availableTags, setAvailableTags] = useState<string[]>([])
+
+  // Add new
   const [newAuthor, setNewAuthor] = useState('')
   const [addingAuthor, setAddingAuthor] = useState(false)
+  const [newTag, setNewTag] = useState('')
+  const [addingTag, setAddingTag] = useState(false)
+
+  // Inline edit state
+  const [editingAuthor, setEditingAuthor] = useState<string | null>(null)
+  const [editingAuthorVal, setEditingAuthorVal] = useState('')
+  const [editingTag, setEditingTag] = useState<string | null>(null)
+  const [editingTagVal, setEditingTagVal] = useState('')
+
+  // UI feedback
   const [saved, setSaved] = useState('')
   const [error, setError] = useState('')
 
@@ -34,7 +48,7 @@ export default function AdminPage() {
   }, [])
 
   useEffect(() => {
-    if (auth) { fetchPosts(); fetchAuthors() }
+    if (auth) { fetchPosts(); fetchAuthors(); fetchTags() }
   }, [auth])
 
   async function fetchPosts() {
@@ -51,6 +65,118 @@ export default function AdminPage() {
     }
   }
 
+  async function fetchTags() {
+    const res = await fetch('/api/tags')
+    if (res.ok) setAvailableTags(await res.json())
+  }
+
+  // --- Auth ---
+  function login() {
+    if (password === ADMIN_KEY) {
+      sessionStorage.setItem('tc-auth', '1')
+      setAuth(true)
+      setError('')
+    } else {
+      setError('Incorrect password.')
+    }
+  }
+
+  // --- Post form ---
+  function resetForm() {
+    setTitle(''); setExcerpt(''); setBody(''); setSelectedTags([])
+    setDate(''); setDraft(false); setEditingSlug(null); setError('')
+    setUpdatedAt(''); setUpdateCount(0)
+    if (authors.length > 0) setAuthor(authors[0])
+  }
+
+  async function loadPost(slug: string) {
+    const res = await fetch(`/api/posts?slug=${slug}`)
+    if (!res.ok) { setError('Could not load post.'); return }
+    const post = await res.json()
+    setEditingSlug(slug)
+    setTitle(post.title); setExcerpt(post.excerpt); setBody(post.body)
+    setDate(post.date ?? ''); setDraft(post.draft ?? false)
+    setSelectedTags(post.tags ?? []); setAuthor(post.author ?? '')
+    setUpdatedAt(post.updatedAt ?? ''); setUpdateCount(post.updateCount ?? 0)
+    setError('')
+    window.scrollTo(0, 0)
+  }
+
+  async function handleSave(asDraft: boolean) {
+    if (!title || !body) { setError('Title and body are required.'); return }
+    const isEdit = editingSlug !== null
+    const res = await fetch('/api/posts', {
+      method: isEdit ? 'PUT' : 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, author }),
+    })
+    if (res.ok) {
+      const msg = asDraft
+        ? 'Post saved as draft. It will not appear on the blog until published.'
+        : isEdit ? 'Post updated successfully.' : 'Post published successfully.'
+      resetForm(); setSaved(msg); setTimeout(() => setSaved(''), 5000); fetchPosts()
+    } else {
+      const errData = await res.json().catch(() => ({}))
+      setError(`Failed to save post: ${errData.error ?? res.status}`)
+    }
+  }
+
+  async function handleDeletePost(slug: string) {
+    if (!confirm(`Delete this post? This cannot be undone.`)) return
+    await fetch(`/api/posts?slug=${slug}`, { method: 'DELETE' })
+    if (editingSlug === slug) resetForm()
+    fetchPosts()
+  }
+
+  function toggleTag(tag: string) {
+    setSelectedTags(prev => prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag])
+  }
+
+  // --- Tag management ---
+  async function handleAddTag() {
+    const tag = newTag.trim()
+    if (!tag || availableTags.includes(tag)) return
+    setAddingTag(true)
+    const res = await fetch('/api/tags', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: tag }),
+    })
+    if (res.ok) {
+      const data = await res.json()
+      setAvailableTags(data.tags)
+      setSelectedTags(prev => [...prev, tag])
+      setNewTag('')
+    }
+    setAddingTag(false)
+  }
+
+  async function handleRenameTag(oldName: string, newName: string) {
+    if (!newName.trim() || newName.trim() === oldName) { setEditingTag(null); return }
+    const res = await fetch('/api/tags', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ old: oldName, name: newName.trim() }),
+    })
+    if (res.ok) {
+      const data = await res.json()
+      setAvailableTags(data.tags)
+      setSelectedTags(prev => prev.map(t => t === oldName ? newName.trim() : t))
+    }
+    setEditingTag(null)
+  }
+
+  async function handleDeleteTag(name: string) {
+    if (!confirm(`Delete the tag "${name}"? It will be removed from the tag list (existing posts keep it until re-saved).`)) return
+    const res = await fetch(`/api/tags?name=${encodeURIComponent(name)}`, { method: 'DELETE' })
+    if (res.ok) {
+      const data = await res.json()
+      setAvailableTags(data.tags)
+      setSelectedTags(prev => prev.filter(t => t !== name))
+    }
+  }
+
+  // --- Author management ---
   async function handleAddAuthor() {
     if (!newAuthor.trim()) return
     setAddingAuthor(true)
@@ -68,82 +194,32 @@ export default function AdminPage() {
     setAddingAuthor(false)
   }
 
-  function login() {
-    if (password === ADMIN_KEY) {
-      sessionStorage.setItem('tc-auth', '1')
-      setAuth(true)
-      setError('')
-    } else {
-      setError('Incorrect password.')
-    }
-  }
-
-  function resetForm() {
-    setTitle(''); setExcerpt(''); setBody(''); setSelectedTags([])
-    setDate(''); setDraft(false); setEditingSlug(null); setError('')
-    setUpdatedAt(''); setUpdateCount(0)
-    if (authors.length > 0) setAuthor(authors[0])
-  }
-
-  async function loadPost(slug: string) {
-    const res = await fetch(`/api/posts?slug=${slug}`)
-    if (!res.ok) { setError('Could not load post.'); return }
-    const post = await res.json()
-    setEditingSlug(slug)
-    setTitle(post.title)
-    setExcerpt(post.excerpt)
-    setBody(post.body)
-    setDate(post.date ?? '')
-    setDraft(post.draft ?? false)
-    setSelectedTags(post.tags ?? [])
-    setAuthor(post.author ?? '')
-    setUpdatedAt(post.updatedAt ?? '')
-    setUpdateCount(post.updateCount ?? 0)
-    setError('')
-    window.scrollTo(0, 0)
-  }
-
-  async function handleSave(asDraft: boolean) {
-    if (!title || !body) { setError('Title and body are required.'); return }
-    const isEdit = editingSlug !== null
-    const res = await fetch('/api/posts', {
-      method: isEdit ? 'PUT' : 'POST',
+  async function handleRenameAuthor(oldName: string, newName: string) {
+    if (!newName.trim() || newName.trim() === oldName) { setEditingAuthor(null); return }
+    const res = await fetch('/api/authors', {
+      method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, author }),
+      body: JSON.stringify({ old: oldName, name: newName.trim() }),
     })
     if (res.ok) {
-      const msg = asDraft
-        ? 'Post saved as draft. It will not appear on the blog until published.'
-        : isEdit ? 'Post updated successfully.' : 'Post published successfully.'
-      resetForm()
-      setSaved(msg)
-      setTimeout(() => setSaved(''), 5000)
-      fetchPosts()
-    } else {
-      const errData = await res.json().catch(() => ({}))
-      setError(`Failed to save post: ${errData.error ?? res.status}`)
+      const data = await res.json()
+      setAuthors(data.authors)
+      if (author === oldName) setAuthor(newName.trim())
+    }
+    setEditingAuthor(null)
+  }
+
+  async function handleDeleteAuthor(name: string) {
+    if (!confirm(`Delete the author "${name}"? They will be removed from the author list (existing posts are not changed).`)) return
+    const res = await fetch(`/api/authors?name=${encodeURIComponent(name)}`, { method: 'DELETE' })
+    if (res.ok) {
+      const data = await res.json()
+      setAuthors(data.authors)
+      if (author === name && data.authors.length > 0) setAuthor(data.authors[0])
     }
   }
 
-  async function handleDelete(slug: string) {
-    if (!confirm('Delete this post?')) return
-    await fetch(`/api/posts?slug=${slug}`, { method: 'DELETE' })
-    if (editingSlug === slug) resetForm()
-    fetchPosts()
-  }
-
-  function toggleTag(tag: string) {
-    setSelectedTags(prev => prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag])
-  }
-
-  function addTag() {
-    const tag = newTag.trim()
-    if (!tag || availableTags.includes(tag)) return
-    setAvailableTags(prev => [...prev, tag])
-    setSelectedTags(prev => [...prev, tag])
-    setNewTag('')
-  }
-
+  // --- Login screen ---
   if (!auth) {
     return (
       <div className="main" style={{ maxWidth: 400, paddingTop: '4rem' }}>
@@ -162,20 +238,27 @@ export default function AdminPage() {
     )
   }
 
+  const manageRowStyle: React.CSSProperties = {
+    display: 'flex', alignItems: 'center', gap: '0.5rem',
+    padding: '0.5rem 0', borderBottom: '1px solid #ecdec8',
+  }
+  const manageInputStyle: React.CSSProperties = {
+    flex: 1, padding: '4px 8px', fontSize: 13,
+    border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2',
+    fontFamily: 'EB Garamond, serif',
+  }
+
   return (
     <div className="admin-wrap">
       <div className="admin-header">
-        <span className="admin-title">
-          {editingSlug ? 'Edit Post' : 'Write New Post'}
-        </span>
+        <span className="admin-title">{editingSlug ? 'Edit Post' : 'Write New Post'}</span>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-          {editingSlug && (
-            <button className="btn-delete" onClick={resetForm}>Cancel Edit</button>
-          )}
+          {editingSlug && <button className="btn-delete" onClick={resetForm}>Cancel Edit</button>}
           <Link href="/" className="back-link">← View Site</Link>
         </div>
       </div>
 
+      {/* ── Post form ── */}
       <div className="admin-form">
         {saved && <div className="success-msg">{saved}</div>}
         {error && <p style={{ color: '#8b1a1a', fontSize: 14 }}>{error}</p>}
@@ -204,29 +287,9 @@ export default function AdminPage() {
 
         <div className="form-group">
           <label className="form-label">Author</label>
-          <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', flexWrap: 'wrap' }}>
-            <select className="form-input" style={{ flex: 1 }} value={author} onChange={e => setAuthor(e.target.value)}>
-              {authors.map(a => <option key={a} value={a}>{a}</option>)}
-            </select>
-          </div>
-          <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem' }}>
-            <input
-              className="form-input"
-              style={{ flex: 1 }}
-              value={newAuthor}
-              onChange={e => setNewAuthor(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && handleAddAuthor()}
-              placeholder="Add new author..."
-            />
-            <button
-              className="btn-publish"
-              style={{ padding: '0.6rem 1rem', whiteSpace: 'nowrap' }}
-              onClick={handleAddAuthor}
-              disabled={addingAuthor}
-            >
-              {addingAuthor ? 'Adding...' : 'Add'}
-            </button>
-          </div>
+          <select className="form-input" value={author} onChange={e => setAuthor(e.target.value)}>
+            {authors.map(a => <option key={a} value={a}>{a}</option>)}
+          </select>
         </div>
 
         <div className="form-group">
@@ -243,15 +306,10 @@ export default function AdminPage() {
               placeholder="Add new tag..."
               value={newTag}
               onChange={e => setNewTag(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), addTag())}
+              onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), handleAddTag())}
             />
-            <button
-              className="btn-secondary"
-              style={{ padding: '6px 14px', fontSize: '12px' }}
-              onClick={addTag}
-              disabled={!newTag.trim()}
-            >
-              Add Tag
+            <button className="btn-secondary" style={{ padding: '6px 14px', fontSize: '12px' }} onClick={handleAddTag} disabled={addingTag || !newTag.trim()}>
+              {addingTag ? 'Adding...' : 'Add Tag'}
             </button>
           </div>
         </div>
@@ -271,6 +329,7 @@ export default function AdminPage() {
         </div>
       </div>
 
+      {/* ── Published posts ── */}
       {posts.filter(p => !p.draft).length > 0 && (
         <div className="admin-posts">
           <div className="section-label" style={{ marginBottom: '0' }}>Published Posts</div>
@@ -282,13 +341,14 @@ export default function AdminPage() {
               </div>
               <div style={{ display: 'flex', gap: '1rem' }}>
                 <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
-                <button className="btn-delete" onClick={() => handleDelete(post.slug)}>Delete</button>
+                <button className="btn-delete" onClick={() => handleDeletePost(post.slug)}>Delete</button>
               </div>
             </div>
           ))}
         </div>
       )}
 
+      {/* ── Drafts ── */}
       {posts.filter(p => p.draft).length > 0 && (
         <div className="admin-posts">
           <div className="section-label" style={{ marginBottom: '0' }}>Drafts</div>
@@ -300,12 +360,98 @@ export default function AdminPage() {
               </div>
               <div style={{ display: 'flex', gap: '1rem' }}>
                 <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
-                <button className="btn-delete" onClick={() => handleDelete(post.slug)}>Delete</button>
+                <button className="btn-delete" onClick={() => handleDeletePost(post.slug)}>Delete</button>
               </div>
             </div>
           ))}
         </div>
       )}
+
+      {/* ── Manage Tags ── */}
+      <div className="admin-posts">
+        <div className="section-label" style={{ marginBottom: '0.5rem' }}>Manage Tags</div>
+        {availableTags.map(tag => (
+          <div key={tag} style={manageRowStyle}>
+            {editingTag === tag ? (
+              <>
+                <input
+                  style={manageInputStyle}
+                  value={editingTagVal}
+                  onChange={e => setEditingTagVal(e.target.value)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter') handleRenameTag(tag, editingTagVal)
+                    if (e.key === 'Escape') setEditingTag(null)
+                  }}
+                  autoFocus
+                />
+                <button className="btn-secondary" style={{ padding: '4px 10px', fontSize: 11 }} onClick={() => handleRenameTag(tag, editingTagVal)}>Save</button>
+                <button className="btn-delete" onClick={() => setEditingTag(null)}>Cancel</button>
+              </>
+            ) : (
+              <>
+                <span style={{ flex: 1, fontSize: 14, fontFamily: 'EB Garamond, serif' }}>{tag}</span>
+                <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => { setEditingTag(tag); setEditingTagVal(tag) }}>Edit</button>
+                <button className="btn-delete" onClick={() => handleDeleteTag(tag)}>Delete</button>
+              </>
+            )}
+          </div>
+        ))}
+        <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
+          <input
+            style={{ ...manageInputStyle, flex: 1 }}
+            placeholder="New tag name..."
+            value={newTag}
+            onChange={e => setNewTag(e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), handleAddTag())}
+          />
+          <button className="btn-secondary" style={{ padding: '4px 14px', fontSize: 11 }} onClick={handleAddTag} disabled={addingTag || !newTag.trim()}>
+            {addingTag ? 'Adding...' : '+ Add'}
+          </button>
+        </div>
+      </div>
+
+      {/* ── Manage Authors ── */}
+      <div className="admin-posts">
+        <div className="section-label" style={{ marginBottom: '0.5rem' }}>Manage Authors</div>
+        {authors.map(a => (
+          <div key={a} style={manageRowStyle}>
+            {editingAuthor === a ? (
+              <>
+                <input
+                  style={manageInputStyle}
+                  value={editingAuthorVal}
+                  onChange={e => setEditingAuthorVal(e.target.value)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter') handleRenameAuthor(a, editingAuthorVal)
+                    if (e.key === 'Escape') setEditingAuthor(null)
+                  }}
+                  autoFocus
+                />
+                <button className="btn-secondary" style={{ padding: '4px 10px', fontSize: 11 }} onClick={() => handleRenameAuthor(a, editingAuthorVal)}>Save</button>
+                <button className="btn-delete" onClick={() => setEditingAuthor(null)}>Cancel</button>
+              </>
+            ) : (
+              <>
+                <span style={{ flex: 1, fontSize: 14, fontFamily: 'EB Garamond, serif' }}>{a}</span>
+                <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => { setEditingAuthor(a); setEditingAuthorVal(a) }}>Edit</button>
+                <button className="btn-delete" onClick={() => handleDeleteAuthor(a)}>Delete</button>
+              </>
+            )}
+          </div>
+        ))}
+        <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
+          <input
+            style={{ ...manageInputStyle, flex: 1 }}
+            placeholder="New author name..."
+            value={newAuthor}
+            onChange={e => setNewAuthor(e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && handleAddAuthor()}
+          />
+          <button className="btn-secondary" style={{ padding: '4px 14px', fontSize: 11 }} onClick={handleAddAuthor} disabled={addingAuthor || !newAuthor.trim()}>
+            {addingAuthor ? 'Adding...' : '+ Add'}
+          </button>
+        </div>
+      </div>
     </div>
   )
 }

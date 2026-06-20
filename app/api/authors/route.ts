@@ -20,33 +20,18 @@ async function githubGetSHA(filePath: string): Promise<string | null> {
     { headers: { Authorization: `token ${GITHUB_TOKEN}`, Accept: 'application/vnd.github.v3+json' } }
   )
   if (!res.ok) return null
-  const data = await res.json()
-  return data.sha ?? null
+  return (await res.json()).sha ?? null
 }
 
-export async function GET() {
-  return NextResponse.json(readAuthors())
-}
-
-export async function POST(req: NextRequest) {
-  const { name } = await req.json()
-  if (!name?.trim()) return NextResponse.json({ error: 'Name required' }, { status: 400 })
-
-  const authors = readAuthors()
-  if (authors.includes(name.trim())) return NextResponse.json({ authors })
-
-  const updated = [...authors, name.trim()]
-  const content = Buffer.from(JSON.stringify(updated, null, 2)).toString('base64')
+async function githubWriteAuthors(authors: string[], message: string) {
   const sha = await githubGetSHA('data/authors.json')
-
   const body: Record<string, string> = {
-    message: `Add author: ${name.trim()}`,
-    content,
+    message,
+    content: Buffer.from(JSON.stringify(authors, null, 2)).toString('base64'),
     branch: GITHUB_BRANCH,
   }
   if (sha) body.sha = sha
-
-  const res = await fetch(
+  return fetch(
     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/data/authors.json`,
     {
       method: 'PUT',
@@ -58,11 +43,42 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify(body),
     }
   )
+}
 
-  if (!res.ok) {
-    const err = await res.json()
-    return NextResponse.json({ error: err.message ?? 'Failed to save author' }, { status: 500 })
-  }
+export async function GET() {
+  return NextResponse.json(readAuthors())
+}
 
+// POST — add new author
+export async function POST(req: NextRequest) {
+  const { name } = await req.json()
+  if (!name?.trim()) return NextResponse.json({ error: 'Name required' }, { status: 400 })
+  const authors = readAuthors()
+  if (authors.includes(name.trim())) return NextResponse.json({ authors })
+  const updated = [...authors, name.trim()]
+  const res = await githubWriteAuthors(updated, `Add author: ${name.trim()}`)
+  if (!res.ok) return NextResponse.json({ error: 'Failed to save author' }, { status: 500 })
+  return NextResponse.json({ authors: updated })
+}
+
+// PUT — rename author
+export async function PUT(req: NextRequest) {
+  const { old: oldName, name: newName } = await req.json()
+  if (!oldName?.trim() || !newName?.trim()) return NextResponse.json({ error: 'Both names required' }, { status: 400 })
+  const authors = readAuthors()
+  const updated = authors.map(a => a === oldName.trim() ? newName.trim() : a)
+  const res = await githubWriteAuthors(updated, `Rename author: ${oldName} → ${newName}`)
+  if (!res.ok) return NextResponse.json({ error: 'Failed to save author' }, { status: 500 })
+  return NextResponse.json({ authors: updated })
+}
+
+// DELETE — remove author
+export async function DELETE(req: NextRequest) {
+  const name = req.nextUrl.searchParams.get('name')
+  if (!name) return NextResponse.json({ error: 'Name required' }, { status: 400 })
+  const authors = readAuthors()
+  const updated = authors.filter(a => a !== name)
+  const res = await githubWriteAuthors(updated, `Remove author: ${name}`)
+  if (!res.ok) return NextResponse.json({ error: 'Failed to save author' }, { status: 500 })
   return NextResponse.json({ authors: updated })
 }
