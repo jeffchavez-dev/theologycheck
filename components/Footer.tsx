@@ -1,10 +1,11 @@
+import Image from 'next/image'
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
     <>
       <footer className="site-footer">
         <div className="footer-logo">
-          <div className="footer-theta"><span>✓</span></div>
+        <Image src="/logo.png" alt="Theology Check logo" width={36} height={36} unoptimized style={{ borderRadius: '50%', border: '1.5px solid #3a1010' }} />
           <div>
             <p className="footer-name">Theology Check</p>
             <p className="footer-copy">© {year} Jeff Chavez</p>
@@ -17,9 +18,7 @@ export default function Footer() {
           <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
             <i className="ti ti-brand-facebook" />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
-            <i className="ti ti-brand-twitter" />
-          </a>
+
         </div>
       </footer>
       <div className="arch-bar-inner" />
