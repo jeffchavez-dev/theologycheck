@@ -7,7 +7,7 @@ tags:
   - "Reformed"
 ---
 
-One of the most misunderstood doctrines in contemporary theology is divine simplicity — the teaching that God is not composed of parts, that His essence and existence are identical, and that His attributes are not really distinct from one another or from His essence. This is classical theism <a href="https://theologycheckblog.wordpress.com/2025/10/08/what-is-classical-theism-2/">
+One of the most misunderstood doctrines in contemporary theology is divine simplicity — the teaching that God is not composed of parts, that His essence and existence are identical, and that His attributes are not really distinct from one another or from His essence. This is the historic [classical theism](https://theologycheckblog.wordpress.com/2025/10/08/what-is-classical-theism-2/).
 
 ## What Is Divine Simplicity?
 
