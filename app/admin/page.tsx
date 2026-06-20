@@ -64,13 +64,13 @@ export default function AdminPage() {
     window.scrollTo(0, 0)
   }
 
-  async function handleSave() {
+  async function handleSave(asDraft: boolean) {
     if (!title || !body) { setError('Title and body are required.'); return }
     const isEdit = editingSlug !== null
     const res = await fetch('/api/posts', {
       method: isEdit ? 'PUT' : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft }),
+      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft }),
     })
     if (res.ok) {
       resetForm()
@@ -159,10 +159,10 @@ export default function AdminPage() {
         </div>
 
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <button className="btn-publish" onClick={() => { setDraft(false); handleSave() }}>
+          <button className="btn-publish" onClick={() => handleSave(false)}>
             {editingSlug ? 'Update Post' : 'Publish Post'}
           </button>
-          <button className="btn-publish" style={{ background: '#8a6040' }} onClick={() => { setDraft(true); handleSave() }}>
+          <button className="btn-publish" style={{ background: '#8a6040' }} onClick={() => handleSave(true)}>
             Save as Draft
           </button>
         </div>
