@@ -7,8 +7,10 @@ tags:
   - "Reformed"
 author: "NoblemanPH"
 updatedAt: "2026-06-20"
-updateCount: 1
+updateCount: 2
 ---
+
+*A guest post from a friend, NoblemanPH, a student of [IRBS](https://www.facebook.com/IRBSTheologicalSeminary). The reader may read this article in [Academia](https://www.academia.edu/145479802/On_the_Classical_Doctrine_of_Divine_Simplicity).*
 
 ### GOD'S SIMPLICITY
 
