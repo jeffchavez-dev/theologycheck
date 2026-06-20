@@ -10,11 +10,14 @@ export default function Home() {
   return (
     <>
       <div className="hero">
-        <div className="hero-line" />
-        <p>
-          &ldquo;Id ergo quod subsistit in Deo, est suum esse.&rdquo;<br />
-          <span className="hero-ref">— Thomas Aquinas, Iª q. 3 a. 4 s. c.</span>
-        </p>
+        <div className="hero-bg" />
+        <div className="hero-content">
+          <div className="hero-line" />
+          <p>
+            &ldquo;Id ergo quod subsistit in Deo, est suum esse.&rdquo;<br />
+            <span className="hero-ref">— Thomas Aquinas, Iª q. 3 a. 4 s. c.</span>
+          </p>
+        </div>
       </div>
 
       <div className="main">
