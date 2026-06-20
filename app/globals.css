@@ -107,6 +107,21 @@ a { color: inherit; text-decoration: none; }
 /* Main */
 .main { max-width: 700px; margin: 0 auto; padding: 2.5rem 1.5rem; }
 
+/* Tag filter bar */
+.tag-filter-bar {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 2rem;
+}
+.tag-filter-btn {
+  font-family: 'Cinzel', serif; font-size: 10px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 2px; cursor: pointer;
+  border: 1px solid #c49a5a; background: transparent;
+  color: #6b4c1e; transition: all 0.15s;
+}
+.tag-filter-btn:hover { background: #fff0d6; border-color: #8b1a1a; color: #8b1a1a; }
+.tag-filter-btn.active { background: #8b1a1a; border-color: #8b1a1a; color: #fdf8f2; }
+
 .section-label {
   font-family: 'Cinzel', serif; font-size: 10px;
   letter-spacing: 0.22em; text-transform: uppercase;
@@ -217,6 +232,9 @@ a { color: inherit; text-decoration: none; }
 .success-msg { background: #f0fce8; border: 1px solid #6a9a2a; color: #3a6a0a; padding: 0.75rem 1rem; font-size: 14px; border-radius: 2px; }
 
 @media (max-width: 640px) {
+  .tag-filter-bar { gap: 6px; }
+  .tag-filter-btn { font-size: 9px; padding: 4px 10px; }
+
   /* Header */
   .site-header {
     padding: 1rem 1rem;
