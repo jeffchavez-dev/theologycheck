@@ -16,8 +16,14 @@ export default function AdminPage() {
   const [body, setBody] = useState('')
   const [date, setDate] = useState('')
   const [draft, setDraft] = useState(false)
+  const [author, setAuthor] = useState('')
+  const [updatedAt, setUpdatedAt] = useState('')
+  const [updateCount, setUpdateCount] = useState(0)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [posts, setPosts] = useState<PostMeta[]>([])
+  const [authors, setAuthors] = useState<string[]>([])
+  const [newAuthor, setNewAuthor] = useState('')
+  const [addingAuthor, setAddingAuthor] = useState(false)
   const [saved, setSaved] = useState('')
   const [error, setError] = useState('')
 
@@ -26,12 +32,38 @@ export default function AdminPage() {
   }, [])
 
   useEffect(() => {
-    if (auth) fetchPosts()
+    if (auth) { fetchPosts(); fetchAuthors() }
   }, [auth])
 
   async function fetchPosts() {
     const res = await fetch('/api/posts')
     if (res.ok) setPosts(await res.json())
+  }
+
+  async function fetchAuthors() {
+    const res = await fetch('/api/authors')
+    if (res.ok) {
+      const list = await res.json()
+      setAuthors(list)
+      if (!author && list.length > 0) setAuthor(list[0])
+    }
+  }
+
+  async function handleAddAuthor() {
+    if (!newAuthor.trim()) return
+    setAddingAuthor(true)
+    const res = await fetch('/api/authors', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: newAuthor.trim() }),
+    })
+    if (res.ok) {
+      const data = await res.json()
+      setAuthors(data.authors)
+      setAuthor(newAuthor.trim())
+      setNewAuthor('')
+    }
+    setAddingAuthor(false)
   }
 
   function login() {
@@ -47,6 +79,8 @@ export default function AdminPage() {
   function resetForm() {
     setTitle(''); setExcerpt(''); setBody(''); setSelectedTags([])
     setDate(''); setDraft(false); setEditingSlug(null); setError('')
+    setUpdatedAt(''); setUpdateCount(0)
+    if (authors.length > 0) setAuthor(authors[0])
   }
 
   async function loadPost(slug: string) {
@@ -60,6 +94,9 @@ export default function AdminPage() {
     setDate(post.date ?? '')
     setDraft(post.draft ?? false)
     setSelectedTags(post.tags ?? [])
+    setAuthor(post.author ?? '')
+    setUpdatedAt(post.updatedAt ?? '')
+    setUpdateCount(post.updateCount ?? 0)
     setError('')
     window.scrollTo(0, 0)
   }
@@ -70,12 +107,12 @@ export default function AdminPage() {
     const res = await fetch('/api/posts', {
       method: isEdit ? 'PUT' : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft }),
+      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, author }),
     })
     if (res.ok) {
       const msg = asDraft
         ? 'Post saved as draft. It will not appear on the blog until published.'
-        : editingSlug ? 'Post updated successfully.' : 'Post published successfully.'
+        : isEdit ? 'Post updated successfully.' : 'Post published successfully.'
       resetForm()
       setSaved(msg)
       setTimeout(() => setSaved(''), 5000)
@@ -146,6 +183,40 @@ export default function AdminPage() {
         <div className="form-group">
           <label className="form-label">Publish Date</label>
           <input className="form-input" type="date" value={date} onChange={e => setDate(e.target.value)} />
+        </div>
+
+        {editingSlug && (
+          <div style={{ display: 'flex', gap: '2rem', fontSize: 13, color: '#8a6040', fontFamily: 'EB Garamond, serif', fontStyle: 'italic', paddingLeft: 2 }}>
+            {updatedAt && <span>Last updated: <strong style={{ fontStyle: 'normal' }}>{updatedAt}</strong></span>}
+            <span>Updates since publish: <strong style={{ fontStyle: 'normal' }}>{updateCount}</strong></span>
+          </div>
+        )}
+
+        <div className="form-group">
+          <label className="form-label">Author</label>
+          <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', flexWrap: 'wrap' }}>
+            <select className="form-input" style={{ flex: 1 }} value={author} onChange={e => setAuthor(e.target.value)}>
+              {authors.map(a => <option key={a} value={a}>{a}</option>)}
+            </select>
+          </div>
+          <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem' }}>
+            <input
+              className="form-input"
+              style={{ flex: 1 }}
+              value={newAuthor}
+              onChange={e => setNewAuthor(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && handleAddAuthor()}
+              placeholder="Add new author..."
+            />
+            <button
+              className="btn-publish"
+              style={{ padding: '0.6rem 1rem', whiteSpace: 'nowrap' }}
+              onClick={handleAddAuthor}
+              disabled={addingAuthor}
+            >
+              {addingAuthor ? 'Adding...' : 'Add'}
+            </button>
+          </div>
         </div>
 
         <div className="form-group">
