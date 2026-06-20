@@ -25,6 +25,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </div>
         <h1>{post.title}</h1>
         <div className="post-meta" style={{ justifyContent: 'center' }}>
+          {post.author && <><span>By {post.author}</span><span>·</span></>}
           <span>{date}</span>
           <span>·</span>
           <span>{readTime} min read</span>

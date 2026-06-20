@@ -12,6 +12,7 @@ export interface Post {
   date: string
   excerpt: string
   tags: string[]
+  author?: string
   content?: string
 }
 
@@ -29,6 +30,7 @@ export function getAllPosts(): Post[] {
         date: data.date || '',
         excerpt: data.excerpt || '',
         tags: data.tags || [],
+        author: data.author || '',
         draft: data.draft || false,
       }
     })
@@ -48,6 +50,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     date: data.date || '',
     excerpt: data.excerpt || '',
     tags: data.tags || [],
+    author: data.author || '',
     content: processed.toString(),
   }
 }
