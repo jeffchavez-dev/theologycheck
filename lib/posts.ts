@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import footnotes from 'remark-footnotes'
 
 const postsDir = path.join(process.cwd(), 'posts')
 
@@ -43,7 +44,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   if (!fs.existsSync(filePath)) return null
   const raw = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(raw)
-  const processed = await remark().use(html).process(content)
+  const processed = await remark().use(footnotes, { inlineNotes: true }).use(html, { sanitize: false }).process(content)
   return {
     slug,
     title: data.title || '',
