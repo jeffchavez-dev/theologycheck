@@ -1,9 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import fs from 'fs'
-import path from 'path'
-
-const hasLogo = fs.existsSync(path.join(process.cwd(), 'public', 'logo.png'))
 
 export default function Header() {
   return (
@@ -11,14 +7,8 @@ export default function Header() {
       <div className="arch-bar" />
       <div className="arch-bar-inner" />
       <header className="site-header">
-        <Link href="/" className="logo-wrap" aria-label="Theology Check home">
-          {hasLogo ? (
-            <Image src="/logo.png" alt="Theology Check logo" width={54} height={54} style={{ borderRadius: '50%' }} />
-          ) : (
-            <div className="logo-theta">
-              <span className="logo-check">✓</span>
-            </div>
-          )}
+        <Link href="/" aria-label="Theology Check home">
+          <Image src="/logo.png" alt="Theology Check logo" width={60} height={60} priority style={{ borderRadius: '50%', border: '2px solid #8b1a1a' }} />
         </Link>
         <div className="header-text">
           <Link href="/" className="site-title">Theology Check</Link>
