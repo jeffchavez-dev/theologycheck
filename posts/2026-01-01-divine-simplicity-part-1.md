@@ -1,61 +1,72 @@
 ---
 title: "On The Classical Doctrine of Divine Simplicity (Part 1)"
-date: "2026-06-20"
+date: "2026-01-01"
 excerpt: "An examination of the classical doctrine of divine simplicity — one of the most contested yet essential doctrines in the Christian theological tradition."
 tags:
   - "Classical Theism"
   - "Reformed"
-author: ""
+author: "Jeff Chavez"
 updatedAt: "2026-06-20"
-updateCount: 3
+updateCount: 1
 ---
 
-A guest post from a friend, NoblemanPH, a student of IRBS. The reader may read this article in Academia.
+## Introduction: God's Simplicity
 
-## GOD’S SIMPLICITY
-Perhaps one of the most neglected and misunderstood doctrines in theology proper is the Doctrine of Divine Simplicity.[^1] Were it not for the recent resurgence of interest, the idea that God is simple (i.e, that there is no composition in God) would be virtually absent from modern Christian literature. On the rare occasions it is mentioned, it’s either muddled with confusion or stated very succinctly that its profound implications are lost. As modern theology grapples with some theological difficulties, mainly on the doctrine of God, it has become evident that one of the key solutions to address these issues is to look in the past, consider the faith that was handed down to us, and glean from it in order to advance Christian orthodoxy in the present theological discussions. In this context, the doctrine of divine simplicity can be considered a doctrinal recovery from yesterday, intended to rectify and provide a remedy for today’s theological diseases.
+Divine simplicity is one of the most neglected and misunderstood doctrines in theology proper. This doctrine provides solutions to modern theological difficulties regarding God's nature and should be recovered by evangelical churches. Affirming God's simplicity is "the foundational point of departure for all careful, accurate, and biblical 'God-talk'."[^1]
 
-In this two-part article series, I will argue why the doctrine of divine simplicity (DDS) must be recovered and confessed by all evangelical churches. I submit that affirming that God is simple and not complex is the foundational point of departure for all careful, accurate, and biblical “God-talk”. To support this thesis, the article will first define and articulate the doctrine of divine simplicity. The necessary consequences and implications of confessing the doctrine will then be articulated. Finally, I will attempt to explain how this doctrine addresses some of the erroneous assumptions modern theologians have regarding the doctrine of God and how we can guard ourselves in our predication about the simple triune God who reveals Himself through nature and Scripture.
+## Divine Simplicity Defined
 
-## DIVINE SIMPLICITY DEFINED
-The 1689 Second London Baptist Confession of Faith provides a classical definition of divine simplicity, stating: “The Lord God is but one only living and true God…a most holy spirit, invisible, without body, parts, or passions…” At its core, to say that God is simple is to affirm that God is not composed of parts. Positively stated, it means that “all that is in God is God.”2 Divine simplicity acknowledges and confesses God as the most absolute, that “God cannot depend on what is not God in order to be God”3, and that in Him belongs all the perfections as the most simple being. In creaturely language, divine simplicity means that God is fundamentally unlike His creation. Because He is the efficient cause of all things, in Him belongs the most absolute “quality of being uncomplicated, uncompounded or unmixed.”4 In God, there is no division whatsoever. There is nothing more basic than God’s own essence in virtue of which that essence exists or is explained. As such, existence and essence must be identical in God.
+At its core, divine simplicity means God is not composed of parts. The 1689 Second London Baptist Confession states God is "a most holy spirit, invisible, without body, parts, or passions."
 
-Biblical Foundations For Divine Simplicity
-Though the Bible nowhere uses the exact words like “God is a simple being” or “divine simplicity”, the concept of the doctrine is undoubtedly present. First, God’s being predicated as the most pure Spirit provides a foundational reason to confess divine simplicity. Since God is Spirit who gives life, breath, and all things to everything not God (John 4:24, Acts 17:25), He must then be a God whose essence is simple and undivided. John Gill, commenting on John 4:24, is helpful when he says the following:
+The positive statement of the doctrine is simply this: **all that is in God is God.**[^2]
 
-God is a spirit, and not a body, or a corporeal substance: the nature and essence of God is like a spirit, simple and uncompounded, not made up of parts; nor is it divisible; nor does it admit of any change and alteration. God, as a spirit, is immaterial, immortal, invisible, and an intelligent, willing, and active being; but differs from other spirits, in that he is an increated one, an immense and infinite spirit, and an eternal one, which has neither beginning nor end: he is therefore a spirit by way of eminency, as well as effectively, he being the author and former of all spirits: whatever excellence is in them, must be ascribed to God in the highest manner; and whatever is imperfect in them, must be removed from him.5
+This entails several key principles:
 
-Second, the Scriptures’ predication of God as the transcendent, unrivaled, supreme being and the efficient cause of all things demands that He be the most simple being, irreducible to parts and dependent on none. Since beside Him there is no God (Isaiah 45:5), in Him we live and move and have our being (Acts 17:28), and from Him and through Him and to Him are all things (Romans 11:36), then He must be a God who is the giver of all but lacking to none. And since there is no deficiency in Him, “God does not depend on qualities really distinct from His divine essence in order to exist as He does. He does not require what is not God (i.e., not divinity) in order to be anything that He is.”6 As Edward Leigh puts it, “God is an Infinite Essence which is of Himself, and gives being to all other things.”7 In relation to this and by good and necessary consequence, divine simplicity must be the foundational premise of God’s other perfections, such as His aseity or independence (Exodus 3:14), immutability (Malachi 3:6), eternality (Psalm 90:2), and even our monotheistic confession of God’s absolute singularity (Deuteronomy 6:4; Galatians 3:20; 1 Timothy 2:5). Lastly, several passages of Scriptures that predicate God in substantives warrants the doctrine of divine simplicity. For example, while Scriptures describe God as loving (1 John 4:11), in several instances, He is also portrayed as love Himself (1 John 4:8, 1 John 4:16). In other words, since God’s essence is simple and is identical to His existence, He does not merely instantiate His attributes as if they are independent of Him, but His attributes and His essence one and the same.
+- God cannot depend on what is not God to be God
+- God possesses an absolute quality of being "uncomplicated, uncompounded or unmixed"[^3]
+- Existence and essence are identical in God
 
-Metaphysical Architecture of Divine Simplicity
-To affirm that divine simplicity means that God is not composed of parts requires examining what we mean by composition. By saying that God is simple and not a complex being, it must be asserted that in God, there is no mixture or composition whatsoever, both in a physical and metaphysical8 sense.
+## Biblical Foundations For Divine Simplicity
 
-As the most pure Spirit who is invisible, God is not composed of any bodily parts. He is not a conglomeration of bits and bits of tangible pieces. The eternal Creator is immaterial and incorporeal. To say that God is a composite being in a physical sense, for example, as the Latter Day Saints would argue,9 would mean that God is in some way similar to humans, who depend on their parts10, which would diminish His absolute perfection. As Francis Turretin puts it, “the simplicity of God…is his incommunicable attribute by which the divine nature is conceived by us not only as free from all composition and division, but also as incapable of composition and divisibility.”11 As the non-composite Spirit, God is “the most pure, spiritual, simple, and uncompounded Being, and therefore the most perfect.”12
+**First:** God as pure Spirit (John 4:24; Acts 17:25) necessitates simplicity. John Gill explains:
 
-To confess divine simplicity also means to argue that God is not made up of any metaphysical parts. 13 Interestingly, theologians of old, especially those who lived before the Enlightenment, used metaphysical terms and distinctions to aid them in their God-talk. In this regard, and in relation to the doctrine of divine simplicity, Steven Duby is helpful when he said that “early orthodoxy…denies that a composition of bodily parts, matter and form, genus and difference, subject and accident, act and potency, suppositum and nature, existence and essence or, indeed, any parts whatsoever might be found in God.”14 Some of these distinctions are worth fleshing out a bit more.
+> God is a spirit, and not a body, or a corporeal substance: the nature and essence of God is like a spirit, simple and uncompounded, not made up of parts; nor is it divisible; nor does it admit of any change and alteration.[^5]
 
-First, God is pure act (actus purus), and in Him there is no passive potency. The act and potency distinction is the ground for all other denials of any metaphysical composition in God. A being in potency has the capacity of becoming what it is that is not yet. Act, on the other hand, is identified as the thing actualized, completed, and that which is “actually present.” Everything not God (including angelic spirits) is composed of act and passive potency. Because the existence of all creation was derived from God, creatures will always have the principle of potentiality. Thus, they remain finite and dependent upon God in their essence and their existence. This, however, is not the same in God. Because God is pure actuality, there is no becoming in Him. As the most absolute and simple being, the giver of all things, but a recipient of none, His essence is the same as His existence. In other words, His “whatness” and His “is-ness” are interchangeable— His essence and existence are identical.15 Thus, when asked what God is, we say “God is” full stop.
+**Second:** God's transcendence and role as efficient cause (Isaiah 45:5; Acts 17:28; Romans 11:36) demands simplicity. Since "God does not depend on qualities really distinct from His divine essence in order to exist as He does,"[^6] divine simplicity grounds God's other perfections: aseity (Exodus 3:14), immutability (Malachi 3:6), eternality (Psalm 90:2), and monotheism (Deuteronomy 6:4).
 
-Second, and in relation to the first, because God is pure actuality and His existence and essence are identical, then other metaphysical compositions whatsoever must not be attributed to Him. In that regard, God is not composed of matter and form. Since God is immaterial and most simple, He is free from any constituents more basic to Himself. Consequently, God must not also be composed of supposit and nature. By supposit, we mean a particular existing thing. By nature, we mean the principle that gives a particular subject its essence or whatness. In humans, supposit and nature are truly distinct. For example, Socrates is a man (a supposit), but Socrates is not humanity (nature). In God, this is not the case; divinity and being God are the same. God just is the divinity as He is. Furthermore, God must not be composed of genus and species. Genus and species are terms used in classification that refer to the names of categories for finite, limited creatures. But God is infinite; He is not a ‘kind’ of thing. He is above any classification. He does not belong to any category whatsoever. Since there is no lacking in God as a simple being, He cannot be specified or differentiated. In other words, God is not ‘special’, properly speaking. We cannot ascribe to Him a definition.16 Because God is simple, He transcends any class of genus or species.17
+**Third:** Scripture predicates God in substantives — He is not merely loving but *love itself* (1 John 4:8, 16), indicating identity between attributes and essence.
 
-[^1] :“Though the doctrine has a long pedigree in orthodox Christianity, recently it has suffered neglect and has been the object of perplexity and opposition.” Joel Beeke, Reformed Systematic Theology: Revelation and God, vol. 1 of Reformed Systematic Theology (Wheaton: Crossway, 2019), kindle edition loc 14567. ↩︎
-James E. Dolezal, All That Is In God (Grand Rapids: Reformation Heritage Books, 2017), 41. ↩︎
-Dolezal, All That Is In God, 41. ↩︎
-Dolf te Velde, ed., Synopsis Of A Purer Theology: Latin Text and English Translation, trans. Riemer A. Faber, Vol. 1 of Studies in Medieval and Reformation Traditions 5 (Leiden: Brill, 2015), 613. ↩︎
-John Gill, An Exposition of the New Testament, The Baptist Commentary Series. (Mathews and Leigh, 1809), 1:731 emphasis added. ↩︎
-Dolezal, All That Is In God, 42. ↩︎
-Edward Leigh, A System or Body of Divinity (West Linn, OR: Monergism Books, 2025), kindle edition loc 4394. ↩︎
-Metaphysics – “beyond the physical, transcending the Physics in penetration of reality or in ascent to the highest reality” Bernard Wuellner, A Dictionary of Scholastic Philosophy, 2nd ed. (Milwaukee: The Bruce Publishing Company, 1966), 188. ↩︎
-The Doctrines and Covenants Of The Church Of Jesus Christ Of Latter-Day Saints (Utah: The Church Of Jesus Christ Of Latter-Day Saints, 2013), 265. ↩︎
-“The principal claim of divine simplicity is that God is not composed of parts. Whatever is composed of parts depends upon its parts in order to be as it is. A part is anything in a subject that is less than the whole and without which the subject would be really different than it is. In short, composite beings need their parts in order to exist as they do. Moreover, the parts in an integrated whole require a composer distinct from themselves to unify them, an extrinsic source of unity. If God should be composed of parts—of components that were prior to Him in being—He would be doubly dependent; first, on the parts, and second, on the composer of parts.” Dolezal, All That Is In God, 40. ↩︎
-François Turrettini, “Institutes Of Elenctic Theology First Through Tenth Topics,” ed. James Dennison Jr., trans. George Musgrave Giger (Phillipsburg, NJ: P & R Publications, 1992), 1:kindle edition loc 6028. ↩︎
-John Gill, A Complete Body of Doctrinal and Practical Divinity: Or A System of Evangelical Truths,
-Deduced from the Sacred Scriptures, New. (London: Tegg & Company, 1839), 175. ↩︎
-For a good introductory book regarding the relationship of metaphysics and philosophy to theology, see Andrew Davison, Love of Wisdom: An Introduction to Philosophy For Theologians (London: Hymns Ancient & Modern Ltd, 2013). ↩︎
-Steven J. Duby, Divine Simplicity: A Dogmatic Account, T & T Clark Studies in Systematic Theology
-volume 30 (London Oxford, New York New Delhi Sydney: Bloomsbury T&T Clark, 2016), 23. ↩︎
-Thomas Aquinas, Summa Theologiae I (The Aquinas Institute), Question 3, Article 4. ↩︎
-To ‘define’ means to find the limit of things and to say that something is ‘special’ implies specification,
-which must be something really distinct from the genus. All of these cannot be predicated of the most absolute and
-simple God. ↩︎
-Aquinas, Summa Theologiae I, Question 3, Articles 1-8. ↩︎
+## Metaphysical Architecture of Divine Simplicity
+
+**Physical Composition:** God, as pure Spirit, is incorporeal and immaterial. Turretin states that divine simplicity is:
+
+> his incommunicable attribute by which the divine nature is conceived by us not only as free from all composition and division, but also as incapable of composition and divisibility.[^11]
+
+**Act and Potency:** God is pure actuality (*actus purus*) with no passive potency. Unlike creation, God has no capacity for becoming — His "whatness" equals His "is-ness." His essence and existence are identical.[^15]
+
+**Matter and Form:** As immaterial and simple, God lacks any constituents more basic than Himself.
+
+**Supposit and Nature:** Unlike humans (where Socrates ≠ humanity), in God, divinity and being God are identical.
+
+**Genus and Species:** God transcends classification. He cannot be defined or "specified" because He lacks nothing. He is not subject to categorical limitations applied to finite creatures.[^17]
+
+Early orthodoxy denies composition including: bodily parts, matter/form, genus/species, subject/accident, act/potency, suppositum/nature, and existence/essence.[^4]
+
+---
+
+[^1]: Joel Beeke, *Reformed Systematic Theology: Revelation and God*, vol. 1 (Wheaton: Crossway, 2019), kindle loc 14567.
+[^2]: James E. Dolezal, *All That Is In God* (Grand Rapids: Reformation Heritage Books, 2017), 41.
+[^3]: Dolezal, *All That Is In God*, 41.
+[^4]: Dolf te Velde, ed., *Synopsis Of A Purer Theology: Latin Text and English Translation*, trans. Riemer A. Faber, Vol. 1 (Leiden: Brill, 2015), 613.
+[^5]: John Gill, *An Exposition of the New Testament*, The Baptist Commentary Series (Mathews and Leigh, 1809), 1:731.
+[^6]: Dolezal, *All That Is In God*, 42.
+[^7]: Edward Leigh, *A System or Body of Divinity* (West Linn, OR: Monergism Books, 2025), kindle loc 4394.
+[^8]: Bernard Wuellner, *A Dictionary of Scholastic Philosophy*, 2nd ed. (Milwaukee: The Bruce Publishing Company, 1966), 188.
+[^9]: *The Doctrines and Covenants Of The Church Of Jesus Christ Of Latter-Day Saints* (Utah: The Church Of Jesus Christ Of Latter-Day Saints, 2013), 265.
+[^10]: Dolezal, *All That Is In God*, 40.
+[^11]: François Turrettini, *Institutes Of Elenctic Theology First Through Tenth Topics*, ed. James Dennison Jr., trans. George Musgrave Giger (Phillipsburg, NJ: P & R Publications, 1992), 1:kindle loc 6028.
+[^12]: John Gill, *A Complete Body of Doctrinal and Practical Divinity: Or A System of Evangelical Truths* (London: Tegg & Company, 1839), 175.
+[^13]: Andrew Davison, *Love of Wisdom: An Introduction to Philosophy For Theologians* (London: Hymns Ancient & Modern Ltd, 2013).
+[^14]: Steven J. Duby, *Divine Simplicity: A Dogmatic Account*, T & T Clark Studies in Systematic Theology vol. 30 (London: Bloomsbury T&T Clark, 2016), 23.
+[^15]: Thomas Aquinas, *Summa Theologiae* I, Question 3, Article 4.
+[^17]: Aquinas, *Summa Theologiae* I, Questions 3, Articles 1–8.
