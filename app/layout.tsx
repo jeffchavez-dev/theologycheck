@@ -6,6 +6,10 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Theology Check',
   description: 'Classical. Reformed. Baptist. — A blog on classical theism, Reformed theology, and biblical languages.',
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
