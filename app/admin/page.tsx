@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-const TAGS = ['Classical Theism', 'Reformed', 'Baptist', '1689 Federalism', 'Covenant Theology', 'Biblical Languages', 'Devotional', 'Book Review']
+const DEFAULT_TAGS = ['Classical Theism', 'Reformed', 'Baptist', '1689 Federalism', 'Covenant Theology', 'Biblical Languages', 'Devotional', 'Book Review']
 const ADMIN_KEY = '1689Federal!sm'
 
 interface PostMeta { slug: string; title: string; date: string; draft?: boolean }
@@ -20,6 +20,8 @@ export default function AdminPage() {
   const [updatedAt, setUpdatedAt] = useState('')
   const [updateCount, setUpdateCount] = useState(0)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const [availableTags, setAvailableTags] = useState<string[]>(DEFAULT_TAGS)
+  const [newTag, setNewTag] = useState('')
   const [posts, setPosts] = useState<PostMeta[]>([])
   const [authors, setAuthors] = useState<string[]>([])
   const [newAuthor, setNewAuthor] = useState('')
@@ -134,6 +136,14 @@ export default function AdminPage() {
     setSelectedTags(prev => prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag])
   }
 
+  function addTag() {
+    const tag = newTag.trim()
+    if (!tag || availableTags.includes(tag)) return
+    setAvailableTags(prev => [...prev, tag])
+    setSelectedTags(prev => [...prev, tag])
+    setNewTag('')
+  }
+
   if (!auth) {
     return (
       <div className="main" style={{ maxWidth: 400, paddingTop: '4rem' }}>
@@ -222,9 +232,27 @@ export default function AdminPage() {
         <div className="form-group">
           <label className="form-label">Tags</label>
           <div className="tag-checkboxes">
-            {TAGS.map(tag => (
+            {availableTags.map(tag => (
               <span key={tag} className={`tag-option${selectedTags.includes(tag) ? ' selected' : ''}`} onClick={() => toggleTag(tag)}>{tag}</span>
             ))}
+          </div>
+          <div style={{ display: 'flex', gap: '8px', marginTop: '10px' }}>
+            <input
+              className="form-input"
+              style={{ flex: 1, padding: '6px 10px', fontSize: '13px' }}
+              placeholder="Add new tag..."
+              value={newTag}
+              onChange={e => setNewTag(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), addTag())}
+            />
+            <button
+              className="btn-secondary"
+              style={{ padding: '6px 14px', fontSize: '12px' }}
+              onClick={addTag}
+              disabled={!newTag.trim()}
+            >
+              Add Tag
+            </button>
           </div>
         </div>
 
