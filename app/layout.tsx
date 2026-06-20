@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Theology Check',
   description: 'Classical. Reformed. Baptist. — A blog on classical theism, Reformed theology, and biblical languages.',
   icons: {
-    icon: '/logo.png',
+    icon: '/favicon.ico',
     apple: '/logo.png',
   },
 }
