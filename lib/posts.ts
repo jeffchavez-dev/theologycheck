@@ -29,8 +29,10 @@ export function getAllPosts(): Post[] {
         date: data.date || '',
         excerpt: data.excerpt || '',
         tags: data.tags || [],
+        draft: data.draft || false,
       }
     })
+    .filter(post => !post.draft)
     .sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 

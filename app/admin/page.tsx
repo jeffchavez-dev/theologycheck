@@ -5,7 +5,7 @@ import Link from 'next/link'
 const TAGS = ['Classical Theism', 'Reformed', 'Baptist', '1689 Federalism', 'Covenant Theology', 'Biblical Languages', 'Devotional', 'Book Review']
 const ADMIN_KEY = '1689Federal!sm'
 
-interface PostMeta { slug: string; title: string; date: string }
+interface PostMeta { slug: string; title: string; date: string; draft?: boolean }
 
 export default function AdminPage() {
   const [auth, setAuth] = useState(false)
@@ -14,6 +14,8 @@ export default function AdminPage() {
   const [title, setTitle] = useState('')
   const [excerpt, setExcerpt] = useState('')
   const [body, setBody] = useState('')
+  const [date, setDate] = useState('')
+  const [draft, setDraft] = useState(false)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [posts, setPosts] = useState<PostMeta[]>([])
   const [saved, setSaved] = useState(false)
@@ -43,7 +45,8 @@ export default function AdminPage() {
   }
 
   function resetForm() {
-    setTitle(''); setExcerpt(''); setBody(''); setSelectedTags([]); setEditingSlug(null); setError('')
+    setTitle(''); setExcerpt(''); setBody(''); setSelectedTags([])
+    setDate(''); setDraft(false); setEditingSlug(null); setError('')
   }
 
   async function loadPost(slug: string) {
@@ -54,6 +57,8 @@ export default function AdminPage() {
     setTitle(post.title)
     setExcerpt(post.excerpt)
     setBody(post.body)
+    setDate(post.date ?? '')
+    setDraft(post.draft ?? false)
     setSelectedTags(post.tags ?? [])
     setError('')
     window.scrollTo(0, 0)
@@ -65,7 +70,7 @@ export default function AdminPage() {
     const res = await fetch('/api/posts', {
       method: isEdit ? 'PUT' : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags }),
+      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft }),
     })
     if (res.ok) {
       resetForm()
@@ -135,6 +140,11 @@ export default function AdminPage() {
         </div>
 
         <div className="form-group">
+          <label className="form-label">Publish Date</label>
+          <input className="form-input" type="date" value={date} onChange={e => setDate(e.target.value)} />
+        </div>
+
+        <div className="form-group">
           <label className="form-label">Tags</label>
           <div className="tag-checkboxes">
             {TAGS.map(tag => (
@@ -148,19 +158,42 @@ export default function AdminPage() {
           <textarea className="form-input form-textarea" value={body} onChange={e => setBody(e.target.value)} placeholder={`Write your post in Markdown...\n\n## Heading\n\nParagraph text here.\n\n> A blockquote`} />
         </div>
 
-        <button className="btn-publish" onClick={handleSave}>
-          {editingSlug ? 'Update Post' : 'Publish Post'}
-        </button>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <button className="btn-publish" onClick={() => { setDraft(false); handleSave() }}>
+            {editingSlug ? 'Update Post' : 'Publish Post'}
+          </button>
+          <button className="btn-publish" style={{ background: '#8a6040' }} onClick={() => { setDraft(true); handleSave() }}>
+            Save as Draft
+          </button>
+        </div>
       </div>
 
-      {posts.length > 0 && (
+      {posts.filter(p => !p.draft).length > 0 && (
         <div className="admin-posts">
           <div className="section-label" style={{ marginBottom: '0' }}>Published Posts</div>
-          {posts.map(post => (
+          {posts.filter(p => !p.draft).map(post => (
             <div key={post.slug} className="admin-post-row">
               <div>
                 <div className="admin-post-title">{post.title}</div>
                 <div className="admin-post-date">{post.date}</div>
+              </div>
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
+                <button className="btn-delete" onClick={() => handleDelete(post.slug)}>Delete</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {posts.filter(p => p.draft).length > 0 && (
+        <div className="admin-posts">
+          <div className="section-label" style={{ marginBottom: '0' }}>Drafts</div>
+          {posts.filter(p => p.draft).map(post => (
+            <div key={post.slug} className="admin-post-row">
+              <div>
+                <div className="admin-post-title" style={{ color: '#8a6040' }}>{post.title}</div>
+                <div className="admin-post-date">{post.date} — Draft</div>
               </div>
               <div style={{ display: 'flex', gap: '1rem' }}>
                 <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
