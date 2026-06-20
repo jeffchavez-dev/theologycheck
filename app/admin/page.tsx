@@ -81,7 +81,8 @@ export default function AdminPage() {
       setTimeout(() => setSaved(''), 5000)
       fetchPosts()
     } else {
-      setError('Failed to save post.')
+      const errData = await res.json().catch(() => ({}))
+      setError(`Failed to save post: ${errData.error ?? res.status}`)
     }
   }
 
