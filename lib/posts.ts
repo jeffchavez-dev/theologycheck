@@ -3,7 +3,9 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
-import footnotes from 'remark-footnotes'
+// remark-footnotes is a CJS module with a .default property
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const footnotes = require('remark-footnotes').default
 
 const postsDir = path.join(process.cwd(), 'posts')
 
