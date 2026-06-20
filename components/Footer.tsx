@@ -12,10 +12,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-links">
-          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+          <a href="https://www.youtube.com/@theologycheck" target="_blank" rel="noopener" aria-label="YouTube">
             <i className="ti ti-brand-youtube" />
           </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+          <a href="https://www.facebook.com/theologycheck.blog" target="_blank" rel="noopener" aria-label="Facebook">
             <i className="ti ti-brand-facebook" />
           </a>
 
