@@ -18,7 +18,7 @@ export default function AdminPage() {
   const [draft, setDraft] = useState(false)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [posts, setPosts] = useState<PostMeta[]>([])
-  const [saved, setSaved] = useState(false)
+  const [saved, setSaved] = useState('')
   const [error, setError] = useState('')
 
   useEffect(() => {
@@ -73,9 +73,12 @@ export default function AdminPage() {
       body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft }),
     })
     if (res.ok) {
+      const msg = asDraft
+        ? 'Post saved as draft. It will not appear on the blog until published.'
+        : editingSlug ? 'Post updated successfully.' : 'Post published successfully.'
       resetForm()
-      setSaved(true)
-      setTimeout(() => setSaved(false), 3000)
+      setSaved(msg)
+      setTimeout(() => setSaved(''), 5000)
       fetchPosts()
     } else {
       setError('Failed to save post.')
@@ -126,7 +129,7 @@ export default function AdminPage() {
       </div>
 
       <div className="admin-form">
-        {saved && <div className="success-msg">{editingSlug ? 'Post updated successfully.' : 'Post published successfully.'}</div>}
+        {saved && <div className="success-msg">{saved}</div>}
         {error && <p style={{ color: '#8b1a1a', fontSize: 14 }}>{error}</p>}
 
         <div className="form-group">
