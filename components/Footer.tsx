@@ -11,6 +11,13 @@ export default function Footer() {
           <div>
             <p className="footer-name">Theology Check</p>
             <p className="footer-copy">© {year} Jeff Chavez</p>
+            <p className="footer-tagline">
+              All original content is freely given and dedicated to the{' '}
+              <a href="https://copy.church/free/" target="_blank" rel="noopener noreferrer">
+                public domain
+              </a>
+              .
+            </p>
           </div>
         </div>
         <div className="footer-links">
