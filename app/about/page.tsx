@@ -49,8 +49,6 @@ export default function AboutPage() {
           I am a covenant member of Trinity Reformed Baptist Church of Cavite, and I love the brethren there.
         </p>
 
-        <p>My present labors include:</p>
-
         <blockquote>
           <p>&ldquo;[Theology is] a work of pious intelligence whose foundation and first moving cause is God’s loving communication of knowledge of himself to the saints, and whose end is the vision of God.&rdquo; (John Webster)</p>
         </blockquote>
