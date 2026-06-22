@@ -12,7 +12,7 @@ export default function Header() {
         </Link>
         <div className="header-text">
           <Link href="/" className="site-title">Theology Check</Link>
-          <p className="site-tagline">A Reformed Baptist and Biblical Language Geek Retrieving Classical Theism</p>
+          <p className="site-tagline">Drawing From The Fountain Of The Past</p>
         </div>
         <nav className="nav">
           <Link href="/">Blog</Link>
