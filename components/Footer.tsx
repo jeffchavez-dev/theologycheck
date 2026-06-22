@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
@@ -23,6 +25,11 @@ export default function Footer() {
       </footer>
       <div className="arch-bar-inner" />
       <div className="arch-bar" />
+      <div style={{ textAlign: 'center', padding: '4px 0 8px', fontSize: '11px' }}>
+        <Link href="/admin" style={{ color: '#bbb', textDecoration: 'none', letterSpacing: '0.05em' }}>
+          ·
+        </Link>
+      </div>
     </>
   )
 }
