@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="arch-bar" />
       <div style={{ textAlign: 'center', padding: '4px 0 8px', fontSize: '11px' }}>
         <Link href="/admin" style={{ color: '#bbb', textDecoration: 'none', letterSpacing: '0.05em' }}>
-          ·
+          θ
         </Link>
       </div>
     </>
