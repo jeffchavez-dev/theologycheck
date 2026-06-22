@@ -19,7 +19,7 @@ export default function AboutPage() {
       <div className="post-content">
         <h2><i>A Reformed Baptist and Biblical Language Geek Retrieving Classical Theism</i> </h2>
 
-        <p>I began this blog more than a decade ago, driven by a passion for the Reformed faith and to write reflections about my <a href="https://theologycheckblog.wordpress.com/2020/12/29/why-write-a-blog/">theological journey</a>. With a renewed desire to share the beauty of classical theism and theological retrieval which I gleaned from the books I've read for the past two years, this blog is dedicated to the public that they may also enjoy and behold the splendid glory of God as it is articulated by the saints of the past.</p>
+        <p>I began this blog more than a decade ago, driven by a passion for the Reformed faith and to write reflections about my <a href="https://theologycheckblog.wordpress.com/2020/12/29/why-write-a-blog/">theological journey</a>. With a renewed desire to share the beauty of classical theism and theological retrieval which I gleaned from the books I've read for the past two years, this redesigned blog is dedicated to the public that they may also enjoy and behold the splendid glory of God as it is articulated by the saints of the past.</p>
         <p>
           My name is <strong>Jeff F. Chavez</strong>, a servant of the Lord Jesus Christ, joyfully married to{' '}
           <strong>Gloryben</strong>, and the father of our daughter, <strong>Mira</strong> — a daily reminder of
