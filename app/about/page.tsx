@@ -17,6 +17,7 @@ export default function AboutPage() {
       </div>
 
       <div className="post-content">
+        <h2><i>A Reformed Baptist and Biblical Language Geek Retrieving Classical Theism</i> </h2>
         <p>
           My name is <strong>Jeff F. Chavez</strong>, a servant of the Lord Jesus Christ, joyfully married to{' '}
           <strong>Gloryben</strong>, and the father of our daughter, <strong>Mira</strong> — a daily reminder of
