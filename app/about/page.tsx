@@ -51,18 +51,10 @@ export default function AboutPage() {
 
         <p>My present labors include:</p>
 
-        <ul>
-          <li>
-            A <strong>Tagalog exposition of the Baptist Catechism for children</strong>, praying that the next
-            generation would treasure the gospel and delight in sound doctrine.
-          </li>
-          <li>
-            <strong>Theoglossa</strong> – <em>παραβολη</em> — a{' '}
-            <strong>beginner-friendly story in Biblical (Koine) Greek</strong> designed to help students retain
-            and enjoy their Greek through an accessible narrative.
-          </li>
-        </ul>
-
+        <blockquote>
+          <p>&ldquo;None but the Triune God is worthy of our whole life&apos;s devotion, time, and effort.&rdquo;</p>
+        </blockquote>
+            <p>&ldquo;[Theology is] a work of pious intelligence whose foundation and first moving cause is God\’s loving communication of knowledge of himself to the saints, and whose end is the vision of God.&rdquo; (John Webster)</p>
         <blockquote>
           <p>&ldquo;None but the Triune God is worthy of our whole life&apos;s devotion, time, and effort.&rdquo;</p>
         </blockquote>
