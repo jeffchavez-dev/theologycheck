@@ -18,6 +18,8 @@ export default function AboutPage() {
 
       <div className="post-content">
         <h2><i>A Reformed Baptist and Biblical Language Geek Retrieving Classical Theism</i> </h2>
+
+        <p>I began this blog more than a decade ago, driven by a passion for the Reformed faith and to write reflections about my <a href="https://theologycheckblog.wordpress.com/2020/12/29/why-write-a-blog/">theological journey</a>. With a renewed desire to share the beauty of classical theism and theological retrieval which I gleaned from the books I've read for the past two years, this blog is dedicated to the public that they may also enjoy and behold the splendid glory of God as it is articulated by the saints of the past.</p>
         <p>
           My name is <strong>Jeff F. Chavez</strong>, a servant of the Lord Jesus Christ, joyfully married to{' '}
           <strong>Gloryben</strong>, and the father of our daughter, <strong>Mira</strong> — a daily reminder of
@@ -27,26 +29,14 @@ export default function AboutPage() {
         <p>
           I write and teach with a heart set on the <strong>glory of the holy, simple, impassible,
           self-sufficient, eternal, sovereign, glorious, and good Triune God</strong>, aiming to magnify Him
-          through clear, reverent, and faithful handling of His Word.
+          through clear, reverent, and faithful handling of His Word and recasting the riches of the past for the edification of the church and the exaltation of Christ.
         </p>
 
         <p>
           My theological focus encompasses{' '}
           <a href="/blog/2026-01-09-what-is-classical-theism">classical theism</a>, the biblical languages
           (Hebrew and Greek), and historic Particular Baptist doctrine (as outlined in the 1689 Baptist
-          Confession), intending to equip the saints and exalt Christ in all things.
-        </p>
-
-        <p>
-          I am currently taking the Greek Pedagogy course with{' '}
-          <a href="https://www.taal-academy.org/" target="_blank" rel="noopener noreferrer">
-            Tyndale Academy of Ancient Languages
-          </a>
-          . I am a student of the Reformed Baptist Institute of Pastoral Theology (modular courses).
-        </p>
-
-        <p>
-          I am a covenant member of Trinity Reformed Baptist Church of Cavite, and I love the brethren there.
+          Confession). I have developed a passion about theological retrieval. I seek to recover and rearticulate the profound insights of the church fathers, medieval scholastics, and early modern theologians in a way that is accessible and edifying for present church of Christ. I am unashamedly a Reformed Thomist and a confessional Particula Baptist. I wish I can simply say that I am a Christian, plain and simple, but my walk with the Lord has led me to a deeper appreciation of the rich theological heritage of the one, holy, catholic, and apostolic church.
         </p>
 
         <blockquote>
