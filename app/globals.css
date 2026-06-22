@@ -207,6 +207,7 @@ a { color: inherit; text-decoration: none; }
 .footer-name { font-family: 'Cinzel', serif; font-size: 11px; color: #2a1a0e; letter-spacing: 0.12em; text-transform: uppercase; }
 .footer-copy { font-size: 11px; color: #8a6040; margin-top: 2px; }
 .footer-tagline { font-size: 10px; color: #8a6040; margin-top: 2px; }
+.footer-tagline a { text-decoration: underline; }
 
 .footer-links { display: flex; gap: 1.25rem; }
 .footer-links a { font-size: 20px; color: #8a6040; }
