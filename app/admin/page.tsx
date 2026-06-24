@@ -17,7 +17,7 @@ export default function AdminPage() {
   const [body, setBody] = useState('')
   const [date, setDate] = useState('')
   const [draft, setDraft] = useState(false)
-  const [dropCap, setDropCap] = useState(false)
+  const [dropCapParagraph, setDropCapParagraph] = useState(0)
   const [author, setAuthor] = useState('')
   const [updatedAt, setUpdatedAt] = useState('')
   const [updateCount, setUpdateCount] = useState(0)
@@ -85,7 +85,7 @@ export default function AdminPage() {
   // --- Post form ---
   function resetForm() {
     setTitle(''); setExcerpt(''); setBody(''); setSelectedTags([])
-    setDate(''); setDraft(false); setDropCap(false); setEditingSlug(null); setError('')
+    setDate(''); setDraft(false); setDropCapParagraph(0); setEditingSlug(null); setError('')
     setUpdatedAt(''); setUpdateCount(0)
     if (authors.length > 0) setAuthor(authors[0])
   }
@@ -96,7 +96,7 @@ export default function AdminPage() {
     const post = await res.json()
     setEditingSlug(slug)
     setTitle(post.title); setExcerpt(post.excerpt); setBody(post.body)
-    setDate(post.date ?? ''); setDraft(post.draft ?? false); setDropCap(post.dropCap ?? false)
+    setDate(post.date ?? ''); setDraft(post.draft ?? false); setDropCapParagraph(post.dropCapParagraph ?? 0)
     setSelectedTags(post.tags ?? []); setAuthor(post.author ?? '')
     setUpdatedAt(post.updatedAt ?? ''); setUpdateCount(post.updateCount ?? 0)
     setError('')
@@ -109,7 +109,7 @@ export default function AdminPage() {
     const res = await fetch('/api/posts', {
       method: isEdit ? 'PUT' : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, author, dropCap }),
+      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, author, dropCapParagraph }),
     })
     if (res.ok) {
       const msg = asDraft
@@ -316,11 +316,24 @@ export default function AdminPage() {
         </div>
 
         <div className="form-group">
-          <label className="form-label">Formatting</label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
-            <input type="checkbox" checked={dropCap} onChange={e => setDropCap(e.target.checked)} style={{ accentColor: '#8b1a1a', width: 15, height: 15 }} />
-            Drop cap on first letter <span style={{ fontFamily: 'Cinzel, serif', fontSize: 13, color: '#8b1a1a', marginLeft: 4 }}>𝔄</span>
-          </label>
+          <label className="form-label">Drop Cap <span style={{ fontFamily: 'Cinzel, serif', color: '#8b1a1a' }}>𝔄</span></label>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
+              <input type="checkbox" checked={dropCapParagraph > 0} onChange={e => setDropCapParagraph(e.target.checked ? 1 : 0)} style={{ accentColor: '#8b1a1a', width: 15, height: 15 }} />
+              Enable
+            </label>
+            {dropCapParagraph > 0 && (
+              <label style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                On paragraph
+                <input
+                  type="number" min={1} max={20} value={dropCapParagraph}
+                  onChange={e => setDropCapParagraph(Math.max(1, parseInt(e.target.value) || 1))}
+                  style={{ width: 60, padding: '3px 8px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#1a0a04' }}
+                />
+              </label>
+            )}
+          </div>
+          {dropCapParagraph > 0 && <p style={{ fontSize: 13, color: '#8a6040', fontStyle: 'italic', marginTop: 4, fontFamily: 'EB Garamond, serif' }}>Paragraph 1 is the first paragraph of the post body.</p>}
         </div>
 
         <div className="form-group">

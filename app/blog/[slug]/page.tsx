@@ -33,7 +33,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       </header>
 
       <div
-        className={`post-content${post.dropCap ? ' drop-cap' : ''}`}
+        className="post-content"
         dangerouslySetInnerHTML={{ __html: post.content ?? '' }}
       />
 

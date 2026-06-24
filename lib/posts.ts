@@ -17,7 +17,7 @@ export interface Post {
   tags: string[]
   author?: string
   content?: string
-  dropCap?: boolean
+  dropCapParagraph?: number
 }
 
 export function getAllPosts(): Post[] {
@@ -48,6 +48,15 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   const raw = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(raw)
   const processed = await remark().use(footnotes, { inlineNotes: true }).use(html, { sanitize: false }).process(content)
+  const dropCapParagraph: number = data.dropCapParagraph ?? 0
+  let htmlContent = processed.toString()
+  if (dropCapParagraph > 0) {
+    let count = 0
+    htmlContent = htmlContent.replace(/<p>/g, () => {
+      count++
+      return count === dropCapParagraph ? '<p class="drop-cap-para">' : '<p>'
+    })
+  }
   return {
     slug,
     title: data.title || '',
@@ -55,7 +64,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     excerpt: data.excerpt || '',
     tags: data.tags || [],
     author: data.author || '',
-    content: processed.toString(),
-    dropCap: data.dropCap || false,
+    content: htmlContent,
+    dropCapParagraph,
   }
 }
