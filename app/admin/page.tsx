@@ -17,6 +17,7 @@ export default function AdminPage() {
   const [body, setBody] = useState('')
   const [date, setDate] = useState('')
   const [draft, setDraft] = useState(false)
+  const [dropCap, setDropCap] = useState(false)
   const [author, setAuthor] = useState('')
   const [updatedAt, setUpdatedAt] = useState('')
   const [updateCount, setUpdateCount] = useState(0)
@@ -84,7 +85,7 @@ export default function AdminPage() {
   // --- Post form ---
   function resetForm() {
     setTitle(''); setExcerpt(''); setBody(''); setSelectedTags([])
-    setDate(''); setDraft(false); setEditingSlug(null); setError('')
+    setDate(''); setDraft(false); setDropCap(false); setEditingSlug(null); setError('')
     setUpdatedAt(''); setUpdateCount(0)
     if (authors.length > 0) setAuthor(authors[0])
   }
@@ -95,7 +96,7 @@ export default function AdminPage() {
     const post = await res.json()
     setEditingSlug(slug)
     setTitle(post.title); setExcerpt(post.excerpt); setBody(post.body)
-    setDate(post.date ?? ''); setDraft(post.draft ?? false)
+    setDate(post.date ?? ''); setDraft(post.draft ?? false); setDropCap(post.dropCap ?? false)
     setSelectedTags(post.tags ?? []); setAuthor(post.author ?? '')
     setUpdatedAt(post.updatedAt ?? ''); setUpdateCount(post.updateCount ?? 0)
     setError('')
@@ -108,7 +109,7 @@ export default function AdminPage() {
     const res = await fetch('/api/posts', {
       method: isEdit ? 'PUT' : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, author }),
+      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, author, dropCap }),
     })
     if (res.ok) {
       const msg = asDraft
@@ -312,6 +313,14 @@ export default function AdminPage() {
               {addingTag ? 'Adding...' : 'Add Tag'}
             </button>
           </div>
+        </div>
+
+        <div className="form-group">
+          <label className="form-label">Formatting</label>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
+            <input type="checkbox" checked={dropCap} onChange={e => setDropCap(e.target.checked)} style={{ accentColor: '#8b1a1a', width: 15, height: 15 }} />
+            Drop cap on first letter <span style={{ fontFamily: 'Cinzel, serif', fontSize: 13, color: '#8b1a1a', marginLeft: 4 }}>𝔄</span>
+          </label>
         </div>
 
         <div className="form-group">

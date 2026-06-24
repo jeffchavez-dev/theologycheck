@@ -17,6 +17,7 @@ export interface Post {
   tags: string[]
   author?: string
   content?: string
+  dropCap?: boolean
 }
 
 export function getAllPosts(): Post[] {
@@ -55,5 +56,6 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     tags: data.tags || [],
     author: data.author || '',
     content: processed.toString(),
+    dropCap: data.dropCap || false,
   }
 }
