@@ -4,9 +4,10 @@ date: "2026-06-20"
 excerpt: "An examination of the classical doctrine of divine simplicity — one of the most contested yet essential doctrines in the Christian theological tradition."
 tags:
   - "Classical Theism"
+dropCap: true
 author: "NoblemanPH"
-updatedAt: "2026-06-20"
-updateCount: 4
+updatedAt: "2026-06-24"
+updateCount: 5
 ---
 
 *A guest post from a friend, NoblemanPH, a student of [IRBS](https://www.facebook.com/IRBSTheologicalSeminary). The reader may read this article in [Academia](https://www.academia.edu/145479802/On_the_Classical_Doctrine_of_Divine_Simplicity).*
