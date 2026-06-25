@@ -37,6 +37,12 @@ export default function PostsFilter({ featured, rest, allTags }: Props) {
     ? [featured!, ...filteredRest]
     : filteredRest
 
+  const allPosts = featured ? [featured, ...rest] : rest
+  const tagCounts = allTags.reduce<Record<string, number>>((acc, tag) => {
+    acc[tag] = allPosts.filter(p => p.tags.includes(tag)).length
+    return acc
+  }, {})
+
   return (
     <>
       {/* Tag filter bar */}
@@ -45,7 +51,7 @@ export default function PostsFilter({ featured, rest, allTags }: Props) {
           className={`tag-filter-btn${activeTag === null ? ' active' : ''}`}
           onClick={() => setActiveTag(null)}
         >
-          All
+          All <span style={{ opacity: 0.6, fontSize: '0.85em' }}>{allPosts.length}</span>
         </button>
         {allTags.map(tag => (
           <button
@@ -53,7 +59,7 @@ export default function PostsFilter({ featured, rest, allTags }: Props) {
             className={`tag-filter-btn${activeTag === tag ? ' active' : ''}`}
             onClick={() => setActiveTag(activeTag === tag ? null : tag)}
           >
-            {tag}
+            {tag} <span style={{ opacity: 0.6, fontSize: '0.85em' }}>{tagCounts[tag]}</span>
           </button>
         ))}
       </div>
