@@ -1,11 +1,12 @@
 ---
 title: "A Depressed Psalmist and the Black Cloud"
-date: "2025-11-24"
+date: "2026-06-26"
 excerpt: "In a sermon on Psalm 42, a pastor examined depression through biblical and theological lenses — and Gregory of Nazianzus walked the same dark path."
 tags:
   - "Devotional"
 author: "Jeff Chavez"
-draft: true
+updatedAt: "2026-06-25"
+updateCount: 1
 ---
 
 > As the deer pants for the water brooks,
