@@ -22,6 +22,8 @@ export default function AdminPage() {
   const [updatedAt, setUpdatedAt] = useState('')
   const [updateCount, setUpdateCount] = useState(0)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const [series, setSeries] = useState('')
+  const [seriesOrder, setSeriesOrder] = useState(0)
 
   // Data lists
   const [posts, setPosts] = useState<PostMeta[]>([])
@@ -86,7 +88,7 @@ export default function AdminPage() {
   function resetForm() {
     setTitle(''); setExcerpt(''); setBody(''); setSelectedTags([])
     setDate(''); setDraft(false); setDropCapParagraph(0); setEditingSlug(null); setError('')
-    setUpdatedAt(''); setUpdateCount(0)
+    setUpdatedAt(''); setUpdateCount(0); setSeries(''); setSeriesOrder(0)
     if (authors.length > 0) setAuthor(authors[0])
   }
 
@@ -99,6 +101,7 @@ export default function AdminPage() {
     setDate(post.date ?? ''); setDraft(post.draft ?? false); setDropCapParagraph(post.dropCapParagraph ?? 0)
     setSelectedTags(post.tags ?? []); setAuthor(post.author ?? '')
     setUpdatedAt(post.updatedAt ?? ''); setUpdateCount(post.updateCount ?? 0)
+    setSeries(post.series ?? ''); setSeriesOrder(post.seriesOrder ?? 0)
     setError('')
     window.scrollTo(0, 0)
   }
@@ -109,7 +112,7 @@ export default function AdminPage() {
     const res = await fetch('/api/posts', {
       method: isEdit ? 'PUT' : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, author, dropCapParagraph }),
+      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, author, dropCapParagraph, series, seriesOrder }),
     })
     if (res.ok) {
       const msg = asDraft
@@ -334,6 +337,35 @@ export default function AdminPage() {
             )}
           </div>
           {dropCapParagraph > 0 && <p style={{ fontSize: 13, color: '#8a6040', fontStyle: 'italic', marginTop: 4, fontFamily: 'EB Garamond, serif' }}>Paragraph 1 is the first paragraph of the post body.</p>}
+        </div>
+
+        <div className="form-group">
+          <label className="form-label">Series</label>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
+              <input type="checkbox" checked={!!series} onChange={e => { setSeries(e.target.checked ? 'New Series' : ''); setSeriesOrder(e.target.checked ? 1 : 0) }} style={{ accentColor: '#8b1a1a', width: 15, height: 15 }} />
+              Part of a series
+            </label>
+          </div>
+          {series && (
+            <div style={{ marginTop: 10, display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <input
+                className="form-input"
+                value={series}
+                onChange={e => setSeries(e.target.value)}
+                placeholder="Series name (e.g. Divine Simplicity)"
+              />
+              <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
+                Part number
+                <input
+                  type="number" min={1} max={99} value={seriesOrder}
+                  onChange={e => setSeriesOrder(Math.max(1, parseInt(e.target.value) || 1))}
+                  style={{ width: 70, padding: '3px 8px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#1a0a04' }}
+                />
+              </label>
+              <p style={{ fontSize: 13, color: '#8a6040', fontStyle: 'italic', fontFamily: 'EB Garamond, serif' }}>Posts in the same series will show prev/next navigation at the bottom.</p>
+            </div>
+          )}
         </div>
 
         <div className="form-group">

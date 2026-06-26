@@ -5,6 +5,8 @@ excerpt: "An examination of the classical doctrine of divine simplicity — one 
 tags:
   - "Classical Theism"
 dropCapParagraph: 3
+series: "On The Classical Doctrine of Divine Simplicity"
+seriesOrder: 1
 author: "NoblemanPH"
 updatedAt: "2026-06-24"
 updateCount: 5

@@ -18,6 +18,8 @@ export interface Post {
   author?: string
   content?: string
   dropCapParagraph?: number
+  series?: string
+  seriesOrder?: number
 }
 
 export function getAllPosts(): Post[] {
@@ -36,6 +38,8 @@ export function getAllPosts(): Post[] {
         tags: data.tags || [],
         author: data.author || '',
         draft: data.draft || false,
+        series: data.series || '',
+        seriesOrder: data.seriesOrder ?? 0,
       }
     })
     .filter(post => !post.draft)
@@ -66,5 +70,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     author: data.author || '',
     content: htmlContent,
     dropCapParagraph,
+    series: data.series || '',
+    seriesOrder: data.seriesOrder ?? 0,
   }
 }

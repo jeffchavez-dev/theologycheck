@@ -5,6 +5,8 @@ excerpt: "Continuing our examination of divine simplicity — addressing modern 
 tags:
   - "Classical Theism"
   - "Reformed"
+series: "On The Classical Doctrine of Divine Simplicity"
+seriesOrder: 2
 author: "NoblemanPH"
 updatedAt: "2026-06-26"
 updateCount: 1

@@ -1,6 +1,7 @@
 import { getPostBySlug, getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import SeriesNav from '@/components/SeriesNav'
 
 export async function generateStaticParams() {
   return getAllPosts().map(p => ({ slug: p.slug }))
@@ -10,6 +11,25 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const post = await getPostBySlug(slug)
   if (!post) notFound()
+
+  // Series navigation
+  let seriesNav = null
+  if (post.series) {
+    const allPosts = getAllPosts()
+    const seriesPosts = allPosts
+      .filter(p => p.series === post.series)
+      .sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
+    const idx = seriesPosts.findIndex(p => p.slug === slug)
+    const prev = idx > 0 ? seriesPosts[idx - 1] : null
+    const next = idx < seriesPosts.length - 1 ? seriesPosts[idx + 1] : null
+    seriesNav = {
+      seriesName: post.series,
+      part: (post.seriesOrder ?? idx + 1),
+      total: seriesPosts.length,
+      prev: prev ? { slug: prev.slug, title: prev.title } : null,
+      next: next ? { slug: next.slug, title: next.title } : null,
+    }
+  }
 
   const date = new Date(post.date).toLocaleDateString('en-US', {
     year: 'numeric', month: 'long', day: 'numeric',
@@ -38,6 +58,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       />
 
       <footer className="post-footer">
+        {seriesNav && <SeriesNav {...seriesNav} />}
         <div className="divider">✦ ✦ ✦</div>
         <Link href="/" className="back-link">← Back to all posts</Link>
       </footer>
