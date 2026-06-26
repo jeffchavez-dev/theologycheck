@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const ADMIN_KEY = '1689Federal!sm'
 
-interface PostMeta { slug: string; title: string; date: string; draft?: boolean }
+interface PostMeta { slug: string; title: string; date: string; draft?: boolean; scheduled?: boolean }
 
 export default function AdminPage() {
   const [auth, setAuth] = useState(false)
@@ -384,14 +384,33 @@ export default function AdminPage() {
       </div>
 
       {/* ── Published posts ── */}
-      {posts.filter(p => !p.draft).length > 0 && (
+      {posts.filter(p => !p.draft && !p.scheduled).length > 0 && (
         <div className="admin-posts">
           <div className="section-label" style={{ marginBottom: '0' }}>Published Posts</div>
-          {posts.filter(p => !p.draft).map(post => (
+          {posts.filter(p => !p.draft && !p.scheduled).map(post => (
             <div key={post.slug} className="admin-post-row">
               <div>
                 <div className="admin-post-title">{post.title}</div>
                 <div className="admin-post-date">{post.date}</div>
+              </div>
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
+                <button className="btn-delete" onClick={() => handleDeletePost(post.slug)}>Delete</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* ── Scheduled posts ── */}
+      {posts.filter(p => p.scheduled).length > 0 && (
+        <div className="admin-posts">
+          <div className="section-label" style={{ marginBottom: '0' }}>Scheduled Posts</div>
+          {posts.filter(p => p.scheduled).map(post => (
+            <div key={post.slug} className="admin-post-row">
+              <div>
+                <div className="admin-post-title" style={{ color: '#5a7a3a' }}>{post.title}</div>
+                <div className="admin-post-date">Publishes {post.date}</div>
               </div>
               <div style={{ display: 'flex', gap: '1rem' }}>
                 <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>

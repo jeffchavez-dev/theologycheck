@@ -107,7 +107,9 @@ export async function GET(req: NextRequest) {
     const slug = file.replace(/\.md$/, '')
     const raw = fs.readFileSync(path.join(postsDir, file), 'utf8')
     const { data } = matter(raw)
-    return { slug, title: data.title ?? slug, date: data.date ?? '', draft: data.draft ?? false }
+    const today = new Date().toISOString().split('T')[0]
+    const scheduled = !data.draft && (data.date ?? '') > today
+    return { slug, title: data.title ?? slug, date: data.date ?? '', draft: data.draft ?? false, scheduled }
   }).sort((a, b) => a.date < b.date ? 1 : -1)
   return NextResponse.json(posts)
 }

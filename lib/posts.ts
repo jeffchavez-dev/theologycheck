@@ -42,7 +42,7 @@ export function getAllPosts(): Post[] {
         seriesOrder: data.seriesOrder ?? 0,
       }
     })
-    .filter(post => !post.draft)
+    .filter(post => !post.draft && post.date <= new Date().toISOString().split('T')[0])
     .sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 
