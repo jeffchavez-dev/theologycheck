@@ -1,15 +1,15 @@
 ---
 title: "Finitum Non Capax Infiniti: How To Do Theology as Finite Creatures (Part 1)"
-date: "2026-01-06"
+date: "2025-12-23"
 excerpt: "The Reformed axiom finitum non capax infiniti — the finite cannot contain the infinite — and its profound implications for how we approach the knowledge of God."
 tags:
   - "Classical Theism"
   - "Reformed"
 series: "Finitum Non Capax Infiniti"
-seriesOrder: 1
+seriesOrder: 2
 author: "NoblemanPH"
 updatedAt: "2026-06-26"
-updateCount: 3
+updateCount: 4
 ---
 
 *A guest post from a friend, NoblemanPH, a student of [IRBS Theological Seminary](https://www.facebook.com/IRBSTheologicalSeminary).*
