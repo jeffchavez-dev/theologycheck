@@ -2,9 +2,34 @@ import { getPostBySlug, getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import SeriesNav from '@/components/SeriesNav'
+import type { Metadata } from 'next'
 
 export async function generateStaticParams() {
   return getAllPosts().map(p => ({ slug: p.slug }))
+}
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await params
+  const post = await getPostBySlug(slug)
+  if (!post) return {}
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: post.date,
+      authors: post.author ? [post.author] : undefined,
+      tags: post.tags,
+    },
+    twitter: {
+      title: post.title,
+      description: post.excerpt,
+    },
+  }
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
