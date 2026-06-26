@@ -5,9 +5,11 @@ excerpt: "The Reformed axiom finitum non capax infiniti — the finite cannot co
 tags:
   - "Classical Theism"
   - "Reformed"
+series: "Finitum Non Capax Infiniti"
+seriesOrder: 1
 author: "NoblemanPH"
-updatedAt: "2026-06-21"
-updateCount: 2
+updatedAt: "2026-06-26"
+updateCount: 3
 ---
 
 *A guest post from a friend, NoblemanPH, a student of [IRBS Theological Seminary](https://www.facebook.com/IRBSTheologicalSeminary).*
