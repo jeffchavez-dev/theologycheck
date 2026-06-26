@@ -253,7 +253,7 @@ a { color: inherit; text-decoration: none; }
 .form-label { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #8b1a1a; }
 .form-input { background: #fff8ee; border: 1px solid #c49a5a; padding: 0.6rem 0.85rem; font-family: 'EB Garamond', serif; font-size: 16px; color: #1a0a04; border-radius: 2px; outline: none; width: 100%; }
 .form-input:focus { border-color: #8b1a1a; }
-.form-textarea { min-height: 320px; resize: vertical; line-height: 1.7; }
+.form-textarea { min-height: 80vh; resize: vertical; line-height: 1.7; }
 .tag-checkboxes { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag-option { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em; color: #6a1010; background: #fff8ee; border: 0.5px solid #c49a5a; padding: 4px 10px; cursor: pointer; user-select: none; }
 .tag-option.selected { background: #f5d0d0; border-color: #8b1a1a; }

@@ -380,6 +380,17 @@ export default function AdminPage() {
           <button className="btn-publish" style={{ background: '#8a6040' }} onClick={() => handleSave(true)}>
             Save as Draft
           </button>
+          {editingSlug && (
+            <a
+              href={`/preview/${editingSlug}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-publish"
+              style={{ background: '#3a5a3a', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}
+            >
+              Preview ↗
+            </a>
+          )}
         </div>
       </div>
 
@@ -394,6 +405,7 @@ export default function AdminPage() {
                 <div className="admin-post-date">{post.date}</div>
               </div>
               <div style={{ display: 'flex', gap: '1rem' }}>
+                <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="btn-delete" style={{ color: '#3a5a3a' }}>Preview</a>
                 <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
                 <button className="btn-delete" onClick={() => handleDeletePost(post.slug)}>Delete</button>
               </div>
@@ -413,6 +425,7 @@ export default function AdminPage() {
                 <div className="admin-post-date">Publishes {post.date}</div>
               </div>
               <div style={{ display: 'flex', gap: '1rem' }}>
+                <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="btn-delete" style={{ color: '#3a5a3a' }}>Preview</a>
                 <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
                 <button className="btn-delete" onClick={() => handleDeletePost(post.slug)}>Delete</button>
               </div>
@@ -432,6 +445,7 @@ export default function AdminPage() {
                 <div className="admin-post-date">{post.date} — Draft</div>
               </div>
               <div style={{ display: 'flex', gap: '1rem' }}>
+                <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="btn-delete" style={{ color: '#3a5a3a' }}>Preview</a>
                 <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
                 <button className="btn-delete" onClick={() => handleDeletePost(post.slug)}>Delete</button>
               </div>
