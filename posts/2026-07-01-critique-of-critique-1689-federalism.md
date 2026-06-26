@@ -1,5 +1,5 @@
 ---
-title: "A Critique of "A Critique of 1689 Federalism""
+title: 'A Critique of "A Critique of 1689 Federalism"'
 date: "2026-07-01"
 excerpt: "A response to Earl Blackburn's critique of 1689 Federalism — arguing that it misreads the position and fails to engage seriously with its key proponents."
 tags:

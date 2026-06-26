@@ -1,8 +1,6 @@
 import { getPostBySlug } from '@/lib/posts'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import SeriesNav from '@/components/SeriesNav'
-
 // Never statically generated — always dynamic so drafts/scheduled are accessible
 export const dynamic = 'force-dynamic'
 
@@ -19,7 +17,6 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
 
   const today = new Date().toISOString().split('T')[0]
   const isScheduled = post.date > today
-  const isDraft = !post.date || post.date <= today // fallback — drafts have no published date logic here
 
   return (
     <>
