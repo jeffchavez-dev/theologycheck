@@ -39,6 +39,12 @@ export default function AboutPage() {
           Confession). I have developed a passion about theological retrieval. I seek to recover and rearticulate the profound insights of the church fathers, medieval scholastics, and early modern theologians in a way that is accessible and edifying for present church of Christ. I am unashamedly a Reformed Thomist and a confessional Particula Baptist. I wish I can simply say that I am a Christian, plain and simple, but my walk with the Lord has led me to a deeper appreciation of the rich theological heritage of the one, holy, catholic, and apostolic church.
         </p>
 
+        <p>
+          Thanks to my friend{' '}
+          <a href="https://www.facebook.com/paige.paje" target="_blank" rel="noopener noreferrer">Neiko Guil-an Paje</a>,
+          student of IRBS Seminary, who generously allowed me to post his academic papers on classical theism.
+        </p>
+
         <blockquote>
           <p>&ldquo;[Theology is] a work of pious intelligence whose foundation and first moving cause is God’s loving communication of knowledge of himself to the saints, and whose end is the vision of God.&rdquo; (John Webster)</p>
         </blockquote>

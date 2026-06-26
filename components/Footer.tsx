@@ -20,6 +20,23 @@ export default function Footer() {
             </p>
           </div>
         </div>
+        <div className="footer-recommended">
+          <p className="footer-recommended-title">Recommended</p>
+          <ul>
+            <li>
+              <a href="https://credomag.com/" target="_blank" rel="noopener noreferrer">Credo Magazine</a>
+              {' '}— A theology magazine dedicated to exploring Baptist and Reformed convictions.
+            </li>
+            <li>
+              <a href="https://www.reformedclassicalist.com/" target="_blank" rel="noopener noreferrer">The Reformed Classicist</a>
+              {' '}— A blog retrieving the classical theological tradition for the Reformed church.
+            </li>
+            <li>
+              <a href="https://watersidejournal.com/" target="_blank" rel="noopener noreferrer">Waterside Journal</a>
+              {' '}— A journal of theology, culture, and the Christian life.
+            </li>
+          </ul>
+        </div>
         <div className="footer-links">
           <a href="https://www.youtube.com/@theologycheck" target="_blank" rel="noopener" aria-label="YouTube">
             <i className="ti ti-brand-youtube" />

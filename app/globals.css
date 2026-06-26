@@ -219,6 +219,12 @@ a { color: inherit; text-decoration: none; }
 .footer-tagline { font-size: 10px; color: #8a6040; margin-top: 2px; }
 .footer-tagline a { text-decoration: underline; }
 
+.footer-recommended { font-size: 11px; color: #8a6040; }
+.footer-recommended-title { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #2a1a0e; margin-bottom: 6px; }
+.footer-recommended ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.footer-recommended a { color: #8b1a1a; text-decoration: underline; }
+.footer-recommended a:hover { color: #c47c2b; }
+
 .footer-links { display: flex; gap: 1.25rem; }
 .footer-links a { font-size: 20px; color: #8a6040; }
 .footer-links a:hover { color: #8b1a1a; }
