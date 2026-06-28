@@ -23,11 +23,13 @@ export default function Header() {
             <Link href="/series" className="nav-series-link">Series</Link>
             {series.length > 0 && (
               <div className="nav-dropdown">
-                {series.map(s => (
-                  <Link key={s.slug} href={`/series/${s.slug}`} className="nav-dropdown-item">
-                    {s.name}
-                  </Link>
-                ))}
+                <div className="nav-dropdown-inner">
+                  {series.map(s => (
+                    <Link key={s.slug} href={`/series/${s.slug}`} className="nav-dropdown-item">
+                      {s.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </div>

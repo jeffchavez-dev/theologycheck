@@ -1,7 +1,7 @@
 import { getPostBySlug, getAllPosts } from '@/lib/posts'
+import { getScheduledPosts, seriesSlug } from '@/lib/seriesUtils'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import SeriesNav from '@/components/SeriesNav'
 import type { Metadata } from 'next'
 
 export async function generateStaticParams() {
@@ -40,22 +40,40 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const post = await getPostBySlug(slug)
   if (!post) notFound()
 
-  // Series navigation
-  let seriesNav = null
+  // Build full series outline (published + scheduled) for the top panel
+  let seriesOutline: {
+    name: string
+    slug: string
+    parts: { title: string; slug: string | null; order: number; isCurrent: boolean; isComingSoon: boolean }[]
+  } | null = null
+
   if (post.series) {
-    const allPosts = getAllPosts()
-    const seriesPosts = allPosts
+    const published = getAllPosts()
       .filter(p => p.series === post.series)
       .sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
-    const idx = seriesPosts.findIndex(p => p.slug === slug)
-    const prev = idx > 0 ? seriesPosts[idx - 1] : null
-    const next = idx < seriesPosts.length - 1 ? seriesPosts[idx + 1] : null
-    seriesNav = {
-      seriesName: post.series,
-      part: (post.seriesOrder ?? idx + 1),
-      total: seriesPosts.length,
-      prev: prev ? { slug: prev.slug, title: prev.title } : null,
-      next: next ? { slug: next.slug, title: next.title } : null,
+    const scheduled = getScheduledPosts()
+      .filter(p => p.series === post.series)
+      .sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
+
+    seriesOutline = {
+      name: post.series,
+      slug: seriesSlug(post.series),
+      parts: [
+        ...published.map(p => ({
+          title: p.title,
+          slug: p.slug,
+          order: p.seriesOrder ?? 0,
+          isCurrent: p.slug === slug,
+          isComingSoon: false,
+        })),
+        ...scheduled.map(p => ({
+          title: p.title,
+          slug: null,
+          order: p.seriesOrder ?? 0,
+          isCurrent: false,
+          isComingSoon: true,
+        })),
+      ].sort((a, b) => a.order - b.order),
     }
   }
 
@@ -80,13 +98,41 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </div>
       </header>
 
+      {/* Series outline panel — shown below title, above content */}
+      {seriesOutline && (
+        <div className="series-outline">
+          <div className="series-outline-header">
+            <Link href={`/series/${seriesOutline.slug}`} className="series-outline-title">
+              {seriesOutline.name}
+            </Link>
+            <span className="series-outline-label">Series</span>
+          </div>
+          <ol className="series-outline-list">
+            {seriesOutline.parts.map((part, i) => (
+              <li key={i} className={`series-outline-item${part.isCurrent ? ' current' : ''}${part.isComingSoon ? ' coming-soon' : ''}`}>
+                {part.isComingSoon || !part.slug ? (
+                  <span className="series-outline-item-title">{part.title}</span>
+                ) : part.isCurrent ? (
+                  <span className="series-outline-item-title">{part.title}</span>
+                ) : (
+                  <Link href={`/blog/${part.slug}`} className="series-outline-item-title">
+                    {part.title}
+                  </Link>
+                )}
+                {part.isComingSoon && <span className="series-outline-soon">Coming Soon</span>}
+                {part.isCurrent && <span className="series-outline-reading">← Reading</span>}
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+
       <div
         className="post-content"
         dangerouslySetInnerHTML={{ __html: post.content ?? '' }}
       />
 
       <footer className="post-footer">
-        {seriesNav && <SeriesNav {...seriesNav} />}
         <div className="divider">✦ ✦ ✦</div>
         <Link href="/" className="back-link">← Back to all posts</Link>
       </footer>
