@@ -6,12 +6,14 @@ tags:
   - "Natural Theology"
 draft: true
 dropCapParagraph: 1
-series: "Natural Theology As A Reformed Principle"
+series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
 updatedAt: "2026-06-28"
-updateCount: 1
+updateCount: 2
 ---
+
+Natural Theology is 
 
 https://credomag.com/article/natural-theology-in-the-reformed-tradition/
 
