@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { getActiveSeries } from '@/lib/seriesUtils'
 
 export default function Header() {
+  const series = getActiveSeries()
+
   return (
     <>
       <div className="arch-bar" />
@@ -16,6 +19,18 @@ export default function Header() {
         </div>
         <nav className="nav">
           <Link href="/">Blog</Link>
+          <div className="nav-series-wrap">
+            <Link href="/series" className="nav-series-link">Series</Link>
+            {series.length > 0 && (
+              <div className="nav-dropdown">
+                {series.map(s => (
+                  <Link key={s.slug} href={`/series/${s.slug}`} className="nav-dropdown-item">
+                    {s.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
           <Link href="/about">About</Link>
         </nav>
       </header>

@@ -109,7 +109,7 @@ export async function GET(req: NextRequest) {
     const { data } = matter(raw)
     const today = new Date().toISOString().split('T')[0]
     const scheduled = !data.draft && (data.date ?? '') > today
-    return { slug, title: data.title ?? slug, date: data.date ?? '', draft: data.draft ?? false, scheduled }
+    return { slug, title: data.title ?? slug, date: data.date ?? '', draft: data.draft ?? false, scheduled, series: data.series ?? '', seriesOrder: data.seriesOrder ?? 0 }
   }).sort((a, b) => a.date < b.date ? 1 : -1)
   return NextResponse.json(posts)
 }

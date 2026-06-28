@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const ADMIN_KEY = '1689Federal!sm'
 
-interface PostMeta { slug: string; title: string; date: string; draft?: boolean; scheduled?: boolean }
+interface PostMeta { slug: string; title: string; date: string; draft?: boolean; scheduled?: boolean; series?: string; seriesOrder?: number }
 
 export default function AdminPage() {
   const [auth, setAuth] = useState(false)
@@ -453,6 +453,72 @@ export default function AdminPage() {
           ))}
         </div>
       )}
+
+      {/* ── Series Manager ── */}
+      {(() => {
+        const today = new Date().toISOString().split('T')[0]
+        const publishedBySeries = new Map<string, PostMeta[]>()
+        const scheduledBySeries = new Map<string, PostMeta[]>()
+
+        posts.filter(p => p.series && !p.draft && !p.scheduled).forEach(p => {
+          const arr = publishedBySeries.get(p.series!) ?? []
+          arr.push(p)
+          publishedBySeries.set(p.series!, arr)
+        })
+        posts.filter(p => p.series && p.scheduled).forEach(p => {
+          const arr = scheduledBySeries.get(p.series!) ?? []
+          arr.push(p)
+          scheduledBySeries.set(p.series!, arr)
+        })
+
+        // Only show series that have at least one published post
+        const activeSeries = [...publishedBySeries.keys()]
+        if (activeSeries.length === 0) return null
+
+        return (
+          <div className="admin-posts">
+            <div className="section-label" style={{ marginBottom: '0' }}>Series</div>
+            {activeSeries.map(seriesName => {
+              const pub = (publishedBySeries.get(seriesName) ?? []).sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
+              const sched = (scheduledBySeries.get(seriesName) ?? []).sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
+              return (
+                <div key={seriesName} style={{ borderBottom: '1px solid #e8d8b0' }}>
+                  <div style={{ padding: '0.75rem 1.25rem', background: '#fff8ee', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontFamily: 'Cinzel, serif', fontSize: 13, color: '#1a0a04', fontWeight: 500 }}>{seriesName}</span>
+                    <span style={{ fontSize: 12, color: '#8a6040', fontStyle: 'italic' }}>{pub.length} published{sched.length > 0 ? ` · ${sched.length} coming soon` : ''}</span>
+                  </div>
+                  {pub.map((post, i) => (
+                    <div key={post.slug} className="admin-post-row" style={{ paddingLeft: '2rem' }}>
+                      <div>
+                        <div style={{ fontSize: 12, fontFamily: 'Cinzel, serif', color: '#8b1a1a', letterSpacing: '0.08em', marginBottom: 2 }}>Part {post.seriesOrder ?? i + 1}</div>
+                        <div className="admin-post-title">{post.title}</div>
+                        <div className="admin-post-date">{post.date}</div>
+                      </div>
+                      <div style={{ display: 'flex', gap: '1rem' }}>
+                        <a href={`/blog/${post.slug}`} target="_blank" rel="noopener noreferrer" className="btn-delete" style={{ color: '#3a5a3a' }}>View</a>
+                        <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
+                      </div>
+                    </div>
+                  ))}
+                  {sched.map((post, i) => (
+                    <div key={post.slug} className="admin-post-row" style={{ paddingLeft: '2rem', opacity: 0.75 }}>
+                      <div>
+                        <div style={{ fontSize: 12, fontFamily: 'Cinzel, serif', color: '#5a7a3a', letterSpacing: '0.08em', marginBottom: 2 }}>Part {post.seriesOrder ?? pub.length + i + 1}</div>
+                        <div className="admin-post-title" style={{ color: '#5a7a3a' }}>{post.title}</div>
+                        <div className="admin-post-date">Coming Soon · publishes {post.date}</div>
+                      </div>
+                      <div style={{ display: 'flex', gap: '1rem' }}>
+                        <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="btn-delete" style={{ color: '#3a5a3a' }}>Preview</a>
+                        <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )
+            })}
+          </div>
+        )
+      })()}
 
       {/* ── Manage Tags ── */}
       <div className="admin-posts">
