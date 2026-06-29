@@ -122,6 +122,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                   </Link>
                 )}
                 {part.isComingSoon && <span className="series-outline-soon">Coming Soon</span>}
+
                 {part.isCurrent && <span className="series-outline-reading">← Reading</span>}
               </li>
             ))}

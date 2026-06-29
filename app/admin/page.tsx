@@ -24,6 +24,7 @@ export default function AdminPage() {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [series, setSeries] = useState('')
   const [seriesOrder, setSeriesOrder] = useState(0)
+  const [scheduled, setScheduled] = useState(false)
 
   // Data lists
   const [posts, setPosts] = useState<PostMeta[]>([])
@@ -91,7 +92,7 @@ export default function AdminPage() {
   // --- Post form ---
   function resetForm() {
     setTitle(''); setExcerpt(''); setBody(''); setSelectedTags([])
-    setDate(''); setDraft(false); setDropCapParagraph(0); setEditingSlug(null); setError('')
+    setDate(''); setDraft(false); setScheduled(false); setDropCapParagraph(0); setEditingSlug(null); setError('')
     setUpdatedAt(''); setUpdateCount(0); setSeries(''); setSeriesOrder(0)
     if (authors.length > 0) setAuthor(authors[0])
   }
@@ -105,21 +106,24 @@ export default function AdminPage() {
     setDate(post.date ?? ''); setDraft(post.draft ?? false); setDropCapParagraph(post.dropCapParagraph ?? 0)
     setSelectedTags(post.tags ?? []); setAuthor(post.author ?? '')
     setUpdatedAt(post.updatedAt ?? ''); setUpdateCount(post.updateCount ?? 0)
-    setSeries(post.series ?? ''); setSeriesOrder(post.seriesOrder ?? 0)
+    setSeries(post.series ?? ''); setSeriesOrder(post.seriesOrder ?? 0); setScheduled(post.scheduled ?? false)
     setError('')
     window.scrollTo(0, 0)
   }
 
-  async function handleSave(asDraft: boolean) {
+  async function handleSave(asDraft: boolean, asScheduled = false) {
     if (!title || !body) { setError('Title and body are required.'); return }
+    if (asScheduled && !date) { setError('A publish date is required for scheduled posts.'); return }
     const isEdit = editingSlug !== null
     const res = await fetch('/api/posts', {
       method: isEdit ? 'PUT' : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, author, dropCapParagraph, series, seriesOrder }),
+      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, scheduled: asScheduled, author, dropCapParagraph, series, seriesOrder }),
     })
     if (res.ok) {
-      const msg = asDraft
+      const msg = asScheduled
+        ? `Post scheduled. It will appear on the blog on ${date}.`
+        : asDraft
         ? 'Post saved as draft. It will not appear on the blog until published.'
         : isEdit ? 'Post updated successfully.' : 'Post published successfully.'
       resetForm(); setSaved(msg); setTimeout(() => setSaved(''), 5000); fetchPosts()
@@ -410,6 +414,9 @@ export default function AdminPage() {
           </button>
           <button className="btn-publish" style={{ background: '#8a6040' }} onClick={() => handleSave(true)}>
             Save as Draft
+          </button>
+          <button className="btn-publish" style={{ background: '#3a5a7a' }} onClick={() => handleSave(false, true)}>
+            {scheduled ? 'Update Schedule' : 'Schedule Post'}
           </button>
           {editingSlug && (
             <a

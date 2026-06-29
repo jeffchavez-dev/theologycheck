@@ -20,6 +20,7 @@ export interface Post {
   dropCapParagraph?: number
   series?: string
   seriesOrder?: number
+  scheduled?: boolean
 }
 
 export function getAllPosts(): Post[] {
@@ -38,11 +39,12 @@ export function getAllPosts(): Post[] {
         tags: data.tags || [],
         author: data.author || '',
         draft: data.draft || false,
+        scheduled: data.scheduled || false,
         series: data.series || '',
         seriesOrder: data.seriesOrder ?? 0,
       }
     })
-    .filter(post => !post.draft && post.date <= new Date().toISOString().split('T')[0])
+    .filter(post => !post.draft && !post.scheduled && post.date <= new Date().toISOString().split('T')[0])
     .sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 

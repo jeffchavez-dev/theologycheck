@@ -11,7 +11,6 @@ export function seriesSlug(name: string): string {
 
 export function getScheduledPosts(): Post[] {
   if (!fs.existsSync(postsDir)) return []
-  const today = new Date().toISOString().split('T')[0]
   return fs.readdirSync(postsDir)
     .filter(f => f.endsWith('.md'))
     .map(file => {
@@ -27,10 +26,11 @@ export function getScheduledPosts(): Post[] {
         author: data.author || '',
         series: data.series || '',
         seriesOrder: data.seriesOrder ?? 0,
+        scheduled: data.scheduled || false,
         draft: data.draft || false,
       }
     })
-    .filter(p => !p.draft && p.date > today)
+    .filter(p => p.scheduled === true)
     .sort((a, b) => (a.date < b.date ? -1 : 1))
 }
 

@@ -69,7 +69,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
             <div className="series-post-num">Part {post.seriesOrder ?? published.length + i + 1}</div>
             <div className="series-post-body">
               <div className="series-post-title">{post.title}</div>
-              <div className="series-post-date">Coming soon · publishes {post.date}</div>
+              <div className="series-post-date">Coming soon</div>
             </div>
           </div>
         ))}

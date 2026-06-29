@@ -20,12 +20,13 @@ function findFile(slug: string) {
   return files.find(f => f === `${slug}.md` || f.endsWith(`-${slug}.md`)) ?? null
 }
 
-function buildMarkdown(title: string, date: string, excerpt: string, tags: string[], draft: boolean, body: string, author: string, updatedAt: string, updateCount: number, dropCapParagraph = 0, series = '', seriesOrder = 0) {
+function buildMarkdown(title: string, date: string, excerpt: string, tags: string[], draft: boolean, body: string, author: string, updatedAt: string, updateCount: number, dropCapParagraph = 0, series = '', seriesOrder = 0, scheduled = false) {
   const tagsYaml = tags?.length ? `\ntags:\n${tags.map((t: string) => `  - "${t}"`).join('\n')}` : ''
   const draftLine = draft ? `\ndraft: true` : ''
+  const scheduledLine = scheduled ? `\nscheduled: true` : ''
   const dropCapLine = dropCapParagraph > 0 ? `\ndropCapParagraph: ${dropCapParagraph}` : ''
   const seriesLine = series ? `\nseries: "${series}"\nseriesOrder: ${seriesOrder}` : ''
-  return `---\ntitle: "${title}"\ndate: "${date}"\nexcerpt: "${excerpt ?? ''}"${tagsYaml}${draftLine}${dropCapLine}${seriesLine}\nauthor: "${author ?? ''}"\nupdatedAt: "${updatedAt}"\nupdateCount: ${updateCount}\n---\n\n${body}`
+  return `---\ntitle: "${title}"\ndate: "${date}"\nexcerpt: "${excerpt ?? ''}"${tagsYaml}${draftLine}${scheduledLine}${dropCapLine}${seriesLine}\nauthor: "${author ?? ''}"\nupdatedAt: "${updatedAt}"\nupdateCount: ${updateCount}\n---\n\n${body}`
 }
 
 async function githubGetSHA(filePath: string): Promise<string | null> {
@@ -92,6 +93,7 @@ export async function GET(req: NextRequest) {
       tags: data.tags ?? [],
       body: content.trim(),
       draft: data.draft ?? false,
+      scheduled: data.scheduled ?? false,
       dropCapParagraph: data.dropCapParagraph ?? 0,
       author: data.author ?? '',
       updatedAt: data.updatedAt ?? '',
@@ -107,22 +109,20 @@ export async function GET(req: NextRequest) {
     const slug = file.replace(/\.md$/, '')
     const raw = fs.readFileSync(path.join(postsDir, file), 'utf8')
     const { data } = matter(raw)
-    const today = new Date().toISOString().split('T')[0]
-    const scheduled = !data.draft && (data.date ?? '') > today
-    return { slug, title: data.title ?? slug, date: data.date ?? '', draft: data.draft ?? false, scheduled, series: data.series ?? '', seriesOrder: data.seriesOrder ?? 0 }
+    return { slug, title: data.title ?? slug, date: data.date ?? '', draft: data.draft ?? false, scheduled: data.scheduled ?? false, series: data.series ?? '', seriesOrder: data.seriesOrder ?? 0 }
   }).sort((a, b) => a.date < b.date ? 1 : -1)
   return NextResponse.json(posts)
 }
 
 // POST — create new post via GitHub API
 export async function POST(req: NextRequest) {
-  const { title, excerpt, body, tags, date: inputDate, draft, author, dropCapParagraph, series, seriesOrder } = await req.json()
+  const { title, excerpt, body, tags, date: inputDate, draft, scheduled, author, dropCapParagraph, series, seriesOrder } = await req.json()
   if (!title || !body) return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
 
   const date = inputDate || new Date().toISOString().split('T')[0]
   const slug = slugify(title)
   const filename = `posts/${date}-${slug}.md`
-  const markdown = buildMarkdown(title, date, excerpt ?? '', tags ?? [], draft ?? false, body, author ?? '', date, 0, dropCapParagraph ?? 0, series ?? '', seriesOrder ?? 0)
+  const markdown = buildMarkdown(title, date, excerpt ?? '', tags ?? [], draft ?? false, body, author ?? '', date, 0, dropCapParagraph ?? 0, series ?? '', seriesOrder ?? 0, scheduled ?? false)
 
   const res = await githubWriteFile(filename, markdown, `Add post: ${title}`)
   if (!res.ok) {
@@ -134,7 +134,7 @@ export async function POST(req: NextRequest) {
 
 // PUT — update existing post via GitHub API
 export async function PUT(req: NextRequest) {
-  const { slug, title, excerpt, body, tags, date: inputDate, draft, author, dropCapParagraph, series, seriesOrder } = await req.json()
+  const { slug, title, excerpt, body, tags, date: inputDate, draft, scheduled, author, dropCapParagraph, series, seriesOrder } = await req.json()
   if (!slug || !title || !body) return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
 
   const file = findFile(slug)
@@ -144,7 +144,7 @@ export async function PUT(req: NextRequest) {
   const date = inputDate || existing.data.date || new Date().toISOString().split('T')[0]
   const updatedAt = new Date().toISOString().split('T')[0]
   const updateCount = (existing.data.updateCount ?? 0) + 1
-  const markdown = buildMarkdown(title, date, excerpt ?? '', tags ?? [], draft ?? false, body, author ?? existing.data.author ?? '', updatedAt, updateCount, dropCapParagraph ?? existing.data.dropCapParagraph ?? 0, series ?? existing.data.series ?? '', seriesOrder ?? existing.data.seriesOrder ?? 0)
+  const markdown = buildMarkdown(title, date, excerpt ?? '', tags ?? [], draft ?? false, body, author ?? existing.data.author ?? '', updatedAt, updateCount, dropCapParagraph ?? existing.data.dropCapParagraph ?? 0, series ?? existing.data.series ?? '', seriesOrder ?? existing.data.seriesOrder ?? 0, scheduled ?? existing.data.scheduled ?? false)
 
   const githubPath = `posts/${file}`
   const sha = await githubGetSHA(githubPath)
