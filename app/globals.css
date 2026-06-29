@@ -374,6 +374,15 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .back-link { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.12em; color: #8a5a2a; text-transform: uppercase; }
 .back-link:hover { color: #2a1a0e; }
 
+.copy-link-btn {
+  font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.15em;
+  text-transform: uppercase; cursor: pointer; border-radius: 2px;
+  padding: 0.5rem 1.4rem; margin-bottom: 1.25rem;
+  border: 1px solid #c49a5a; background: transparent; color: #8a5a2a;
+  transition: all 0.15s;
+}
+.copy-link-btn:hover { background: #fff0d6; border-color: #8b1a1a; color: #8b1a1a; }
+
 /* Footer */
 .site-footer {
   background: #fdf8f2; border-top: 1px solid #d4b896;
