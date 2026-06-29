@@ -351,25 +351,52 @@ export default function AdminPage() {
               Part of a series
             </label>
           </div>
-          {series && (
-            <div style={{ marginTop: 10, display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <input
-                className="form-input"
-                value={series}
-                onChange={e => setSeries(e.target.value)}
-                placeholder="Series name (e.g. Divine Simplicity)"
-              />
-              <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
-                Part number
+          {series && (() => {
+            const existingSeries = [...new Set(posts.map(p => p.series).filter(Boolean))] as string[]
+            return (
+              <div style={{ marginTop: 10, display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <datalist id="series-list">
+                  {existingSeries.map(s => <option key={s} value={s} />)}
+                </datalist>
                 <input
-                  type="number" min={1} max={99} value={seriesOrder}
-                  onChange={e => setSeriesOrder(Math.max(1, parseInt(e.target.value) || 1))}
-                  style={{ width: 70, padding: '3px 8px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#1a0a04' }}
+                  className="form-input"
+                  list="series-list"
+                  value={series}
+                  onChange={e => setSeries(e.target.value)}
+                  placeholder="Select existing or type a new series name"
                 />
-              </label>
-              <p style={{ fontSize: 13, color: '#8a6040', fontStyle: 'italic', fontFamily: 'EB Garamond, serif' }}>Posts in the same series will show prev/next navigation at the bottom.</p>
-            </div>
-          )}
+                {existingSeries.length > 0 && (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                    {existingSeries.map(s => (
+                      <button
+                        key={s}
+                        type="button"
+                        onClick={() => setSeries(s)}
+                        style={{
+                          fontFamily: 'EB Garamond, serif', fontSize: 13,
+                          padding: '3px 10px', borderRadius: 2, cursor: 'pointer',
+                          border: `1px solid ${series === s ? '#8b1a1a' : '#c49a5a'}`,
+                          background: series === s ? '#f5d0d0' : 'transparent',
+                          color: series === s ? '#6a1010' : '#4a3020',
+                        }}
+                      >
+                        {s}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
+                  Part number
+                  <input
+                    type="number" min={1} max={99} value={seriesOrder}
+                    onChange={e => setSeriesOrder(Math.max(1, parseInt(e.target.value) || 1))}
+                    style={{ width: 70, padding: '3px 8px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#1a0a04' }}
+                  />
+                </label>
+                <p style={{ fontSize: 13, color: '#8a6040', fontStyle: 'italic', fontFamily: 'EB Garamond, serif' }}>Posts in the same series will show prev/next navigation at the bottom.</p>
+              </div>
+            )
+          })()}
         </div>
 
         <div className="form-group">
