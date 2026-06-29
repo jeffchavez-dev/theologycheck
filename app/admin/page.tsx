@@ -47,8 +47,11 @@ export default function AdminPage() {
   const [saved, setSaved] = useState('')
   const [error, setError] = useState('')
 
-  // Accordion open state
-  const [openSections, setOpenSections] = useState<Set<string>>(new Set(['published']))
+  // Mobile drawer
+  const [panelOpen, setPanelOpen] = useState(false)
+
+  // Accordion open state — all collapsed by default
+  const [openSections, setOpenSections] = useState<Set<string>>(new Set())
   function toggleSection(name: string) {
     setOpenSections(prev => {
       const next = new Set(prev)
@@ -115,7 +118,7 @@ export default function AdminPage() {
     setSelectedTags(post.tags ?? []); setAuthor(post.author ?? '')
     setUpdatedAt(post.updatedAt ?? ''); setUpdateCount(post.updateCount ?? 0)
     setSeries(post.series ?? ''); setSeriesOrder(post.seriesOrder ?? 0)
-    setError('')
+    setError(''); setPanelOpen(false)
     window.scrollTo(0, 0)
   }
 
@@ -382,8 +385,14 @@ export default function AdminPage() {
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           {editingSlug && <button className="btn-delete" onClick={resetForm}>✕ Cancel</button>}
           <Link href="/" className="back-link">← View Site</Link>
+          <button className="admin-hamburger" onClick={() => setPanelOpen(o => !o)} aria-label="Post options">
+            <span /><span /><span />
+          </button>
         </div>
       </div>
+
+      {/* ── Mobile drawer overlay ── */}
+      {panelOpen && <div className="admin-drawer-overlay" onClick={() => setPanelOpen(false)} />}
 
       <div className="admin-layout">
         {/* ── LEFT: Writing form ── */}
@@ -455,7 +464,7 @@ export default function AdminPage() {
         </div>
 
         {/* ── RIGHT: Control panel ── */}
-        <div className="admin-control-panel">
+        <div className={`admin-control-panel${panelOpen ? ' admin-panel-open' : ''}`}>
 
           {/* ── Post metadata ── */}
           <div className="admin-meta-panel">
