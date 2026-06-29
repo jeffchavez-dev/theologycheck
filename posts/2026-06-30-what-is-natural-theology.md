@@ -10,11 +10,12 @@ series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
 updatedAt: "2026-06-29"
-updateCount: 6
+updateCount: 7
 ---
 
 God has spoken (Hebrews 1:1). This is the truth that every Christian affirms. This Divine speech is recorded for us in the inscripturated word of God. The Bible is the revealed word of God.  I want to begin a series on natural theology. In a book by the Davenant Press, this is how David Haines defines Natural Theology,
 > Natural Theology, broadly defined, is that part of philosophy which explores that which man can know about God (his existence, divine nature, etc.) from nature via His divinely bestowed faculty of reason, and this, unaided by any divinely inspired written revelation from any religion, and this, without presupposing the truth of any one religion."[^2]
+
 This is not far from the definition by a classic book on Classical Apologetics
 
 This are the points we can draw from the above definitions:
