@@ -4,9 +4,10 @@ date: "2026-07-01"
 excerpt: "A summary of the seven common objections to classical apologetics as catalogued by Matt Marino of the Reformed Classicalist — and why this apologetic approach remains grounded in classical theism."
 tags:
   - "Natural Theology"
+scheduled: true
 author: ""
-updatedAt: "2026-06-26"
-updateCount: 2
+updatedAt: "2026-06-29"
+updateCount: 3
 ---
 
 > These objections tend to be more concerned with how natural theology would distort the view we have of God or His revelation even if (or when) one comes to faith and begins to start doing the rest of their theology. It is also the case that some objections are not against natural theology in total but against a particular kind of natural theology. Since I defend classical natural theology, only such objections as are raised against it will be covered.
