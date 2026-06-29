@@ -3,6 +3,7 @@ import { getScheduledPosts, seriesSlug } from '@/lib/seriesUtils'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import EditButton from '@/components/EditButton'
 
 export async function generateStaticParams() {
   return getAllPosts().map(p => ({ slug: p.slug }))
@@ -136,6 +137,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <div className="divider">✦ ✦ ✦</div>
         <Link href="/" className="back-link">← Back to all posts</Link>
       </footer>
+
+      <EditButton slug={slug} />
     </article>
   )
 }

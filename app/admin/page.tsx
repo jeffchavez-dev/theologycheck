@@ -51,7 +51,11 @@ export default function AdminPage() {
   }, [])
 
   useEffect(() => {
-    if (auth) { fetchPosts(); fetchAuthors(); fetchTags() }
+    if (auth) {
+      fetchPosts(); fetchAuthors(); fetchTags()
+      const editSlug = new URLSearchParams(window.location.search).get('edit')
+      if (editSlug) loadPost(editSlug)
+    }
   }, [auth])
 
   async function fetchPosts() {
