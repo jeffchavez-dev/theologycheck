@@ -10,7 +10,7 @@ series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
 updatedAt: "2026-06-29"
-updateCount: 3
+updateCount: 4
 ---
 
 Natural Theology is 
@@ -22,9 +22,10 @@ This distinction clarifies that natural theology is not a "man-made" invention i
 
 Within the Christian tradition, natural theology is never intended to replace the Bible or provide a path to salvation; instead, it provides the "preambles" of faith that make the acceptance of Scripture a rational act
 
-Natural theology functions as a "handmaid" to faith, clearing away intellectual obstacles (like atheism) and establishing a "point of contact" with non-believers by appealing to shared principles of reason and observation
+Natural theology functions as a "[handmaid](https://www.reformedclassicalist.com/home/redeeming-natural-theology
+)" to faith, clearing away intellectual obstacles (like atheism) and establishing a "point of contact" with non-believers by appealing to shared principles of reason and observation[^1]
 
 
-https://credomag.com/article/natural-theology-in-the-reformed-tradition/
 
-https://www.reformedclassicalist.com/home/redeeming-natural-theology
+
+[^1]: https://credomag.com/article/natural-theology-in-the-reformed-tradition/
