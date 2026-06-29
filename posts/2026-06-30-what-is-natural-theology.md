@@ -10,10 +10,11 @@ series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
 updatedAt: "2026-06-29"
-updateCount: 8
+updateCount: 9
 ---
 
 Orthodox Christianity, in general, and the Reformed tradition, in particular, affirm that God has spoken clearly through three primary modes: His Son (the Word made flesh), the Bible or the inscripturated Word, and the entire creation. Each mode of divine speech differs in its clarity and purpose. And they are all understood as expressions of divine self-disclosure or revelation. God revealed Himself. 
+
 Furthermore, God’s speech through the Son and the Word is categorized as *special revelation*. God's speech through nature is called *general or natural revelation*. Put simply, nature reveals God as Creator, the Son, and the Scriptures reveal the same God as Redeemer. This provides the "saving knowledge" necessary for sinful men to be reconciled with God. This is not controversial. 
 
 In a book by the Davenant Press, this is how David Haines defines Natural Theology,
