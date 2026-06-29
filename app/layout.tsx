@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     siteName: 'Theology Check',
     type: 'website',
     locale: 'en_US',
-    images: [{ url: '/cover.jpeg', width: 2000, height: 1199, alt: 'Theology Check' }],
+    images: [{ url: '/og-image.png', width: 2000, height: 1199, alt: 'Theology Check' }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/cover.jpeg'],
+    images: ['/og-image.png'],
   },
   icons: {
     icon: '/favicon.ico',
