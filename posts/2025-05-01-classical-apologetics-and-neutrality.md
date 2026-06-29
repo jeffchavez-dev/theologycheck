@@ -3,9 +3,11 @@ title: "Classical Apologetics and Neutrality"
 date: "2025-05-01"
 excerpt: "Classical apologetics, founded on Classical Theism, does not reason from a position of neutrality — here are four classical apologists who reject the neutral zone."
 tags:
-  - "Classical Theism"
-  - "Reformed"
+  - "Classical Apologetics"
+dropCapParagraph: 1
 author: "Jeff Chavez"
+updatedAt: "2026-06-29"
+updateCount: 1
 ---
 
 Classical apologetics, which is founded on the truths of Classical Theism, does not reason from a position of neutrality or completely "autonomous" reasoning[^1], though it is sometimes accused of doing so. Let me cite four Classical Apologists who reject this neutral zone:
