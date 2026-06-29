@@ -129,10 +129,13 @@ export default function AdminPage() {
       body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, scheduled: asScheduled, author, dropCapParagraph, series, seriesOrder }),
     })
     if (res.ok) {
+      const data = await res.json()
+      if (!isEdit && data.slug) setEditingSlug(data.slug)
+      setDraft(asDraft); setScheduled(asScheduled)
       const msg = asScheduled
         ? `Post scheduled — publishes ${date}.`
         : asDraft ? 'Saved as draft.' : isEdit ? 'Post updated.' : 'Post published.'
-      resetForm(); setSaved(msg); setTimeout(() => setSaved(''), 5000); fetchPosts()
+      setSaved(msg); setTimeout(() => setSaved(''), 5000); fetchPosts()
     } else {
       const errData = await res.json().catch(() => ({}))
       setError(`Failed: ${errData.error ?? res.status}`)
