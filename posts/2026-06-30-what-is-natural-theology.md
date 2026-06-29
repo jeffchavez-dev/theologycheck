@@ -1,6 +1,6 @@
 ---
 title: "What is Natural Theology"
-date: "2026-06-30"
+date: "2026-07-01"
 excerpt: ""
 tags:
   - "Natural Theology"
@@ -10,10 +10,13 @@ series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
 updatedAt: "2026-06-29"
-updateCount: 7
+updateCount: 8
 ---
 
-God has spoken (Hebrews 1:1). This is the truth that every Christian affirms. This Divine speech is recorded for us in the inscripturated word of God. The Bible is the revealed word of God.  I want to begin a series on natural theology. In a book by the Davenant Press, this is how David Haines defines Natural Theology,
+Orthodox Christianity, in general, and the Reformed tradition, in particular, affirm that God has spoken clearly through three primary modes: His Son (the Word made flesh), the Bible or the inscripturated Word, and the entire creation. Each mode of divine speech differs in its clarity and purpose. And they are all understood as expressions of divine self-disclosure or revelation. God revealed Himself. 
+Furthermore, God’s speech through the Son and the Word is categorized as *special revelation*. God's speech through nature is called *general or natural revelation*. Put simply, nature reveals God as Creator, the Son, and the Scriptures reveal the same God as Redeemer. This provides the "saving knowledge" necessary for sinful men to be reconciled with God. This is not controversial. 
+
+In a book by the Davenant Press, this is how David Haines defines Natural Theology,
 > Natural Theology, broadly defined, is that part of philosophy which explores that which man can know about God (his existence, divine nature, etc.) from nature via His divinely bestowed faculty of reason, and this, unaided by any divinely inspired written revelation from any religion, and this, without presupposing the truth of any one religion."[^2]
 
 This is not far from the definition by a classic book on Classical Apologetics
