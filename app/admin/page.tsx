@@ -17,6 +17,7 @@ export default function AdminPage() {
   const [body, setBody] = useState('')
   const [date, setDate] = useState('')
   const [draft, setDraft] = useState(false)
+  const [scheduled, setScheduled] = useState(false)
   const [dropCapParagraph, setDropCapParagraph] = useState(0)
   const [author, setAuthor] = useState('')
   const [updatedAt, setUpdatedAt] = useState('')
@@ -24,7 +25,6 @@ export default function AdminPage() {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [series, setSeries] = useState('')
   const [seriesOrder, setSeriesOrder] = useState(0)
-  const [scheduled, setScheduled] = useState(false)
 
   // Data lists
   const [posts, setPosts] = useState<PostMeta[]>([])
@@ -46,6 +46,16 @@ export default function AdminPage() {
   // UI feedback
   const [saved, setSaved] = useState('')
   const [error, setError] = useState('')
+
+  // Accordion open state
+  const [openSections, setOpenSections] = useState<Set<string>>(new Set(['published']))
+  function toggleSection(name: string) {
+    setOpenSections(prev => {
+      const next = new Set(prev)
+      if (next.has(name)) { next.delete(name) } else { next.add(name) }
+      return next
+    })
+  }
 
   useEffect(() => {
     if (sessionStorage.getItem('tc-auth') === '1') setAuth(true)
@@ -78,18 +88,15 @@ export default function AdminPage() {
     if (res.ok) setAvailableTags(await res.json())
   }
 
-  // --- Auth ---
   function login() {
     if (password === ADMIN_KEY) {
       sessionStorage.setItem('tc-auth', '1')
-      setAuth(true)
-      setError('')
+      setAuth(true); setError('')
     } else {
       setError('Incorrect password.')
     }
   }
 
-  // --- Post form ---
   function resetForm() {
     setTitle(''); setExcerpt(''); setBody(''); setSelectedTags([])
     setDate(''); setDraft(false); setScheduled(false); setDropCapParagraph(0); setEditingSlug(null); setError('')
@@ -103,10 +110,11 @@ export default function AdminPage() {
     const post = await res.json()
     setEditingSlug(slug)
     setTitle(post.title); setExcerpt(post.excerpt); setBody(post.body)
-    setDate(post.date ?? ''); setDraft(post.draft ?? false); setDropCapParagraph(post.dropCapParagraph ?? 0)
+    setDate(post.date ?? ''); setDraft(post.draft ?? false); setScheduled(post.scheduled ?? false)
+    setDropCapParagraph(post.dropCapParagraph ?? 0)
     setSelectedTags(post.tags ?? []); setAuthor(post.author ?? '')
     setUpdatedAt(post.updatedAt ?? ''); setUpdateCount(post.updateCount ?? 0)
-    setSeries(post.series ?? ''); setSeriesOrder(post.seriesOrder ?? 0); setScheduled(post.scheduled ?? false)
+    setSeries(post.series ?? ''); setSeriesOrder(post.seriesOrder ?? 0)
     setError('')
     window.scrollTo(0, 0)
   }
@@ -122,14 +130,12 @@ export default function AdminPage() {
     })
     if (res.ok) {
       const msg = asScheduled
-        ? `Post scheduled. It will appear on the blog on ${date}.`
-        : asDraft
-        ? 'Post saved as draft. It will not appear on the blog until published.'
-        : isEdit ? 'Post updated successfully.' : 'Post published successfully.'
+        ? `Post scheduled — publishes ${date}.`
+        : asDraft ? 'Saved as draft.' : isEdit ? 'Post updated.' : 'Post published.'
       resetForm(); setSaved(msg); setTimeout(() => setSaved(''), 5000); fetchPosts()
     } else {
       const errData = await res.json().catch(() => ({}))
-      setError(`Failed to save post: ${errData.error ?? res.status}`)
+      setError(`Failed: ${errData.error ?? res.status}`)
     }
   }
 
@@ -144,21 +150,17 @@ export default function AdminPage() {
     setSelectedTags(prev => prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag])
   }
 
-  // --- Tag management ---
   async function handleAddTag() {
     const tag = newTag.trim()
     if (!tag || availableTags.includes(tag)) return
     setAddingTag(true)
     const res = await fetch('/api/tags', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: tag }),
     })
     if (res.ok) {
       const data = await res.json()
-      setAvailableTags(data.tags)
-      setSelectedTags(prev => [...prev, tag])
-      setNewTag('')
+      setAvailableTags(data.tags); setSelectedTags(prev => [...prev, tag]); setNewTag('')
     }
     setAddingTag(false)
   }
@@ -166,8 +168,7 @@ export default function AdminPage() {
   async function handleRenameTag(oldName: string, newName: string) {
     if (!newName.trim() || newName.trim() === oldName) { setEditingTag(null); return }
     const res = await fetch('/api/tags', {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'PUT', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ old: oldName, name: newName.trim() }),
     })
     if (res.ok) {
@@ -179,29 +180,24 @@ export default function AdminPage() {
   }
 
   async function handleDeleteTag(name: string) {
-    if (!confirm(`Delete the tag "${name}"? It will be removed from the tag list (existing posts keep it until re-saved).`)) return
+    if (!confirm(`Delete the tag "${name}"?`)) return
     const res = await fetch(`/api/tags?name=${encodeURIComponent(name)}`, { method: 'DELETE' })
     if (res.ok) {
       const data = await res.json()
-      setAvailableTags(data.tags)
-      setSelectedTags(prev => prev.filter(t => t !== name))
+      setAvailableTags(data.tags); setSelectedTags(prev => prev.filter(t => t !== name))
     }
   }
 
-  // --- Author management ---
   async function handleAddAuthor() {
     if (!newAuthor.trim()) return
     setAddingAuthor(true)
     const res = await fetch('/api/authors', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: newAuthor.trim() }),
     })
     if (res.ok) {
       const data = await res.json()
-      setAuthors(data.authors)
-      setAuthor(newAuthor.trim())
-      setNewAuthor('')
+      setAuthors(data.authors); setAuthor(newAuthor.trim()); setNewAuthor('')
     }
     setAddingAuthor(false)
   }
@@ -209,8 +205,7 @@ export default function AdminPage() {
   async function handleRenameAuthor(oldName: string, newName: string) {
     if (!newName.trim() || newName.trim() === oldName) { setEditingAuthor(null); return }
     const res = await fetch('/api/authors', {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'PUT', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ old: oldName, name: newName.trim() }),
     })
     if (res.ok) {
@@ -222,7 +217,7 @@ export default function AdminPage() {
   }
 
   async function handleDeleteAuthor(name: string) {
-    if (!confirm(`Delete the author "${name}"? They will be removed from the author list (existing posts are not changed).`)) return
+    if (!confirm(`Delete author "${name}"?`)) return
     const res = await fetch(`/api/authors?name=${encodeURIComponent(name)}`, { method: 'DELETE' })
     if (res.ok) {
       const data = await res.json()
@@ -231,7 +226,6 @@ export default function AdminPage() {
     }
   }
 
-  // --- Login screen ---
   if (!auth) {
     return (
       <div className="main" style={{ maxWidth: 400, paddingTop: '4rem' }}>
@@ -250,397 +244,310 @@ export default function AdminPage() {
     )
   }
 
-  const manageRowStyle: React.CSSProperties = {
-    display: 'flex', alignItems: 'center', gap: '0.5rem',
-    padding: '0.5rem 0', borderBottom: '1px solid #ecdec8',
-  }
   const manageInputStyle: React.CSSProperties = {
     flex: 1, padding: '4px 8px', fontSize: 13,
     border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2',
     fontFamily: 'EB Garamond, serif',
   }
 
+  const published = posts.filter(p => !p.draft && !p.scheduled)
+  const scheduledPosts = posts.filter(p => p.scheduled)
+  const drafts = posts.filter(p => p.draft)
+
+  // Series manager
+  const publishedBySeries = new Map<string, PostMeta[]>()
+  const scheduledBySeries = new Map<string, PostMeta[]>()
+  posts.filter(p => p.series && !p.draft && !p.scheduled).forEach(p => {
+    const arr = publishedBySeries.get(p.series!) ?? []; arr.push(p); publishedBySeries.set(p.series!, arr)
+  })
+  posts.filter(p => p.series && p.scheduled).forEach(p => {
+    const arr = scheduledBySeries.get(p.series!) ?? []; arr.push(p); scheduledBySeries.set(p.series!, arr)
+  })
+  const activeSeries = [...publishedBySeries.keys()]
+
+  const existingSeries = [...new Set(posts.map(p => p.series).filter(Boolean))] as string[]
+
+  function Accordion({ id, label, count, children }: { id: string; label: string; count?: number; children: React.ReactNode }) {
+    const open = openSections.has(id)
+    return (
+      <div className="admin-accordion">
+        <button className="admin-accordion-header" onClick={() => toggleSection(id)}>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            {label}
+            {count !== undefined && count > 0 && (
+              <span className="admin-accordion-badge">{count}</span>
+            )}
+          </span>
+          <span className="admin-accordion-chevron">{open ? '▴' : '▾'}</span>
+        </button>
+        {open && <div className="admin-accordion-body">{children}</div>}
+      </div>
+    )
+  }
+
   return (
-    <div className="admin-wrap">
-      <div className="admin-header">
-        <span className="admin-title">{editingSlug ? 'Edit Post' : 'Write New Post'}</span>
+    <div className="admin-layout-wrap">
+      {/* ── Header bar ── */}
+      <div className="admin-topbar">
+        <span className="admin-title">{editingSlug ? `Editing: ${title || '…'}` : 'New Post'}</span>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-          {editingSlug && <button className="btn-delete" onClick={resetForm}>Cancel Edit</button>}
+          {editingSlug && <button className="btn-delete" onClick={resetForm}>✕ Cancel</button>}
           <Link href="/" className="back-link">← View Site</Link>
         </div>
       </div>
 
-      {/* ── Post form ── */}
-      <div className="admin-form">
-        {saved && <div className="success-msg">{saved}</div>}
-        {error && <p style={{ color: '#8b1a1a', fontSize: 14 }}>{error}</p>}
+      <div className="admin-layout">
+        {/* ── LEFT: Writing form ── */}
+        <div className="admin-form-panel">
+          {saved && <div className="success-msg" style={{ marginBottom: '1rem' }}>{saved}</div>}
+          {error && <p style={{ color: '#8b1a1a', fontSize: 14, marginBottom: '1rem' }}>{error}</p>}
 
-        <div className="form-group">
-          <label className="form-label">Title</label>
-          <input className="form-input" value={title} onChange={e => setTitle(e.target.value)} placeholder="Post title" />
-        </div>
+          <div className="admin-form">
+            <div className="form-group">
+              <label className="form-label">Title</label>
+              <input className="form-input" value={title} onChange={e => setTitle(e.target.value)} placeholder="Post title" />
+            </div>
 
-        <div className="form-group">
-          <label className="form-label">Excerpt</label>
-          <input className="form-input" value={excerpt} onChange={e => setExcerpt(e.target.value)} placeholder="Short summary shown on homepage" />
-        </div>
+            <div className="form-group">
+              <label className="form-label">Excerpt</label>
+              <input className="form-input" value={excerpt} onChange={e => setExcerpt(e.target.value)} placeholder="Short summary shown on homepage" />
+            </div>
 
-        <div className="form-group">
-          <label className="form-label">Publish Date</label>
-          <input className="form-input" type="date" value={date} onChange={e => setDate(e.target.value)} />
-        </div>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div className="form-group" style={{ flex: 1, minWidth: 160 }}>
+                <label className="form-label">Publish Date</label>
+                <input className="form-input" type="date" value={date} onChange={e => setDate(e.target.value)} />
+              </div>
+              <div className="form-group" style={{ flex: 1, minWidth: 140 }}>
+                <label className="form-label">Author</label>
+                <select className="form-input" value={author} onChange={e => setAuthor(e.target.value)}>
+                  {authors.map(a => <option key={a} value={a}>{a}</option>)}
+                </select>
+              </div>
+            </div>
 
-        {editingSlug && (
-          <div style={{ display: 'flex', gap: '2rem', fontSize: 13, color: '#8a6040', fontFamily: 'EB Garamond, serif', fontStyle: 'italic', paddingLeft: 2 }}>
-            {updatedAt && <span>Last updated: <strong style={{ fontStyle: 'normal' }}>{updatedAt}</strong></span>}
-            <span>Updates since publish: <strong style={{ fontStyle: 'normal' }}>{updateCount}</strong></span>
-          </div>
-        )}
-
-        <div className="form-group">
-          <label className="form-label">Author</label>
-          <select className="form-input" value={author} onChange={e => setAuthor(e.target.value)}>
-            {authors.map(a => <option key={a} value={a}>{a}</option>)}
-          </select>
-        </div>
-
-        <div className="form-group">
-          <label className="form-label">Tags</label>
-          <div className="tag-checkboxes">
-            {availableTags.map(tag => (
-              <span key={tag} className={`tag-option${selectedTags.includes(tag) ? ' selected' : ''}`} onClick={() => toggleTag(tag)}>{tag}</span>
-            ))}
-          </div>
-          <div style={{ display: 'flex', gap: '8px', marginTop: '10px' }}>
-            <input
-              className="form-input"
-              style={{ flex: 1, padding: '6px 10px', fontSize: '13px' }}
-              placeholder="Add new tag..."
-              value={newTag}
-              onChange={e => setNewTag(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), handleAddTag())}
-            />
-            <button className="btn-secondary" style={{ padding: '6px 14px', fontSize: '12px' }} onClick={handleAddTag} disabled={addingTag || !newTag.trim()}>
-              {addingTag ? 'Adding...' : 'Add Tag'}
-            </button>
-          </div>
-        </div>
-
-        <div className="form-group">
-          <label className="form-label">Drop Cap <span style={{ fontFamily: 'Cinzel, serif', color: '#8b1a1a' }}>𝔄</span></label>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
-            <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
-              <input type="checkbox" checked={dropCapParagraph > 0} onChange={e => setDropCapParagraph(e.target.checked ? 1 : 0)} style={{ accentColor: '#8b1a1a', width: 15, height: 15 }} />
-              Enable
-            </label>
-            {dropCapParagraph > 0 && (
-              <label style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                On paragraph
-                <input
-                  type="number" min={1} max={20} value={dropCapParagraph}
-                  onChange={e => setDropCapParagraph(Math.max(1, parseInt(e.target.value) || 1))}
-                  style={{ width: 60, padding: '3px 8px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#1a0a04' }}
-                />
-              </label>
+            {editingSlug && updatedAt && (
+              <div style={{ fontSize: 12, color: '#8a6040', fontFamily: 'EB Garamond, serif', fontStyle: 'italic' }}>
+                Last updated: <strong style={{ fontStyle: 'normal' }}>{updatedAt}</strong> · Updates: <strong style={{ fontStyle: 'normal' }}>{updateCount}</strong>
+              </div>
             )}
+
+            <div className="form-group">
+              <label className="form-label">Tags</label>
+              <div className="tag-checkboxes">
+                {availableTags.map(tag => (
+                  <span key={tag} className={`tag-option${selectedTags.includes(tag) ? ' selected' : ''}`} onClick={() => toggleTag(tag)}>{tag}</span>
+                ))}
+              </div>
+              <div style={{ display: 'flex', gap: '8px', marginTop: '8px' }}>
+                <input className="form-input" style={{ flex: 1, padding: '5px 10px', fontSize: 13 }} placeholder="Add new tag…" value={newTag} onChange={e => setNewTag(e.target.value)} onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), handleAddTag())} />
+                <button className="btn-secondary" style={{ padding: '5px 12px', fontSize: 11 }} onClick={handleAddTag} disabled={addingTag || !newTag.trim()}>{addingTag ? '…' : '+ Tag'}</button>
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Drop Cap <span style={{ fontFamily: 'Cinzel, serif', color: '#8b1a1a' }}>𝔄</span></label>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
+                  <input type="checkbox" checked={dropCapParagraph > 0} onChange={e => setDropCapParagraph(e.target.checked ? 1 : 0)} style={{ accentColor: '#8b1a1a', width: 15, height: 15 }} />
+                  Enable
+                </label>
+                {dropCapParagraph > 0 && (
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    Paragraph
+                    <input type="number" min={1} max={20} value={dropCapParagraph} onChange={e => setDropCapParagraph(Math.max(1, parseInt(e.target.value) || 1))} style={{ width: 55, padding: '3px 8px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 15 }} />
+                  </label>
+                )}
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Series</label>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
+                  <input type="checkbox" checked={!!series} onChange={e => { setSeries(e.target.checked ? 'New Series' : ''); setSeriesOrder(e.target.checked ? 1 : 0) }} style={{ accentColor: '#8b1a1a', width: 15, height: 15 }} />
+                  Part of a series
+                </label>
+              </div>
+              {series && (
+                <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  <datalist id="series-list">
+                    {existingSeries.map(s => <option key={s} value={s} />)}
+                  </datalist>
+                  <input className="form-input" list="series-list" value={series} onChange={e => setSeries(e.target.value)} placeholder="Select or type a series name" />
+                  {existingSeries.length > 0 && (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
+                      {existingSeries.map(s => (
+                        <button key={s} type="button" onClick={() => setSeries(s)} style={{ fontFamily: 'EB Garamond, serif', fontSize: 12, padding: '2px 8px', borderRadius: 2, cursor: 'pointer', border: `1px solid ${series === s ? '#8b1a1a' : '#c49a5a'}`, background: series === s ? '#f5d0d0' : 'transparent', color: series === s ? '#6a1010' : '#4a3020' }}>{s}</button>
+                      ))}
+                    </div>
+                  )}
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
+                    Part
+                    <input type="number" min={1} max={99} value={seriesOrder} onChange={e => setSeriesOrder(Math.max(1, parseInt(e.target.value) || 1))} style={{ width: 60, padding: '3px 8px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 15 }} />
+                  </label>
+                </div>
+              )}
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Body (Markdown)</label>
+              <textarea className="form-input form-textarea" value={body} onChange={e => setBody(e.target.value)} placeholder={`Write your post in Markdown…\n\n## Heading\n\nParagraph text here.\n\n> A blockquote`} />
+            </div>
+
+            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', position: 'sticky', bottom: 0, background: '#f5efe3', padding: '1rem 0', borderTop: '1px solid #e8d8b0' }}>
+              <button className="btn-publish" onClick={() => handleSave(false)}>
+                {editingSlug ? 'Update Post' : 'Publish Post'}
+              </button>
+              <button className="btn-publish" style={{ background: '#8a6040' }} onClick={() => handleSave(true)}>
+                Draft
+              </button>
+              <button className="btn-publish" style={{ background: '#3a5a7a' }} onClick={() => handleSave(false, true)}>
+                {scheduled ? 'Reschedule' : 'Schedule'}
+              </button>
+              {editingSlug && (
+                <a href={`/preview/${editingSlug}`} target="_blank" rel="noopener noreferrer" className="btn-publish" style={{ background: '#3a5a3a', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+                  Preview ↗
+                </a>
+              )}
+            </div>
           </div>
-          {dropCapParagraph > 0 && <p style={{ fontSize: 13, color: '#8a6040', fontStyle: 'italic', marginTop: 4, fontFamily: 'EB Garamond, serif' }}>Paragraph 1 is the first paragraph of the post body.</p>}
         </div>
 
-        <div className="form-group">
-          <label className="form-label">Series</label>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-            <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
-              <input type="checkbox" checked={!!series} onChange={e => { setSeries(e.target.checked ? 'New Series' : ''); setSeriesOrder(e.target.checked ? 1 : 0) }} style={{ accentColor: '#8b1a1a', width: 15, height: 15 }} />
-              Part of a series
-            </label>
-          </div>
-          {series && (() => {
-            const existingSeries = [...new Set(posts.map(p => p.series).filter(Boolean))] as string[]
-            return (
-              <div style={{ marginTop: 10, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <datalist id="series-list">
-                  {existingSeries.map(s => <option key={s} value={s} />)}
-                </datalist>
-                <input
-                  className="form-input"
-                  list="series-list"
-                  value={series}
-                  onChange={e => setSeries(e.target.value)}
-                  placeholder="Select existing or type a new series name"
-                />
-                {existingSeries.length > 0 && (
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-                    {existingSeries.map(s => (
-                      <button
-                        key={s}
-                        type="button"
-                        onClick={() => setSeries(s)}
-                        style={{
-                          fontFamily: 'EB Garamond, serif', fontSize: 13,
-                          padding: '3px 10px', borderRadius: 2, cursor: 'pointer',
-                          border: `1px solid ${series === s ? '#8b1a1a' : '#c49a5a'}`,
-                          background: series === s ? '#f5d0d0' : 'transparent',
-                          color: series === s ? '#6a1010' : '#4a3020',
-                        }}
-                      >
-                        {s}
-                      </button>
+        {/* ── RIGHT: Control panel ── */}
+        <div className="admin-control-panel">
+
+          <Accordion id="published" label="Published" count={published.length}>
+            {published.length === 0 && <p className="admin-empty">No published posts yet.</p>}
+            {published.map(post => (
+              <div key={post.slug} className="admin-panel-row">
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div className="admin-post-title" style={{ fontSize: 13 }}>{post.title}</div>
+                  <div className="admin-post-date">{post.date}</div>
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}>
+                  <a href={`/blog/${post.slug}`} target="_blank" rel="noopener noreferrer" className="admin-panel-btn">View</a>
+                  <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
+                  <button className="admin-panel-btn danger" onClick={() => handleDeletePost(post.slug)}>✕</button>
+                </div>
+              </div>
+            ))}
+          </Accordion>
+
+          <Accordion id="scheduled" label="Scheduled" count={scheduledPosts.length}>
+            {scheduledPosts.length === 0 && <p className="admin-empty">No scheduled posts.</p>}
+            {scheduledPosts.map(post => (
+              <div key={post.slug} className="admin-panel-row">
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div className="admin-post-title" style={{ fontSize: 13, color: '#3a6a9a' }}>{post.title}</div>
+                  <div className="admin-post-date">Publishes {post.date}</div>
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}>
+                  <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="admin-panel-btn">Preview</a>
+                  <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
+                  <button className="admin-panel-btn danger" onClick={() => handleDeletePost(post.slug)}>✕</button>
+                </div>
+              </div>
+            ))}
+          </Accordion>
+
+          <Accordion id="drafts" label="Drafts" count={drafts.length}>
+            {drafts.length === 0 && <p className="admin-empty">No drafts.</p>}
+            {drafts.map(post => (
+              <div key={post.slug} className="admin-panel-row">
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div className="admin-post-title" style={{ fontSize: 13, color: '#8a6040' }}>{post.title}</div>
+                  <div className="admin-post-date">Draft</div>
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}>
+                  <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="admin-panel-btn">Preview</a>
+                  <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
+                  <button className="admin-panel-btn danger" onClick={() => handleDeletePost(post.slug)}>✕</button>
+                </div>
+              </div>
+            ))}
+          </Accordion>
+
+          {activeSeries.length > 0 && (
+            <Accordion id="series" label="Series" count={activeSeries.length}>
+              {activeSeries.map(seriesName => {
+                const pub = (publishedBySeries.get(seriesName) ?? []).sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
+                const sched = (scheduledBySeries.get(seriesName) ?? []).sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
+                return (
+                  <div key={seriesName} style={{ borderBottom: '1px solid #ecdec8' }}>
+                    <div style={{ padding: '0.5rem 0.75rem', background: '#fff8ee', fontSize: 12, fontFamily: 'Cinzel, serif', color: '#8b1a1a', letterSpacing: '0.06em' }}>{seriesName}</div>
+                    {pub.map((post, i) => (
+                      <div key={post.slug} className="admin-panel-row" style={{ paddingLeft: '1.25rem' }}>
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ fontSize: 10, fontFamily: 'Cinzel, serif', color: '#8a6040', marginBottom: 1 }}>Part {post.seriesOrder ?? i + 1}</div>
+                          <div className="admin-post-title" style={{ fontSize: 12 }}>{post.title}</div>
+                        </div>
+                        <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
+                      </div>
+                    ))}
+                    {sched.map((post, i) => (
+                      <div key={post.slug} className="admin-panel-row" style={{ paddingLeft: '1.25rem', opacity: 0.7 }}>
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ fontSize: 10, fontFamily: 'Cinzel, serif', color: '#3a6a9a', marginBottom: 1 }}>Part {post.seriesOrder ?? pub.length + i + 1} · Scheduled</div>
+                          <div className="admin-post-title" style={{ fontSize: 12 }}>{post.title}</div>
+                        </div>
+                        <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
+                      </div>
                     ))}
                   </div>
-                )}
-                <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
-                  Part number
-                  <input
-                    type="number" min={1} max={99} value={seriesOrder}
-                    onChange={e => setSeriesOrder(Math.max(1, parseInt(e.target.value) || 1))}
-                    style={{ width: 70, padding: '3px 8px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#1a0a04' }}
-                  />
-                </label>
-                <p style={{ fontSize: 13, color: '#8a6040', fontStyle: 'italic', fontFamily: 'EB Garamond, serif' }}>Posts in the same series will show prev/next navigation at the bottom.</p>
-              </div>
-            )
-          })()}
-        </div>
-
-        <div className="form-group">
-          <label className="form-label">Body (Markdown)</label>
-          <textarea className="form-input form-textarea" value={body} onChange={e => setBody(e.target.value)} placeholder={`Write your post in Markdown...\n\n## Heading\n\nParagraph text here.\n\n> A blockquote`} />
-        </div>
-
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <button className="btn-publish" onClick={() => handleSave(false)}>
-            {editingSlug ? 'Update Post' : 'Publish Post'}
-          </button>
-          <button className="btn-publish" style={{ background: '#8a6040' }} onClick={() => handleSave(true)}>
-            Save as Draft
-          </button>
-          <button className="btn-publish" style={{ background: '#3a5a7a' }} onClick={() => handleSave(false, true)}>
-            {scheduled ? 'Update Schedule' : 'Schedule Post'}
-          </button>
-          {editingSlug && (
-            <a
-              href={`/preview/${editingSlug}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-publish"
-              style={{ background: '#3a5a3a', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}
-            >
-              Preview ↗
-            </a>
+                )
+              })}
+            </Accordion>
           )}
-        </div>
-      </div>
 
-      {/* ── Published posts ── */}
-      {posts.filter(p => !p.draft && !p.scheduled).length > 0 && (
-        <div className="admin-posts">
-          <div className="section-label" style={{ marginBottom: '0' }}>Published Posts</div>
-          {posts.filter(p => !p.draft && !p.scheduled).map(post => (
-            <div key={post.slug} className="admin-post-row">
-              <div>
-                <div className="admin-post-title">{post.title}</div>
-                <div className="admin-post-date">{post.date}</div>
+          <Accordion id="tags" label="Tags" count={availableTags.length}>
+            {availableTags.map(tag => (
+              <div key={tag} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0.75rem', borderBottom: '1px solid #ecdec8' }}>
+                {editingTag === tag ? (
+                  <>
+                    <input style={{ ...manageInputStyle, flex: 1 }} value={editingTagVal} onChange={e => setEditingTagVal(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') handleRenameTag(tag, editingTagVal); if (e.key === 'Escape') setEditingTag(null) }} autoFocus />
+                    <button className="admin-panel-btn" onClick={() => handleRenameTag(tag, editingTagVal)}>Save</button>
+                    <button className="admin-panel-btn danger" onClick={() => setEditingTag(null)}>✕</button>
+                  </>
+                ) : (
+                  <>
+                    <span style={{ flex: 1, fontSize: 13, fontFamily: 'EB Garamond, serif' }}>{tag}</span>
+                    <button className="admin-panel-btn" onClick={() => { setEditingTag(tag); setEditingTagVal(tag) }}>Edit</button>
+                    <button className="admin-panel-btn danger" onClick={() => handleDeleteTag(tag)}>✕</button>
+                  </>
+                )}
               </div>
-              <div style={{ display: 'flex', gap: '1rem' }}>
-                <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="btn-delete" style={{ color: '#3a5a3a' }}>Preview</a>
-                <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
-                <button className="btn-delete" onClick={() => handleDeletePost(post.slug)}>Delete</button>
-              </div>
+            ))}
+            <div style={{ display: 'flex', gap: '6px', padding: '0.6rem 0.75rem' }}>
+              <input style={{ ...manageInputStyle, flex: 1 }} placeholder="New tag…" value={newTag} onChange={e => setNewTag(e.target.value)} onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), handleAddTag())} />
+              <button className="admin-panel-btn" onClick={handleAddTag} disabled={addingTag || !newTag.trim()}>{addingTag ? '…' : '+ Add'}</button>
             </div>
-          ))}
-        </div>
-      )}
+          </Accordion>
 
-      {/* ── Scheduled posts ── */}
-      {posts.filter(p => p.scheduled).length > 0 && (
-        <div className="admin-posts">
-          <div className="section-label" style={{ marginBottom: '0' }}>Scheduled Posts</div>
-          {posts.filter(p => p.scheduled).map(post => (
-            <div key={post.slug} className="admin-post-row">
-              <div>
-                <div className="admin-post-title" style={{ color: '#5a7a3a' }}>{post.title}</div>
-                <div className="admin-post-date">Publishes {post.date}</div>
+          <Accordion id="authors" label="Authors" count={authors.length}>
+            {authors.map(a => (
+              <div key={a} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0.75rem', borderBottom: '1px solid #ecdec8' }}>
+                {editingAuthor === a ? (
+                  <>
+                    <input style={{ ...manageInputStyle, flex: 1 }} value={editingAuthorVal} onChange={e => setEditingAuthorVal(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') handleRenameAuthor(a, editingAuthorVal); if (e.key === 'Escape') setEditingAuthor(null) }} autoFocus />
+                    <button className="admin-panel-btn" onClick={() => handleRenameAuthor(a, editingAuthorVal)}>Save</button>
+                    <button className="admin-panel-btn danger" onClick={() => setEditingAuthor(null)}>✕</button>
+                  </>
+                ) : (
+                  <>
+                    <span style={{ flex: 1, fontSize: 13, fontFamily: 'EB Garamond, serif' }}>{a}</span>
+                    <button className="admin-panel-btn" onClick={() => { setEditingAuthor(a); setEditingAuthorVal(a) }}>Edit</button>
+                    <button className="admin-panel-btn danger" onClick={() => handleDeleteAuthor(a)}>✕</button>
+                  </>
+                )}
               </div>
-              <div style={{ display: 'flex', gap: '1rem' }}>
-                <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="btn-delete" style={{ color: '#3a5a3a' }}>Preview</a>
-                <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
-                <button className="btn-delete" onClick={() => handleDeletePost(post.slug)}>Delete</button>
-              </div>
+            ))}
+            <div style={{ display: 'flex', gap: '6px', padding: '0.6rem 0.75rem' }}>
+              <input style={{ ...manageInputStyle, flex: 1 }} placeholder="New author…" value={newAuthor} onChange={e => setNewAuthor(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleAddAuthor()} />
+              <button className="admin-panel-btn" onClick={handleAddAuthor} disabled={addingAuthor || !newAuthor.trim()}>{addingAuthor ? '…' : '+ Add'}</button>
             </div>
-          ))}
-        </div>
-      )}
+          </Accordion>
 
-      {/* ── Drafts ── */}
-      {posts.filter(p => p.draft).length > 0 && (
-        <div className="admin-posts">
-          <div className="section-label" style={{ marginBottom: '0' }}>Drafts</div>
-          {posts.filter(p => p.draft).map(post => (
-            <div key={post.slug} className="admin-post-row">
-              <div>
-                <div className="admin-post-title" style={{ color: '#8a6040' }}>{post.title}</div>
-                <div className="admin-post-date">{post.date} — Draft</div>
-              </div>
-              <div style={{ display: 'flex', gap: '1rem' }}>
-                <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="btn-delete" style={{ color: '#3a5a3a' }}>Preview</a>
-                <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
-                <button className="btn-delete" onClick={() => handleDeletePost(post.slug)}>Delete</button>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* ── Series Manager ── */}
-      {(() => {
-        const today = new Date().toISOString().split('T')[0]
-        const publishedBySeries = new Map<string, PostMeta[]>()
-        const scheduledBySeries = new Map<string, PostMeta[]>()
-
-        posts.filter(p => p.series && !p.draft && !p.scheduled).forEach(p => {
-          const arr = publishedBySeries.get(p.series!) ?? []
-          arr.push(p)
-          publishedBySeries.set(p.series!, arr)
-        })
-        posts.filter(p => p.series && p.scheduled).forEach(p => {
-          const arr = scheduledBySeries.get(p.series!) ?? []
-          arr.push(p)
-          scheduledBySeries.set(p.series!, arr)
-        })
-
-        // Only show series that have at least one published post
-        const activeSeries = [...publishedBySeries.keys()]
-        if (activeSeries.length === 0) return null
-
-        return (
-          <div className="admin-posts">
-            <div className="section-label" style={{ marginBottom: '0' }}>Series</div>
-            {activeSeries.map(seriesName => {
-              const pub = (publishedBySeries.get(seriesName) ?? []).sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
-              const sched = (scheduledBySeries.get(seriesName) ?? []).sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
-              return (
-                <div key={seriesName} style={{ borderBottom: '1px solid #e8d8b0' }}>
-                  <div style={{ padding: '0.75rem 1.25rem', background: '#fff8ee', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontFamily: 'Cinzel, serif', fontSize: 13, color: '#1a0a04', fontWeight: 500 }}>{seriesName}</span>
-                    <span style={{ fontSize: 12, color: '#8a6040', fontStyle: 'italic' }}>{pub.length} published{sched.length > 0 ? ` · ${sched.length} coming soon` : ''}</span>
-                  </div>
-                  {pub.map((post, i) => (
-                    <div key={post.slug} className="admin-post-row" style={{ paddingLeft: '2rem' }}>
-                      <div>
-                        <div style={{ fontSize: 12, fontFamily: 'Cinzel, serif', color: '#8b1a1a', letterSpacing: '0.08em', marginBottom: 2 }}>Part {post.seriesOrder ?? i + 1}</div>
-                        <div className="admin-post-title">{post.title}</div>
-                        <div className="admin-post-date">{post.date}</div>
-                      </div>
-                      <div style={{ display: 'flex', gap: '1rem' }}>
-                        <a href={`/blog/${post.slug}`} target="_blank" rel="noopener noreferrer" className="btn-delete" style={{ color: '#3a5a3a' }}>View</a>
-                        <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
-                      </div>
-                    </div>
-                  ))}
-                  {sched.map((post, i) => (
-                    <div key={post.slug} className="admin-post-row" style={{ paddingLeft: '2rem', opacity: 0.75 }}>
-                      <div>
-                        <div style={{ fontSize: 12, fontFamily: 'Cinzel, serif', color: '#5a7a3a', letterSpacing: '0.08em', marginBottom: 2 }}>Part {post.seriesOrder ?? pub.length + i + 1}</div>
-                        <div className="admin-post-title" style={{ color: '#5a7a3a' }}>{post.title}</div>
-                        <div className="admin-post-date">Coming Soon · publishes {post.date}</div>
-                      </div>
-                      <div style={{ display: 'flex', gap: '1rem' }}>
-                        <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="btn-delete" style={{ color: '#3a5a3a' }}>Preview</a>
-                        <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => loadPost(post.slug)}>Edit</button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )
-            })}
-          </div>
-        )
-      })()}
-
-      {/* ── Manage Tags ── */}
-      <div className="admin-posts">
-        <div className="section-label" style={{ marginBottom: '0.5rem' }}>Manage Tags</div>
-        {availableTags.map(tag => (
-          <div key={tag} style={manageRowStyle}>
-            {editingTag === tag ? (
-              <>
-                <input
-                  style={manageInputStyle}
-                  value={editingTagVal}
-                  onChange={e => setEditingTagVal(e.target.value)}
-                  onKeyDown={e => {
-                    if (e.key === 'Enter') handleRenameTag(tag, editingTagVal)
-                    if (e.key === 'Escape') setEditingTag(null)
-                  }}
-                  autoFocus
-                />
-                <button className="btn-secondary" style={{ padding: '4px 10px', fontSize: 11 }} onClick={() => handleRenameTag(tag, editingTagVal)}>Save</button>
-                <button className="btn-delete" onClick={() => setEditingTag(null)}>Cancel</button>
-              </>
-            ) : (
-              <>
-                <span style={{ flex: 1, fontSize: 14, fontFamily: 'EB Garamond, serif' }}>{tag}</span>
-                <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => { setEditingTag(tag); setEditingTagVal(tag) }}>Edit</button>
-                <button className="btn-delete" onClick={() => handleDeleteTag(tag)}>Delete</button>
-              </>
-            )}
-          </div>
-        ))}
-        <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
-          <input
-            style={{ ...manageInputStyle, flex: 1 }}
-            placeholder="New tag name..."
-            value={newTag}
-            onChange={e => setNewTag(e.target.value)}
-            onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), handleAddTag())}
-          />
-          <button className="btn-secondary" style={{ padding: '4px 14px', fontSize: 11 }} onClick={handleAddTag} disabled={addingTag || !newTag.trim()}>
-            {addingTag ? 'Adding...' : '+ Add'}
-          </button>
-        </div>
-      </div>
-
-      {/* ── Manage Authors ── */}
-      <div className="admin-posts">
-        <div className="section-label" style={{ marginBottom: '0.5rem' }}>Manage Authors</div>
-        {authors.map(a => (
-          <div key={a} style={manageRowStyle}>
-            {editingAuthor === a ? (
-              <>
-                <input
-                  style={manageInputStyle}
-                  value={editingAuthorVal}
-                  onChange={e => setEditingAuthorVal(e.target.value)}
-                  onKeyDown={e => {
-                    if (e.key === 'Enter') handleRenameAuthor(a, editingAuthorVal)
-                    if (e.key === 'Escape') setEditingAuthor(null)
-                  }}
-                  autoFocus
-                />
-                <button className="btn-secondary" style={{ padding: '4px 10px', fontSize: 11 }} onClick={() => handleRenameAuthor(a, editingAuthorVal)}>Save</button>
-                <button className="btn-delete" onClick={() => setEditingAuthor(null)}>Cancel</button>
-              </>
-            ) : (
-              <>
-                <span style={{ flex: 1, fontSize: 14, fontFamily: 'EB Garamond, serif' }}>{a}</span>
-                <button className="btn-delete" style={{ color: '#8b5a2a' }} onClick={() => { setEditingAuthor(a); setEditingAuthorVal(a) }}>Edit</button>
-                <button className="btn-delete" onClick={() => handleDeleteAuthor(a)}>Delete</button>
-              </>
-            )}
-          </div>
-        ))}
-        <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
-          <input
-            style={{ ...manageInputStyle, flex: 1 }}
-            placeholder="New author name..."
-            value={newAuthor}
-            onChange={e => setNewAuthor(e.target.value)}
-            onKeyDown={e => e.key === 'Enter' && handleAddAuthor()}
-          />
-          <button className="btn-secondary" style={{ padding: '4px 14px', fontSize: 11 }} onClick={handleAddAuthor} disabled={addingAuthor || !newAuthor.trim()}>
-            {addingAuthor ? 'Adding...' : '+ Add'}
-          </button>
         </div>
       </div>
     </div>
