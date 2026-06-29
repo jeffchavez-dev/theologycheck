@@ -458,6 +458,12 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .admin-panel-btn.danger { border-color: #dca0a0; color: #8b1a1a; }
 .admin-panel-btn.danger:hover { background: #f5d0d0; }
 
+/* Right-panel metadata section */
+.admin-meta-panel { padding: 0.85rem 0.85rem 0.5rem; background: #fdf8f2; border-bottom: 2px solid #dfc99a; display: flex; flex-direction: column; gap: 0.75rem; }
+.admin-meta-input { font-size: 13px !important; padding: 0.4rem 0.6rem !important; }
+.admin-meta-panel .tag-option { font-size: 9px; padding: 3px 7px; }
+.admin-meta-panel .form-label { font-size: 9px; }
+
 /* Markdown toolbar */
 .md-toolbar-wrap { display: flex; flex-direction: column; border: 1px solid #c49a5a; border-radius: 2px; overflow: hidden; }
 .md-toolbar-wrap .form-input { border: none; border-radius: 0; border-top: 1px solid #c49a5a; }

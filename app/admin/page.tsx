@@ -399,83 +399,6 @@ export default function AdminPage() {
               <input className="form-input" value={excerpt} onChange={e => setExcerpt(e.target.value)} placeholder="Short summary shown on homepage" />
             </div>
 
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <div className="form-group" style={{ flex: 1, minWidth: 160 }}>
-                <label className="form-label">Publish Date</label>
-                <input className="form-input" type="date" value={date} onChange={e => setDate(e.target.value)} />
-              </div>
-              <div className="form-group" style={{ flex: 1, minWidth: 140 }}>
-                <label className="form-label">Author</label>
-                <select className="form-input" value={author} onChange={e => setAuthor(e.target.value)}>
-                  {authors.map(a => <option key={a} value={a}>{a}</option>)}
-                </select>
-              </div>
-            </div>
-
-            {editingSlug && updatedAt && (
-              <div style={{ fontSize: 12, color: '#8a6040', fontFamily: 'EB Garamond, serif', fontStyle: 'italic' }}>
-                Last updated: <strong style={{ fontStyle: 'normal' }}>{updatedAt}</strong> · Updates: <strong style={{ fontStyle: 'normal' }}>{updateCount}</strong>
-              </div>
-            )}
-
-            <div className="form-group">
-              <label className="form-label">Tags</label>
-              <div className="tag-checkboxes">
-                {availableTags.map(tag => (
-                  <span key={tag} className={`tag-option${selectedTags.includes(tag) ? ' selected' : ''}`} onClick={() => toggleTag(tag)}>{tag}</span>
-                ))}
-              </div>
-              <div style={{ display: 'flex', gap: '8px', marginTop: '8px' }}>
-                <input className="form-input" style={{ flex: 1, padding: '5px 10px', fontSize: 13 }} placeholder="Add new tag…" value={newTag} onChange={e => setNewTag(e.target.value)} onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), handleAddTag())} />
-                <button className="btn-secondary" style={{ padding: '5px 12px', fontSize: 11 }} onClick={handleAddTag} disabled={addingTag || !newTag.trim()}>{addingTag ? '…' : '+ Tag'}</button>
-              </div>
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Drop Cap <span style={{ fontFamily: 'Cinzel, serif', color: '#8b1a1a' }}>𝔄</span></label>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
-                <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
-                  <input type="checkbox" checked={dropCapParagraph > 0} onChange={e => setDropCapParagraph(e.target.checked ? 1 : 0)} style={{ accentColor: '#8b1a1a', width: 15, height: 15 }} />
-                  Enable
-                </label>
-                {dropCapParagraph > 0 && (
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    Paragraph
-                    <input type="number" min={1} max={20} value={dropCapParagraph} onChange={e => setDropCapParagraph(Math.max(1, parseInt(e.target.value) || 1))} style={{ width: 55, padding: '3px 8px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 15 }} />
-                  </label>
-                )}
-              </div>
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Series</label>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
-                  <input type="checkbox" checked={!!series} onChange={e => { setSeries(e.target.checked ? 'New Series' : ''); setSeriesOrder(e.target.checked ? 1 : 0) }} style={{ accentColor: '#8b1a1a', width: 15, height: 15 }} />
-                  Part of a series
-                </label>
-              </div>
-              {series && (
-                <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <datalist id="series-list">
-                    {existingSeries.map(s => <option key={s} value={s} />)}
-                  </datalist>
-                  <input className="form-input" list="series-list" value={series} onChange={e => setSeries(e.target.value)} placeholder="Select or type a series name" />
-                  {existingSeries.length > 0 && (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
-                      {existingSeries.map(s => (
-                        <button key={s} type="button" onClick={() => setSeries(s)} style={{ fontFamily: 'EB Garamond, serif', fontSize: 12, padding: '2px 8px', borderRadius: 2, cursor: 'pointer', border: `1px solid ${series === s ? '#8b1a1a' : '#c49a5a'}`, background: series === s ? '#f5d0d0' : 'transparent', color: series === s ? '#6a1010' : '#4a3020' }}>{s}</button>
-                      ))}
-                    </div>
-                  )}
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'EB Garamond, serif', fontSize: 15, color: '#2a1a0e' }}>
-                    Part
-                    <input type="number" min={1} max={99} value={seriesOrder} onChange={e => setSeriesOrder(Math.max(1, parseInt(e.target.value) || 1))} style={{ width: 60, padding: '3px 8px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 15 }} />
-                  </label>
-                </div>
-              )}
-            </div>
-
             <div className="form-group">
               <label className="form-label">Body (Markdown)</label>
               <div className="md-toolbar-wrap">
@@ -530,6 +453,80 @@ export default function AdminPage() {
 
         {/* ── RIGHT: Control panel ── */}
         <div className="admin-control-panel">
+
+          {/* ── Post metadata ── */}
+          <div className="admin-meta-panel">
+            <div style={{ display: 'flex', gap: '0.75rem' }}>
+              <div className="form-group" style={{ flex: 1 }}>
+                <label className="form-label">Date</label>
+                <input className="form-input admin-meta-input" type="date" value={date} onChange={e => setDate(e.target.value)} />
+              </div>
+              <div className="form-group" style={{ flex: 1 }}>
+                <label className="form-label">Author</label>
+                <select className="form-input admin-meta-input" value={author} onChange={e => setAuthor(e.target.value)}>
+                  {authors.map(a => <option key={a} value={a}>{a}</option>)}
+                </select>
+              </div>
+            </div>
+
+            {editingSlug && updatedAt && (
+              <div style={{ fontSize: 11, color: '#8a6040', fontFamily: 'EB Garamond, serif', fontStyle: 'italic' }}>
+                Updated {updatedAt} · {updateCount}×
+              </div>
+            )}
+
+            <div className="form-group">
+              <label className="form-label">Tags</label>
+              <div className="tag-checkboxes">
+                {availableTags.map(tag => (
+                  <span key={tag} className={`tag-option${selectedTags.includes(tag) ? ' selected' : ''}`} onClick={() => toggleTag(tag)}>{tag}</span>
+                ))}
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Drop Cap 𝔄</label>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: 'EB Garamond, serif', fontSize: 14, color: '#2a1a0e' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
+                  <input type="checkbox" checked={dropCapParagraph > 0} onChange={e => setDropCapParagraph(e.target.checked ? 1 : 0)} style={{ accentColor: '#8b1a1a', width: 14, height: 14 }} />
+                  Enable
+                </label>
+                {dropCapParagraph > 0 && (
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    Para
+                    <input type="number" min={1} max={20} value={dropCapParagraph} onChange={e => setDropCapParagraph(Math.max(1, parseInt(e.target.value) || 1))} style={{ width: 48, padding: '2px 6px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 14 }} />
+                  </label>
+                )}
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Series</label>
+              <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', fontFamily: 'EB Garamond, serif', fontSize: 14, color: '#2a1a0e' }}>
+                <input type="checkbox" checked={!!series} onChange={e => { setSeries(e.target.checked ? (existingSeries[0] ?? 'New Series') : ''); setSeriesOrder(e.target.checked ? 1 : 0) }} style={{ accentColor: '#8b1a1a', width: 14, height: 14 }} />
+                Part of a series
+              </label>
+              {series && (
+                <div style={{ marginTop: 6, display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  <datalist id="series-list">
+                    {existingSeries.map(s => <option key={s} value={s} />)}
+                  </datalist>
+                  <input className="form-input admin-meta-input" list="series-list" value={series} onChange={e => setSeries(e.target.value)} placeholder="Series name" />
+                  {existingSeries.length > 0 && (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                      {existingSeries.map(s => (
+                        <button key={s} type="button" onClick={() => setSeries(s)} style={{ fontFamily: 'EB Garamond, serif', fontSize: 11, padding: '2px 7px', borderRadius: 2, cursor: 'pointer', border: `1px solid ${series === s ? '#8b1a1a' : '#c49a5a'}`, background: series === s ? '#f5d0d0' : 'transparent', color: series === s ? '#6a1010' : '#4a3020' }}>{s}</button>
+                      ))}
+                    </div>
+                  )}
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'EB Garamond, serif', fontSize: 14, color: '#2a1a0e' }}>
+                    Part
+                    <input type="number" min={1} max={99} value={seriesOrder} onChange={e => setSeriesOrder(Math.max(1, parseInt(e.target.value) || 1))} style={{ width: 52, padding: '2px 6px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 14 }} />
+                  </label>
+                </div>
+              )}
+            </div>
+          </div>
 
           <Accordion id="published" label="Published" count={published.length}>
             {published.length === 0 && <p className="admin-empty">No published posts yet.</p>}
