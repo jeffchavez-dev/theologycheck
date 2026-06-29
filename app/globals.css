@@ -458,6 +458,17 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .admin-panel-btn.danger { border-color: #dca0a0; color: #8b1a1a; }
 .admin-panel-btn.danger:hover { background: #f5d0d0; }
 
+/* Markdown toolbar */
+.md-toolbar-wrap { display: flex; flex-direction: column; border: 1px solid #c49a5a; border-radius: 2px; overflow: hidden; }
+.md-toolbar-wrap .form-input { border: none; border-radius: 0; border-top: 1px solid #c49a5a; }
+.md-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 2px; padding: 5px 8px; background: #2a1a0e; position: sticky; top: 45px; z-index: 10; }
+.md-toolbar-group { display: flex; gap: 2px; }
+.md-toolbar-sep { width: 1px; height: 20px; background: #4a3020; margin: 0 4px; }
+.md-btn { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.05em; color: #e0c88a; background: transparent; border: 1px solid transparent; border-radius: 2px; padding: 3px 7px; cursor: pointer; min-width: 28px; text-align: center; line-height: 1.4; transition: background 0.1s; }
+.md-btn:hover { background: #4a3020; border-color: #8b6030; color: #f0d99a; }
+.md-btn:active { background: #8b1a1a; border-color: #8b1a1a; color: #f0d99a; }
+.md-btn-wide { min-width: 26px; }
+
 .btn-delete { font-size: 13px; color: #c49a5a; background: none; border: none; cursor: pointer; font-family: 'Cinzel', serif; letter-spacing: 0.1em; }
 .btn-delete:hover { color: #f0d99a; }
 .success-msg { background: #f0fce8; border: 1px solid #6a9a2a; color: #3a6a0a; padding: 0.75rem 1rem; font-size: 14px; border-radius: 2px; }

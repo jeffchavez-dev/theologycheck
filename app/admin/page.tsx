@@ -146,6 +146,92 @@ export default function AdminPage() {
     fetchPosts()
   }
 
+  function applyMarkdown(action: string) {
+    const ta = document.getElementById('post-body') as HTMLTextAreaElement
+    if (!ta) return
+    const start = ta.selectionStart
+    const end = ta.selectionEnd
+    const val = body
+    const sel = val.slice(start, end)
+    const lineStart = val.lastIndexOf('\n', start - 1) + 1
+
+    const wrapInline = (marker: string, placeholder: string) => {
+      const text = sel || placeholder
+      const result = `${marker}${text}${marker}`
+      const newBody = val.slice(0, start) + result + val.slice(end)
+      setBody(newBody)
+      setTimeout(() => { ta.focus(); ta.setSelectionRange(start + marker.length, start + marker.length + text.length) }, 0)
+    }
+
+    const prefixLine = (prefix: string) => {
+      const lineEnd = val.indexOf('\n', start) === -1 ? val.length : val.indexOf('\n', start)
+      const line = val.slice(lineStart, lineEnd)
+      const stripped = line.replace(/^(#{1,3} |> |- |\d+\. )/, '')
+      const newLine = prefix + stripped
+      const newBody = val.slice(0, lineStart) + newLine + val.slice(lineEnd)
+      setBody(newBody)
+      const cur = lineStart + prefix.length + stripped.length
+      setTimeout(() => { ta.focus(); ta.setSelectionRange(cur, cur) }, 0)
+    }
+
+    const wrapBlock = (before: string, after: string, placeholder: string) => {
+      const text = sel || placeholder
+      const result = `\n${before}${text}${after}\n`
+      const newBody = val.slice(0, start) + result + val.slice(end)
+      setBody(newBody)
+      const s = start + 1 + before.length
+      setTimeout(() => { ta.focus(); ta.setSelectionRange(s, s + text.length) }, 0)
+    }
+
+    switch (action) {
+      case 'h1': prefixLine('# '); break
+      case 'h2': prefixLine('## '); break
+      case 'h3': prefixLine('### '); break
+      case 'p': prefixLine(''); break
+      case 'bold': wrapInline('**', 'bold text'); break
+      case 'italic': wrapInline('*', 'italic text'); break
+      case 'underline': {
+        const text = sel || 'underlined text'
+        const result = `<u>${text}</u>`
+        const newBody = val.slice(0, start) + result + val.slice(end)
+        setBody(newBody)
+        setTimeout(() => { ta.focus(); ta.setSelectionRange(start + 3, start + 3 + text.length) }, 0)
+        break
+      }
+      case 'quote': prefixLine('> '); break
+      case 'bullet': prefixLine('- '); break
+      case 'ordered': prefixLine('1. '); break
+      case 'link': {
+        const text = sel || 'link text'
+        const result = `[${text}](url)`
+        const newBody = val.slice(0, start) + result + val.slice(end)
+        setBody(newBody)
+        const urlStart = start + text.length + 3
+        setTimeout(() => { ta.focus(); ta.setSelectionRange(urlStart, urlStart + 3) }, 0)
+        break
+      }
+      case 'footnote': {
+        const existing = [...val.matchAll(/\[\^(\d+)\]/g)].map(m => parseInt(m[1]))
+        const n = existing.length > 0 ? Math.max(...existing) + 1 : 1
+        const marker = `[^${n}]`
+        const definition = `\n[^${n}]: `
+        const newBody = val.slice(0, start) + marker + val.slice(end) + definition
+        setBody(newBody)
+        const defPos = newBody.length
+        setTimeout(() => { ta.focus(); ta.setSelectionRange(defPos, defPos) }, 0)
+        break
+      }
+      case 'hr': {
+        const result = `\n\n---\n\n`
+        const newBody = val.slice(0, start) + result + val.slice(end)
+        setBody(newBody)
+        const cur = start + result.length
+        setTimeout(() => { ta.focus(); ta.setSelectionRange(cur, cur) }, 0)
+        break
+      }
+    }
+  }
+
   function toggleTag(tag: string) {
     setSelectedTags(prev => prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag])
   }
@@ -392,7 +478,35 @@ export default function AdminPage() {
 
             <div className="form-group">
               <label className="form-label">Body (Markdown)</label>
-              <textarea className="form-input form-textarea" value={body} onChange={e => setBody(e.target.value)} placeholder={`Write your post in Markdown…\n\n## Heading\n\nParagraph text here.\n\n> A blockquote`} />
+              <div className="md-toolbar-wrap">
+                <div className="md-toolbar">
+                  <span className="md-toolbar-group">
+                    <button type="button" className="md-btn" title="Heading 1" onClick={() => applyMarkdown('h1')}>H1</button>
+                    <button type="button" className="md-btn" title="Heading 2" onClick={() => applyMarkdown('h2')}>H2</button>
+                    <button type="button" className="md-btn" title="Heading 3" onClick={() => applyMarkdown('h3')}>H3</button>
+                    <button type="button" className="md-btn" title="Paragraph" onClick={() => applyMarkdown('p')}>¶</button>
+                  </span>
+                  <span className="md-toolbar-sep" />
+                  <span className="md-toolbar-group">
+                    <button type="button" className="md-btn md-btn-wide" title="Bold" onClick={() => applyMarkdown('bold')}><strong>B</strong></button>
+                    <button type="button" className="md-btn md-btn-wide" title="Italic" onClick={() => applyMarkdown('italic')}><em>I</em></button>
+                    <button type="button" className="md-btn md-btn-wide" title="Underline" onClick={() => applyMarkdown('underline')}><u>U</u></button>
+                  </span>
+                  <span className="md-toolbar-sep" />
+                  <span className="md-toolbar-group">
+                    <button type="button" className="md-btn" title="Blockquote" onClick={() => applyMarkdown('quote')}>"</button>
+                    <button type="button" className="md-btn" title="Bullet list" onClick={() => applyMarkdown('bullet')}>•</button>
+                    <button type="button" className="md-btn" title="Numbered list" onClick={() => applyMarkdown('ordered')}>1.</button>
+                    <button type="button" className="md-btn" title="Horizontal rule" onClick={() => applyMarkdown('hr')}>—</button>
+                  </span>
+                  <span className="md-toolbar-sep" />
+                  <span className="md-toolbar-group">
+                    <button type="button" className="md-btn" title="Link" onClick={() => applyMarkdown('link')}>🔗</button>
+                    <button type="button" className="md-btn" title="Footnote" onClick={() => applyMarkdown('footnote')}>[^]</button>
+                  </span>
+                </div>
+                <textarea id="post-body" className="form-input form-textarea" value={body} onChange={e => setBody(e.target.value)} placeholder={`Write your post in Markdown…\n\n## Heading\n\nParagraph text here.\n\n> A blockquote`} />
+              </div>
             </div>
 
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', position: 'sticky', bottom: 0, background: '#f5efe3', padding: '1rem 0', borderTop: '1px solid #e8d8b0' }}>
