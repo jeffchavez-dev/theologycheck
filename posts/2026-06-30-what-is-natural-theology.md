@@ -10,7 +10,7 @@ series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
 updatedAt: "2026-06-30"
-updateCount: 13
+updateCount: 14
 ---
 
 Orthodox Christianity, in general, and the Reformed tradition, in particular, affirm that God has spoken clearly through three primary modes: His Son (the Word made flesh), the Bible or the inscripturated Word, and the entire creation. Each mode of divine speech differs in its clarity and purpose. And they are all understood as expressions of divine self-disclosure or revelation. God revealed Himself. 
@@ -43,7 +43,7 @@ Interestingly, this 16th-century Reformed confession likens the universe to a be
 
 > “The human discipline of natural theology is validated by its "material"—the objective "book of nature"—which provides the footprints of God to both the regenerate and unregenerate. Just as biblical theology is grounded in the text of Scripture, natural theology finds its ground in the created order.”[^5]
 
-There is a clear distinction between biblical theology and natural theology. The former is man's activity, a reflective act assisted by the divine grace that is grounded in the written Word of God. The latter is man's activity, a reflective act assisted by the divine grace that is grounded in nature. 
+There is a clear distinction between biblical theology and natural theology. The former is man's activity, a reflective act assisted by the divine grace that is grounded in the written Word of God. The latter is man's activity, a reflective act assisted by the divine grace that is grounded in nature. There is also a clear distinction between natural revelation and natural theology. The former refers to an *activity of God*. The latter refers to a *human activity*. *Natural theology is subjective (though not subjectivistic), in the sense that it involves the human subject’s apprehension and appropriation of natural revelation.*[^6] Natural revelation is God's doing. Natural theology is our response to God's act of condescension in nature. 
 
 In a book published by the Davenant Press, I like how David Haines defines Natural Theology,
 > Natural Theology, broadly defined, is that part of philosophy which explores that which man can know about God (his existence, divine nature, etc.) from nature via His divinely bestowed faculty of reason, and this, unaided by any divinely inspired written revelation from any religion, and this, without presupposing the truth of any one religion."[^2]
@@ -83,3 +83,4 @@ https://www.reformedclassicalist.com/home/redeeming-natural-theology
 [^3]: Aquinas 
 [^4]: Sproul, R. C., John Gerstner, and Arthur Lindsley. Classical Apologetics: A Rational Defense of the Christian Faith and a Critique of Presuppositional Apologetics. Grand Rapids, MI: Zondervan Publishing House, 1984.
 [^5]: Fesko, J. V. Reforming Apologetics: Retrieving the Classic Reformed Approach to Defending the Faith. Grand Rapids, MI: Baker Academic, 2019.
+[^6]: Sproul, R. C., John Gerstner, and Arthur Lindsley. Classical Apologetics: A Rational Defense of the Christian Faith and a Critique of Presuppositional Apologetics. Grand Rapids, MI: Zondervan Publishing House, 1984.
