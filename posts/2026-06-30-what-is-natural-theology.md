@@ -9,8 +9,8 @@ dropCapParagraph: 1
 series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
-updatedAt: "2026-06-30"
-updateCount: 15
+updatedAt: "2026-07-01"
+updateCount: 16
 ---
 
 Orthodox Christianity, in general, and the Reformed tradition, in particular, affirm that God has spoken clearly through three primary modes: His Son (the Word made flesh), the Bible or the inscripturated Word, and the entire creation. Each mode of divine speech differs in its clarity and purpose. And they are all understood as expressions of divine self-disclosure or revelation. God revealed Himself. 
@@ -20,7 +20,7 @@ Furthermore, God’s speech through the Son and the Word is categorized as *spec
 The second article of the Belgic Confession, "The Means by Which We Know God," beautifully states this:
 
 > We know God by two means:
-First, by the creation, preservation, and government
+> First, by the creation, preservation, and government
 of the universe,
 since that universe is before our eyes
 like a **beautiful book**
@@ -29,11 +29,11 @@ great and small,
 are as letters
 to make us ponder
 the invisible things of God:
-God’s eternal power and divinity,
+> God’s eternal power and divinity,
 as the apostle Paul says in Romans 1:20.
-All these things are enough to convict humans
+> All these things are enough to convict humans
 and to leave them without excuse.
-Second, God makes himself known to us more clearly
+> Second, God makes himself known to us more clearly
 by his holy and divine Word,
 as much as we need in this life,
 for God’s glory
