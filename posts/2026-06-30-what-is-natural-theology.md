@@ -1,6 +1,6 @@
 ---
 title: "What is Natural Theology"
-date: "2026-07-01"
+date: "2026-07-03"
 excerpt: ""
 tags:
   - "Natural Theology"
