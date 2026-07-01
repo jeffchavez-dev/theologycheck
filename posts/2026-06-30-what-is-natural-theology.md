@@ -4,12 +4,13 @@ date: "2026-07-03"
 excerpt: ""
 tags:
   - "Natural Theology"
+scheduled: true
 dropCapParagraph: 1
 series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
 updatedAt: "2026-07-01"
-updateCount: 17
+updateCount: 18
 ---
 
 Orthodox Christianity, in general, and the Reformed tradition, in particular, affirm that God has spoken clearly through three primary modes: His Son (the Word made flesh), the Bible or the inscripturated Word, and the entire creation. Each mode of divine speech differs in its clarity and purpose. And they are all understood as expressions of divine self-disclosure or revelation. God revealed Himself. 
@@ -47,22 +48,18 @@ There is a clear distinction between biblical theology and natural theology. The
 In a book published by the Davenant Press, I like how David Haines defines Natural Theology,
 > Natural Theology, broadly defined, is that part of philosophy which explores that which man can know about God (his existence, divine nature, etc.) from nature via His divinely bestowed faculty of reason, and this, unaided by any divinely inspired written revelation from any religion, and this, without presupposing the truth of any one religion."[^2]
 
-Let me highlight three things about Natural theology from Haines' definition: 
-As mentioned above, it is man's reflective activity, which is also a philosophical response of man to natural knowledge that can be known about God. There is a clear object of knowledge through the medium of creation that man created in the image of God perceives. 
-
-## Though unaided by written revelation is not unaided by the divine light
-
-Contrary to the claims of most opponents of Natural Theology, it is not a product of autonomous human reasoning. Here's Thomas Aquinas, 
+Let me highlight three things about Natural theology from Haines' definition. **First**, as mentioned above, it is man's reflective activity, which is also a philosophical response of man to the natural knowledge that can be known about God. There is a clear object of knowledge (that God is–*his existence*, and what God is–*his attributes*) through the medium of creation that any man created in the image of God perceives. Human can know God, regenerate and ungenerate through nature. This will be demonstrated throughout this series in the Scripture which is also richly affirmed by our forebears. **Second**, this kind of theology, though unaided by any written revelation, is *not unaided* by the divine light. God has given man a faculty of reason or natural cognitive faculty which is able to perceive and understand God's clear revelation. Reason is not viewed here as an autonomous power but as a divinely bestowed faculty designed to perceive and process God's self-disclosure. Without the light of reason, the "Book of Nature" would remain closed to the any human mind. Contrary to the claims of most opponents of Natural Theology, it is not a product of autonomous human reasoning. Here's Thomas Aquinas, 
 > It seems that a man cannot know any truth without grace... . Now however pure it be, bodily sense cannot see any visible thing without the light of the sun. Hence however perfect be the human mind, it cannot by reasoning know any truth without the light of God, which belongs to the aid of grace. ... The natural light bestowed on the mind is God’s light, by which we are enlightened to know such things as belong to natural knowledge.*[^3]
+
+**Finally**, since natural revelation is clear and penetrates the human mind via the God-given reason, there is no need to presuppose the truthfulness of any religion, even Christianity. One does not need to presuppose that Christianity is true to know that God exists. This may be a hard take due to presuppositionalism but we will get to explain this further. Suffice it to say that the Scripture such as Romans 1:19–20 indicate that God's power and divinity are "plain to them" because God has shown it through "the things that have been made." I know that *this* is true because Scriptures says so, but man does not need to know this passage to perceive God's existence and being from nature. 
 
 This distinction clarifies that natural theology is not a "man-made" invention in the sense of creating its own content; rather, it is a rational interpretation of the "footprints" or "traces" God has intentionally left in the structure of the universe
 
-This is an orthodox teaching. 
->"The orthodox... uniformly teach that there is a natural theology, partly innate (derived from the book of conscience by means of common notions) and partly acquired (drawn from the book of creatures discursively)."[^7]
+Let's me end this introductory post by saying that this is an orthodox teaching. This may sound new to some of my beloved friends or a return to Roman Catholicism. But listen to the 17th century Swiss-Italian Reformed theologian and pastor who is best known for his three-volume work, Institutes of Elenctic Theology, Francis Turretin.
+> The orthodox... uniformly teach that there is a natural theology, partly innate (derived from the book of conscience by means of common notions) and partly acquired (drawn from the book of creatures discursively).[^7]
 
-Within the Christian tradition, natural theology is never intended to replace the Bible or provide a path to salvation; instead, it provides the "preambles" of faith that make the acceptance of Scripture a rational act. I'll develop several arguments in this series, hoping to clarify this reformed principle. 
+Within the Christian tradition, natural theology is never intended to replace the Bible or provide a path to salvation; instead, it provides the "preambles" of faith that make the acceptance of Scripture a rational act. I'll develop several arguments in this series, hoping to clarify this biblical and reformed principle. 
 
-Natural theology functions as a "[handmaid]()" to faith, clearing away intellectual obstacles (like atheism) and establishing a "point of contact" with non-believers by appealing to shared principles of reason and observation[^1]
 
 
 
@@ -74,4 +71,4 @@ https://www.reformedclassicalist.com/home/redeeming-natural-theology
 [^4]: 
 [^5]: Fesko, J. V. Reforming Apologetics: Retrieving the Classic Reformed Approach to Defending the Faith. Grand Rapids, MI: Baker Academic, 2019.
 [^6]: Sproul, R. C., John Gerstner, and Arthur Lindsley. Classical Apologetics: A Rational Defense of the Christian Faith and a Critique of Presuppositional Apologetics. Grand Rapids, MI: Zondervan Publishing House, 1984.
-[^7]: Turretin
+[^7]: Turretin, Francis. Institutes of Elenctic Theology. Edited by James T. Dennison Jr. Translated by George Musgrave Giger. 3 vols. Phillipsburg, NJ: P&R, 1992–1997. In the next articles, we will draw from his and other Reformed Theologians' writings that Natural Theology is a Reformed principle. 
