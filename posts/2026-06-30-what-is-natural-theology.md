@@ -10,12 +10,12 @@ series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
 updatedAt: "2026-07-01"
-updateCount: 16
+updateCount: 17
 ---
 
 Orthodox Christianity, in general, and the Reformed tradition, in particular, affirm that God has spoken clearly through three primary modes: His Son (the Word made flesh), the Bible or the inscripturated Word, and the entire creation. Each mode of divine speech differs in its clarity and purpose. And they are all understood as expressions of divine self-disclosure or revelation. God revealed Himself. 
 
-Furthermore, God’s speech through the Son and the Word is categorized as *special revelation*. God's speech through nature is called *general or natural revelation*. Put simply, nature reveals God as Creator; the Son, and the Scriptures reveal the same God as Redeemer. The former provides a *general knowledge* not of a *generic god* but of the only true God that is accessible to all men, believers and unbelievers alike. This latter provides the *saving knowledge* necessary for sinful men to be reconciled with God. This is not controversial. 
+Furthermore, God’s speech through the Son and the Word is categorized as *special revelation*. God's speech through nature is called *general or natural revelation*. Put simply, nature reveals God as Creator; the Son, and the Scriptures reveal the same God as Redeemer. The former provides a *general knowledge* not of a *generic god* but of the only true God that is accessible to all men, believers and unbelievers alike. The latter provides the *saving knowledge* necessary for sinful men to be reconciled with God. This is not controversial. 
 
 The second article of the Belgic Confession, "The Means by Which We Know God," beautifully states this:
 
@@ -39,7 +39,7 @@ as much as we need in this life,
 for God’s glory
 and for our salvation.
 
-Interestingly, this 16th-century Reformed confession likens the universe to a beautiful book. The first book by which we know God is the book of nature. That is general or natural revelation. From this book, humans reflect and develop a kind of theology. This is called *natural theology*. J.V. Fesko writes, 
+Interestingly, this 16th-century Reformed confession likens the universe to a beautiful book. The first book by which we know God is the book of nature.  This is commonly known as general or natural revelation. From this book, humans reflect and develop a kind of theology. This is called *natural theology*. J.V. Fesko writes, 
 
 > “The human discipline of natural theology is validated by its "material"—the objective "book of nature"—which provides the footprints of God to both the regenerate and unregenerate. Just as biblical theology is grounded in the text of Scripture, natural theology finds its ground in the created order.”[^5]
 
