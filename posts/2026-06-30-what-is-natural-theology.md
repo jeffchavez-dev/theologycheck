@@ -1,16 +1,15 @@
 ---
 title: "What is Natural Theology?"
-date: "2026-07-03"
+date: "2026-07-02"
 excerpt: ""
 tags:
   - "Natural Theology"
-scheduled: true
 dropCapParagraph: 1
 series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
-updatedAt: "2026-07-01"
-updateCount: 19
+updatedAt: "2026-07-02"
+updateCount: 20
 ---
 
 Orthodox Christianity, in general, and the Reformed tradition, in particular, affirm that God has spoken clearly through three primary modes: His Son (the Word made flesh), the Bible or the inscripturated Word, and the entire creation. Each mode of divine speech differs in its clarity and purpose. And they are all understood as expressions of divine self-disclosure or revelation. God revealed Himself. 
@@ -51,7 +50,9 @@ In a book published by the Davenant Press, I like how David Haines defines Natur
 Let me highlight three things about Natural theology from Haines' definition. **First**, as mentioned above, it is man's reflective activity, which is also a philosophical response of man to the natural knowledge that can be known about God. There is a clear object of knowledge (that God is–*his existence*, and what God is–*his attributes*) through the medium of creation that any man created in the image of God perceives. Human can know God, regenerate and ungenerate through nature. This will be demonstrated throughout this series in the Scripture which is also richly affirmed by our forebears. **Second**, this kind of theology, though unaided by any written revelation, is *not unaided* by the divine light. God has given man a faculty of reason or natural cognitive faculty which is able to perceive and understand God's clear revelation. Reason is not viewed here as an autonomous power but as a divinely bestowed faculty designed to perceive and process God's self-disclosure. Without the light of reason, the "Book of Nature" would remain closed to the any human mind. Contrary to the claims of most opponents of Natural Theology, it is not a product of autonomous human reasoning. Here's Thomas Aquinas, 
 > It seems that a man cannot know any truth without grace... . Now however pure it be, bodily sense cannot see any visible thing without the light of the sun. Hence however perfect be the human mind, it cannot by reasoning know any truth without the light of God, which belongs to the aid of grace. ... The natural light bestowed on the mind is God’s light, by which we are enlightened to know such things as belong to natural knowledge.*[^4]
 
-**Finally**, since natural revelation is clear and penetrates the human mind via the God-given reason, which then allows man to do natural theology, there is no need to presuppose the truthfulness of any religion, even Christianity. One does not need to presuppose that Christianity is true to know that God exists. This may be a hard take due to presuppositionalism but we will get to explain this further. Suffice it to say that the Scripture such as Romans 1:19–20 indicate that God's power and divinity are "plain to them" because God has shown it through "the things that have been made." I know that *this* is true because Scriptures says so, but man does not need to know this passage to perceive God's existence and being from nature. 
+This is clear. Think of it this way. Our eyes have the faculty of sight but require the light of sun (or even lesser lights) to see objects. Similarly, the human intellect has the faculty of reason but requires the "divine light" to apprehend truth. Man's ability to use reason or intellect to discern, perceive and contemplate upon God's natural revelation yielding to natural theology is a still a gift of God's common grace. Even the pagans are dependent upon the light of God that they may know the truth about God revealed in nature.   
+
+**Finally**, since natural revelation is clear and penetrates the human mind via the God-given reason, which then allows even fallen man to do natural theology, there is no need to presuppose the truthfulness of any religion, even Christianity. One does not need to presuppose that Christianity is true to know that God exists. This may be a hard take due to presuppositionalism but we will get to explain this further. Suffice it to say that the Scripture such as Romans 1:19–20 indicate that God's power and divinity are "plain to them" because God has shown it through "the things that have been made." I know that *this* is true because Scriptures says so, but man does not need to know this scriptural text to be true to perceive God's existence and being from nature. 
 
 Let's me end this introductory post by saying that this is an orthodox teaching. This may sound new to some of my beloved friends or a return to Roman Catholicism. But listen to the 17th century Swiss-Italian Reformed theologian and pastor who is best known for his three-volume work, Institutes of Elenctic Theology, Francis Turretin.
 > The orthodox... uniformly teach that there is a natural theology, partly innate (derived from the book of conscience by means of common notions) and partly acquired (drawn from the book of creatures discursively).[^5]
