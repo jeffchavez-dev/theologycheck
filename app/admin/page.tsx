@@ -446,10 +446,10 @@ export default function AdminPage() {
 
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', position: 'sticky', bottom: 0, background: '#f5efe3', padding: '1rem 0', borderTop: '1px solid #e8d8b0' }}>
               <button className="btn-publish" onClick={() => handleSave(false)}>
-                {editingSlug ? 'Update Post' : 'Publish Post'}
+                {!editingSlug ? 'Publish Post' : (draft || scheduled) ? 'Publish Now' : 'Update Post'}
               </button>
               <button className="btn-publish" style={{ background: '#8a6040' }} onClick={() => handleSave(true)}>
-                Draft
+                {draft ? 'Update Draft' : 'Save as Draft'}
               </button>
               <button className="btn-publish" style={{ background: '#3a5a7a' }} onClick={() => handleSave(false, true)}>
                 {scheduled ? 'Reschedule' : 'Schedule'}
