@@ -7,10 +7,10 @@ tags:
 scheduled: true
 dropCapParagraph: 1
 series: "Natural Theology 101"
-seriesOrder: 1
+seriesOrder: 7
 author: "Jeff Chavez"
-updatedAt: "2026-09-14"
-updateCount: 0
+updatedAt: "2026-07-02"
+updateCount: 1
 ---
 
-Beatific vision is the blessed sight of the saints
+Beatific vision is the blessed sight of the saints.
