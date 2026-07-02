@@ -89,7 +89,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     <article className="post-page">
       <header className="post-header">
         <div className="post-tags">
-          {post.tags.map(tag => <span key={tag} className="post-tag">{tag}</span>)}
+          {post.tags.map(tag => (<Link key={tag} href={`/?tag=${encodeURIComponent(tag)}`} className="post-tag post-tag-link">{tag}</Link>))}
         </div>
         <h1>{post.title}</h1>
         <div className="post-meta" style={{ justifyContent: 'center' }}>

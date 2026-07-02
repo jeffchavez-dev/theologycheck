@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 interface Post {
@@ -21,7 +22,23 @@ interface Props {
 const romanNumerals = ['II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
 
 export default function PostsFilter({ featured, rest, allTags }: Props) {
+  const router = useRouter()
   const [activeTag, setActiveTag] = useState<string | null>(null)
+
+  // Read ?tag= from URL on mount
+  useEffect(() => {
+    const tag = new URLSearchParams(window.location.search).get('tag')
+    if (tag && allTags.includes(tag)) setActiveTag(tag)
+  }, [allTags])
+
+  function selectTag(tag: string | null) {
+    setActiveTag(tag)
+    if (tag) {
+      router.replace(`/?tag=${encodeURIComponent(tag)}`, { scroll: false })
+    } else {
+      router.replace('/', { scroll: false })
+    }
+  }
 
   const filteredFeatured = activeTag
     ? featured?.tags.includes(activeTag) ? featured : null
@@ -31,7 +48,6 @@ export default function PostsFilter({ featured, rest, allTags }: Props) {
     ? rest.filter(p => p.tags.includes(activeTag))
     : rest
 
-  // If active tag filters out the featured post, show it in the list instead
   const showFeatured = !!filteredFeatured
   const listPosts = !showFeatured && activeTag && featured?.tags.includes(activeTag)
     ? [featured!, ...filteredRest]
@@ -49,7 +65,7 @@ export default function PostsFilter({ featured, rest, allTags }: Props) {
       <div className="tag-filter-bar">
         <button
           className={`tag-filter-btn${activeTag === null ? ' active' : ''}`}
-          onClick={() => setActiveTag(null)}
+          onClick={() => selectTag(null)}
         >
           All <span style={{ opacity: 0.6, fontSize: '0.85em' }}>{allPosts.length}</span>
         </button>
@@ -57,7 +73,7 @@ export default function PostsFilter({ featured, rest, allTags }: Props) {
           <button
             key={tag}
             className={`tag-filter-btn${activeTag === tag ? ' active' : ''}`}
-            onClick={() => setActiveTag(activeTag === tag ? null : tag)}
+            onClick={() => selectTag(activeTag === tag ? null : tag)}
           >
             {tag} <span style={{ opacity: 0.6, fontSize: '0.85em' }}>{tagCounts[tag]}</span>
           </button>
@@ -72,7 +88,9 @@ export default function PostsFilter({ featured, rest, allTags }: Props) {
           <p className="excerpt">{filteredFeatured.excerpt}</p>
           <div className="post-meta">
             <span>{new Date(filteredFeatured.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            {filteredFeatured.tags.map(tag => <span key={tag} className="post-tag">{tag}</span>)}
+            {filteredFeatured.tags.map(tag => (
+              <button key={tag} className="post-tag post-tag-btn" onClick={() => selectTag(tag)}>{tag}</button>
+            ))}
           </div>
         </div>
       ) : !activeTag ? (
@@ -93,7 +111,9 @@ export default function PostsFilter({ featured, rest, allTags }: Props) {
                   <h3><Link href={`/blog/${post.slug}`}>{post.title}</Link></h3>
                   <p className="excerpt">{post.excerpt}</p>
                   <div className="post-meta">
-                    {post.tags.map(tag => <span key={tag} className="post-tag">{tag}</span>)}
+                    {post.tags.map(tag => (
+                      <button key={tag} className="post-tag post-tag-btn" onClick={() => selectTag(tag)}>{tag}</button>
+                    ))}
                   </div>
                 </div>
               </div>

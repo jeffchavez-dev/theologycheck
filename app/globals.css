@@ -373,6 +373,8 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .series-nav-prev:hover .series-nav-title, .series-nav-next:hover .series-nav-title { color: #8b1a1a; }
 .back-link { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.12em; color: #8a5a2a; text-transform: uppercase; }
 .back-link:hover { color: #2a1a0e; }
+.post-tag-link, .post-tag-btn { cursor: pointer; text-decoration: none; background: none; border: inherit; padding: inherit; font: inherit; color: inherit; display: inline-block; }
+.post-tag-link:hover, .post-tag-btn:hover { background: #f5d0d0; border-color: #8b1a1a; color: #6a1010; }
 
 .copy-link-btn {
   font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.15em;
