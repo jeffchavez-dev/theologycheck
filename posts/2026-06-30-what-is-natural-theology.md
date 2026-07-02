@@ -1,7 +1,7 @@
 ---
 title: "What is Natural Theology?"
 date: "2026-07-02"
-excerpt: ""
+excerpt: "Natural revelation is God's doing. Natural theology is our response to God's act of condescension in nature. This distinction clarifies that natural theology is not a "man-made" invention in the sense of creating its own content; rather, it is a rational interpretation of the "footprints" or "traces" God has intentionally left in the world that he created."
 tags:
   - "Natural Theology"
 dropCapParagraph: 1
@@ -9,7 +9,7 @@ series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
 updatedAt: "2026-07-02"
-updateCount: 23
+updateCount: 24
 ---
 
 Orthodox Christianity, in general, and the Reformed tradition, in particular, affirm that God has spoken clearly through three primary modes: His Son (the Word made flesh), the Bible or the inscripturated Word, and the entire creation. Each mode of divine speech differs in its clarity and purpose. And they are all understood as expressions of divine self-disclosure or revelation. God revealed Himself. 
@@ -42,7 +42,7 @@ Interestingly, this 16th-century Reformed confession likens the universe to a be
 
 > “The human discipline of natural theology is validated by its "material"—the objective "book of nature"—which provides the footprints of God to both the regenerate and unregenerate. Just as biblical theology is grounded in the text of Scripture, natural theology finds its ground in the created order.”[^1]
 
-There is a clear distinction between biblical theology and natural theology. The former is man's activity, a reflective act assisted by the divine grace that is grounded in the written Word of God. The latter is man's activity, a reflective act assisted by the divine grace that is grounded in nature. There is also a clear distinction between natural revelation and natural theology. The former refers to an *activity of God*. The latter refers to a *human activity*. *Natural theology is subjective (though not subjectivistic), in the sense that it involves the human subject’s apprehension and appropriation of natural revelation.*[^2][^6] Natural revelation is God's doing. Natural theology is our response to God's act of condescension in nature. This distinction clarifies that natural theology is not a "man-made" invention in the sense of creating its own content; rather, it is a rational interpretation of the "footprints" or "traces" God has intentionally left in the world that he created.
+There is a clear distinction between biblical theology and natural theology. The former is man's activity, a reflective act assisted by the divine grace that is grounded in the written Word of God. The latter is man's activity, a reflective act assisted by the divine grace that is grounded in nature. There is also a clear distinction between natural revelation and natural theology. The former refers to an *activity of God*. The latter refers to a *human activity*. *Natural theology is subjective (though not subjectivistic), in the sense that it involves the human subject’s apprehension and appropriation of natural revelation.*[^2] Natural revelation is God's doing. Natural theology is our response to God's act of condescension in nature. This distinction clarifies that natural theology is not a "man-made" invention in the sense of creating its own content; rather, it is a rational interpretation of the "footprints" or "traces" God has intentionally left in the world that he created.
 
 In a book published by the Davenant Press, I like how David Haines defines Natural Theology,
 > Natural Theology, broadly defined, is that part of philosophy which explores that which man can know about God (his existence, divine nature, etc.) from nature via His divinely bestowed faculty of reason, and this, unaided by any divinely inspired written revelation from any religion, and this, without presupposing the truth of any one religion."[^3]
