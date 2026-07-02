@@ -9,7 +9,7 @@ series: "Natural Theology 101"
 seriesOrder: 1
 author: "Jeff Chavez"
 updatedAt: "2026-07-02"
-updateCount: 20
+updateCount: 21
 ---
 
 Orthodox Christianity, in general, and the Reformed tradition, in particular, affirm that God has spoken clearly through three primary modes: His Son (the Word made flesh), the Bible or the inscripturated Word, and the entire creation. Each mode of divine speech differs in its clarity and purpose. And they are all understood as expressions of divine self-disclosure or revelation. God revealed Himself. 
@@ -54,7 +54,7 @@ This is clear. Think of it this way. Our eyes have the faculty of sight but requ
 
 **Finally**, since natural revelation is clear and penetrates the human mind via the God-given reason, which then allows even fallen man to do natural theology, there is no need to presuppose the truthfulness of any religion, even Christianity. One does not need to presuppose that Christianity is true to know that God exists. This may be a hard take due to presuppositionalism but we will get to explain this further. Suffice it to say that the Scripture such as Romans 1:19–20 indicate that God's power and divinity are "plain to them" because God has shown it through "the things that have been made." I know that *this* is true because Scriptures says so, but man does not need to know this scriptural text to be true to perceive God's existence and being from nature. 
 
-Let's me end this introductory post by saying that this is an orthodox teaching. This may sound new to some of my beloved friends or a return to Roman Catholicism. But listen to the 17th century Swiss-Italian Reformed theologian and pastor who is best known for his three-volume work, Institutes of Elenctic Theology, Francis Turretin.
+Let's me end this introductory post by saying that this is an orthodox teaching. This may sound new to some of my beloved friends or may be construed as a return to Roman Catholicism. But listen to the 17th century Swiss-Italian Reformed theologian and pastor who is best known for his three-volume work, Institutes of Elenctic Theology, Francis Turretin.
 > The orthodox... uniformly teach that there is a natural theology, partly innate (derived from the book of conscience by means of common notions) and partly acquired (drawn from the book of creatures discursively).[^5]
 
 Within the Christian tradition, natural theology is never intended to replace the Bible or provide a path to salvation; instead, it provides the "preambles" of faith that make the acceptance of Scripture a rational act. I'll develop several arguments in this series, hoping to clarify this biblical and reformed principle. 
@@ -63,4 +63,4 @@ Within the Christian tradition, natural theology is never intended to replace th
 [^2]: Sproul, R. C., John Gerstner, and Arthur Lindsley. Classical Apologetics: A Rational Defense of the Christian Faith and a Critique of Presuppositional Apologetics. Grand Rapids, MI: Zondervan Publishing House, 1984.
 [^3]: Haines, David. "Natural Theology and Protestant Orthodoxy." In God of Our Fathers: Classical Theism in Reformation Theology, edited by Bradford Littlejohn. Landrum, SC: The Davenant Press, 2018. 58
 [^4]: Aquinas, Thomas. Summa Theologiae I-II, Question 109, Article 1, "Whether without grace man can know any truth?"
-[^5]: Turretin, Francis. Institutes of Elenctic Theology. Edited by James T. Dennison Jr. Translated by George Musgrave Giger. 3 vols. Phillipsburg, NJ: P&R, 1992–1997. In the next articles, we will draw from his and other Reformed Theologians' writings that Natural Theology is a Reformed principle. 
+[^5]: Turretin, Francis. Institutes of Elenctic Theology. Edited by James T. Dennison Jr. Translated by George Musgrave Giger. 3 vols. Phillipsburg, NJ: P&R, 1992–1997. In the next articles, we will draw from his and other Reformed Theologians' writings that Natural Theology is a Reformed principle.
