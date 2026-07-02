@@ -4,6 +4,7 @@ date: "2026-07-20"
 excerpt: ""
 tags:
   - "Natural Theology"
+scheduled: true
 dropCapParagraph: 1
 series: "Natural Theology 101"
 seriesOrder: 3
