@@ -7,10 +7,10 @@ tags:
 scheduled: true
 dropCapParagraph: 1
 series: "Natural Theology 101"
-seriesOrder: 2
+seriesOrder: 7
 author: "Jeff Chavez"
-updatedAt: "2026-06-29"
-updateCount: 2
+updatedAt: "2026-07-02"
+updateCount: 3
 ---
 
 One of the critiques of non-Classicalists is to argue that we confuse Natural Theology and Natural/General Revelation.
