@@ -1,14 +1,13 @@
 ---
-title: 'A Critique of "A Critique of 1689 Federalism"'
+title: "A Critique of \"A Critique of 1689 Federalism\""
 date: "2026-07-01"
 excerpt: "A response to Earl Blackburn's critique of 1689 Federalism — arguing that it misreads the position and fails to engage seriously with its key proponents."
 tags:
   - "1689 Federalism"
-draft: true
 dropCapParagraph: 1
 author: ""
-updatedAt: "2026-06-26"
-updateCount: 2
+updatedAt: "2026-07-02"
+updateCount: 3
 ---
 
 I recently read a book—generously given by a friend—that critiques the covenant theology framework I hold. As someone who has spent several years reading the key proponents of 1689 Federalism, I approached the book with interest but also with a fair degree of familiarity with the position it sought to challenge.
