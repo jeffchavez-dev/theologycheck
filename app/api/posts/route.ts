@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { revalidatePath } from 'next/cache'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -20,13 +21,17 @@ function findFile(slug: string) {
   return files.find(f => f === `${slug}.md` || f.endsWith(`-${slug}.md`)) ?? null
 }
 
+function yamlStr(s: string) {
+  return s.replace(/\\/g, '\\\\').replace(/"/g, '\\"')
+}
+
 function buildMarkdown(title: string, date: string, excerpt: string, tags: string[], draft: boolean, body: string, author: string, updatedAt: string, updateCount: number, dropCapParagraph = 0, series = '', seriesOrder = 0, scheduled = false) {
-  const tagsYaml = tags?.length ? `\ntags:\n${tags.map((t: string) => `  - "${t}"`).join('\n')}` : ''
+  const tagsYaml = tags?.length ? `\ntags:\n${tags.map((t: string) => `  - "${yamlStr(t)}"`).join('\n')}` : ''
   const draftLine = draft ? `\ndraft: true` : ''
   const scheduledLine = scheduled ? `\nscheduled: true` : ''
   const dropCapLine = dropCapParagraph > 0 ? `\ndropCapParagraph: ${dropCapParagraph}` : ''
-  const seriesLine = series ? `\nseries: "${series}"\nseriesOrder: ${seriesOrder}` : ''
-  return `---\ntitle: "${title}"\ndate: "${date}"\nexcerpt: "${excerpt ?? ''}"${tagsYaml}${draftLine}${scheduledLine}${dropCapLine}${seriesLine}\nauthor: "${author ?? ''}"\nupdatedAt: "${updatedAt}"\nupdateCount: ${updateCount}\n---\n\n${body}`
+  const seriesLine = series ? `\nseries: "${yamlStr(series)}"\nseriesOrder: ${seriesOrder}` : ''
+  return `---\ntitle: "${yamlStr(title)}"\ndate: "${date}"\nexcerpt: "${yamlStr(excerpt ?? '')}"${tagsYaml}${draftLine}${scheduledLine}${dropCapLine}${seriesLine}\nauthor: "${yamlStr(author ?? '')}"\nupdatedAt: "${updatedAt}"\nupdateCount: ${updateCount}\n---\n\n${body}`
 }
 
 async function githubGetSHA(filePath: string): Promise<string | null> {
@@ -129,7 +134,9 @@ export async function POST(req: NextRequest) {
     const err = await res.json()
     return NextResponse.json({ error: err.message ?? 'GitHub write failed' }, { status: 500 })
   }
-  return NextResponse.json({ slug })
+  const postSlug = `${date}-${slug}`
+  revalidatePath('/'); revalidatePath('/series'); revalidatePath(`/blog/${postSlug}`)
+  return NextResponse.json({ slug: postSlug })
 }
 
 // PUT — update existing post via GitHub API
@@ -153,6 +160,8 @@ export async function PUT(req: NextRequest) {
     const err = await res.json()
     return NextResponse.json({ error: err.message ?? 'GitHub write failed' }, { status: 500 })
   }
+  revalidatePath('/'); revalidatePath('/series'); revalidatePath(`/blog/${slug}`)
+  if (series) revalidatePath(`/series/${series.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`)
   return NextResponse.json({ ok: true })
 }
 

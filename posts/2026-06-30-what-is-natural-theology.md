@@ -1,7 +1,7 @@
 ---
 title: "What is Natural Theology?"
 date: "2026-07-02"
-excerpt: "Natural revelation is God's doing. Natural theology is our response to God's act of condescension in nature. This distinction clarifies that natural theology is not a "man-made" invention in the sense of creating its own content; rather, it is a rational interpretation of the "footprints" or "traces" God has intentionally left in the world that he created."
+excerpt: "Natural revelation is God's doing. Natural theology is our response to God's act of condescension in nature. This distinction clarifies that natural theology is not a \"man-made\" invention in the sense of creating its own content; rather, it is a rational interpretation of the \"footprints\" or \"traces\" God has intentionally left in the world that he created."
 tags:
   - "Natural Theology"
 dropCapParagraph: 1
