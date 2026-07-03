@@ -1,10 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import SubscribeForm from './SubscribeForm'
 
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
     <>
+      <div className="subscribe-section">
+        <SubscribeForm />
+      </div>
       <footer className="site-footer">
         <div className="footer-logo">
         <Image src="/logo.png" alt="Theology Check logo" width={36} height={36} unoptimized style={{ borderRadius: '50%', border: '1.5px solid #3a1010' }} />

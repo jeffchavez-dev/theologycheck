@@ -554,3 +554,73 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   .form-textarea { min-height: 40vh; }
   .btn-publish { width: 100%; text-align: center; }
 }
+
+/* Subscribe Section */
+.subscribe-section {
+  background: #1a0e06;
+  border-top: 2px solid #5a3010;
+  border-bottom: 2px solid #5a3010;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+.subscribe-wrap {
+  max-width: 480px;
+  margin: 0 auto;
+}
+.subscribe-label {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  color: #e0c88a;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+.subscribe-desc {
+  font-size: 0.9rem;
+  color: #b09070;
+  margin: 0 0 1rem;
+}
+.subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.subscribe-input {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid #7a5030;
+  border-radius: 2px;
+  background: #0e0804;
+  color: #e8d8c0;
+  font-size: 0.9rem;
+  outline: none;
+}
+.subscribe-input:focus {
+  border-color: #c49a5a;
+}
+.subscribe-btn {
+  padding: 0.55rem 1.2rem;
+  background: #7a3a10;
+  color: #f5e8d0;
+  border: none;
+  border-radius: 2px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.subscribe-btn:hover:not(:disabled) { background: #9a4a18; }
+.subscribe-btn:disabled { opacity: 0.6; cursor: default; }
+.subscribe-success {
+  color: #90c878;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+.subscribe-error {
+  color: #e07858;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
