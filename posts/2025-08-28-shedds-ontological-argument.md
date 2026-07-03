@@ -5,6 +5,7 @@ excerpt: "W.G.T. Shedd's vindication of the ontological argument in his Dogmatic
 tags:
   - "Natural Theology"
   - "Proofs for God"
+dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-07-03"
 updateCount: 2
