@@ -76,6 +76,8 @@ export async function POST(req: NextRequest) {
     <a href="https://theologycheck.blog" style="display:inline-block;background:#7a3a10;color:#fff;padding:12px 24px;text-decoration:none;font-size:14px;font-family:Georgia,serif;letter-spacing:0.04em;">Visit the Blog →</a>
     <hr style="margin:32px 0;border:none;border-top:1px solid #e8d8b0;" />
     <p style="margin:0;font-size:12px;color:#2a0e06;font-family:Georgia,serif;">— Jeff Chavez<br><a href="https://theologycheck.blog" style="color:#8a6040;">theologycheck.blog</a></p>
+    <hr style="margin:24px 0;border:none;border-top:1px solid #e8d8b0;" />
+    <p style="margin:0;font-size:11px;color:#aaa;font-family:monospace;">New subscriber: ${email}</p>
   </div>
 </div>
 </body>
@@ -85,7 +87,8 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: 'Theology Check <jeff@theologycheck.blog>',
       to: 'jeffchavez0828@gmail.com',
-      subject: `New subscriber: ${email} — forward this to welcome them`,
+      subject: `Thank you for subscribing!`,
+      replyTo: email,
       html: welcomeHtml,
     })
     return NextResponse.json({ ok: true })
