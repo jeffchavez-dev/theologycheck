@@ -1,16 +1,19 @@
 ---
-title: "Classical Apologetics and Neutrality"
-date: "2025-05-01"
-excerpt: "Classical apologetics, founded on Classical Theism, does not reason from a position of neutrality — here are four classical apologists who reject the neutral zone."
+title: "Natural Theology and Neutrality"
+date: "2025-09-21"
+excerpt: "Classical apologetics, and natural theology, founded on Classical Theism, does not reason from a position of neutrality — here are four classical apologists who reject the neutral zone."
 tags:
   - "Classical Apologetics"
+scheduled: true
 dropCapParagraph: 1
+series: "Natural Theology 101"
+seriesOrder: 8
 author: "Jeff Chavez"
-updatedAt: "2026-06-29"
-updateCount: 1
+updatedAt: "2026-07-03"
+updateCount: 2
 ---
 
-Classical apologetics, which is founded on the truths of Classical Theism, does not reason from a position of neutrality or completely "autonomous" reasoning[^1], though it is sometimes accused of doing so. Let me cite four Classical Apologists who reject this neutral zone:
+Classical apologetics and its use of natural theology, which is founded on the truths of Classical Theism, does not reason from a position of neutrality or completely "autonomous" reasoning[^1], though it is sometimes accused of doing so. Let me cite four Classical Apologists who reject this neutral zone:
 
 > To appeal to these things, whether natural revelation, natural law, common notions, or the light of nature, is not in any way a capitulation to a so-called autonomous neutral zone; to appeal to these things is to appeal to God's revelation. In defense of the faith, Christians have two books in their apologetic arsenal, the book of nature and the book of Scripture.[^2]
 
