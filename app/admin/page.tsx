@@ -36,6 +36,10 @@ export default function AdminPage() {
   const [emailModal, setEmailModal] = useState<{ title: string; excerpt: string; slug: string } | null>(null)
   const [emailCopied, setEmailCopied] = useState(false)
 
+  // Subscriber edit state
+  const [editingSubscriber, setEditingSubscriber] = useState<string | null>(null)
+  const [editingSubscriberVal, setEditingSubscriberVal] = useState('')
+
   // Add new
   const [newAuthor, setNewAuthor] = useState('')
   const [addingAuthor, setAddingAuthor] = useState(false)
@@ -99,6 +103,27 @@ export default function AdminPage() {
   async function fetchSubscribers() {
     const res = await fetch('/api/subscribers')
     if (res.ok) setSubscribers(await res.json())
+  }
+
+  async function handleEditSubscriber(oldEmail: string, newEmail: string) {
+    if (!newEmail.trim() || !newEmail.includes('@')) return
+    await fetch('/api/subscribers', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ oldEmail, newEmail: newEmail.trim() }),
+    })
+    setEditingSubscriber(null)
+    fetchSubscribers()
+  }
+
+  async function handleDeleteSubscriber(email: string) {
+    if (!confirm(`Remove ${email} from subscribers?`)) return
+    await fetch('/api/subscribers', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    })
+    fetchSubscribers()
   }
 
   function login() {
@@ -704,11 +729,23 @@ export default function AdminPage() {
           <Accordion id="subscribers" label="Subscribers" count={subscribers.length}>
             {subscribers.length === 0 && <p className="admin-empty">No subscribers yet.</p>}
             {[...subscribers].reverse().map(s => (
-              <div key={s.email} className="admin-panel-row">
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div className="admin-post-title" style={{ fontSize: 13 }}>{s.email}</div>
-                  <div className="admin-post-date">{new Date(s.subscribedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</div>
-                </div>
+              <div key={s.email} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0.75rem', borderBottom: '1px solid #ecdec8' }}>
+                {editingSubscriber === s.email ? (
+                  <>
+                    <input style={{ ...manageInputStyle, flex: 1 }} value={editingSubscriberVal} onChange={e => setEditingSubscriberVal(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') handleEditSubscriber(s.email, editingSubscriberVal); if (e.key === 'Escape') setEditingSubscriber(null) }} autoFocus />
+                    <button className="admin-panel-btn" onClick={() => handleEditSubscriber(s.email, editingSubscriberVal)}>Save</button>
+                    <button className="admin-panel-btn danger" onClick={() => setEditingSubscriber(null)}>✕</button>
+                  </>
+                ) : (
+                  <>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div className="admin-post-title" style={{ fontSize: 13 }}>{s.email}</div>
+                      <div className="admin-post-date">{new Date(s.subscribedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</div>
+                    </div>
+                    <button className="admin-panel-btn" onClick={() => { setEditingSubscriber(s.email); setEditingSubscriberVal(s.email) }}>Edit</button>
+                    <button className="admin-panel-btn danger" onClick={() => handleDeleteSubscriber(s.email)}>✕</button>
+                  </>
+                )}
               </div>
             ))}
           </Accordion>
