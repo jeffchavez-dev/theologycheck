@@ -1,35 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Resend } from 'resend'
 
-const BUTTONDOWN_API_KEY = process.env.BUTTONDOWN_API_KEY
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: NextRequest) {
   const { email } = await req.json()
   if (!email || !email.includes('@')) {
     return NextResponse.json({ error: 'Valid email required.' }, { status: 400 })
   }
-  if (!BUTTONDOWN_API_KEY) {
+  if (!process.env.RESEND_API_KEY) {
     return NextResponse.json({ error: 'Newsletter not configured.' }, { status: 500 })
   }
 
-  const res = await fetch('https://api.buttondown.email/v1/subscribers', {
-    method: 'POST',
-    headers: {
-      Authorization: `Token ${BUTTONDOWN_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email, tags: ['theologycheck'] }),
-  })
-
-  if (res.status === 201) {
+  try {
+    await resend.emails.send({
+      from: 'Theology Check <onboarding@resend.dev>',
+      to: 'jeffchavez0828@gmail.com',
+      subject: 'New subscriber: ' + email,
+      text: `${email} just subscribed to Theology Check.`,
+    })
     return NextResponse.json({ ok: true })
+  } catch {
+    return NextResponse.json({ error: 'Could not subscribe. Try again.' }, { status: 500 })
   }
-  if (res.status === 400) {
-    const data = await res.json()
-    // Already subscribed
-    if (JSON.stringify(data).includes('already')) {
-      return NextResponse.json({ ok: true, already: true })
-    }
-    return NextResponse.json({ error: 'Invalid email.' }, { status: 400 })
-  }
-  return NextResponse.json({ error: 'Could not subscribe. Try again.' }, { status: 500 })
 }
