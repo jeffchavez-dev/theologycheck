@@ -83,7 +83,7 @@ export async function POST(req: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: 'Theology Check <onboarding@resend.dev>',
+      from: 'Theology Check <jeff@theologycheck.blog>',
       to: 'jeffchavez0828@gmail.com',
       subject: `New subscriber: ${email} — forward this to welcome them`,
       html: welcomeHtml,
