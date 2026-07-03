@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 export default function SubscribeForm() {
   const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'already' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
 
   async function handleSubmit(e: React.FormEvent) {
@@ -19,7 +19,7 @@ export default function SubscribeForm() {
       })
       const data = await res.json()
       if (res.ok) {
-        setStatus('success')
+        setStatus(data.already ? 'already' : 'success')
         setEmail('')
       } else {
         setErrorMsg(data.error ?? 'Something went wrong.')
@@ -38,10 +38,13 @@ export default function SubscribeForm() {
       {status === 'success' && (
         <p className="subscribe-success">✓ You're subscribed! We'll notify you when new posts go live.</p>
       )}
+      {status === 'already' && (
+        <p className="subscribe-error">You're already subscribed with that email.</p>
+      )}
       {status === 'error' && (
         <p className="subscribe-error">{errorMsg}</p>
       )}
-      {status !== 'success' && (
+      {status !== 'success' && status !== 'already' && (
         <form className="subscribe-form" onSubmit={handleSubmit}>
           <input
             className="subscribe-input"

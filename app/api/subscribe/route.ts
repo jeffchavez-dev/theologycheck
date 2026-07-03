@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
     if (current) {
       const already = current.list.some(s => s.email.toLowerCase() === email.toLowerCase())
       if (already) {
-        return NextResponse.json({ ok: true })
+        return NextResponse.json({ ok: true, already: true })
       }
       current.list.push({ email, subscribedAt: new Date().toISOString() })
       await githubWrite(current.list, current.sha)
