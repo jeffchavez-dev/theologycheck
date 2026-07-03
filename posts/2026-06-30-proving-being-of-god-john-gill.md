@@ -7,10 +7,10 @@ tags:
 dropCapParagraph: 1
 author: ""
 updatedAt: "2026-07-03"
-updateCount: 2
+updateCount: 3
 ---
 
-In the first chapter of *A Complete Body of Doctrinal and Practical Divinity*[^1], John Gill offers eight arguments for the Being of God.[^2] He maintains that God's existence is "a first principle, which is not to be disputed; and because that there is one is a self-evident proposition, not to be disproved." However,
+In the first chapter of *A Complete Body of Doctrinal and Practical Divinity*[^1], John Gill offers eight arguments for the Being of God.[^2] He maintains that God's existence is "a first principle, which is not to be disputed; and because *that there is one* is a self-evident proposition, not to be disproved." However,
 
 > such is the malice of Satan, as to suggest the contrary to the minds of men; and such the badness of some wicked men as to listen to it, and imbibe it; and such the weakness of some good men as to be harassed and distressed with doubts about it at times; it cannot be improper to endeavor to fortify our minds with reasons and arguments against such suggestions and insinuations.[^3]
 
