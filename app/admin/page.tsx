@@ -438,8 +438,19 @@ export default function AdminPage() {
             </div>
             <div className="email-modal-preview" dangerouslySetInnerHTML={{ __html: buildEmailHtml(emailModal.title, emailModal.excerpt, emailModal.slug) }} />
             <div className="email-modal-footer">
-              <p className="email-modal-hint">Copy this, then paste it into Gmail → Compose → body.</p>
-              <button className="btn-publish" style={{ minWidth: 160 }} onClick={copyEmail}>
+              <div style={{ flex: 1 }}>
+                <p className="email-modal-hint">Copy this, then paste it into Gmail → Compose → body.</p>
+                {subscribers.length > 0 && (
+                  <p className="email-modal-hint" style={{ marginTop: '0.4rem' }}>
+                    <strong>Send to:</strong>{' '}
+                    <span className="email-modal-recipients">{subscribers.map(s => s.email).join(', ')}</span>
+                  </p>
+                )}
+                {subscribers.length === 0 && (
+                  <p className="email-modal-hint" style={{ marginTop: '0.4rem' }}>No subscribers yet.</p>
+                )}
+              </div>
+              <button className="btn-publish" style={{ minWidth: 160, flexShrink: 0 }} onClick={copyEmail}>
                 {emailCopied ? '✓ Copied!' : 'Copy Email HTML'}
               </button>
             </div>

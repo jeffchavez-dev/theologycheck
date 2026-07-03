@@ -693,3 +693,10 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   margin: 0;
   font-family: 'EB Garamond', serif;
 }
+.email-modal-recipients {
+  color: #2a0e06;
+  font-family: monospace;
+  font-size: 11px;
+  word-break: break-all;
+  user-select: all;
+}
