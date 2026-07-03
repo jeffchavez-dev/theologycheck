@@ -43,15 +43,16 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Newsletter not configured.' }, { status: 500 })
   }
 
-  // Persist to subscribers.json
+  // Persist to subscribers.json, reject duplicates
   if (GITHUB_TOKEN && GITHUB_OWNER && GITHUB_REPO) {
     const current = await githubRead()
     if (current) {
       const already = current.list.some(s => s.email.toLowerCase() === email.toLowerCase())
-      if (!already) {
-        current.list.push({ email, subscribedAt: new Date().toISOString() })
-        await githubWrite(current.list, current.sha)
+      if (already) {
+        return NextResponse.json({ ok: true })
       }
+      current.list.push({ email, subscribedAt: new Date().toISOString() })
+      await githubWrite(current.list, current.sha)
     }
   }
 
