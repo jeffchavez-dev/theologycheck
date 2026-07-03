@@ -1,13 +1,12 @@
 ---
 title: "Shedd's Ontological Argument"
-date: "2025-08-28"
+date: "2026-07-04"
 excerpt: "W.G.T. Shedd's vindication of the ontological argument in his Dogmatic Theology — presenting, defending, and concluding the argument for God's necessary existence from the idea of absolute and perfect being."
 tags:
   - "Natural Theology"
-draft: true
 author: "Jeff Chavez"
-updatedAt: "2025-08-28"
-updateCount: 0
+updatedAt: "2026-07-03"
+updateCount: 1
 ---
 
 As I read through the last Great Southern Presbyterian's book on apologetics, Francis Beattie, in his discussion of the Ontological argument, wrote, "No writer in America has done more than Shedd, in the early chapters of his Dogmatic Theology, to vindicate this argument and to indicate its true nature and value."[^1] Here's Shedd,
