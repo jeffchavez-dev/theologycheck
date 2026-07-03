@@ -36,7 +36,7 @@ export default function SubscribeForm() {
       <div className="subscribe-label">Stay in the Tradition</div>
       <p className="subscribe-desc">New posts delivered to your inbox — no noise, no spam.</p>
       {status === 'success' && (
-        <p className="subscribe-success">✓ Check your inbox to confirm your subscription.</p>
+        <p className="subscribe-success">✓ You're subscribed! We'll notify you when new posts go live.</p>
       )}
       {status === 'error' && (
         <p className="subscribe-error">{errorMsg}</p>
