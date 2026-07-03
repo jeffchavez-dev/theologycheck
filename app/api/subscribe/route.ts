@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN
 const GITHUB_OWNER = process.env.GITHUB_OWNER
 const GITHUB_REPO = process.env.GITHUB_REPO
@@ -39,7 +38,8 @@ export async function POST(req: NextRequest) {
   if (!email || !email.includes('@')) {
     return NextResponse.json({ error: 'Valid email required.' }, { status: 400 })
   }
-  if (!process.env.RESEND_API_KEY) {
+  const resendKey = process.env.RESEND_API_KEY
+  if (!resendKey) {
     return NextResponse.json({ error: 'Newsletter not configured.' }, { status: 500 })
   }
 
@@ -56,6 +56,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Notify Jeff
+  const resend = new Resend(resendKey)
   try {
     await resend.emails.send({
       from: 'Theology Check <onboarding@resend.dev>',
