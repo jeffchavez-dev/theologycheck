@@ -4,10 +4,11 @@ date: "2026-06-30"
 excerpt: "John Gill's argument from the works of creation for the Being of God — illustrated by the remarkable story of a Greenlander who reasoned his way to the First Cause."
 tags:
   - "Natural Theology"
+  - "Proofs for God"
 dropCapParagraph: 1
 author: ""
 updatedAt: "2026-07-03"
-updateCount: 4
+updateCount: 5
 ---
 
 In the first chapter of *A Complete Body of Doctrinal and Practical Divinity*[^1], John Gill offers eight arguments for the Being of God.[^2] He maintains that God's existence is "a first principle, which is not to be disputed; and because *that there is one* is a self-evident proposition, not to be disproved." However,
