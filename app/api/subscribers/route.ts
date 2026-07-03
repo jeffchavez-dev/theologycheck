@@ -5,14 +5,16 @@ const GITHUB_OWNER = process.env.GITHUB_OWNER
 const GITHUB_REPO = process.env.GITHUB_REPO
 const FILE_PATH = 'data/subscribers.json'
 
-async function githubRead() {
+interface Subscriber { email: string; subscribedAt: string }
+
+async function githubRead(): Promise<{ list: Subscriber[]; sha: string } | null> {
   const res = await fetch(
     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}`,
     { headers: { Authorization: `token ${GITHUB_TOKEN}`, Accept: 'application/vnd.github.v3+json' }, cache: 'no-store' }
   )
   if (!res.ok) return null
   const data = await res.json()
-  const list = JSON.parse(Buffer.from(data.content, 'base64').toString('utf8'))
+  const list: Subscriber[] = JSON.parse(Buffer.from(data.content, 'base64').toString('utf8'))
   return { list, sha: data.sha as string }
 }
 
