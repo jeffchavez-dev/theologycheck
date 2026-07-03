@@ -5,7 +5,6 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import EditButton from '@/components/EditButton'
 import CopyLink from '@/components/CopyLink'
-import HeartButton from '@/components/HeartButton'
 
 export async function generateStaticParams() {
   return getAllPosts().map(p => ({ slug: p.slug }))
@@ -138,8 +137,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
       <footer className="post-footer">
         <div className="divider">✦ ✦ ✦</div>
-        <HeartButton slug={slug} />
-        <CopyLink />
+<CopyLink />
         <Link href="/" className="back-link" style={{ marginTop: '1rem', display: 'inline-block' }}>← Back to all posts</Link>
       </footer>
 

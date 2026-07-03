@@ -555,60 +555,6 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   .btn-publish { width: 100%; text-align: center; }
 }
 
-/* Heart reaction */
-.heart-wrap {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  justify-content: center;
-  margin: 1.5rem 0;
-}
-.heart-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: none;
-  border: 1.5px solid #c49a5a;
-  border-radius: 999px;
-  padding: 0.45rem 1rem;
-  cursor: pointer;
-  color: #8a6040;
-  font-family: 'EB Garamond', serif;
-  font-size: 0.9rem;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
-}
-.heart-btn:hover:not(:disabled) {
-  background: #fff0e0;
-  border-color: #8b1a1a;
-  color: #8b1a1a;
-}
-.heart-btn--active {
-  background: #fff0e0;
-  border-color: #8b1a1a;
-  color: #8b1a1a;
-  cursor: default;
-}
-.heart-icon {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-  transition: transform 0.15s;
-}
-.heart-btn--pop .heart-icon {
-  animation: heart-pop 0.6s ease;
-}
-@keyframes heart-pop {
-  0%   { transform: scale(1); }
-  30%  { transform: scale(1.5); }
-  60%  { transform: scale(0.9); }
-  100% { transform: scale(1); }
-}
-.heart-count {
-  font-family: 'EB Garamond', serif;
-  font-size: 0.9rem;
-  color: #8a6040;
-}
-
 /* Subscribe Section */
 .subscribe-section {
   background: #1a0e06;
