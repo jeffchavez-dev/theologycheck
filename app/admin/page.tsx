@@ -30,6 +30,11 @@ export default function AdminPage() {
   const [posts, setPosts] = useState<PostMeta[]>([])
   const [authors, setAuthors] = useState<string[]>([])
   const [availableTags, setAvailableTags] = useState<string[]>([])
+  const [subscribers, setSubscribers] = useState<{ email: string; subscribedAt: string }[]>([])
+
+  // Email modal
+  const [emailModal, setEmailModal] = useState<{ title: string; excerpt: string; slug: string } | null>(null)
+  const [emailCopied, setEmailCopied] = useState(false)
 
   // Add new
   const [newAuthor, setNewAuthor] = useState('')
@@ -66,7 +71,7 @@ export default function AdminPage() {
 
   useEffect(() => {
     if (auth) {
-      fetchPosts(); fetchAuthors(); fetchTags()
+      fetchPosts(); fetchAuthors(); fetchTags(); fetchSubscribers()
       const editSlug = new URLSearchParams(window.location.search).get('edit')
       if (editSlug) loadPost(editSlug)
     }
@@ -89,6 +94,11 @@ export default function AdminPage() {
   async function fetchTags() {
     const res = await fetch('/api/tags')
     if (res.ok) setAvailableTags(await res.json())
+  }
+
+  async function fetchSubscribers() {
+    const res = await fetch('/api/subscribers')
+    if (res.ok) setSubscribers(await res.json())
   }
 
   function login() {
@@ -133,12 +143,17 @@ export default function AdminPage() {
     })
     if (res.ok) {
       const data = await res.json()
+      const resolvedSlug = isEdit ? editingSlug! : data.slug
       if (!isEdit && data.slug) setEditingSlug(data.slug)
       setDraft(asDraft); setScheduled(asScheduled)
       const msg = asScheduled
         ? `Post scheduled — publishes ${date}.`
         : asDraft ? 'Saved as draft.' : isEdit ? 'Post updated.' : 'Post published.'
       setSaved(msg); setTimeout(() => setSaved(''), 5000); fetchPosts()
+      if (!asDraft && !asScheduled) {
+        setEmailModal({ title, excerpt, slug: resolvedSlug })
+        setEmailCopied(false)
+      }
     } else {
       const errData = await res.json().catch(() => ({}))
       setError(`Failed: ${errData.error ?? res.status}`)
@@ -377,8 +392,60 @@ export default function AdminPage() {
     )
   }
 
+  function buildEmailHtml(t: string, ex: string, sl: string) {
+    const url = `https://theologycheck.blog/blog/${sl}`
+    return `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="margin:0;padding:0;background:#f5efe3;">
+<div style="max-width:600px;margin:32px auto;background:#fff;border:1px solid #dfc99a;font-family:Georgia,serif;">
+  <img src="https://theologycheck.blog/og-image.png" alt="Theology Check" style="width:100%;display:block;" />
+  <div style="padding:32px 28px;">
+    <p style="margin:0 0 6px;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8a6040;font-family:Georgia,serif;">New Post · Theology Check</p>
+    <h1 style="margin:0 0 16px;font-size:22px;color:#2a0e06;line-height:1.3;font-family:Georgia,serif;">${t}</h1>
+    <p style="margin:0 0 24px;font-size:15px;color:#444;line-height:1.7;font-family:Georgia,serif;">${ex}</p>
+    <a href="${url}" style="display:inline-block;background:#7a3a10;color:#fff;padding:12px 24px;text-decoration:none;font-size:14px;font-family:Georgia,serif;letter-spacing:0.04em;">Read the Full Post →</a>
+    <hr style="margin:32px 0;border:none;border-top:1px solid #e8d8b0;" />
+    <p style="margin:0;font-size:11px;color:#aaa;font-family:Georgia,serif;">You are receiving this because you subscribed at <a href="https://theologycheck.blog" style="color:#8a6040;">theologycheck.blog</a>.</p>
+  </div>
+</div>
+</body>
+</html>`
+  }
+
+  async function copyEmail() {
+    if (!emailModal) return
+    const html = buildEmailHtml(emailModal.title, emailModal.excerpt, emailModal.slug)
+    try {
+      await navigator.clipboard.write([
+        new ClipboardItem({ 'text/html': new Blob([html], { type: 'text/html' }) })
+      ])
+    } catch {
+      await navigator.clipboard.writeText(html)
+    }
+    setEmailCopied(true)
+    setTimeout(() => setEmailCopied(false), 3000)
+  }
+
   return (
     <div className="admin-layout-wrap">
+      {emailModal && (
+        <div className="email-modal-overlay" onClick={() => setEmailModal(null)}>
+          <div className="email-modal" onClick={e => e.stopPropagation()}>
+            <div className="email-modal-header">
+              <span>Email Draft</span>
+              <button className="email-modal-close" onClick={() => setEmailModal(null)}>✕</button>
+            </div>
+            <div className="email-modal-preview" dangerouslySetInnerHTML={{ __html: buildEmailHtml(emailModal.title, emailModal.excerpt, emailModal.slug) }} />
+            <div className="email-modal-footer">
+              <p className="email-modal-hint">Copy this, then paste it into Gmail → Compose → body.</p>
+              <button className="btn-publish" style={{ minWidth: 160 }} onClick={copyEmail}>
+                {emailCopied ? '✓ Copied!' : 'Copy Email HTML'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* ── Header bar ── */}
       <div className="admin-topbar">
         <span className="admin-title">{editingSlug ? `Editing: ${title || '…'}` : 'New Post'}</span>
@@ -622,6 +689,18 @@ export default function AdminPage() {
               })}
             </Accordion>
           )}
+
+          <Accordion id="subscribers" label="Subscribers" count={subscribers.length}>
+            {subscribers.length === 0 && <p className="admin-empty">No subscribers yet.</p>}
+            {[...subscribers].reverse().map(s => (
+              <div key={s.email} className="admin-panel-row">
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div className="admin-post-title" style={{ fontSize: 13 }}>{s.email}</div>
+                  <div className="admin-post-date">{new Date(s.subscribedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</div>
+                </div>
+              </div>
+            ))}
+          </Accordion>
 
           <Accordion id="tags" label="Tags" count={availableTags.length}>
             {availableTags.map(tag => (
