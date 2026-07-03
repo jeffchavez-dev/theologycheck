@@ -4,6 +4,23 @@ import Link from 'next/link'
 
 const ADMIN_KEY = '1689Federal!sm'
 
+function Accordion({ id, label, count, open, onToggle, children }: { id: string; label: string; count?: number; open: boolean; onToggle: () => void; children: React.ReactNode }) {
+  return (
+    <div className="admin-accordion">
+      <button className="admin-accordion-header" onClick={onToggle}>
+        <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          {label}
+          {count !== undefined && count > 0 && (
+            <span className="admin-accordion-badge">{count}</span>
+          )}
+        </span>
+        <span className="admin-accordion-chevron">{open ? '▴' : '▾'}</span>
+      </button>
+      {open && <div className="admin-accordion-body">{children}</div>}
+    </div>
+  )
+}
+
 interface PostMeta { slug: string; title: string; date: string; draft?: boolean; scheduled?: boolean; series?: string; seriesOrder?: number }
 
 export default function AdminPage() {
@@ -59,14 +76,10 @@ export default function AdminPage() {
   // Mobile drawer
   const [panelOpen, setPanelOpen] = useState(false)
 
-  // Accordion open state — all collapsed by default
-  const [openSections, setOpenSections] = useState<Set<string>>(new Set())
+  // Accordion open state — only one open at a time
+  const [openSection, setOpenSection] = useState<string | null>(null)
   function toggleSection(name: string) {
-    setOpenSections(prev => {
-      const next = new Set(prev)
-      if (next.has(name)) { next.delete(name) } else { next.add(name) }
-      return next
-    })
+    setOpenSection(prev => prev === name ? null : name)
   }
 
   useEffect(() => {
@@ -399,23 +412,7 @@ export default function AdminPage() {
 
   const existingSeries = [...new Set(posts.map(p => p.series).filter(Boolean))] as string[]
 
-  function Accordion({ id, label, count, children }: { id: string; label: string; count?: number; children: React.ReactNode }) {
-    const open = openSections.has(id)
-    return (
-      <div className="admin-accordion">
-        <button className="admin-accordion-header" onClick={() => toggleSection(id)}>
-          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            {label}
-            {count !== undefined && count > 0 && (
-              <span className="admin-accordion-badge">{count}</span>
-            )}
-          </span>
-          <span className="admin-accordion-chevron">{open ? '▴' : '▾'}</span>
-        </button>
-        {open && <div className="admin-accordion-body">{children}</div>}
-      </div>
-    )
-  }
+
 
   function buildEmailHtml(t: string, ex: string, sl: string) {
     const url = `https://theologycheck.blog/blog/${sl}`
@@ -643,7 +640,7 @@ export default function AdminPage() {
             </div>
           </div>
 
-          <Accordion id="published" label="Published" count={published.length}>
+          <Accordion id="published" label="Published" count={published.length} open={openSection === "published"} onToggle={() => toggleSection("published")}>
             {published.length === 0 && <p className="admin-empty">No published posts yet.</p>}
             {published.map(post => (
               <div key={post.slug} className="admin-panel-row">
@@ -660,7 +657,7 @@ export default function AdminPage() {
             ))}
           </Accordion>
 
-          <Accordion id="scheduled" label="Scheduled" count={scheduledPosts.length}>
+          <Accordion id="scheduled" label="Scheduled" count={scheduledPosts.length} open={openSection === "scheduled"} onToggle={() => toggleSection("scheduled")}>
             {scheduledPosts.length === 0 && <p className="admin-empty">No scheduled posts.</p>}
             {scheduledPosts.map(post => (
               <div key={post.slug} className="admin-panel-row">
@@ -677,7 +674,7 @@ export default function AdminPage() {
             ))}
           </Accordion>
 
-          <Accordion id="drafts" label="Drafts" count={drafts.length}>
+          <Accordion id="drafts" label="Drafts" count={drafts.length} open={openSection === "drafts"} onToggle={() => toggleSection("drafts")}>
             {drafts.length === 0 && <p className="admin-empty">No drafts.</p>}
             {drafts.map(post => (
               <div key={post.slug} className="admin-panel-row">
@@ -695,7 +692,7 @@ export default function AdminPage() {
           </Accordion>
 
           {activeSeries.length > 0 && (
-            <Accordion id="series" label="Series" count={activeSeries.length}>
+            <Accordion id="series" label="Series" count={activeSeries.length} open={openSection === "series"} onToggle={() => toggleSection("series")}>
               {activeSeries.map(seriesName => {
                 const pub = (publishedBySeries.get(seriesName) ?? []).sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
                 const sched = (scheduledBySeries.get(seriesName) ?? []).sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
@@ -726,7 +723,7 @@ export default function AdminPage() {
             </Accordion>
           )}
 
-          <Accordion id="subscribers" label="Subscribers" count={subscribers.length}>
+          <Accordion id="subscribers" label="Subscribers" count={subscribers.length} open={openSection === "subscribers"} onToggle={() => toggleSection("subscribers")}>
             {subscribers.length === 0 && <p className="admin-empty">No subscribers yet.</p>}
             {[...subscribers].reverse().map(s => (
               <div key={s.email} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0.75rem', borderBottom: '1px solid #ecdec8' }}>
@@ -750,7 +747,7 @@ export default function AdminPage() {
             ))}
           </Accordion>
 
-          <Accordion id="tags" label="Tags" count={availableTags.length}>
+          <Accordion id="tags" label="Tags" count={availableTags.length} open={openSection === "tags"} onToggle={() => toggleSection("tags")}>
             {availableTags.map(tag => (
               <div key={tag} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0.75rem', borderBottom: '1px solid #ecdec8' }}>
                 {editingTag === tag ? (
@@ -774,7 +771,7 @@ export default function AdminPage() {
             </div>
           </Accordion>
 
-          <Accordion id="authors" label="Authors" count={authors.length}>
+          <Accordion id="authors" label="Authors" count={authors.length} open={openSection === "authors"} onToggle={() => toggleSection("authors")}>
             {authors.map(a => (
               <div key={a} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0.75rem', borderBottom: '1px solid #ecdec8' }}>
                 {editingAuthor === a ? (
