@@ -11,6 +11,38 @@ interface PostResult {
   excerpt: string
   tags: string[]
   author: string
+  matchSnippet: { before: string; match: string; after: string } | null
+}
+
+// Strip markdown syntax so snippets read as plain prose
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/#{1,6}\s+/g, '')
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/\*(.+?)\*/g, '$1')
+    .replace(/_(.+?)_/g, '$1')
+    .replace(/\[(.+?)\]\(.+?\)/g, '$1')
+    .replace(/`(.+?)`/g, '$1')
+    .replace(/^>\s+/gm, '')
+    .replace(/\n+/g, ' ')
+    .trim()
+}
+
+function getSnippet(
+  text: string,
+  query: string,
+  radius = 90
+): { before: string; match: string; after: string } | null {
+  const lower = text.toLowerCase()
+  const idx = lower.indexOf(query.toLowerCase())
+  if (idx === -1) return null
+
+  const start = Math.max(0, idx - radius)
+  const end = Math.min(text.length, idx + query.length + radius)
+  const before = (start > 0 ? '…' : '') + text.slice(start, idx)
+  const match = text.slice(idx, idx + query.length)
+  const after = text.slice(idx + query.length, end) + (end < text.length ? '…' : '')
+  return { before, match, after }
 }
 
 function searchPosts(q: string): PostResult[] {
@@ -18,21 +50,33 @@ function searchPosts(q: string): PostResult[] {
   if (!fs.existsSync(postsDir)) return []
   const today = new Date().toISOString().split('T')[0]
   const query = q.toLowerCase()
+
   return fs.readdirSync(postsDir)
     .filter(f => f.endsWith('.md'))
     .map(file => {
       const raw = fs.readFileSync(path.join(postsDir, file), 'utf8')
       const { data, content } = matter(raw)
       if (data.draft || data.scheduled || (data.date && data.date > today)) return null
-      const searchable = [data.title ?? '', data.excerpt ?? '', content].join(' ').toLowerCase()
+
+      const title: string = data.title ?? ''
+      const excerpt: string = data.excerpt ?? ''
+      const plainContent = stripMarkdown(content)
+      const searchable = [title, excerpt, plainContent].join(' ').toLowerCase()
       if (!searchable.includes(query)) return null
+
+      // Prefer a match in body over title/excerpt for the snippet
+      let snippet = getSnippet(plainContent, q)
+      if (!snippet) snippet = getSnippet(excerpt, q)
+      if (!snippet) snippet = getSnippet(title, q)
+
       return {
         slug: file.replace(/\.md$/, ''),
-        title: data.title ?? '',
+        title,
         date: data.date ?? '',
-        excerpt: data.excerpt ?? '',
+        excerpt,
         tags: data.tags ?? [],
         author: data.author ?? '',
+        matchSnippet: snippet,
       }
     })
     .filter(Boolean)
@@ -91,7 +135,13 @@ export default async function SearchPage(
                 </span>
               </div>
               <h2 className="search-result-title">{post.title}</h2>
-              {post.excerpt && <p className="search-result-excerpt">{post.excerpt}</p>}
+              {post.matchSnippet && (
+                <p className="search-result-snippet">
+                  {post.matchSnippet.before}
+                  <mark className="search-highlight">{post.matchSnippet.match}</mark>
+                  {post.matchSnippet.after}
+                </p>
+              )}
               {post.tags?.length > 0 && (
                 <div className="search-result-tags">
                   {post.tags.map(tag => (
