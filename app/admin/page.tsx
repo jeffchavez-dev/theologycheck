@@ -193,10 +193,17 @@ export default function AdminPage() {
     if (!title || !body) { setError('Title and body are required.'); return }
     // date is optional for scheduled posts
     const isEdit = editingSlug !== null
+    // Auto-assign seriesOrder: new posts go to end; existing posts keep their order
+    let resolvedSeriesOrder = seriesOrder
+    if (series && (!isEdit || seriesOrder === 0)) {
+      const seriesPosts = posts.filter(p => p.series === series && p.slug !== editingSlug)
+      const maxOrder = seriesPosts.reduce((max, p) => Math.max(max, p.seriesOrder ?? 0), 0)
+      resolvedSeriesOrder = maxOrder + 1
+    }
     const res = await fetch('/api/posts', {
       method: isEdit ? 'PUT' : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, scheduled: asScheduled, author, dropCapParagraph, series, seriesOrder }),
+      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, scheduled: asScheduled, author, dropCapParagraph, series, seriesOrder: resolvedSeriesOrder }),
     })
     if (res.ok) {
       const data = await res.json()
@@ -650,10 +657,6 @@ export default function AdminPage() {
                       ))}
                     </div>
                   )}
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'EB Garamond, serif', fontSize: 14, color: '#2a1a0e' }}>
-                    Part
-                    <input type="number" min={1} max={99} value={seriesOrder} onChange={e => setSeriesOrder(Math.max(1, parseInt(e.target.value) || 1))} style={{ width: 52, padding: '2px 6px', border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif', fontSize: 14 }} />
-                  </label>
                 </div>
               )}
             </div>
