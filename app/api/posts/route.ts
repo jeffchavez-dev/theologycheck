@@ -165,6 +165,33 @@ export async function PUT(req: NextRequest) {
   return NextResponse.json({ ok: true })
 }
 
+// PATCH — batch update seriesOrder for multiple posts
+export async function PATCH(req: NextRequest) {
+  const { updates } = await req.json() as { updates: { slug: string; seriesOrder: number }[] }
+  if (!Array.isArray(updates) || updates.length === 0) return NextResponse.json({ error: 'No updates' }, { status: 400 })
+
+  for (const { slug, seriesOrder } of updates) {
+    const file = findFile(slug)
+    if (!file) continue
+    const existing = matter(fs.readFileSync(path.join(postsDir, file), 'utf8'))
+    const d = existing.data
+    const markdown = buildMarkdown(
+      d.title ?? '', d.date ?? '', d.excerpt ?? '', d.tags ?? [],
+      d.draft ?? false, existing.content, d.author ?? '',
+      d.updatedAt ?? d.date ?? '', d.updateCount ?? 0,
+      d.dropCapParagraph ?? 0, d.series ?? '', seriesOrder, d.scheduled ?? false
+    )
+    const githubPath = `posts/${file}`
+    const sha = await githubGetSHA(githubPath)
+    await githubWriteFile(githubPath, markdown, `Reorder: ${d.title ?? slug}`, sha)
+  }
+
+  // Revalidate series pages
+  revalidatePath('/series')
+  revalidatePath('/')
+  return NextResponse.json({ ok: true })
+}
+
 // DELETE — delete post via GitHub API
 export async function DELETE(req: NextRequest) {
   const slug = req.nextUrl.searchParams.get('slug')

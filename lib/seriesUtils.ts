@@ -30,8 +30,8 @@ export function getScheduledPosts(): Post[] {
         draft: data.draft || false,
       }
     })
-    .filter(p => p.scheduled === true)
-    .sort((a, b) => (a.date < b.date ? -1 : 1))
+    .filter(p => p.scheduled === true && !p.draft)
+    .sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
 }
 
 export interface SeriesInfo {
@@ -54,7 +54,8 @@ export function getActiveSeries(): SeriesInfo[] {
       const slug = file.replace(/\.md$/, '')
       const raw = fs.readFileSync(path.join(postsDir, file), 'utf8')
       const { data } = matter(raw)
-      if (!data.series || data.draft || (data.date ?? '') > today) return
+      // only count genuinely published posts toward series visibility
+      if (!data.series || data.draft || data.scheduled || (data.date ?? '') > today) return
       const name = data.series as string
       const existing = byName.get(name)
       if (!existing || data.date < existing.firstDate) {

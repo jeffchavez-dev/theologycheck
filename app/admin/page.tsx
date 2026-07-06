@@ -139,6 +139,25 @@ export default function AdminPage() {
     fetchSubscribers()
   }
 
+  async function handleReorder(seriesName: string, slugA: string, slugB: string) {
+    // Swap seriesOrder between two adjacent posts
+    const all = [
+      ...(publishedBySeries.get(seriesName) ?? []),
+      ...(scheduledBySeries.get(seriesName) ?? []),
+    ].sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
+    const a = all.find(p => p.slug === slugA)
+    const b = all.find(p => p.slug === slugB)
+    if (!a || !b) return
+    const orderA = a.seriesOrder ?? 0
+    const orderB = b.seriesOrder ?? 0
+    await fetch('/api/posts', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ updates: [{ slug: slugA, seriesOrder: orderB }, { slug: slugB, seriesOrder: orderA }] }),
+    })
+    fetchPosts()
+  }
+
   function login() {
     if (password === ADMIN_KEY) {
       sessionStorage.setItem('tc-auth', '1')
@@ -172,7 +191,7 @@ export default function AdminPage() {
 
   async function handleSave(asDraft: boolean, asScheduled = false) {
     if (!title || !body) { setError('Title and body are required.'); return }
-    if (asScheduled && !date) { setError('A publish date is required for scheduled posts.'); return }
+    // date is optional for scheduled posts
     const isEdit = editingSlug !== null
     const res = await fetch('/api/posts', {
       method: isEdit ? 'PUT' : 'POST',
@@ -185,7 +204,7 @@ export default function AdminPage() {
       if (!isEdit && data.slug) setEditingSlug(data.slug)
       setDraft(asDraft); setScheduled(asScheduled)
       const msg = asScheduled
-        ? `Post scheduled — publishes ${date}.`
+        ? 'Post saved as coming soon.'
         : asDraft ? 'Saved as draft.' : isEdit ? 'Post updated.' : 'Post published.'
       setSaved(msg); setTimeout(() => setSaved(''), 5000); fetchPosts()
       if (!asDraft && !asScheduled) {
@@ -408,7 +427,7 @@ export default function AdminPage() {
   posts.filter(p => p.series && p.scheduled).forEach(p => {
     const arr = scheduledBySeries.get(p.series!) ?? []; arr.push(p); scheduledBySeries.set(p.series!, arr)
   })
-  const activeSeries = [...publishedBySeries.keys()]
+  const activeSeries = [...new Set([...publishedBySeries.keys(), ...scheduledBySeries.keys()])]
 
   const existingSeries = [...new Set(posts.map(p => p.series).filter(Boolean))] as string[]
 
@@ -696,27 +715,40 @@ export default function AdminPage() {
               {activeSeries.map(seriesName => {
                 const pub = (publishedBySeries.get(seriesName) ?? []).sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
                 const sched = (scheduledBySeries.get(seriesName) ?? []).sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
+                const all = [...pub, ...sched]
                 return (
                   <div key={seriesName} style={{ borderBottom: '1px solid #ecdec8' }}>
                     <div style={{ padding: '0.5rem 0.75rem', background: '#fff8ee', fontSize: 12, fontFamily: 'Cinzel, serif', color: '#8b1a1a', letterSpacing: '0.06em' }}>{seriesName}</div>
-                    {pub.map((post, i) => (
-                      <div key={post.slug} className="admin-panel-row" style={{ paddingLeft: '1.25rem' }}>
-                        <div style={{ flex: 1, minWidth: 0 }}>
-                          <div style={{ fontSize: 10, fontFamily: 'Cinzel, serif', color: '#8a6040', marginBottom: 1 }}>Part {post.seriesOrder ?? i + 1}</div>
-                          <div className="admin-post-title" style={{ fontSize: 12 }}>{post.title}</div>
+                    {all.map((post, i) => {
+                      const isScheduled = !!post.scheduled
+                      const canUp = i > 0
+                      const canDown = i < all.length - 1
+                      return (
+                        <div key={post.slug} className="admin-panel-row" style={{ paddingLeft: '1.25rem', opacity: isScheduled ? 0.8 : 1 }}>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: 1, marginRight: 4 }}>
+                            <button
+                              onClick={() => canUp && handleReorder(seriesName, post.slug, all[i - 1].slug)}
+                              disabled={!canUp}
+                              style={{ background: 'none', border: 'none', cursor: canUp ? 'pointer' : 'default', color: canUp ? '#8a6040' : '#d4c5a9', fontSize: 10, padding: '1px 3px', lineHeight: 1 }}
+                              aria-label="Move up"
+                            >▲</button>
+                            <button
+                              onClick={() => canDown && handleReorder(seriesName, post.slug, all[i + 1].slug)}
+                              disabled={!canDown}
+                              style={{ background: 'none', border: 'none', cursor: canDown ? 'pointer' : 'default', color: canDown ? '#8a6040' : '#d4c5a9', fontSize: 10, padding: '1px 3px', lineHeight: 1 }}
+                              aria-label="Move down"
+                            >▼</button>
+                          </div>
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <div style={{ fontSize: 10, fontFamily: 'Cinzel, serif', color: isScheduled ? '#3a6a9a' : '#8a6040', marginBottom: 1 }}>
+                              Part {post.seriesOrder ?? i + 1}{isScheduled ? ' · Coming Soon' : ''}
+                            </div>
+                            <div className="admin-post-title" style={{ fontSize: 12 }}>{post.title}</div>
+                          </div>
+                          <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
                         </div>
-                        <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
-                      </div>
-                    ))}
-                    {sched.map((post, i) => (
-                      <div key={post.slug} className="admin-panel-row" style={{ paddingLeft: '1.25rem', opacity: 0.7 }}>
-                        <div style={{ flex: 1, minWidth: 0 }}>
-                          <div style={{ fontSize: 10, fontFamily: 'Cinzel, serif', color: '#3a6a9a', marginBottom: 1 }}>Part {post.seriesOrder ?? pub.length + i + 1} · Scheduled</div>
-                          <div className="admin-post-title" style={{ fontSize: 12 }}>{post.title}</div>
-                        </div>
-                        <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
-                      </div>
-                    ))}
+                      )
+                    })}
                   </div>
                 )
               })}
