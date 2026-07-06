@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { getActiveSeries } from '@/lib/seriesUtils'
+import SearchBar from './SearchBar'
 
 export default function Header() {
   const series = getActiveSeries()
@@ -33,6 +34,7 @@ export default function Header() {
               </div>
             )}
           </div>
+          <SearchBar />
           <Link href="/about">About</Link>
         </nav>
       </header>
