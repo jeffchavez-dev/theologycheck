@@ -4,9 +4,12 @@ date: "2026-01-04"
 excerpt: "The first of the 24 Thomistic Theses examined — the fundamental distinction between potency and act and its implications for classical theism and Reformed theology."
 tags:
   - "Thomism"
+dropCapParagraph: 1
+series: "Thomistic Theses"
+seriesOrder: 1
 author: "Jeff Chavez"
-updatedAt: "2026-06-21"
-updateCount: 2
+updatedAt: "2026-07-06"
+updateCount: 3
 ---
 
 *Note: I do not claim expertise on the 24 Thomistic Theses; on the contrary, I write that I may learn. Throughout this series, I'll be citing various sources that will help explain each thesis. Enjoy! Find all the theses here: [THE 24 THOMISTIC THESES](https://theologycheckblog.wordpress.com/2025/12/22/the-24-thomistic-theses/).*
