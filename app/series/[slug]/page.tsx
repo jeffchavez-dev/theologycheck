@@ -54,7 +54,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
           })
           return (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="series-post-row">
-              <div className="series-post-num">Part {post.seriesOrder ?? i + 1}</div>
+              <div className="series-post-num">Part {i + 1}</div>
               <div className="series-post-body">
                 <div className="series-post-title">{post.title}</div>
                 {post.excerpt && <div className="series-post-excerpt">{post.excerpt}</div>}
@@ -66,7 +66,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
 
         {comingSoon.map((post, i) => (
           <div key={post.slug} className="series-post-row series-post-soon">
-            <div className="series-post-num">Part {post.seriesOrder ?? published.length + i + 1}</div>
+            <div className="series-post-num">Part {published.length + i + 1}</div>
             <div className="series-post-body">
               <div className="series-post-title">{post.title}</div>
               <div className="series-post-date">Coming soon</div>

@@ -741,7 +741,7 @@ export default function AdminPage() {
                           </div>
                           <div style={{ flex: 1, minWidth: 0 }}>
                             <div style={{ fontSize: 10, fontFamily: 'Cinzel, serif', color: isScheduled ? '#3a6a9a' : '#8a6040', marginBottom: 1 }}>
-                              Part {post.seriesOrder ?? i + 1}{isScheduled ? ' · Coming Soon' : ''}
+                              Part {i + 1}{isScheduled ? ' · Coming Soon' : ''}
                             </div>
                             <div className="admin-post-title" style={{ fontSize: 12 }}>{post.title}</div>
                           </div>
