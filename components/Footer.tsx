@@ -11,10 +11,10 @@ export default function Footer() {
       </div>
       <footer className="site-footer">
         <div className="footer-logo">
-        <Image src="/logo.png" alt="Theology Check logo" width={36} height={36} unoptimized style={{ borderRadius: '50%', border: '1.5px solid #3a1010' }} />
+          <Image src="/logo.png" alt="Theology Check logo" width={36} height={36} unoptimized style={{ borderRadius: '50%', border: '1.5px solid #3a1010' }} />
           <div>
             <p className="footer-name">Theology Check</p>
-            <p className="footer-copy">© {year} Jeff Chavez</p>
+            <p className="footer-copy">{year} Jeff Chavez</p>
             <p className="footer-tagline">
               All original content is freely given and dedicated to the{' '}
               <a href="https://copy.church/free/" target="_blank" rel="noopener noreferrer">
@@ -48,7 +48,6 @@ export default function Footer() {
           <a href="https://www.facebook.com/theologycheck.blog" target="_blank" rel="noopener" aria-label="Facebook">
             <i className="ti ti-brand-facebook" />
           </a>
-
         </div>
       </footer>
       <div className="arch-bar-inner" />

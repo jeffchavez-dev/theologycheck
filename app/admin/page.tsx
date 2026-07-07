@@ -69,6 +69,9 @@ export default function AdminPage() {
   const [editingTag, setEditingTag] = useState<string | null>(null)
   const [editingTagVal, setEditingTagVal] = useState('')
 
+  // Admin search
+  const [adminSearch, setAdminSearch] = useState('')
+
   // UI feedback
   const [saved, setSaved] = useState('')
   const [error, setError] = useState('')
@@ -156,6 +159,29 @@ export default function AdminPage() {
       body: JSON.stringify({ updates: [{ slug: slugA, seriesOrder: orderB }, { slug: slugB, seriesOrder: orderA }] }),
     })
     fetchPosts()
+  }
+
+  async function handleDuplicate(slug: string) {
+    const res = await fetch(`/api/posts?slug=${slug}`)
+    if (!res.ok) { setError('Could not load post.'); return }
+    const post = await res.json()
+    setEditingSlug(null)
+    setTitle(`${post.title} (Copy)`)
+    setExcerpt(post.excerpt ?? '')
+    setBody(post.body ?? '')
+    setDate('')
+    setDraft(true)
+    setScheduled(false)
+    setDropCapParagraph(post.dropCapParagraph ?? 0)
+    setSelectedTags(post.tags ?? [])
+    setAuthor(post.author ?? '')
+    setUpdatedAt('')
+    setUpdateCount(0)
+    setSeries(post.series ?? '')
+    setSeriesOrder(0)
+    setError('')
+    setPanelOpen(false)
+    window.scrollTo(0, 0)
   }
 
   function login() {
@@ -421,9 +447,10 @@ export default function AdminPage() {
     fontFamily: 'EB Garamond, serif',
   }
 
-  const published = posts.filter(p => !p.draft && !p.scheduled)
-  const scheduledPosts = posts.filter(p => p.scheduled)
-  const drafts = posts.filter(p => p.draft)
+  const sq = adminSearch.toLowerCase()
+  const published = posts.filter(p => !p.draft && !p.scheduled && (!sq || p.title.toLowerCase().includes(sq)))
+  const scheduledPosts = posts.filter(p => p.scheduled && (!sq || p.title.toLowerCase().includes(sq)))
+  const drafts = posts.filter(p => p.draft && (!sq || p.title.toLowerCase().includes(sq)))
 
   // Series manager
   const publishedBySeries = new Map<string, PostMeta[]>()
@@ -435,6 +462,9 @@ export default function AdminPage() {
     const arr = scheduledBySeries.get(p.series!) ?? []; arr.push(p); scheduledBySeries.set(p.series!, arr)
   })
   const activeSeries = [...new Set([...publishedBySeries.keys(), ...scheduledBySeries.keys()])]
+    .filter(name => !sq || name.toLowerCase().includes(sq) ||
+      [...(publishedBySeries.get(name) ?? []), ...(scheduledBySeries.get(name) ?? [])].some(p => p.title.toLowerCase().includes(sq))
+    )
 
   const existingSeries = [...new Set(posts.map(p => p.series).filter(Boolean))] as string[]
 
@@ -510,6 +540,7 @@ export default function AdminPage() {
         <span className="admin-title">{editingSlug ? `Editing: ${title || '…'}` : 'New Post'}</span>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           {editingSlug && <button className="btn-delete" onClick={resetForm}>✕ Cancel</button>}
+          <button className="admin-panel-btn" onClick={() => { resetForm(); window.scrollTo(0, 0) }} style={{ fontFamily: 'Cinzel, serif', fontSize: 10, letterSpacing: '0.06em' }}>+ New Post</button>
           <Link href="/" className="back-link">← View Site</Link>
           <button className="admin-hamburger" onClick={() => setPanelOpen(o => !o)} aria-label="Post options">
             <span /><span /><span />
@@ -662,6 +693,24 @@ export default function AdminPage() {
             </div>
           </div>
 
+          {/* ── New Post + Search ── */}
+          <div style={{ display: 'flex', gap: '0.5rem', padding: '0.75rem 0.75rem 0.25rem', alignItems: 'center' }}>
+            <button
+              className="admin-panel-btn"
+              onClick={() => { resetForm(); window.scrollTo(0, 0) }}
+              style={{ fontFamily: 'Cinzel, serif', fontSize: 10, letterSpacing: '0.06em', whiteSpace: 'nowrap' }}
+            >+ New Post</button>
+            <input
+              value={adminSearch}
+              onChange={e => setAdminSearch(e.target.value)}
+              placeholder="Search posts…"
+              style={{ flex: 1, padding: '4px 8px', fontSize: 13, border: '1px solid #c49a5a', borderRadius: 2, background: '#fffaf2', fontFamily: 'EB Garamond, serif' }}
+            />
+            {adminSearch && (
+              <button onClick={() => setAdminSearch('')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#8a6040', fontSize: 14, padding: '0 2px' }} aria-label="Clear search">✕</button>
+            )}
+          </div>
+
           <Accordion id="published" label="Published" count={published.length} open={openSection === "published"} onToggle={() => toggleSection("published")}>
             {published.length === 0 && <p className="admin-empty">No published posts yet.</p>}
             {published.map(post => (
@@ -673,6 +722,7 @@ export default function AdminPage() {
                 <div style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}>
                   <a href={`/blog/${post.slug}`} target="_blank" rel="noopener noreferrer" className="admin-panel-btn">View</a>
                   <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
+                  <button className="admin-panel-btn" onClick={() => handleDuplicate(post.slug)} title="Duplicate as draft">⧉</button>
                   <button className="admin-panel-btn danger" onClick={() => handleDeletePost(post.slug)}>✕</button>
                 </div>
               </div>
@@ -685,11 +735,11 @@ export default function AdminPage() {
               <div key={post.slug} className="admin-panel-row">
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div className="admin-post-title" style={{ fontSize: 13, color: '#3a6a9a' }}>{post.title}</div>
-                  <div className="admin-post-date">Publishes {post.date}</div>
+                  <div className="admin-post-date">{post.date ? `Publishes ${post.date}` : 'Coming soon'}</div>
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}>
-                  <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="admin-panel-btn">Preview</a>
                   <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
+                  <button className="admin-panel-btn" onClick={() => handleDuplicate(post.slug)} title="Duplicate as draft">⧉</button>
                   <button className="admin-panel-btn danger" onClick={() => handleDeletePost(post.slug)}>✕</button>
                 </div>
               </div>
@@ -705,8 +755,8 @@ export default function AdminPage() {
                   <div className="admin-post-date">Draft</div>
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}>
-                  <a href={`/preview/${post.slug}`} target="_blank" rel="noopener noreferrer" className="admin-panel-btn">Preview</a>
                   <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
+                  <button className="admin-panel-btn" onClick={() => handleDuplicate(post.slug)} title="Duplicate as draft">⧉</button>
                   <button className="admin-panel-btn danger" onClick={() => handleDeletePost(post.slug)}>✕</button>
                 </div>
               </div>
