@@ -1,5 +1,5 @@
 ---
-title: "Act Is Perfection"
+title: "Thomistic Thesis 2: Act Is Perfection"
 date: "2026-07-07"
 excerpt: ""
 scheduled: true
@@ -8,9 +8,8 @@ series: "Thomistic Theses"
 seriesOrder: 2
 author: "Jeff Chavez"
 updatedAt: "2026-07-07"
-updateCount: 0
+updateCount: 1
 ---
-
 
 2. Since act is perfection, it is not limited except through a potency which itself is a capacity for perfection. Hence in any order in which an act is pure act, it will only exist, in that order, as a unique and unlimited act. But whenever it is finite and manifold, it has entered into a true composition with potency.4
 
