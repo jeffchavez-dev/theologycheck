@@ -1,5 +1,5 @@
 ---
-title: "One God, Unique and Simple"
+title: "Thomistic Thesis 3: One God, Unique and Simple"
 date: "2026-07-07"
 excerpt: ""
 scheduled: true
@@ -8,9 +8,8 @@ series: "Thomistic Theses"
 seriesOrder: 2
 author: "Jeff Chavez"
 updatedAt: "2026-07-07"
-updateCount: 0
+updateCount: 1
 ---
-
 
 3. Consequently, the one God, unique and simple, alone subsists in absolute being. All other things that participate in being have a nature whereby their being is restricted; they are constituted of essence and being, as really distinct principles.5
 
