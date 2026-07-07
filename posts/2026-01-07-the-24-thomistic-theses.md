@@ -1,12 +1,15 @@
 ---
 title: "THE 24 THOMISTIC THESES"
-date: "2026-01-07"
+date: "2026-06-01"
 excerpt: "An overview of the 24 Thomistic Theses — the fundamental propositions of Thomistic metaphysics officially endorsed by the Catholic Church in 1914 and their relevance to Reformed classical theism."
 tags:
   - "Thomism"
+dropCapParagraph: 1
+series: "Thomistic Theses"
+seriesOrder: 1
 author: "Jeff Chavez"
-updatedAt: "2026-07-04"
-updateCount: 2
+updatedAt: "2026-07-07"
+updateCount: 3
 ---
 
 These 24 propositions are a concise guide of the whole philosophy of Thomism (which Reformed Thomists also affirm) and can be divided as follows[^1]:
