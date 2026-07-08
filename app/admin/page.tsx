@@ -310,6 +310,16 @@ export default function AdminPage() {
         break
       }
       case 'quote': prefixLine('> '); break
+      case 'blockquote': {
+        const lines = (sel || 'Extended quote text here.').split('\n').map(l => `> ${l}`).join('\n')
+        const result = `\n${lines}\n>\n> — Author, *Source* (Year)\n`
+        const newBody = val.slice(0, start) + result + val.slice(end)
+        setBody(newBody)
+        const s = start + 1 + 2
+        const quoteText = sel || 'Extended quote text here.'
+        setTimeout(() => { ta.focus(); ta.setSelectionRange(s, s + quoteText.length) }, 0)
+        break
+      }
       case 'bullet': prefixLine('- '); break
       case 'ordered': prefixLine('1. '); break
       case 'link': {
@@ -586,7 +596,8 @@ export default function AdminPage() {
                   </span>
                   <span className="md-toolbar-sep" />
                   <span className="md-toolbar-group">
-                    <button type="button" className="md-btn" title="Blockquote" onClick={() => applyMarkdown('quote')}>"</button>
+                    <button type="button" className="md-btn" title="Inline quote" onClick={() => applyMarkdown('quote')}>"</button>
+                    <button type="button" className="md-btn" title="Full block quote with attribution" onClick={() => applyMarkdown('blockquote')} style={{ fontSize: 11, letterSpacing: '0.02em' }}>❝¶</button>
                     <button type="button" className="md-btn" title="Bullet list" onClick={() => applyMarkdown('bullet')}>•</button>
                     <button type="button" className="md-btn" title="Numbered list" onClick={() => applyMarkdown('ordered')}>1.</button>
                     <button type="button" className="md-btn" title="Horizontal rule" onClick={() => applyMarkdown('hr')}>—</button>
