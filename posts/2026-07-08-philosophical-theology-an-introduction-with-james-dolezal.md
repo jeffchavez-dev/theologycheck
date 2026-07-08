@@ -4,13 +4,12 @@ date: "2026-07-08"
 excerpt: "This is an outlined transcript of Dr. James Dolezal's interview with Theology in Particular where he dealt with the Foundations of Philosophical Theology."
 tags:
   - "Philosophy"
-draft: true
 author: "Jeff Chavez"
 updatedAt: "2026-07-08"
-updateCount: 5
+updateCount: 6
 ---
 
-This is an outlined transcript of Dr. James Dolezal's interview with Theology in Particular, where he dealt with the Foundations of Philosophical Theology. James Dolezal is really a gift to the church. Despite his current condition, resulting from a recent accident, this archived lecture will serve the greater body of Christ's church in understanding that Philosophy is subordinate to Theology yet remains a genuine science.
+This is an outlined transcript of Dr. James Dolezal's interview with Theology in Particular, where he dealt with the Foundations of Philosophical Theology. James Dolezal is really a gift to the church. Despite his current condition, resulting from a recent accident, this archived lecture will serve the greater body of Christ's church in understanding that while Philosophy is subordinate to Theology, it remains a genuine science.
 
 **[Theology in Particular | Episode 58 (Greatest Hits Replay)](https://www.youtube.com/watch?v=cCjhKtXVidY)**
 
