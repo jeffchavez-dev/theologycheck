@@ -5,7 +5,7 @@ export default function QuoteShare() {
   useEffect(() => {
     const blockquotes = document.querySelectorAll<HTMLElement>('.post-content .pull-quote blockquote')
     blockquotes.forEach(bq => {
-      if (bq.querySelector('.quote-share-btn')) return // already added
+      if (bq.querySelector('.quote-share-btn')) return
       const btn = document.createElement('button')
       btn.textContent = 'Share'
       btn.className = 'quote-share-btn'
@@ -36,12 +36,37 @@ async function shareQuote(bq: HTMLElement) {
     document.fonts.load('500 24px "Cinzel"'),
   ])
 
+  // Layout constants
+  const pad = 48
+  const quoteMarkH = 90   // space for the " glyph + gap
+  const attributionH = attribution ? 50 : 0
+  const brandingH = 50
+  const innerTop = pad + 20
+  const innerBottom = H - pad - 20
+  const availableForText = innerBottom - innerTop - quoteMarkH - attributionH - brandingH
+
+  // Find the largest font size where the text fits
+  const maxW = 900
+  let fontSize = 32
+  let lineH = fontSize * 1.55
+  let lines: string[] = []
+
+  while (fontSize >= 16) {
+    ctx.font = `italic ${fontSize}px "EB Garamond"`
+    lineH = fontSize * 1.55
+    lines = buildLines(ctx, quoteText, maxW)
+    const textH = lines.length * lineH
+    if (textH <= availableForText) break
+    fontSize -= 2
+  }
+
+  // ── Draw ──
+
   // Background
   ctx.fillStyle = '#160d06'
   ctx.fillRect(0, 0, W, H)
 
-  // Subtle vignette-like border inset
-  const pad = 48
+  // Border
   ctx.strokeStyle = '#c49a5a'
   ctx.lineWidth = 1
   ctx.globalAlpha = 0.35
@@ -55,39 +80,43 @@ async function shareQuote(bq: HTMLElement) {
   ctx.globalAlpha = 0.7
   for (const [cx, cy, dx, dy] of [
     [pad, pad, 1, 1], [W - pad, pad, -1, 1],
-    [pad, H - pad, 1, -1], [W - pad, H - pad, -1, -1]
+    [pad, H - pad, 1, -1], [W - pad, H - pad, -1, -1],
   ] as [number, number, number, number][]) {
     ctx.beginPath(); ctx.moveTo(cx + dx * cs, cy); ctx.lineTo(cx, cy); ctx.lineTo(cx, cy + dy * cs); ctx.stroke()
   }
   ctx.globalAlpha = 1
 
+  // Vertically center everything inside the border
+  const totalContentH = quoteMarkH + lines.length * lineH + attributionH + brandingH
+  const contentStartY = innerTop + (innerBottom - innerTop - totalContentH) / 2
+
   // Opening quote mark
-  ctx.font = '500 108px "Cinzel"'
+  ctx.font = '500 80px "Cinzel"'
   ctx.fillStyle = '#c49a5a'
   ctx.textAlign = 'center'
-  ctx.fillText('“', W / 2, 210)
+  ctx.fillText('"', W / 2, contentStartY + 68)
 
-  // Quote text — word wrap
-  ctx.font = 'italic 30px "EB Garamond"'
+  // Quote text
+  ctx.font = `italic ${fontSize}px "EB Garamond"`
   ctx.fillStyle = '#f0e8d8'
   ctx.textAlign = 'center'
-  const lineH = 46
-  const maxW = 860
-  const startY = attribution ? 280 : 300
-  const usedLines = wrapText(ctx, quoteText, W / 2, startY, maxW, lineH)
-  const textBottom = startY + usedLines * lineH
+  const textStartY = contentStartY + quoteMarkH
+  lines.forEach((line, i) => {
+    ctx.fillText(line, W / 2, textStartY + i * lineH)
+  })
+  const textEndY = textStartY + lines.length * lineH
 
   // Attribution
   if (attribution) {
-    ctx.font = '500 15px "Cinzel"'
+    ctx.font = '500 14px "Cinzel"'
     ctx.fillStyle = '#c49a5a'
-    ctx.fillText(attribution.toUpperCase(), W / 2, textBottom + 36)
+    ctx.fillText(attribution.toUpperCase(), W / 2, textEndY + 32)
   }
 
   // Branding
-  ctx.font = '500 13px "Cinzel"'
+  ctx.font = '500 12px "Cinzel"'
   ctx.fillStyle = '#5a4030'
-  ctx.fillText('THEOLOGYCHECK.BLOG', W / 2, H - 52)
+  ctx.fillText('THEOLOGYCHECK.BLOG', W / 2, H - pad - 8)
 
   canvas.toBlob(async blob => {
     if (!blob) return
@@ -95,7 +124,6 @@ async function shareQuote(bq: HTMLElement) {
       await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
       showToast(bq, 'Quote card copied to clipboard')
     } catch {
-      // fallback: download
       const url = URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url; a.download = 'quote-theologycheck.png'; a.click()
@@ -104,26 +132,23 @@ async function shareQuote(bq: HTMLElement) {
   }, 'image/png')
 }
 
-function wrapText(
-  ctx: CanvasRenderingContext2D,
-  text: string, x: number, y: number,
-  maxWidth: number, lineHeight: number
-): number {
-  const words = text.split(' ')
-  let line = ''
-  let row = 0
-  for (const word of words) {
-    const test = line + word + ' '
-    if (ctx.measureText(test).width > maxWidth && line !== '') {
-      ctx.fillText(line.trim(), x, y + row * lineHeight)
-      line = word + ' '
-      row++
-    } else {
-      line = test
+function buildLines(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
+  const result: string[] = []
+  for (const paragraph of text.split('\n\n')) {
+    const words = paragraph.split(' ')
+    let line = ''
+    for (const word of words) {
+      const test = line + word + ' '
+      if (ctx.measureText(test).width > maxWidth && line !== '') {
+        result.push(line.trim())
+        line = word + ' '
+      } else {
+        line = test
+      }
     }
+    if (line.trim()) result.push(line.trim())
   }
-  if (line.trim()) { ctx.fillText(line.trim(), x, y + row * lineHeight); row++ }
-  return row
+  return result
 }
 
 function showToast(near: HTMLElement, msg: string) {
