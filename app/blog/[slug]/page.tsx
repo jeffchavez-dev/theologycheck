@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import EditButton from '@/components/EditButton'
 import CopyLink from '@/components/CopyLink'
+import QuoteShare from '@/components/QuoteShare'
 
 export async function generateStaticParams() {
   return getAllPosts().map(p => ({ slug: p.slug }))
@@ -134,6 +135,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         className="post-content"
         dangerouslySetInnerHTML={{ __html: post.content ?? '' }}
       />
+      <QuoteShare />
 
       <footer className="post-footer">
         <div className="divider">✦ ✦ ✦</div>
