@@ -31,9 +31,10 @@ async function shareQuote(bq: HTMLElement) {
   canvas.height = H
   const ctx = canvas.getContext('2d')!
 
-  await Promise.all([
+  const [, , bgImg] = await Promise.all([
     document.fonts.load('italic 36px "EB Garamond"'),
     document.fonts.load('500 24px "Cinzel"'),
+    loadImage('/og-image.png'),
   ])
 
   // Layout constants
@@ -62,8 +63,13 @@ async function shareQuote(bq: HTMLElement) {
 
   // ── Draw ──
 
-  // Background
-  ctx.fillStyle = '#160d06'
+  // Background — cathedral photo + dark overlay
+  if (bgImg) {
+    const scale = Math.max(W / bgImg.width, H / bgImg.height)
+    const sw = bgImg.width * scale, sh = bgImg.height * scale
+    ctx.drawImage(bgImg, (W - sw) / 2, (H - sh) / 2, sw, sh)
+  }
+  ctx.fillStyle = 'rgba(16, 8, 2, 0.82)'
   ctx.fillRect(0, 0, W, H)
 
   // Border
@@ -149,6 +155,16 @@ function buildLines(ctx: CanvasRenderingContext2D, text: string, maxWidth: numbe
     if (line.trim()) result.push(line.trim())
   }
   return result
+}
+
+function loadImage(src: string): Promise<HTMLImageElement | null> {
+  return new Promise(resolve => {
+    const img = new Image()
+    img.crossOrigin = 'anonymous'
+    img.onload = () => resolve(img)
+    img.onerror = () => resolve(null)
+    img.src = src
+  })
 }
 
 function showToast(near: HTMLElement, msg: string) {
