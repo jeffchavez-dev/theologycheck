@@ -8,7 +8,7 @@ draft: true
 dropCapParagraph: 4
 author: "Jeff Chavez"
 updatedAt: "2026-07-08"
-updateCount: 2
+updateCount: 3
 ---
 
 This is an outlined transcript of Dr. James Dolezal's interview with Theology in Particular, where he dealt with the Foundations of Philosophical Theology. James Dolezal is really a gift to the church. Despite his current condition, resulting from a recent accident, this archived lecture will serve the greater body of Christ's church in understanding that Philosophy is subordinate to Theology yet remains a genuine science.
@@ -262,4 +262,6 @@ There is a learning curve for us in 21st-century Western culture. The learning c
 
 ---
 
-*This interview originally aired in September 2022 as Episode 58 of Theology in Particular, a podcast of International Reformed Baptist Seminary (IRBS). IRBS is a confessional seminary committed to the inerrant and infallible Word of God as summarized in the Second London Confession of Faith. The views and opinions expressed on Theology in Particular are not necessarily those of IRBS, its trustees, or every faculty member.*
+*This interview originally aired in September 2022 as Episode 58 of Theology in Particular, a podcast of International Reformed Baptist Seminary (IRBS). IRBS is a confessional seminary committed to the inerrant and infallible Word of God as summarized in the Second London Confession of Faith. 
+
+May the Triune God be praised!
