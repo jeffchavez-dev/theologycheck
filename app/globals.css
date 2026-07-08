@@ -318,7 +318,7 @@ a { color: inherit; text-decoration: none; }
   border-left: none;
   margin: 2.5rem -1.5rem;
   padding: 2rem 2.5rem 1.75rem;
-  background: #1a0f08;
+  background: linear-gradient(rgba(22, 13, 6, 0.86), rgba(22, 13, 6, 0.86)), url('/og-image.png') center/cover no-repeat;
   color: #f0e8d8;
   font-style: italic;
   font-size: 1.2rem;
