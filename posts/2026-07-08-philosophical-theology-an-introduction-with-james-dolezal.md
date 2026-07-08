@@ -8,14 +8,20 @@ draft: true
 dropCapParagraph: 4
 author: "Jeff Chavez"
 updatedAt: "2026-07-08"
-updateCount: 1
+updateCount: 2
 ---
 
-This is an outlined transcript of Dr. James Dolezal's interview with Theology in Particular, where he dealt with the Foundations of Philosophical Theology. James Dolezal is really a gift to the church. Despite his current condition, due to a recent accident, this archived lecture will serve the greater body of Christ's church in understanding Philosophy as 
+This is an outlined transcript of Dr. James Dolezal's interview with Theology in Particular, where he dealt with the Foundations of Philosophical Theology. James Dolezal is really a gift to the church. Despite his current condition, resulting from a recent accident, this archived lecture will serve the greater body of Christ's church in understanding that Philosophy is subordinate to Theology yet remains a genuine science.
 
 **[Theology in Particular | Episode 58 (Greatest Hits Replay)](https://www.youtube.com/watch?v=cCjhKtXVidY)**
 
 *Hosted by Joe Anady. The interview originally aired in September 2022.*
+
+
+>  If we despise what can be known through natural reason unaided by special revelation... we're despising the providence and the handiwork of God who gave us that reason, sustains it, and orders it to actually know things. 
+>
+> — James Dolezal
+
 ---
 ### Prayer Request: James Dolezal
 
@@ -144,7 +150,7 @@ There's a long commentary tradition on this particular text. I wondered if I cou
 **Joe:** This is a Protestant Anglican, but that's exactly what Thomas Aquinas says about reason — in his commentary on Boethius's *De Trinitate* — that reason doesn't exist independent of God making it be, sustaining it, and even ordering it to know things naturally.
 
 **James:** Yes. So if we despise what can be known through natural reason unaided by special revelation, his point is we're despising the providence and the handiwork of God who gave us that reason, sustains it, and orders it to actually know things. Davenant goes on:
-> z
+
 > "Therefore, judge not the discipline of the Stoics or the Platonists or the Aristotelians to be true philosophy, but whatever among all these or others shall have been discovered, spoken, or written by the light of right reason."
 
 In other words, he's saying: I'm not signing up for a philosophical system, but I'm signing up for true philosophy. He's saying he finds bits of it in Stoicism, Platonism, and Aristotelianism. This is actually the reformed tradition broadly — there's a very favorable commentary tradition on, say, Aristotle's *Nicomachean Ethics*. You'll find a Southern Presbyterian like James Henley Thornwell frequently alluding to ideas of Aristotle favorably as if they were true.
