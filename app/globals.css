@@ -312,8 +312,8 @@ a { color: inherit; text-decoration: none; }
 /* Simple inline quote — left border style */
 .post-content blockquote { border-left: 3px solid #8b1a1a; margin: 1.5rem 0; padding: 0.5rem 0 0.5rem 1.25rem; color: #5a3e28; font-style: italic; }
 
-/* Full pull-quote card — ❝¶ blockquote has multiple <p> children (quote + attribution) */
-.post-content blockquote:has(p ~ p) {
+/* Full pull-quote card — only ❝¶ blockquotes wrapped in <div class="pull-quote"> */
+.post-content .pull-quote blockquote {
   position: relative;
   border-left: none;
   margin: 2.5rem -1.5rem;
@@ -325,7 +325,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.75;
   text-align: center;
 }
-.post-content blockquote:has(p ~ p)::before {
+.post-content .pull-quote blockquote::before {
   content: '\201C';
   font-family: 'Cinzel', serif;
   font-size: 4.5rem;
@@ -335,7 +335,7 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 1rem;
 }
 /* Attribution — last <p> in a multi-paragraph blockquote */
-.post-content blockquote:has(p ~ p) p:last-child {
+.post-content .pull-quote blockquote p:last-child {
   font-style: normal;
   font-family: 'Cinzel', serif;
   font-size: 0.72rem;
@@ -345,7 +345,7 @@ a { color: inherit; text-decoration: none; }
   margin-top: 1.25rem;
   margin-bottom: 0;
 }
-.post-content blockquote:has(p ~ p) p { margin-bottom: 0; }
+.post-content .pull-quote blockquote p { margin-bottom: 0; }
 /* Share button — only on full pull-quote cards */
 .quote-share-btn {
   position: absolute;
@@ -363,7 +363,7 @@ a { color: inherit; text-decoration: none; }
   opacity: 0;
   transition: opacity 0.2s;
 }
-.post-content blockquote:has(p ~ p):hover .quote-share-btn { opacity: 1; }
+.post-content .pull-quote blockquote:hover .quote-share-btn { opacity: 1; }
 .quote-share-btn:hover { background: #c49a5a22; }
 .post-content a { color: #8b1a1a; text-decoration: underline; }
 .post-content ol { padding-left: 1.75rem; margin-bottom: 1.25rem; }

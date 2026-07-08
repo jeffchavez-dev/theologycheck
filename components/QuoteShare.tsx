@@ -3,10 +3,8 @@ import { useEffect } from 'react'
 
 export default function QuoteShare() {
   useEffect(() => {
-    const blockquotes = document.querySelectorAll<HTMLElement>('.post-content blockquote')
+    const blockquotes = document.querySelectorAll<HTMLElement>('.post-content .pull-quote blockquote')
     blockquotes.forEach(bq => {
-      // Only attach to full pull-quote cards (multi-paragraph = ❝¶ style)
-      if (bq.querySelectorAll('p').length < 2) return
       if (bq.querySelector('.quote-share-btn')) return // already added
       const btn = document.createElement('button')
       btn.textContent = 'Share'

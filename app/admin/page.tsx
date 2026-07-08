@@ -318,12 +318,12 @@ export default function AdminPage() {
       }
       case 'quote': prefixLine('> '); break
       case 'blockquote': {
-        const lines = (sel || 'Extended quote text here.').split('\n').map(l => `> ${l}`).join('\n')
-        const result = `\n${lines}\n>\n> — Author, *Source* (Year)\n`
+        const quoteText = sel || 'Extended quote text here.'
+        const lines = quoteText.split('\n').map(l => `> ${l}`).join('\n')
+        const result = `\n<div class="pull-quote">\n\n${lines}\n>\n> — Author, *Source* (Year)\n\n</div>\n`
         const newBody = val.slice(0, start) + result + val.slice(end)
         setBody(newBody)
-        const s = start + 1 + 2
-        const quoteText = sel || 'Extended quote text here.'
+        const s = start + result.indexOf(quoteText)
         setTimeout(() => { ta.focus(); ta.setSelectionRange(s, s + quoteText.length) }, 0)
         break
       }
