@@ -7,7 +7,7 @@ tags:
 draft: true
 author: "Jeff Chavez"
 updatedAt: "2026-07-08"
-updateCount: 4
+updateCount: 5
 ---
 
 This is an outlined transcript of Dr. James Dolezal's interview with Theology in Particular, where he dealt with the Foundations of Philosophical Theology. James Dolezal is really a gift to the church. Despite his current condition, resulting from a recent accident, this archived lecture will serve the greater body of Christ's church in understanding that Philosophy is subordinate to Theology yet remains a genuine science.
@@ -17,9 +17,15 @@ This is an outlined transcript of Dr. James Dolezal's interview with Theology in
 *Hosted by Joe Anady. The interview originally aired in September 2022.*
 
 
+
+<div class="pull-quote">
+
 >  If we despise what can be known through natural reason unaided by special revelation... we're despising the providence and the handiwork of God who gave us that reason, sustains it, and orders it to actually know things. 
->
+> 
 > — James Dolezal
+
+</div>
+
 
 ---
 ### Prayer Request: James Dolezal
