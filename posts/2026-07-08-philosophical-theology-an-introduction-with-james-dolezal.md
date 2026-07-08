@@ -5,10 +5,9 @@ excerpt: "This is an outlined transcript of Dr. James Dolezal's interview with T
 tags:
   - "Philosophy"
 draft: true
-dropCapParagraph: 4
 author: "Jeff Chavez"
 updatedAt: "2026-07-08"
-updateCount: 3
+updateCount: 4
 ---
 
 This is an outlined transcript of Dr. James Dolezal's interview with Theology in Particular, where he dealt with the Foundations of Philosophical Theology. James Dolezal is really a gift to the church. Despite his current condition, resulting from a recent accident, this archived lecture will serve the greater body of Christ's church in understanding that Philosophy is subordinate to Theology yet remains a genuine science.
@@ -256,7 +255,19 @@ A couple of older works that can be found in used book places and some of which 
 - **[Étienne Gilson, *Elements of Christian Philosophy*](https://www.amazon.com/Elements-Christian-Philosophy-Etienne-Gilson/dp/0313207348)** — this gets you more to an intermediate level. Gilson is a 20th-century Catholic writer (died, I think, in 1978), a lucid writer, a very good writer, a historian of philosophy by trade. He's going to introduce you basically to Thomism.
 - **[Edward Feser, *Aquinas: A Beginner's Guide*](https://www.amazon.com/dp/1780740069)** — a more recent, smaller volume; probably $10 on Amazon. A nice first step.
 
-These are not unqualified recommendations — my only unqualified recommendation is the Bible. That's not a recommendation, that's an insistence. These are just recommendations. With qualifications, I think they are generally reliable guides into the subject.
+
+> 
+> 
+> These are not unqualified recommendations — my only unqualified recommendation is the Bible. That's not a recommendation, that's an insistence. These are just recommendations. With qualifications, I think they are generally reliable guides into the subject.
+> 
+>
+> — Author, *Source* (Year)
+> 
+>
+> — Author, *Source* (Year)
+> 
+>
+> — Author, *Source* (Year)
 
 There is a learning curve for us in 21st-century Western culture. The learning curve is a little steep on the front end. But there are dictionaries to help with that and also the internet. You can find nice philosophical word lists with little explanations for free online. At IRBS, I require **[Bernard Wuellner, *A Dictionary of Scholastic Philosophy*](https://www.amazon.com/Dictionary-Scholastic-Philosophy-Bernard-Wuellner/dp/1622920007)**, and we do sort of vocab quizzes out of that dictionary — because learning the grammar is essential to becoming conversant with this kind of thought world.
 
