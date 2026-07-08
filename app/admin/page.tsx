@@ -161,6 +161,13 @@ export default function AdminPage() {
     fetchPosts()
   }
 
+  function copyPreviewLink(slug: string) {
+    const url = `${window.location.origin}/preview/${slug}`
+    navigator.clipboard.writeText(url).then(() => {
+      setSaved('Preview link copied to clipboard.'); setTimeout(() => setSaved(''), 3000)
+    })
+  }
+
   async function handleDuplicate(slug: string) {
     const res = await fetch(`/api/posts?slug=${slug}`)
     if (!res.ok) { setError('Could not load post.'); return }
@@ -750,6 +757,7 @@ export default function AdminPage() {
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}>
                   <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
+                  <button className="admin-panel-btn" onClick={() => copyPreviewLink(post.slug)} title="Copy shareable preview link">Share</button>
                   <button className="admin-panel-btn" onClick={() => handleDuplicate(post.slug)} title="Duplicate as draft">⧉</button>
                   <button className="admin-panel-btn danger" onClick={() => handleDeletePost(post.slug)}>✕</button>
                 </div>
@@ -767,6 +775,7 @@ export default function AdminPage() {
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}>
                   <button className="admin-panel-btn" onClick={() => loadPost(post.slug)}>Edit</button>
+                  <button className="admin-panel-btn" onClick={() => copyPreviewLink(post.slug)} title="Copy shareable preview link">Share</button>
                   <button className="admin-panel-btn" onClick={() => handleDuplicate(post.slug)} title="Duplicate as draft">⧉</button>
                   <button className="admin-panel-btn danger" onClick={() => handleDeletePost(post.slug)}>✕</button>
                 </div>

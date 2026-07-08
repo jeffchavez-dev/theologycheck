@@ -25,11 +25,14 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
         background: '#2a1a0e', color: '#f5efe3', textAlign: 'center',
         padding: '10px 1rem', fontSize: 13, fontFamily: 'EB Garamond, serif',
         display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.5rem',
+        flexWrap: 'wrap',
       }}>
         <span style={{ fontFamily: 'Cinzel, serif', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#c47c2b' }}>
-          {isScheduled ? `⏰ Scheduled — publishes ${post.date}` : '✎ Draft Preview'}
+          {isScheduled ? 'Scheduled — Coming Soon' : 'Draft Preview — Not yet published'}
         </span>
-        <Link href="/admin" style={{ color: '#d4b896', fontSize: 12, textDecoration: 'underline' }}>← Back to Admin</Link>
+        <span style={{ color: '#8a7060', fontSize: 12 }}>
+          This post is shared for review only. Please do not distribute further.
+        </span>
       </div>
 
       <article className="post-page">
@@ -53,7 +56,7 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
 
         <footer className="post-footer">
           <div className="divider">✦ ✦ ✦</div>
-          <Link href="/admin" className="back-link">← Back to Admin</Link>
+          <Link href="/" className="back-link">← Theology Check</Link>
         </footer>
       </article>
     </>
