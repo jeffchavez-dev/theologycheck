@@ -4,10 +4,10 @@ date: "2026-07-20"
 excerpt: "An engagement paper tracing the historical roots of Aquinas's act-potency metaphysics — showing it is not purely Aristotelian but a synthesis of Aristotelianism specified by Neoplatonism."
 tags:
   - "Thomism"
-scheduled: true
+draft: true
 author: "NoblemanPH"
 updatedAt: "2026-07-18"
-updateCount: 2
+updateCount: 3
 ---
 
 *Engagement Paper submitted to Dr. James Dolezal*
@@ -22,7 +22,7 @@ updateCount: 2
 
 > While Thomas Aquinas, in some measure, adopts Aristotle's act and potency, this is not identical to that of the Philosopher. Aquinas moves further by positing that matter also limits the form, which is only possible if some participation framework is granted to which Clarke argued, "there is no room for such a perspective in the universe of Aristotle."
 >
-> — Author, *Source* (Year)
+> — Neiko Guil-An Paje
 
 </div>
 
