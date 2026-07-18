@@ -1,13 +1,13 @@
 ---
 title: "Thomas Aquinas: Limitation of Act by Potency"
-date: "2026-06-27"
+date: "2026-07-20"
 excerpt: "An engagement paper tracing the historical roots of Aquinas's act-potency metaphysics — showing it is not purely Aristotelian but a synthesis of Aristotelianism specified by Neoplatonism."
 tags:
   - "Thomism"
+scheduled: true
 author: "NoblemanPH"
-draft: true
-updatedAt: "2026-06-27"
-updateCount: 1
+updatedAt: "2026-07-18"
+updateCount: 2
 ---
 
 *Engagement Paper submitted to Dr. James Dolezal*
@@ -16,6 +16,16 @@ updateCount: 1
 *Neiko Guil-An Paje — November 11, 2024*
 
 ---
+
+
+<div class="pull-quote">
+
+> While Thomas Aquinas, in some measure, adopts Aristotle's act and potency, this is not identical to that of the Philosopher. Aquinas moves further by positing that matter also limits the form, which is only possible if some participation framework is granted to which Clarke argued, "there is no room for such a perspective in the universe of Aristotle."
+>
+> — Author, *Source* (Year)
+
+</div>
+
 
 How do we make sense of reality? Of the stability within the change? Of the idea of being and becoming? Of the problem of the one and the many? Ancient philosophers have been wrestling with these inquiries ever since. When Aristotle came along, he made a great leap of progress and, in some sense, salvaged Western metaphysics when he articulated the distinction between act and potency. In Christian philosophy, this Aristotelian notion had been recovered in the medieval period and then refined and extended, especially by Thomas Aquinas. This critical distinction between actuality and potentiality aided the Dominican friar not only in understanding reality and creatures but, more importantly, in his arguments for the existence and being of God. By utilizing Aristotle, the keystone of the Thomistic metaphysical system which is the principle, "Actus non limitatur nisi per potentiam," i.e., no act or perfection can be found in a limited degree in any being unless it is conjoined with a really distinct limiting principle whose nature is to be a potency for that act"[^1] was established.
 
