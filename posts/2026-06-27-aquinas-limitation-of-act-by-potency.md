@@ -6,16 +6,10 @@ tags:
   - "Thomism"
 draft: true
 author: "NoblemanPH"
-updatedAt: "2026-07-18"
-updateCount: 3
+updatedAt: "2026-07-20"
+updateCount: 4
 ---
 
-*Engagement Paper submitted to Dr. James Dolezal*
-*AP 501 Foundations of Philosophical Theology*
-*International Reformed Baptist Seminary*
-*Neiko Guil-An Paje — November 11, 2024*
-
----
 
 
 <div class="pull-quote">
@@ -59,3 +53,12 @@ Thomas Aquinas' work on the act and potency principle is rich and complex. Furth
 [^12]: Clarke, 79.
 [^13]: Clarke, 80.
 [^14]: Clarke, 80.
+
+---
+Note: 
+This is an *Engagement Paper submitted to Dr. James Dolezal*
+*AP 501 Foundations of Philosophical Theology*
+*International Reformed Baptist Seminary*
+*Neiko Guil-An Paje — November 11, 2024*
+
+
