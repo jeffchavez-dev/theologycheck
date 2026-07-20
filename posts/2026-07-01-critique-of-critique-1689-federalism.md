@@ -7,7 +7,7 @@ tags:
 dropCapParagraph: 1
 author: ""
 updatedAt: "2026-07-20"
-updateCount: 4
+updateCount: 5
 ---
 
 I recently read a book—generously given by a friend—that critiques the covenant theology framework I hold. As someone who has spent several years reading the key proponents of 1689 Federalism, I approached the book with interest but also with a fair degree of familiarity with the position it sought to challenge.
