@@ -4,10 +4,9 @@ date: "2026-07-20"
 excerpt: "An engagement paper tracing the historical roots of Aquinas's act-potency metaphysics — showing it is not purely Aristotelian but a synthesis of Aristotelianism specified by Neoplatonism."
 tags:
   - "Thomism"
-draft: true
 author: "NoblemanPH"
 updatedAt: "2026-07-20"
-updateCount: 4
+updateCount: 5
 ---
 
 
