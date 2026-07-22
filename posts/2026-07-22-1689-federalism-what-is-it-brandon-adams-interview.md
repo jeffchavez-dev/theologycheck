@@ -5,10 +5,9 @@ excerpt: "A transcript of Brandon Adams's interview on the Reform Rookie Video P
 tags:
   - "1689 Federalism"
   - "Covenant Theology"
-draft: true
 author: ""
 updatedAt: "2026-07-22"
-updateCount: 2
+updateCount: 3
 ---
 
 *This is an outlined transcript of the Reform Rookie Video Podcast with Brandon Adams, creator of [1689federalism.com](https://www.1689federalism.com/) and [contrast2.wordpress.com](https://contrast2.wordpress.com/).*
@@ -254,5 +253,3 @@ One thing that was really helpful for me: find a chronological reading plan. I t
 ---
 
 May the Triune God be praised!
-
-
