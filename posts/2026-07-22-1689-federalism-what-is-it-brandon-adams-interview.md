@@ -7,7 +7,7 @@ tags:
   - "Covenant Theology"
 author: ""
 updatedAt: "2026-07-22"
-updateCount: 3
+updateCount: 4
 ---
 
 *This is an outlined transcript of the Reform Rookie Video Podcast with Brandon Adams, creator of [1689federalism.com](https://www.1689federalism.com/) and [contrast2.wordpress.com](https://contrast2.wordpress.com/).*
@@ -59,6 +59,15 @@ Apparently he's come around more to the 1689 Federalism view, but that was the e
 They would tend to call that a "theological covenant" and distinguish it from what they would see as the historical covenants — the old covenant, the new covenant, the Abrahamic covenant, and so on. It's over and above them — it's God's plan of salvation.
 
 ---
+
+<div class="pull-quote">
+
+> A lot of people who push back against the idea that somebody could be saved from the new covenant in the Old Testament — at the same time they have no problem affirming that those people were saved by the death of Christ even though he hadn't died yet. If you can affirm one, there's no theoretical problem affirming the other.
+>
+> — Brandon Adams, *Can Old Testament Saints Be in the New Covenant Before It Was Ratified?* 
+
+</div>
+
 
 ## Can Old Testament Saints Be in the New Covenant Before It Was Ratified?
 
@@ -215,6 +224,16 @@ Some of what I was hearing from other Reformed Baptists was talking about it as 
 That experience led me to realize we need a better way to communicate this and let people know about this view — I was really struggling to find things. That's what led to the website.
 
 ---
+
+
+<div class="pull-quote">
+
+> "...only the new covenant offers the benefits of the *ordo salutis* — the order of salvation: regeneration, faith, forgiveness of sin, sanctification. The other covenants are largely about earthly life, but they're related in some way to the new covenant... the Abrahamic covenant did not promise forgiveness of sins, regeneration, faith, or sanctification. It promised — the technical term is the *historia salutis* — the history of salvation. It promised that Abraham would be the father of the Messiah who would come to bless the nations — how would he bless the nations? By establishing the new covenant and dispensing the benefits of his death and resurrection."
+>
+> — Brandon Adams, *Were the Pre-New Covenant Covenants Only for Earthly Blessings?*
+
+</div>
+
 
 ## Were the Pre-New Covenant Covenants Only for Earthly Blessings?
 
