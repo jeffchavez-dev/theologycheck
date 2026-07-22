@@ -7,45 +7,11 @@ tags:
   - "Covenant Theology"
 draft: true
 author: ""
+updatedAt: "2026-07-22"
+updateCount: 1
 ---
 
-*Transcript of the Reform Rookie Video Podcast. Guest: Brandon Adams, creator of [1689federalism.com](https://www.1689federalism.com/) and [contrast2.wordpress.com](https://contrast2.wordpress.com/).*
-
----
-
-## Introduction
-
-**Anthony:** Hello everyone and welcome to the Reform Rookie Video Podcast. My name is Anthony, and I'm your Reform Rookie host, bringing you all things from a Reformed perspective. The goal of this podcast is to take the deep, rich truths of the Reformed tradition and help you see the beauty in them and the joy you'll experience in understanding them better. Understanding these truths will help you better know the God of the Scriptures and help us better appreciate the hope and confidence we have in Jesus Christ. And to that I say, *semper reformanda*.
-
-Today I'm excited to have Brandon Adams on the show, and I'm eager to speak to him with regards to our topic today, which is going to be 1689 Federalism. A little while back there was a little dust-up about the issue, and hopefully we can lend some clarity to this and see how we can better understand it.
-
----
-
-## Brandon's Testimony into Reformed Theology
-
-**Anthony:** I always ask first-time guests to share their testimony into Reformed theology. So Brandon, welcome to the show.
-
-**Brandon:** Thanks for having me, Anthony. Appreciate it.
-
-**Anthony:** My pleasure. It's a joy to have you. Tell me — have you always been Reformed? What was it that brought you to Reformed theology? How did you get to the position you're at now theologically?
-
-**Brandon:** I grew up mostly non-denominational and went off to college and through a series of events wound up attending a small church plant real close to the college, and it ended up being a Reformed Baptist church. That wound up being my introduction to the doctrines of grace. I actually had a class called "Five Point Café" — walking through the doctrines of grace. That was my introduction, and it's all history from there. That's where it started for me.
-
----
-
-## On Being a Calvinist: Pushback and the Cage Stage
-
-**Anthony:** Do you ever get pushback from being a Calvinist?
-
-**Brandon:** Not a ton in the circles that I'm in. Sometimes people will hear Fred Phelps or somebody like that, who supposedly holds to the Second London Baptist Confession, and that's their idea of what a Reformed Baptist is. So really just trying to graciously model — well, that's not the case.
-
-**Anthony:** I think Calvinists get a bad reputation sometimes because they're a little arrogant and look down their nose. I try to tell people: if you hold to the doctrines of grace and are not gracious in your conversation, it really doesn't matter what you believe, because it's what they see that's going to make a difference. If it comes across in an arrogant or snobby manner, you're just going to turn people away. Don't be outraged by other people, especially when you hold to the doctrines of grace.
-
-**Brandon:** God had a bit more work to do in me after I learned the doctrines of grace. There was certainly a fair amount of pride and arrogance that I had to work through — that the Lord worked through in me. Hopefully I've grown somewhat since then.
-
-**Anthony:** I share the sentiment. I was cage-stage for a while, and thankfully in God's providence and grace he's led me through and calmed me down, helped me understand things better. Coming from a Reformed perspective, everything that we hold to and believe is given to us as a gift by God, so certainly I should not be looking down my nose arrogantly towards anyone who doesn't hold the same view. I want to fight for the truth of the Scriptures, but in a loving, respectful, and gentle way — so that people are drawn in by my demeanor to show them that the doctrines of grace have really helped me become gracious.
-
----
+*This is an outlined transcript of the Reform Rookie Video Podcast with Brandon Adams, creator of [1689federalism.com](https://www.1689federalism.com/) and [contrast2.wordpress.com](https://contrast2.wordpress.com/).*
 
 ## What Is 1689 Federalism?
 
@@ -286,7 +252,3 @@ The Noahic covenant was preserving life for the new covenant to come. The Abraha
 One thing that was really helpful for me: find a chronological reading plan. I think the ESV puts out a chronological reading plan. If you follow that, you start to see connections that you would otherwise miss in how the story and the narrative fit together. It's really that narrative — what's sometimes referred to as biblical theology — that 1689 Federalism really sharpens over Westminster Federalism. It's something we add to and I think makes it better. The progress through history, how things change — try a chronological reading plan, get through the Bible beginning to end through that plan, take notes on everything you see about these different covenants, and try to wrap your mind around how these fit together. Then maybe visit some of these books and see what you think.
 
 ---
-
-**Anthony:** Brandon, thank you so much for your time. For those of you who want to read more of Brandon's stuff or see his stuff — it's [1689federalism.com](https://www.1689federalism.com/). I've also got my own blog, mostly geared toward 1689 Federalism topics. The URL is [contrast2.wordpress.com](https://contrast2.wordpress.com/). If you go to that page, it's got all the posts categorized by topic — posts on the Abrahamic covenant, the old covenant, the new covenant, and so on.
-
-Friends, thanks again for joining us on the Reform Rookie Podcast. Remember: a life reformed is a life conformed to the Jesus of the Scriptures. And to God be the glory. *Semper reformanda* — always be reforming.
