@@ -35,7 +35,8 @@ function BibleModal({ reference, onClose }: { reference: string; onClose: () => 
   useEffect(() => {
     setData(null)
     setError(false)
-    fetch(`https://bible-api.com/${encodeURIComponent(reference)}?translation=kjv`)
+    const normalized = reference.replace(/–|—/g, '-').trim()
+    fetch(`https://bible-api.com/${encodeURIComponent(normalized)}?translation=kjv`)
       .then(r => r.json())
       .then(json => {
         if (json.error) setError(true)
