@@ -836,6 +836,11 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 
 /* ── Study page ─────────────────────────────────────────────────────────────── */
+.study-index-header { margin-bottom: 2rem; }
+.study-index-intro { font-size: 15px; color: #4a3020; font-style: italic; margin-top: 0.5rem; }
+.study-index-card-subtitle { font-family: 'EB Garamond', serif; font-size: 13px; font-style: italic; color: #8a6040; margin: 0 0 0.4rem; }
+
+/* ── Study outline page ─── */
 .study-page-header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.75rem; border-bottom: 2px solid #8b1a1a; }
 .study-book-title { font-family: 'Cinzel', serif; font-size: 1.9rem; font-weight: 500; color: #1e1208; margin: 0.5rem 0 0.25rem; letter-spacing: -0.02em; }
 .study-book-author { font-family: 'EB Garamond', serif; font-size: 1.1rem; font-style: italic; color: #8b1a1a; margin: 0; }
