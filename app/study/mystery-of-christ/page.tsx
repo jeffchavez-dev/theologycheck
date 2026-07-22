@@ -20,9 +20,66 @@ interface Chapter {
   sections: Section[]
 }
 
+interface VerseResult {
+  reference: string
+  text: string
+  verses: { book_name: string; chapter: number; verse: number; text: string }[]
+}
+
+// ── Bible modal ───────────────────────────────────────────────────────────────
+
+function BibleModal({ reference, onClose }: { reference: string; onClose: () => void }) {
+  const [data, setData] = useState<VerseResult | null>(null)
+  const [error, setError] = useState(false)
+
+  useEffect(() => {
+    setData(null)
+    setError(false)
+    fetch(`https://bible-api.com/${encodeURIComponent(reference)}?translation=kjv`)
+      .then(r => r.json())
+      .then(json => {
+        if (json.error) setError(true)
+        else setData(json)
+      })
+      .catch(() => setError(true))
+  }, [reference])
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  return (
+    <div className="bible-modal-backdrop" onClick={onClose}>
+      <div className="bible-modal" onClick={e => e.stopPropagation()}>
+        <div className="bible-modal-header">
+          <span className="bible-modal-ref">{reference}</span>
+          <button className="bible-modal-close" onClick={onClose}>✕</button>
+        </div>
+        <div className="bible-modal-body">
+          {!data && !error && <p className="bible-modal-loading">Loading…</p>}
+          {error && <p className="bible-modal-loading">Could not load passage.</p>}
+          {data && (
+            <>
+              {data.verses.map((v, i) => (
+                <p key={i} className="bible-modal-verse">
+                  <sup className="bible-modal-versenum">{v.verse}</sup>
+                  {v.text}
+                </p>
+              ))}
+              <p className="bible-modal-translation">King James Version</p>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // ── Section component ─────────────────────────────────────────────────────────
 
-function SectionRow({ section, globalOpen }: { section: Section; globalOpen: boolean | null }) {
+function SectionRow({ section, globalOpen, onRef }: { section: Section; globalOpen: boolean | null; onRef: (ref: string) => void }) {
   const [open, setOpen] = useState(false)
   const hasContent = section.bibleReferences.length > 0 || section.subsections.length > 0
 
@@ -45,12 +102,12 @@ function SectionRow({ section, globalOpen }: { section: Section; globalOpen: boo
           {section.bibleReferences.length > 0 && (
             <div className="study-refs">
               {section.bibleReferences.map((ref, i) => (
-                <span key={i} className="study-ref-tag">{ref}</span>
+                <span key={i} className="study-ref-tag" onClick={() => onRef(ref)}>{ref}</span>
               ))}
             </div>
           )}
           {section.subsections.map((sub, i) => (
-            <SectionRow key={i} section={sub} globalOpen={globalOpen} />
+            <SectionRow key={i} section={sub} globalOpen={globalOpen} onRef={onRef} />
           ))}
         </div>
       )}
@@ -60,7 +117,7 @@ function SectionRow({ section, globalOpen }: { section: Section; globalOpen: boo
 
 // ── Chapter component ─────────────────────────────────────────────────────────
 
-function ChapterRow({ chapter, globalOpen }: { chapter: Chapter; globalOpen: boolean | null }) {
+function ChapterRow({ chapter, globalOpen, onRef }: { chapter: Chapter; globalOpen: boolean | null; onRef: (ref: string) => void }) {
   const [open, setOpen] = useState(false)
 
   useEffect(() => { if (globalOpen !== null) setOpen(globalOpen) }, [globalOpen])
@@ -78,7 +135,7 @@ function ChapterRow({ chapter, globalOpen }: { chapter: Chapter; globalOpen: boo
       {open && (
         <div className="study-chapter-body">
           {chapter.sections.map((section, i) => (
-            <SectionRow key={i} section={section} globalOpen={globalOpen} />
+            <SectionRow key={i} section={section} globalOpen={globalOpen} onRef={onRef} />
           ))}
         </div>
       )}
@@ -90,9 +147,12 @@ function ChapterRow({ chapter, globalOpen }: { chapter: Chapter; globalOpen: boo
 
 export default function StudyPage() {
   const [globalOpen, setGlobalOpen] = useState<boolean | null>(null)
+  const [activeRef, setActiveRef] = useState<string | null>(null)
 
   return (
     <div className="main">
+      {activeRef && <BibleModal reference={activeRef} onClose={() => setActiveRef(null)} />}
+
       <div className="study-page-header">
         <div className="section-label">Study</div>
         <h1 className="study-book-title">The Mystery of Christ</h1>
@@ -107,7 +167,7 @@ export default function StudyPage() {
 
       <div className="study-outline">
         {outlineData.chapters.map((chapter, i) => (
-          <ChapterRow key={i} chapter={chapter as Chapter} globalOpen={globalOpen} />
+          <ChapterRow key={i} chapter={chapter as Chapter} globalOpen={globalOpen} onRef={setActiveRef} />
         ))}
       </div>
 
