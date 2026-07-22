@@ -8,7 +8,7 @@ tags:
 draft: true
 author: ""
 updatedAt: "2026-07-22"
-updateCount: 1
+updateCount: 2
 ---
 
 *This is an outlined transcript of the Reform Rookie Video Podcast with Brandon Adams, creator of [1689federalism.com](https://www.1689federalism.com/) and [contrast2.wordpress.com](https://contrast2.wordpress.com/).*
@@ -252,3 +252,7 @@ The Noahic covenant was preserving life for the new covenant to come. The Abraha
 One thing that was really helpful for me: find a chronological reading plan. I think the ESV puts out a chronological reading plan. If you follow that, you start to see connections that you would otherwise miss in how the story and the narrative fit together. It's really that narrative — what's sometimes referred to as biblical theology — that 1689 Federalism really sharpens over Westminster Federalism. It's something we add to and I think makes it better. The progress through history, how things change — try a chronological reading plan, get through the Bible beginning to end through that plan, take notes on everything you see about these different covenants, and try to wrap your mind around how these fit together. Then maybe visit some of these books and see what you think.
 
 ---
+
+May the Triune God be praised!
+
+
