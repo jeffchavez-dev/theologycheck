@@ -34,6 +34,7 @@ export default function Header() {
               </div>
             )}
           </div>
+          <Link href="/study">Study</Link>
           <SearchBar />
           <Link href="/about">About</Link>
         </nav>
