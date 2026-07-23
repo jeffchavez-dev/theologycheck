@@ -364,7 +364,7 @@ export default function StudyPage() {
       <p className="study-footer-note">
         This is a study outline of <em>The Mystery of Christ, His Covenant, and His Kingdom</em> by Samuel Renihan (Founders Press).
         Outlines contain paraphrased summaries and Bible references for study purposes — not a substitute for the full book.{' '}
-        <a href="https://www.amazon.com/Mystery-Christ-His-Covenant-Kingdom/dp/1644340038" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.amazon.com/Mystery-Christ-His-Covenant-Kingdom/dp/1943539154/" target="_blank" rel="noopener noreferrer">
           Purchase the book →
         </a>
       </p>
