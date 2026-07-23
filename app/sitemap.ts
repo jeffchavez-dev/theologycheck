@@ -23,7 +23,7 @@ export default function sitemap() {
     { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.5 },
     { url: `${BASE_URL}/series`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${BASE_URL}/study`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-    { url: `${BASE_URL}/study/mystery-of-christ`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: `${BASE_URL}/study/mystery-of-christ`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 },
     ...seriesPages,
     ...posts,
   ]
