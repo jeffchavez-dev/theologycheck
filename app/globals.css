@@ -917,6 +917,55 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .study-footer-note a { color: #8b1a1a; text-decoration: none; }
 .study-footer-note a:hover { text-decoration: underline; }
 
+/* ── Part headings ─── */
+.study-part { margin-bottom: 0.5rem; }
+.study-part-header {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.75rem 1rem; background: #8b1a1a; cursor: pointer;
+  border-radius: 2px; user-select: none;
+}
+.study-part-toggle { color: #fff8ee; font-size: 12px; flex-shrink: 0; }
+.study-part-title {
+  font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 1px;
+  text-transform: uppercase; color: #fff8ee; font-weight: 600;
+}
+.study-part-body { padding-left: 0; }
+
+/* ── Study questions ─── */
+.study-questions {
+  margin: 1rem 1.2rem 0.5rem; padding: 1rem 1.2rem;
+  border-left: 3px solid #d4b896; background: #fdf6ec;
+}
+.study-questions-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+.study-questions-label {
+  font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 1px;
+  text-transform: uppercase; color: #8b1a1a; font-weight: 600;
+}
+.study-questions-edit-btn {
+  background: none; border: 1px solid #8b1a1a; color: #8b1a1a;
+  font-size: 11px; padding: 2px 8px; cursor: pointer; font-family: inherit;
+}
+.study-questions-edit-btn:hover { background: #8b1a1a; color: #fff8ee; }
+.study-questions-list {
+  margin: 0; padding-left: 1.4rem;
+  font-family: 'EB Garamond', Georgia, serif; font-size: 15px;
+  color: #2a1a0a; line-height: 1.7;
+}
+.study-questions-list li { margin-bottom: 0.3rem; }
+.study-questions-hint { font-size: 12px; color: #8a6040; font-style: italic; margin-bottom: 0.4rem; }
+.study-questions-textarea {
+  width: 100%; font-family: 'EB Garamond', Georgia, serif; font-size: 15px;
+  color: #2a1a0a; border: 1px solid #d4b896; background: #fff8ee;
+  padding: 0.6rem; resize: vertical; outline: none; line-height: 1.6;
+}
+.study-questions-textarea:focus { border-color: #8b1a1a; }
+.study-questions-actions { display: flex; gap: 0.6rem; margin-top: 0.6rem; }
+.study-btn-ghost { background: #fff8ee !important; color: #8b1a1a !important; }
+.study-saving { font-size: 12px; color: #8a6040; font-style: italic; }
+
 /* ── Bible modal ─── */
 .study-ref-tag { cursor: pointer; }
 .bible-modal-backdrop {
