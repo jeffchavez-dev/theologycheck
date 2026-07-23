@@ -138,6 +138,7 @@ function StudyQuestions({
   isAdmin: boolean
   onSave: (chapterNum: number, questions: string[]) => void
 }) {
+  const [open, setOpen] = useState(true)
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState(questions.join('\n'))
 
@@ -147,16 +148,17 @@ function StudyQuestions({
 
   return (
     <div className="study-questions">
-      <div className="study-questions-header">
+      <div className="study-questions-header" onClick={() => { if (!editing) setOpen(o => !o) }}>
+        <span className="study-questions-toggle">{open ? '▾' : '▸'}</span>
         <span className="study-questions-label">Study Questions</span>
         {isAdmin && !editing && (
-          <button className="study-questions-edit-btn" onClick={() => setEditing(true)}>
-            {questions.length === 0 ? '+ Add questions' : 'Edit'}
+          <button className="study-questions-edit-btn" onClick={e => { e.stopPropagation(); setOpen(true); setEditing(true) }}>
+            {questions.length === 0 ? '+ Add' : 'Edit'}
           </button>
         )}
       </div>
 
-      {editing ? (
+      {open && (editing ? (
         <div className="study-questions-editor">
           <p className="study-questions-hint">One question per line.</p>
           <textarea
@@ -184,7 +186,7 @@ function StudyQuestions({
             {questions.map((q, i) => <li key={i}>{q}</li>)}
           </ol>
         )
-      )}
+      ))}
     </div>
   )
 }

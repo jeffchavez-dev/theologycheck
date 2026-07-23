@@ -937,12 +937,13 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   border-left: 3px solid #d4b896; background: #fdf6ec;
 }
 .study-questions-header {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 0.6rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  margin-bottom: 0.6rem; cursor: pointer; user-select: none;
 }
+.study-questions-toggle { font-size: 11px; color: #8b1a1a; flex-shrink: 0; }
 .study-questions-label {
   font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 1px;
-  text-transform: uppercase; color: #8b1a1a; font-weight: 600;
+  text-transform: uppercase; color: #8b1a1a; font-weight: 600; flex: 1;
 }
 .study-questions-edit-btn {
   background: none; border: 1px solid #8b1a1a; color: #8b1a1a;
