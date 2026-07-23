@@ -138,7 +138,7 @@ function StudyQuestions({
   isAdmin: boolean
   onSave: (chapterNum: number, questions: string[]) => void
 }) {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState(questions.join('\n'))
 
