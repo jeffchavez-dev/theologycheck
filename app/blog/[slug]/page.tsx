@@ -137,6 +137,20 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       />
       <QuoteShare />
 
+      {post.tags.includes('1689 Federalism') && (
+        <aside className="post-recommended-study" aria-label="Recommended Study">
+          <div className="post-recommended-study-label">Recommended Study</div>
+          <Link href="/study/mystery-of-christ" className="post-recommended-study-card">
+            <div className="post-recommended-study-meta">Samuel Renihan · Interactive Outline · Study Questions</div>
+            <h3 className="post-recommended-study-title">The Mystery of Christ: His Covenant, and His Kingdom</h3>
+            <p className="post-recommended-study-desc">
+              The definitive 1689 Federalist treatment of covenant theology — from the Covenant of Works through the New Covenant. Explore the full interactive outline with chapter-by-chapter study questions.
+            </p>
+            <span className="post-recommended-study-cta">Open study outline →</span>
+          </Link>
+        </aside>
+      )}
+
       <footer className="post-footer">
         <div className="divider">✦ ✦ ✦</div>
 <CopyLink />
