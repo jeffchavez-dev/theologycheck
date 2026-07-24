@@ -14,6 +14,18 @@ const PARTS: Record<number, string> = {
   10: 'Part Four: The Kingdom of Christ',
 }
 
+// ── Section notes ─────────────────────────────────────────────────────────────
+// Key format: "chapterNumber-heading"
+
+const NOTES: Record<string, string> = {
+  '1-Introduction': 'Studying covenant theology requires humility and careful method, since it deals with the whole sweep of God\'s redemptive plan. The chapter previews four methodological issues that shape how biblical and systematic theology should work together in this field.',
+  '1-1. Scope and Simplicity': 'Because covenant theology spans all of Scripture, it can\'t be reduced to neat generalizations without losing accuracy. A sound system has to be built up from the full range of biblical detail, not simplified past the point of usefulness.',
+  '1-2. Creation, Covenant, and Consequences': 'Covenants are freely instituted by God rather than built into nature, so no covenant\'s features can be assumed to carry over to another by logical necessity. This means conclusions about any given covenant must come from what God actually revealed about it, not from inference or analogy with other covenants.',
+  '1-3. The Law and the Gospel': 'Law and gospel are opposite paths to righteousness in a doctrinal sense, yet both are also historical labels for the Old and New Testament eras. Salvation by grace runs continuously through both periods, so the covenants shouldn\'t be collapsed into one another just because they share that underlying continuity.',
+  '1-4. History and Mystery': 'Christ\'s saving plan for the nations was only partially disclosed before the New Testament, described by Paul as a "mystery" gradually unveiled rather than a truth hidden and then dropped in all at once. A responsible covenant theology should let the Old Testament\'s witness to Christ stay veiled the way Scripture itself presents it, rather than reading later clarity back into earlier stages.',
+  '1-Conclusion': 'These four considerations set the methodological groundwork for the rest of the study. Given how vast and demanding the subject is, the fitting response is humility and worship rather than confidence in one\'s own mastery of it.',
+}
+
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 interface Section {
@@ -89,9 +101,10 @@ function BibleModal({ reference, onClose }: { reference: string; onClose: () => 
 
 // ── Section component ─────────────────────────────────────────────────────────
 
-function SectionRow({ section, globalOpen, onRef }: { section: Section; globalOpen: boolean | null; onRef: (ref: string) => void }) {
+function SectionRow({ section, globalOpen, onRef, chapterNum }: { section: Section; globalOpen: boolean | null; onRef: (ref: string) => void; chapterNum: number }) {
   const [open, setOpen] = useState(false)
-  const hasContent = section.bibleReferences.length > 0 || section.subsections.length > 0
+  const note = NOTES[`${chapterNum}-${section.heading}`]
+  const hasContent = !!note || section.bibleReferences.length > 0 || section.subsections.length > 0
 
   useEffect(() => { if (globalOpen !== null) setOpen(globalOpen) }, [globalOpen])
 
@@ -109,6 +122,7 @@ function SectionRow({ section, globalOpen, onRef }: { section: Section; globalOp
 
       {hasContent && open && (
         <div className="study-section-body">
+          {note && <p className="study-section-note">{note}</p>}
           {section.bibleReferences.length > 0 && (
             <div className="study-refs">
               {section.bibleReferences.map((ref, i) => (
@@ -117,7 +131,7 @@ function SectionRow({ section, globalOpen, onRef }: { section: Section; globalOp
             </div>
           )}
           {section.subsections.map((sub, i) => (
-            <SectionRow key={i} section={sub} globalOpen={globalOpen} onRef={onRef} />
+            <SectionRow key={i} section={sub} globalOpen={globalOpen} onRef={onRef} chapterNum={chapterNum} />
           ))}
         </div>
       )}
@@ -222,7 +236,7 @@ function ChapterRow({
       {open && (
         <div className="study-chapter-body">
           {chapter.sections.map((section, i) => (
-            <SectionRow key={i} section={section} globalOpen={globalOpen} onRef={onRef} />
+            <SectionRow key={i} section={section} globalOpen={globalOpen} onRef={onRef} chapterNum={chapter.chapterNumber} />
           ))}
           <StudyQuestions
             chapterNum={chapter.chapterNumber}
