@@ -197,12 +197,38 @@ function BibleModal({ reference, onClose }: { reference: string; onClose: () => 
 
 // ── Section component ─────────────────────────────────────────────────────────
 
-function SectionRow({ section, globalOpen, onRef, chapterNum }: { section: Section; globalOpen: boolean | null; onRef: (ref: string) => void; chapterNum: number }) {
+function SectionRow({
+  section, globalOpen, onRef, chapterNum, allNotes, isAdmin, onSaveNote,
+}: {
+  section: Section
+  globalOpen: boolean | null
+  onRef: (ref: string) => void
+  chapterNum: number
+  allNotes: Record<string, string>
+  isAdmin: boolean
+  onSaveNote: (key: string, text: string) => void
+}) {
   const [open, setOpen] = useState(false)
-  const note = NOTES[`${chapterNum}-${section.heading}`]
-  const hasContent = !!note || section.bibleReferences.length > 0 || section.subsections.length > 0
+  const [editing, setEditing] = useState(false)
+  const [draft, setDraft] = useState('')
+
+  const noteKey = `${chapterNum}-${section.heading}`
+  const note = allNotes[noteKey] ?? NOTES[noteKey] ?? ''
+  const hasContent = !!note || isAdmin || section.bibleReferences.length > 0 || section.subsections.length > 0
 
   useEffect(() => { if (globalOpen !== null) setOpen(globalOpen) }, [globalOpen])
+
+  function startEdit(e: React.MouseEvent) {
+    e.stopPropagation()
+    setDraft(note)
+    setEditing(true)
+    if (!open) setOpen(true)
+  }
+
+  function saveNote() {
+    onSaveNote(noteKey, draft)
+    setEditing(false)
+  }
 
   return (
     <div className="study-section">
@@ -214,11 +240,33 @@ function SectionRow({ section, globalOpen, onRef, chapterNum }: { section: Secti
           {open ? '▾' : '▸'}
         </span>
         <span className="study-section-title">{section.heading}</span>
+        {isAdmin && (
+          <button className="study-note-edit-btn" onClick={startEdit} title={note ? 'Edit note' : 'Add note'}>
+            {note ? '✎' : '+'}
+          </button>
+        )}
       </div>
 
       {hasContent && open && (
         <div className="study-section-body">
-          {note && <p className="study-section-note">{note}</p>}
+          {editing ? (
+            <div className="study-note-editor">
+              <textarea
+                className="study-note-textarea"
+                value={draft}
+                onChange={e => setDraft(e.target.value)}
+                rows={4}
+                autoFocus
+                placeholder="Write a section note…"
+              />
+              <div className="study-note-actions">
+                <button className="study-note-save" onClick={saveNote}>Save</button>
+                <button className="study-note-cancel" onClick={() => setEditing(false)}>Cancel</button>
+              </div>
+            </div>
+          ) : (
+            note && <p className="study-section-note">{note}</p>
+          )}
           {section.bibleReferences.length > 0 && (
             <div className="study-refs">
               {section.bibleReferences.map((ref, i) => (
@@ -227,7 +275,8 @@ function SectionRow({ section, globalOpen, onRef, chapterNum }: { section: Secti
             </div>
           )}
           {section.subsections.map((sub, i) => (
-            <SectionRow key={i} section={sub} globalOpen={globalOpen} onRef={onRef} chapterNum={chapterNum} />
+            <SectionRow key={i} section={sub} globalOpen={globalOpen} onRef={onRef}
+              chapterNum={chapterNum} allNotes={allNotes} isAdmin={isAdmin} onSaveNote={onSaveNote} />
           ))}
         </div>
       )}
@@ -304,7 +353,7 @@ function StudyQuestions({
 // ── Chapter component ─────────────────────────────────────────────────────────
 
 function ChapterRow({
-  chapter, globalOpen, onRef, questions, isAdmin, onSaveQuestions,
+  chapter, globalOpen, onRef, questions, isAdmin, onSaveQuestions, allNotes, onSaveNote,
 }: {
   chapter: Chapter
   globalOpen: boolean | null
@@ -312,6 +361,8 @@ function ChapterRow({
   questions: string[]
   isAdmin: boolean
   onSaveQuestions: (chapterNum: number, questions: string[]) => void
+  allNotes: Record<string, string>
+  onSaveNote: (key: string, text: string) => void
 }) {
   const [open, setOpen] = useState(false)
 
@@ -329,17 +380,23 @@ function ChapterRow({
         <span className="study-chapter-title">{chapter.title}</span>
       </div>
 
-      {QUOTES[chapter.chapterNumber] && (
-        <blockquote className="study-chapter-quote">
-          "{QUOTES[chapter.chapterNumber]}"
-          <cite className="study-chapter-quote-cite">— Samuel Renihan</cite>
-        </blockquote>
-      )}
-
       {open && (
         <div className="study-chapter-body">
+          {chapter.chapterNumber === 0 && (
+            <blockquote className="study-chapter-quote">
+              "I will only add this: that on the whole, my aim has been to speak the truth in love and to take my notions from the Scriptures, not grafting any preconceived opinions of my own onto them. Where the evidence of truth appears, let it not be refused because it is offered in a mean dress and presented under the disadvantage of a rude and unpolished style. But consider instead the reason of what is said and with the noble Bereans search the Scriptures to see whether these things be so or not. And the Lord give you understanding in all things."
+              <cite className="study-chapter-quote-cite">— Nehemiah Coxe</cite>
+            </blockquote>
+          )}
+          {QUOTES[chapter.chapterNumber] && (
+            <blockquote className="study-chapter-quote">
+              "{QUOTES[chapter.chapterNumber]}"
+              <cite className="study-chapter-quote-cite">— Samuel Renihan</cite>
+            </blockquote>
+          )}
           {chapter.sections.map((section, i) => (
-            <SectionRow key={i} section={section} globalOpen={globalOpen} onRef={onRef} chapterNum={chapter.chapterNumber} />
+            <SectionRow key={i} section={section} globalOpen={globalOpen} onRef={onRef}
+              chapterNum={chapter.chapterNumber} allNotes={allNotes} isAdmin={isAdmin} onSaveNote={onSaveNote} />
           ))}
           <StudyQuestions
             chapterNum={chapter.chapterNumber}
@@ -356,7 +413,7 @@ function ChapterRow({
 // ── Part component ────────────────────────────────────────────────────────────
 
 function PartRow({
-  title, chapters, globalOpen, onRef, allQuestions, isAdmin, onSaveQuestions,
+  title, chapters, globalOpen, onRef, allQuestions, isAdmin, onSaveQuestions, allNotes, onSaveNote,
 }: {
   title: string
   chapters: Chapter[]
@@ -365,8 +422,10 @@ function PartRow({
   allQuestions: Record<string, string[]>
   isAdmin: boolean
   onSaveQuestions: (chapterNum: number, questions: string[]) => void
+  allNotes: Record<string, string>
+  onSaveNote: (key: string, text: string) => void
 }) {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => { if (globalOpen !== null) setOpen(globalOpen) }, [globalOpen])
 
@@ -387,6 +446,8 @@ function PartRow({
               questions={allQuestions[String(ch.chapterNumber)] ?? []}
               isAdmin={isAdmin}
               onSaveQuestions={onSaveQuestions}
+              allNotes={allNotes}
+              onSaveNote={onSaveNote}
             />
           ))}
         </div>
@@ -401,6 +462,7 @@ export default function StudyPage() {
   const [globalOpen, setGlobalOpen] = useState<boolean | null>(null)
   const [activeRef, setActiveRef] = useState<string | null>(null)
   const [allQuestions, setAllQuestions] = useState<Record<string, string[]>>({})
+  const [allNotes, setAllNotes] = useState<Record<string, string>>({})
   const [isAdmin, setIsAdmin] = useState(false)
   const [saving, setSaving] = useState(false)
 
@@ -410,6 +472,10 @@ export default function StudyPage() {
       .then(r => r.json())
       .then(setAllQuestions)
       .catch(() => {})
+    fetch('/api/study-notes/mystery-of-christ')
+      .then(r => r.json())
+      .then(setAllNotes)
+      .catch(() => {})
   }, [])
 
   async function handleSaveQuestions(chapterNum: number, questions: string[]) {
@@ -417,6 +483,18 @@ export default function StudyPage() {
     setAllQuestions(updated)
     setSaving(true)
     await fetch('/api/study-questions/mystery-of-christ', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updated),
+    })
+    setSaving(false)
+  }
+
+  async function handleSaveNote(key: string, text: string) {
+    const updated = { ...allNotes, [key]: text }
+    setAllNotes(updated)
+    setSaving(true)
+    await fetch('/api/study-notes/mystery-of-christ', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updated),
@@ -446,11 +524,6 @@ export default function StudyPage() {
         <p className="study-book-attribution">Outline notes by the Theology Check author · not by Samuel Renihan</p>
       </div>
 
-      <blockquote className="study-preface-quote">
-        I will only add this: that on the whole, my aim has been to speak the truth in love and to take my notions from the Scriptures, not grafting any preconceived opinions of my own onto them. Where the evidence of truth appears, let it not be refused because it is offered in a mean dress and presented under the disadvantage of a rude and unpolished style. But consider instead the reason of what is said and with the noble Bereans search the Scriptures to see whether these things be so or not. And the Lord give you understanding in all things.
-        <cite className="study-preface-quote-cite">— Nehemiah Coxe</cite>
-      </blockquote>
-
       <div className="study-controls">
         <button className="study-btn" onClick={() => { setGlobalOpen(true); setTimeout(() => setGlobalOpen(null), 0) }}>Expand All</button>
         <button className="study-btn" onClick={() => { setGlobalOpen(false); setTimeout(() => setGlobalOpen(null), 0) }}>Collapse All</button>
@@ -461,7 +534,8 @@ export default function StudyPage() {
         {preface.map((ch, i) => (
           <ChapterRow key={i} chapter={ch} globalOpen={globalOpen} onRef={setActiveRef}
             questions={allQuestions[String(ch.chapterNumber)] ?? []}
-            isAdmin={isAdmin} onSaveQuestions={handleSaveQuestions} />
+            isAdmin={isAdmin} onSaveQuestions={handleSaveQuestions}
+            allNotes={allNotes} onSaveNote={handleSaveNote} />
         ))}
 
         {Object.entries(PARTS).map(([startNum, partTitle]) => (
@@ -474,13 +548,16 @@ export default function StudyPage() {
             allQuestions={allQuestions}
             isAdmin={isAdmin}
             onSaveQuestions={handleSaveQuestions}
+            allNotes={allNotes}
+            onSaveNote={handleSaveNote}
           />
         ))}
 
         {conclusion.map((ch, i) => (
           <ChapterRow key={i} chapter={ch} globalOpen={globalOpen} onRef={setActiveRef}
             questions={allQuestions[String(ch.chapterNumber)] ?? []}
-            isAdmin={isAdmin} onSaveQuestions={handleSaveQuestions} />
+            isAdmin={isAdmin} onSaveQuestions={handleSaveQuestions}
+            allNotes={allNotes} onSaveNote={handleSaveNote} />
         ))}
       </div>
 

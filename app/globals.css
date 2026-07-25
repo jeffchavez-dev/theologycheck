@@ -940,6 +940,35 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 .study-section-header.clickable { cursor: pointer; }
 .study-section-header.clickable:hover .study-section-title { color: #8b1a1a; }
+.study-note-edit-btn {
+  margin-left: auto; flex-shrink: 0;
+  background: none; border: none; cursor: pointer;
+  color: #8b1a1a; font-size: 14px; opacity: 0; padding: 0 0.25rem;
+  transition: opacity 0.15s; line-height: 1;
+}
+.study-section-header:hover .study-note-edit-btn { opacity: 1; }
+.study-note-editor { margin-bottom: 0.75rem; }
+.study-note-textarea {
+  width: 100%; min-height: 80px; padding: 0.5rem 0.65rem;
+  font-family: 'EB Garamond', Georgia, serif; font-size: 15px;
+  border: 1px solid #c49a5a; border-radius: 3px;
+  background: #fdf6ec; color: #2a1a0a; resize: vertical;
+  line-height: 1.6; box-sizing: border-box;
+}
+.study-note-textarea:focus { outline: none; border-color: #8b1a1a; }
+.study-note-actions { display: flex; gap: 0.5rem; margin-top: 0.4rem; }
+.study-note-save, .study-note-cancel {
+  padding: 0.3rem 0.85rem; font-family: 'Cinzel', serif; font-size: 10px;
+  letter-spacing: 0.05em; cursor: pointer; border-radius: 2px;
+}
+.study-note-save {
+  background: #8b1a1a; color: #fff; border: 1.5px solid #8b1a1a;
+}
+.study-note-save:hover { background: #6e1414; }
+.study-note-cancel {
+  background: transparent; color: #8b1a1a; border: 1.5px solid #8b1a1a;
+}
+.study-note-cancel:hover { background: #f5ece3; }
 .study-toggle { color: #8b1a1a; font-size: 0.75rem; flex-shrink: 0; width: 0.9rem; }
 .study-toggle.invisible { visibility: hidden; }
 .study-section-title { font-family: 'EB Garamond', serif; font-size: 0.97rem; color: #2a1a0e; line-height: 1.4; }
