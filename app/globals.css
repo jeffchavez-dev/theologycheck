@@ -882,6 +882,18 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 .study-book-subtitle { font-family: 'EB Garamond', serif; font-size: 0.95rem; font-style: italic; color: #8a6040; margin: 0.1rem 0 0; }
 
+.study-preface-quote {
+  margin: 1.5rem auto 2rem; max-width: 680px; padding: 1rem 1.25rem;
+  border-left: 3px solid #8b1a1a; background: #fdf6ec;
+  font-family: 'EB Garamond', Georgia, serif; font-size: 16px;
+  color: #2a1a0a; line-height: 1.7; font-style: italic;
+}
+.study-preface-quote-cite {
+  display: block; margin-top: 0.6rem;
+  font-family: 'Cinzel', serif; font-size: 11px; font-style: normal;
+  letter-spacing: 0.05em; color: #8b1a1a; text-transform: uppercase;
+}
+
 .study-controls { display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 1.75rem; }
 .study-btn {
   padding: 0.45rem 1.1rem;
@@ -934,6 +946,17 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 
 .study-section-body { padding: 0.25rem 1rem 0.5rem 1.4rem; border-left: 1px solid #c49a5a55; margin-left: 0.9rem; }
 .study-main-point { font-family: 'EB Garamond', serif; font-size: 0.9rem; font-style: italic; color: #5a3e28; line-height: 1.6; margin: 0 0 0.5rem; }
+.study-chapter-quote {
+  margin: 0 0 0 2.5rem; padding: 0.6rem 1rem 0.6rem 1rem;
+  border-left: 3px solid #8b1a1a; background: #fdf6ec;
+  font-family: 'EB Garamond', Georgia, serif; font-size: 15px;
+  color: #2a1a0a; line-height: 1.65; font-style: italic;
+}
+.study-chapter-quote-cite {
+  display: block; margin-top: 0.35rem;
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.8px;
+  color: #8b1a1a; font-style: normal; text-transform: uppercase;
+}
 .study-section-note {
   font-family: 'EB Garamond', Georgia, serif; font-size: 15px;
   color: #4a3020; line-height: 1.7; margin-bottom: 0.75rem;

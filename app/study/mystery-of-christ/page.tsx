@@ -14,6 +14,25 @@ const PARTS: Record<number, string> = {
   10: 'Part Four: The Kingdom of Christ',
 }
 
+// ── Chapter quotes ────────────────────────────────────────────────────────────
+
+const QUOTES: Record<number, string> = {
+  1: 'Necessary consequences don\'t work for covenants because there is no necessity in covenants. Covenants are not natural. They are not a part of the created order.',
+  2: 'Typology without Christ at its center is concerned with something other than the mystery of Christ, His covenant, and His kingdom. And it is therefore, by definition, not typology.',
+  3: 'A covenant is a divinely sanctioned commitment defining the relationship between God and another party. And a covenant functions as the God-ordained legal basis upon which a kingdom is founded and by which a kingdom is governed.',
+  4: 'Adam did not fall out of bed and bonk his head. He fell from orbit and was obliterated when he hit the ground.',
+  5: 'We can do no more than trust and obey... we are both citizens of a common cursed kingdom of common grace.',
+  6: 'The Old Covenant is pregnant with the New Covenant.',
+  7: 'Without righteousness, there is no blessing. Without the spilling of blood, there is no remission of sins. Without the High Priest, there is no sacrifice.',
+  8: 'As goes the king, so goes the kingdom.',
+  9: 'The prophets did not know Him, but Jesus Christ was the hope of the Israelites. He was promised to them... the dawning light of Jesus Christ gleamed on the horizon.',
+  10: 'They tripped over the stumbling block in Zion, the mystery of Christ.',
+  11: 'What the Father planned, the Son accomplished, and the Spirit applies.',
+  12: 'The New Covenant, which powerfully causes its children to be born again and gives them faith, thereby fulfills its own requirements in its own people... Even that which He requires of us He supplies to us.',
+  13: 'The kingdom of Israel and its covenants were scaffolding around the kingdom of Christ and His covenant.',
+  14: 'To join the kingdom is to be placed on the side of Christ and to unite with the children of God and heirs of the new creation. To abandon or be removed from the kingdom is to be unmasked and placed on the side of Satan with his hell-bound children.',
+}
+
 // ── Section notes ─────────────────────────────────────────────────────────────
 // Key format: "chapterNumber-heading"
 
@@ -310,6 +329,13 @@ function ChapterRow({
         <span className="study-chapter-title">{chapter.title}</span>
       </div>
 
+      {QUOTES[chapter.chapterNumber] && (
+        <blockquote className="study-chapter-quote">
+          "{QUOTES[chapter.chapterNumber]}"
+          <cite className="study-chapter-quote-cite">— Samuel Renihan</cite>
+        </blockquote>
+      )}
+
       {open && (
         <div className="study-chapter-body">
           {chapter.sections.map((section, i) => (
@@ -419,6 +445,11 @@ export default function StudyPage() {
         <p className="study-book-subtitle">His Covenant, and His Kingdom</p>
         <p className="study-book-attribution">Outline notes by the Theology Check author · not by Samuel Renihan</p>
       </div>
+
+      <blockquote className="study-preface-quote">
+        I will only add this: that on the whole, my aim has been to speak the truth in love and to take my notions from the Scriptures, not grafting any preconceived opinions of my own onto them. Where the evidence of truth appears, let it not be refused because it is offered in a mean dress and presented under the disadvantage of a rude and unpolished style. But consider instead the reason of what is said and with the noble Bereans search the Scriptures to see whether these things be so or not. And the Lord give you understanding in all things.
+        <cite className="study-preface-quote-cite">— Nehemiah Coxe</cite>
+      </blockquote>
 
       <div className="study-controls">
         <button className="study-btn" onClick={() => { setGlobalOpen(true); setTimeout(() => setGlobalOpen(null), 0) }}>Expand All</button>
