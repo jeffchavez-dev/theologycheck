@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'The Mystery of Christ — Interactive Outline with Study Questions',
   description:
-    'The Mystery of Christ Interactive Outline with Study Questions — a chapter-by-chapter study of Samuel Renihan\'s covenant theology covering the Covenant of Works, Mosaic Covenant, Davidic Covenant, and New Covenant.',
+    'An interactive study outline of The Mystery of Christ by Samuel Renihan — a chapter-by-chapter guide to 1689 Federalism and Reformed Baptist covenant theology, with study questions covering the Covenant of Works, Mosaic Covenant, Davidic Covenant, and New Covenant.',
   openGraph: {
     title: 'The Mystery of Christ — Interactive Outline with Study Questions',
     description:
-      'Explore Samuel Renihan\'s The Mystery of Christ chapter by chapter with an interactive outline and study questions covering Reformed Baptist covenant theology.',
+      'An interactive study outline of The Mystery of Christ by Samuel Renihan — chapter-by-chapter 1689 Federalism and Reformed Baptist covenant theology with study questions.',
     type: 'article',
   },
   keywords: [

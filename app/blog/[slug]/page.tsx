@@ -146,7 +146,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
             <p className="post-recommended-study-desc">
               The definitive 1689 Federalist treatment of covenant theology — from the Covenant of Works through the New Covenant. Explore the full interactive outline with chapter-by-chapter study questions.
             </p>
-            <span className="post-recommended-study-cta">Open study outline →</span>
+            <span className="post-recommended-study-cta">Open interactive study outline →</span>
           </Link>
         </aside>
       )}
