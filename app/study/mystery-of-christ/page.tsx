@@ -81,6 +81,26 @@ const NOTES: Record<string, string> = {
   '6-c. The Abrahamic Covenant anticipates the New Covenant': 'Because the promised offspring who blesses the nations is the one who brings the New Covenant, the Abrahamic Covenant both predicts and typologically foreshadows it — its earthly people, land, and kings function as pictures of a greater spiritual reality.',
   '6-d. The Abrahamic covenant echoes Eden': 'Abraham\'s calling to a special place with a commission tied to a coming blessing mirrors Adam\'s situation in Eden, though Israel would prove no more faithful to its calling than Adam was to his.',
   '6-Conclusion': 'Through a series of stages, God bound Himself to multiply Abraham\'s family and give them Canaan, while requiring Abraham\'s household to keep the covenant through circumcision — and it is from this family that the promised blessing for all nations would eventually come.',
+
+  '7-Introduction': 'Israel had every reason to obey God out of sheer gratitude even before the Exodus, but their enslavement in and deliverance from Egypt gave that obedience an even deeper motivation.',
+  '7-a. The promise of oppression and affliction': 'God had told Abraham centuries earlier that his descendants would spend a long period enslaved before receiving the land, and by the time of Moses that foretold period of suffering had run its course.',
+  '7-b. The promise of liberation and fulfilment': 'God\'s deliverance of Israel from Egypt is explicitly tied to His remembrance of His covenant with Abraham, so the Exodus itself functions as God keeping His earlier promise.',
+  '7-2. The Kind of Covenant': 'Like the Abrahamic Covenant, this one combines guaranteed divine promises with a real demand for obedience as the condition for enjoying them.',
+  '7-a. Its laws': 'At Sinai, Israel formally pledges obedience to the law God gives through Moses, and that pledge is sealed with a blood ceremony that functions as a binding oath.',
+  '7-b. Its promises': 'The blessings held out through obedience to the Mosaic law are simply the further enjoyment of what God had already promised Abraham — nothing more, nothing less.',
+  '7-c. Its threats': 'Obedience to the law brings blessing in the land, while disobedience brings curses, up to and including exile, a pattern spelled out repeatedly in Deuteronomy.',
+  '7-3. The Kindness of the Covenant': 'Despite being built on the principle of obedience, this covenant reflects real divine kindness in several ways.',
+  '7-a. The absolute dominion of God': 'Since God owes people nothing to begin with, offering any covenant of blessing in exchange for obedience — especially to sinners who deserve judgment — is itself an act of grace.',
+  '7-b. The promises to Abraham': 'Even when Israel broke the covenant badly (as with the golden calf), God\'s prior commitment to Abraham became grounds for mercy rather than total destruction.',
+  '7-c. The sacrificial system': 'God provided a system of sacrifices that allowed Israel to find real, if limited, forgiveness and atonement for their sins, teaching them about guilt and substitution even though it couldn\'t ultimately cleanse the conscience.',
+  '7-d. The history of Israel': 'Israel\'s ongoing history of disobedience, discipline, and restoration illustrates God\'s patient faithfulness to His covenant promises despite the nation\'s repeated unfaithfulness.',
+  '7-4. The Function of the Covenant': 'The Mosaic law regulated every dimension of life within the kingdom of Israel.',
+  '7-a. The covenant governs the people': 'Both moral and additional positive laws structured the everyday life and conduct of the nation.',
+  '7-b. The covenant governs the priesthood': 'The law established who could serve as priests, defined their duties, and disciplined any deviation from what God had commanded.',
+  '7-c. The covenant governs the kingship': 'Unlike surrounding nations, Israel\'s kings were placed under the law rather than being its source — required to copy, read, and obey it rather than create their own rules.',
+  '7-d. The covenant governs the prophets': 'True prophets were identified by whether their message matched the existing law, meaning prophetic authority was always accountable to God\'s prior revealed word.',
+  '7-e. The covenant governs blessing and cursing': 'Ultimately, the whole relationship between Israel and God under this covenant hinged on obedience: blessing for compliance, curse for rebellion, reinforced through ceremonies and regular public reading of the law.',
+  '7-Conclusion': 'The Mosaic Covenant governed every level of Israel\'s national life, extending and applying the same obedience-based relationship first established through Abraham, while also planting typological seeds — through its priesthood and sacrifices especially — that anticipated the coming Messiah.',
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────
