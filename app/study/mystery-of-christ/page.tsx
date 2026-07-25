@@ -59,6 +59,13 @@ const NOTES: Record<string, string> = {
   '4-c. A merciful curse': 'God softened the immediate severity of the curse by first promising, in Genesis 3:15, that a future offspring would defeat the serpent — turning what could have been pure judgment into disciplinary judgment tempered with hope.',
   '4-4. The Protological Nature of the Kingdom': 'Eden and the Covenant of Works establish the foundational pattern that later biblical history — Israel, and ultimately Christ — will repeat and fulfill on a larger scale.',
   '4-Conclusion': 'Through the Covenant of Works, God gave Adam a kingdom to build toward a perfected creation; Adam\'s failure left that kingdom under a curse that still governs human existence, but God\'s promise of a deliverer set redemptive history in motion.',
+
+  '5-Introduction': 'Like the Covenant of Works, the Noahic Covenant governs the whole created order; it arises after human wickedness grew so severe that God judged the world with the flood.',
+  '5-1. A New Creation and Commission': 'The flood account is deliberately written to echo Genesis 1, but it isn\'t a reset to paradise or innocence — humanity\'s heart remains just as corrupt, and Noah\'s renewed commission to be fruitful and multiply is framed in terms of mastering a hostile world by force rather than building a holy civilization the way Adam\'s original calling envisioned.',
+  '5-2. A Judicial Retribution': 'God institutes capital punishment for murder and establishes a basic standard of justice binding on every human society, centered on protecting human life and the family as the means by which humanity continues.',
+  '5-3. A Promised Preservation': 'God unconditionally promises never again to destroy the earth by flood, sealing that promise with the rainbow; this preservation isn\'t tied to human obedience but simply provides a stable stage on which the rest of God\'s redemptive plan can unfold.',
+  '5-4. A Common Cursed Kingdom of Common Grace': 'Together, the Covenant of Works and the Noahic Covenant define the world all people currently live in — a kingdom still under the curse of Adam\'s sin, yet stabilized and sustained by God\'s common kindness toward believer and unbeliever alike.',
+  '5-Conclusion': 'The kingdom of creation, governed jointly by the Covenant of Works and the Noahic Covenant, is a common realm marked by both curse and kindness, existing to preserve humanity until God\'s larger promises are fulfilled.',
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────
