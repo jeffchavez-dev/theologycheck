@@ -109,6 +109,44 @@ After every POST/PUT in `app/api/posts/route.ts`, `revalidatePath()` is called f
 - If Vercel redeploys an old commit by mistake, push an empty commit: `git commit --allow-empty -m "Trigger redeploy" && git push`
 - TypeScript errors will fail the build — always run `npx tsc --noEmit` before pushing
 
+## Study pages (`/study/[slug]`)
+
+All study pages live under `app/study/`. The Mystery of Christ (`app/study/mystery-of-christ/`) is the reference implementation — copy its patterns for new study posts.
+
+### Architecture
+- `page.tsx` — `'use client'` component with outline JSON inlined
+- `layout.tsx` — Server Component sibling that exports `metadata` (SEO title/description/OG)
+- `data/study-notes/[slug].json` — editable section notes, persisted to GitHub
+- `data/study-questions/[slug].json` — per-chapter study questions, persisted to GitHub
+- `app/api/study-notes/[slug]/route.ts` — GET reads local JSON; PUT writes to GitHub
+- `app/api/study-questions/[slug]/route.ts` — same pattern
+
+### Outline data shape
+```ts
+{ chapters: [{ chapterNumber, title, sections: [{ heading, bibleReferences, subsections }] }] }
+// chapterNumber 0 = Preface, 15 = Conclusion; Parts are a PARTS map keyed by first chapter number
+```
+
+### Features to replicate for every study post
+- **Part headings** — `PARTS: Record<number, string>` keyed by first chapter in that part; rendered as collapsible `PartRow`
+- **Chapter quotes** — `QUOTES: Record<number, string>` keyed by chapter number; rendered inside chapter body when open
+- **Preface quote** — hardcoded inside chapter 0 body (whatever quote opens the book)
+- **Section notes** — `allNotes` state fetched from `/api/study-notes/[slug]`; falls back to hardcoded `NOTES` map; admin sees pencil/+ edit button on hover
+- **Study questions** — `allQuestions` state fetched from `/api/study-questions/[slug]`; admin editable; collapsed by default
+- **Bible modal** — tap any scripture ref tag to open KJV passage via bible-api.com; normalise en/em dashes before fetch
+- **Collapse all by default** — `PartRow` starts `useState(false)`; `ChapterRow` starts `useState(false)`
+- **Sitemap** — add to `app/sitemap.ts` with `priority: 0.9`, `changeFrequency: 'weekly'`
+- **Recommended study block** — add to blog posts with matching tag (see `app/blog/[slug]/page.tsx` for 1689 Federalism pattern)
+- **Attribution line** — `<p className="study-book-attribution">Outline notes by the Theology Check author · not by [Author Name]</p>`
+
+### Admin detection
+`sessionStorage.getItem('tc-auth') === '1'` — same token set by `/admin` login. Checked in `useEffect` on mount.
+
+### CSS classes (globals.css)
+`study-part-*`, `study-chapter-*`, `study-section-*`, `study-note-*`, `study-questions-*`, `bible-modal-*`, `study-preface-quote`, `study-chapter-quote`, `study-section-note`, `study-book-attribution`
+
+---
+
 ## Common pitfalls
 - **Never** instantiate `new Resend(key)` or similar SDK clients at module level — Vercel evaluates module-level code during build when env vars are absent. Always instantiate inside the handler function.
 - **Never** define React components inside another component — causes remounting on every render (breaks input focus, resets state).
