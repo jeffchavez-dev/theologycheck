@@ -413,10 +413,12 @@ function ChapterRow({
 // ── Part component ────────────────────────────────────────────────────────────
 
 function PartRow({
-  title, chapters, globalOpen, onRef, allQuestions, isAdmin, onSaveQuestions, allNotes, onSaveNote,
+  title, chapters, open, onToggle, globalOpen, onRef, allQuestions, isAdmin, onSaveQuestions, allNotes, onSaveNote,
 }: {
   title: string
   chapters: Chapter[]
+  open: boolean
+  onToggle: () => void
   globalOpen: boolean | null
   onRef: (ref: string) => void
   allQuestions: Record<string, string[]>
@@ -425,13 +427,9 @@ function PartRow({
   allNotes: Record<string, string>
   onSaveNote: (key: string, text: string) => void
 }) {
-  const [open, setOpen] = useState(false)
-
-  useEffect(() => { if (globalOpen !== null) setOpen(globalOpen) }, [globalOpen])
-
   return (
     <div className="study-part">
-      <div className="study-part-header" onClick={() => setOpen(o => !o)}>
+      <div className="study-part-header" onClick={onToggle}>
         <span className="study-part-toggle">{open ? '▾' : '▸'}</span>
         <span className="study-part-title">{title}</span>
       </div>
@@ -460,11 +458,18 @@ function PartRow({
 
 export default function StudyPage() {
   const [globalOpen, setGlobalOpen] = useState<boolean | null>(null)
+  const [openPart, setOpenPart] = useState<string | null>(null)
+  const [allPartsOpen, setAllPartsOpen] = useState(false)
   const [activeRef, setActiveRef] = useState<string | null>(null)
   const [allQuestions, setAllQuestions] = useState<Record<string, string[]>>({})
   const [allNotes, setAllNotes] = useState<Record<string, string>>({})
   const [isAdmin, setIsAdmin] = useState(false)
   const [saving, setSaving] = useState(false)
+
+  function togglePart(key: string) {
+    setAllPartsOpen(false)
+    setOpenPart(prev => prev === key ? null : key)
+  }
 
   useEffect(() => {
     setIsAdmin(sessionStorage.getItem('tc-auth') === '1')
@@ -525,8 +530,8 @@ export default function StudyPage() {
       </div>
 
       <div className="study-controls">
-        <button className="study-btn" onClick={() => { setGlobalOpen(true); setTimeout(() => setGlobalOpen(null), 0) }}>Expand All</button>
-        <button className="study-btn" onClick={() => { setGlobalOpen(false); setTimeout(() => setGlobalOpen(null), 0) }}>Collapse All</button>
+        <button className="study-btn" onClick={() => { setAllPartsOpen(true); setOpenPart(null); setGlobalOpen(true); setTimeout(() => setGlobalOpen(null), 0) }}>Expand All</button>
+        <button className="study-btn" onClick={() => { setAllPartsOpen(false); setOpenPart(null); setGlobalOpen(false); setTimeout(() => setGlobalOpen(null), 0) }}>Collapse All</button>
         {saving && <span className="study-saving">Saving…</span>}
       </div>
 
@@ -543,6 +548,8 @@ export default function StudyPage() {
             key={startNum}
             title={partTitle}
             chapters={partChapters[startNum] ?? []}
+            open={allPartsOpen || openPart === startNum}
+            onToggle={() => togglePart(startNum)}
             globalOpen={globalOpen}
             onRef={setActiveRef}
             allQuestions={allQuestions}
