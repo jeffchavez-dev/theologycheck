@@ -154,6 +154,14 @@ const NOTES: Record<string, string> = {
   '10-2. The Kingdom of Heaven': 'Jesus described a kingdom that is fundamentally not of this world — entered by spiritual rebirth rather than physical descent, open to Gentiles by faith apart from circumcision or the Jewish law — which deeply provoked many religious leaders who assumed automatic inclusion by virtue of their ancestry.',
   '10-3. The King of the Kingdom': 'Jesus claimed the full threefold office of prophet, priest, and king over this kingdom; the crowds who hailed Him as "Son of David" expected Him to overthrow Rome, but He had instead come to defeat Satan by laying down His life and inaugurating a new covenant in His own blood.',
   '10-Conclusion': 'Jesus\' earthly ministry began unveiling God\'s complete redemptive plan — a new humanity gathered into a new kingdom through a new covenant, received simply by faith in Him.',
+
+  '11-Introduction': 'Before time began, salvation in Christ was already planned, and Scripture presents this eternal plan in covenantal terms as a transaction among the persons of the Trinity.',
+  '11-1. The Parties of the Covenant': 'The Father, Son, and Holy Spirit are all shown participating in this covenant, especially in Isaiah\'s Servant Songs, where the Father commissions the Servant, equips Him with the Spirit, and the Servant willingly takes up His mission.',
+  '11-2. The Commitments of the Covenant': 'Each divine person makes specific commitments within this covenant.',
+  '11-a. The Son\'s commitments': 'The Father assigns the Son the work of becoming incarnate, obeying the law perfectly, and dying as a substitute for an elect people, appointing Him as their prophet, priest, and king.',
+  '11-b. The Father\'s commitments': 'In contrast to the Davidic king\'s only conditional help, the Father unconditionally commits to sustain and empower the Son throughout His mission through the Holy Spirit, promising Him resurrection and exaltation as His reward for faithful obedience.',
+  '11-3. The Fulfillment of the Covenant': 'Jesus willingly carried out this mission to completion — keeping the moral law, the law of Moses, and the unique demands of His own redemptive calling — and was rewarded with resurrection and exaltation exactly as promised.',
+  '11-Conclusion': 'The Covenant of Redemption is the hidden foundation beneath the gospel: what the Father planned and commissioned, the Son perfectly accomplished, securing eternal salvation that the Spirit now applies to God\'s people through the New Covenant.',
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────
