@@ -162,6 +162,18 @@ const NOTES: Record<string, string> = {
   '11-b. The Father\'s commitments': 'In contrast to the Davidic king\'s only conditional help, the Father unconditionally commits to sustain and empower the Son throughout His mission through the Holy Spirit, promising Him resurrection and exaltation as His reward for faithful obedience.',
   '11-3. The Fulfillment of the Covenant': 'Jesus willingly carried out this mission to completion — keeping the moral law, the law of Moses, and the unique demands of His own redemptive calling — and was rewarded with resurrection and exaltation exactly as promised.',
   '11-Conclusion': 'The Covenant of Redemption is the hidden foundation beneath the gospel: what the Father planned and commissioned, the Son perfectly accomplished, securing eternal salvation that the Spirit now applies to God\'s people through the New Covenant.',
+
+  '12-Introduction': 'Jesus, the promised son of Abraham, David, and God, completed His heavenly mission within Israel\'s earthly covenants and now freely offers everyone who believes the salvation He secured.',
+  '12-1. The Establishment of the New Covenant': 'Christ\'s death legally establishes this covenant on better promises than the old, since His blood accomplishes complete, permanent cleansing rather than the repeated, incomplete cleansing provided by animal sacrifice.',
+  '12-2. The Blessings of the New Covenant': 'Jeremiah\'s promised New Covenant delivers a full range of blessings, all flowing from union with Christ.',
+  '12-a. Justification': 'Christ\'s perfect sacrifice provides permanent forgiveness of sins and the legal crediting of His own righteousness to His people, reversing Adam\'s condemnation and received freely through faith.',
+  '12-b. Regeneration and Sanctification': 'Unlike the Old Covenant, which could only command from the outside, the New Covenant produces an inward transformation — a new birth followed by ongoing growth in holiness — because God Himself writes His law on His people\'s hearts and empowers their obedience by His Spirit.',
+  '12-c. Adoption and Preservation': 'Those regenerated become God\'s actual children, receiving the Spirit of adoption, and God\'s fatherly discipline of His people functions to preserve and mature them rather than to condemn them.',
+  '12-d. Resurrection and Glorification': 'Because Christ fulfilled His own mission and was raised, His people are guaranteed a future bodily resurrection and full share in His glory in the new creation.',
+  '12-3. The Foundation of the New Covenant': 'The New Covenant simply delivers to believers what Christ already earned by keeping the Covenant of Redemption, meaning it is best understood as an already-completed covenant of works now freely mediated to God\'s people through their union with Christ as their federal head.',
+  '12-4. The Kingdom of the New Covenant': 'Just as the Father covenanted a kingdom to the Son in the Covenant of Redemption, that same kingdom is now covenanted to believers through the New Covenant, making the Lord\'s Supper a celebration of entrance into that coming kingdom rather than a memorial of Israel\'s exodus from Egypt.',
+  '12-5. The People of the New Covenant': 'Membership in the New Covenant is defined entirely by union with Christ, its federal head — those united to Him by the Spirit share fully in His inheritance, while those without His Spirit have no claim to it.',
+  '12-Conclusion': 'Founded in the Covenant of Redemption and sealed in Christ\'s blood, the New Covenant of grace reverses the corruption of Adam\'s fall and grants eternal, glorious communion with God to all who belong to Christ.',
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────
