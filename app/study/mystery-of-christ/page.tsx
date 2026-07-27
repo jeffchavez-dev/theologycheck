@@ -138,6 +138,16 @@ const NOTES: Record<string, string> = {
   '8-a. The judgment of God himself': 'God promises to discipline unfaithful sons of David directly, describing the relationship as one of father and son.',
   '8-b. Expulsion from the land of Canaan': 'Persistent unfaithfulness in the king ultimately brings the same covenant curse threatened back in Moses\' day — national exile from the land — a pattern realized historically first in Solomon\'s later years and finally in the exiles of Israel and Judah.',
   '8-Conclusion': 'Together, the Abrahamic, Mosaic, and Davidic Covenants form one unified structure governing the kingdom of Israel, with the king\'s obedience to Moses\' law determining whether the nation enjoys or forfeits the blessings originally promised to Abraham.',
+
+  '9-Introduction': 'Tracing how the concept of the Messiah developed within Israel\'s kingdom and covenants is really tracing the unfolding of the mystery of Christ itself, since "Messiah" and "Christ" are the same title.',
+  '9-1. The Messianic Purpose of the Old Covenant': 'From Genesis 12 onward, Israel\'s covenants existed to produce the promised, nations-blessing descendant; broadly, the whole kingdom of Israel functioned as a shadow of greater realities, while more narrowly, the covenants increasingly focused expectation on one particular person, the son of David.',
+  '9-2. The Messianic Hope of the Old Covenant': 'Israel\'s hope in "the anointed one" developed over time as historical circumstances shifted.',
+  '9-a. The present Messiah': 'Originally, Israel\'s messianic hope centered on the reigning Davidic king himself, since the king was, quite literally, God\'s "anointed one" by virtue of the covenant made with David.',
+  '9-b. The future Messiah': 'As one king after another failed to live up to the covenant\'s demands, especially highlighted by the exile, Israel\'s hope shifted from confidence in the current king to anticipation of a future, perfectly righteous son of David who would finally fulfill what earlier kings could not.',
+  '9-3. The Messianic Promise of a New Covenant': 'In the depths of exile, the prophets began revealing that the coming Messiah would not just restore the nation but bring an entirely new kind of covenant — one marked by internal transformation and complete, permanent forgiveness, unlike the covenant Israel had broken.',
+  '9-4. The Messianic Inclusion of the Nations': 'The prophets also made clear that this coming Messiah\'s blessings would extend beyond Israel to gather people from every nation into a renewed and perfected place of worship.',
+  '9-5. The Typological Nature of the Kingdom': 'Because all of this was revealed through typology rather than plain statement, Israel\'s own expectations tended to stay tied to an idealized version of their present national existence, causing them to underestimate just how different and how much better the promised New Covenant would actually be.',
+  '9-Conclusion': 'Across the whole sweep from Abraham to David, God\'s unfolding revelation pointed toward a coming son of David who would unite Israel and the nations through a new covenant — a hope finally realized in the arrival of Jesus.',
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────
