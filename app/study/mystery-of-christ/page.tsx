@@ -148,6 +148,12 @@ const NOTES: Record<string, string> = {
   '9-4. The Messianic Inclusion of the Nations': 'The prophets also made clear that this coming Messiah\'s blessings would extend beyond Israel to gather people from every nation into a renewed and perfected place of worship.',
   '9-5. The Typological Nature of the Kingdom': 'Because all of this was revealed through typology rather than plain statement, Israel\'s own expectations tended to stay tied to an idealized version of their present national existence, causing them to underestimate just how different and how much better the promised New Covenant would actually be.',
   '9-Conclusion': 'Across the whole sweep from Abraham to David, God\'s unfolding revelation pointed toward a coming son of David who would unite Israel and the nations through a new covenant — a hope finally realized in the arrival of Jesus.',
+
+  '10-Introduction': 'Israel expected the Messiah to perfect their present national existence and free them from foreign rule, but Jesus\' actual ministry confused and offended many Jews precisely because it didn\'t do that.',
+  '10-1. The Gospel of the Kingdom': 'From the start of His ministry, Jesus preached good news calling for repentance and faith, and that good news centered not merely on physical healing but on His coming sacrificial death, resurrection, and the gift of eternal life to all who trust Him.',
+  '10-2. The Kingdom of Heaven': 'Jesus described a kingdom that is fundamentally not of this world — entered by spiritual rebirth rather than physical descent, open to Gentiles by faith apart from circumcision or the Jewish law — which deeply provoked many religious leaders who assumed automatic inclusion by virtue of their ancestry.',
+  '10-3. The King of the Kingdom': 'Jesus claimed the full threefold office of prophet, priest, and king over this kingdom; the crowds who hailed Him as "Son of David" expected Him to overthrow Rome, but He had instead come to defeat Satan by laying down His life and inaugurating a new covenant in His own blood.',
+  '10-Conclusion': 'Jesus\' earthly ministry began unveiling God\'s complete redemptive plan — a new humanity gathered into a new kingdom through a new covenant, received simply by faith in Him.',
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────
