@@ -133,15 +133,11 @@ function TopicRow({
 }) {
   return (
     <div className="study-chapter">
-      <button
-        className="study-chapter-header"
-        onClick={onToggle}
-        aria-expanded={open}
-      >
+      <div className="study-chapter-header" onClick={onToggle} role="button" aria-expanded={open}>
         <span className="study-chapter-toggle">{open ? '▾' : '▸'}</span>
         <span className="study-chapter-num">{topic.number}</span>
         <span className="study-chapter-title">{topic.title}</span>
-      </button>
+      </div>
       {open && (
         <div className="study-chapter-body">
           {topic.subsections.map(sub => (
@@ -208,12 +204,13 @@ export default function StudyClient({ topics }: { topics: Topic[] }) {
   }
 
   return (
-    <main className="page-container">
+    <div className="main">
       <div className="study-page-header">
-        <p className="study-book-subtitle">Reference Outline</p>
+        <div className="section-label">Study</div>
         <h1 className="study-book-title">1689 Reformed Baptist Federalism</h1>
         <p className="study-book-author">A Topical Reference on Covenant Theology</p>
-        {saving && <p style={{ fontSize: 12, color: '#8b1a1a', marginTop: '0.25rem' }}>Saving…</p>}
+        <p className="study-book-subtitle">Reference Outline</p>
+        {saving && <span className="study-saving">Saving…</span>}
       </div>
 
       <div className="study-controls">
@@ -243,6 +240,6 @@ export default function StudyClient({ topics }: { topics: Topic[] }) {
           Outline compiled by the Theology Check author · not by any of the quoted theologians.
         </span>
       </p>
-    </main>
+    </div>
   )
 }
