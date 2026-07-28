@@ -236,9 +236,9 @@ export default function StudyClient({ topics }: { topics: Topic[] }) {
         This is an interactive study outline on 1689 Reformed Baptist Federalism.
         Quotes compiled from Nehemiah Coxe, Samuel Renihan, Pascal Denault, John Owen,
         A. W. Pink, Jeffrey Johnson, and others.{' '}
-        <span className="study-book-attribution" style={{ display: 'inline' }}>
-          Outline compiled by the Theology Check author · not by any of the quoted theologians.
-        </span>
+        Outline compiled by Simon Wartanian of{' '}
+        <a href="https://thecalvinist.net/" target="_blank" rel="noopener noreferrer">The Staunch Calvinist</a>
+        {' '}· not by the Theology Check author.
       </p>
     </div>
   )
