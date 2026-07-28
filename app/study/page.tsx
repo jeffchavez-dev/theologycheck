@@ -15,6 +15,14 @@ const studies = [
     chapters: 14,
     description: 'A thorough biblical-theological study of the covenant framework — from Adam through the New Covenant — tracing kingdom and covenant through every major redemptive-historical epoch.',
   },
+  {
+    slug: '1689-federalism',
+    title: '1689 Reformed Baptist Federalism',
+    subtitle: 'A Topical Reference on Covenant Theology',
+    author: 'Compiled Quotes',
+    chapters: 13,
+    description: 'A topical reference outline drawing from Nehemiah Coxe, Samuel Renihan, Pascal Denault, John Owen, A. W. Pink, and others — covering definitions, typology, each covenant, and contra paedobaptism.',
+  },
 ]
 
 export default function StudyIndexPage() {
