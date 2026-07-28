@@ -9,6 +9,11 @@ export const metadata: Metadata = {
     description:
       'An interactive study outline on 1689 Reformed Baptist Federalism — a topical reference of quotes from Coxe, Renihan, Denault, Owen, and others on covenant theology and the distinction between the Old and New Covenants.',
     type: 'article',
+    images: [{ url: '/og-image.png', width: 2000, height: 1199, alt: 'Theology Check' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
   },
   keywords: [
     '1689 Federalism',

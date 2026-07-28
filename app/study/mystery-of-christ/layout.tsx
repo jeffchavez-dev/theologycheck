@@ -9,6 +9,11 @@ export const metadata: Metadata = {
     description:
       'An interactive study outline of The Mystery of Christ by Samuel Renihan — chapter-by-chapter 1689 Federalism and Reformed Baptist covenant theology with study questions.',
     type: 'article',
+    images: [{ url: '/og-image.png', width: 2000, height: 1199, alt: 'Theology Check' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
   },
   keywords: [
     'The Mystery of Christ',
