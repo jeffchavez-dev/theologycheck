@@ -289,7 +289,8 @@ function SectionRow({
 
   const noteKey = `${chapterNum}-${section.heading}`
   const note = allNotes[noteKey] ?? NOTES[noteKey] ?? ''
-  const hasContent = !!note || isAdmin || section.bibleReferences.length > 0 || section.subsections.length > 0
+  const hasExpandable = !!note || section.bibleReferences.length > 0 || section.subsections.length > 0
+  const hasContent = hasExpandable || isAdmin
 
   useEffect(() => { if (globalOpen !== null) setOpen(globalOpen) }, [globalOpen])
 
@@ -311,7 +312,7 @@ function SectionRow({
         className={`study-section-header${hasContent ? ' clickable' : ''}`}
         onClick={() => hasContent && setOpen(o => !o)}
       >
-        <span className={`study-toggle${!hasContent ? ' invisible' : ''}`}>
+        <span className={`study-toggle${!hasExpandable ? ' invisible' : ''}`}>
           {open ? '▾' : '▸'}
         </span>
         <span className="study-section-title">{section.heading}</span>
