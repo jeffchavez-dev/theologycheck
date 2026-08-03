@@ -139,6 +139,39 @@ All study pages live under `app/study/`. The Mystery of Christ (`app/study/myste
 - **Recommended study block** — add to blog posts with matching tag (see `app/blog/[slug]/page.tsx` for 1689 Federalism pattern)
 - **Attribution line** — `<p className="study-book-attribution">Outline notes by the Theology Check author · not by [Author Name]</p>`
 
+### Layout — ALWAYS match this exactly
+Every study page must use the same outer wrapper, header order, and outline container as Mystery of Christ. Deviating from these causes layout/width/centering breakage.
+
+```tsx
+// ✅ Correct outer wrapper — NOT <main>, NOT <div className="page-container">
+<div className="main">
+
+  // Header — in this order
+  <div className="study-page-header">
+    <div className="section-label">Study</div>         // "STUDY" label with divider lines
+    <h1 className="study-book-title">…</h1>            // Cinzel serif, large
+    <p className="study-book-author">…</p>             // EB Garamond italic, burgundy
+    <p className="study-book-subtitle">…</p>           // smaller italic
+    <p className="study-book-attribution">…</p>        // attribution line (who made the outline)
+  </div>
+
+  // Controls
+  <div className="study-controls">
+    <button className="study-btn">Expand All</button>
+    <button className="study-btn">Collapse All</button>
+  </div>
+
+  // Outline — separator lines between rows
+  <div className="study-outline">
+    …rows…
+  </div>
+
+  <p className="study-footer-note">…</p>
+</div>
+```
+
+**Row elements must be `<div>`, not `<button>`** — `.study-chapter-header` has no `width: 100%`; it relies on being a block `<div>`. Using `<button>` makes rows only as wide as their content. Always use `<div role="button">` with `onClick` for clickable rows.
+
 ### Admin detection
 `sessionStorage.getItem('tc-auth') === '1'` — same token set by `/admin` login. Checked in `useEffect` on mount.
 
