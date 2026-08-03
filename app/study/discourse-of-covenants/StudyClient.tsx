@@ -115,7 +115,7 @@ export default function StudyClient({ chapters }: { chapters: Chapter[] }) {
         This is an interactive study outline of <em>A Discourse of the Covenants That God Made
         with Men Before the Law</em> by Nehemiah Coxe, outlining the Adamic, Noahic, Abrahamic,
         and Covenant of Circumcision from a 1689 Federalism perspective.
-        Outline by <a href="https://www.credomag.com/author/brandon-adams/" target="_blank" rel="noopener noreferrer">Brandon Adams</a>
+        Outline by <a href="https://contrast2.wordpress.com/" target="_blank" rel="noopener noreferrer">Brandon Adams</a>
         {' '}· not a substitute for reading the original work.
       </p>
     </div>
