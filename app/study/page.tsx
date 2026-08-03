@@ -16,6 +16,14 @@ const studies = [
     description: 'A thorough biblical-theological study of the covenant framework — from Adam through the New Covenant — tracing kingdom and covenant through every major redemptive-historical epoch.',
   },
   {
+    slug: 'discourse-of-covenants',
+    title: 'A Discourse of the Covenants',
+    subtitle: 'That God Made with Men Before the Law',
+    author: 'Nehemiah Coxe',
+    chapters: 8,
+    description: 'A chapter-by-chapter outline of Nehemiah Coxe\'s foundational 1689 Federalism work — covering covenant relationships, Adam, Noah, Abraham, and the Covenant of Circumcision. Outlined by Brandon Adams.',
+  },
+  {
     slug: '1689-federalism',
     title: '1689 Reformed Baptist Federalism',
     subtitle: 'A Topical Reference on Covenant Theology',
