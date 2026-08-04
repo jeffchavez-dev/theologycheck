@@ -443,7 +443,7 @@ export default function StudyPage() {
         <h1 className="study-book-title">The Mystery of Christ</h1>
         <p className="study-book-author">Samuel Renihan</p>
         <p className="study-book-subtitle">His Covenant, and His Kingdom</p>
-        <p className="study-book-attribution">Outline notes by the Theology Check author · not by Samuel Renihan</p>
+
       </div>
 
       <div className="study-controls">
