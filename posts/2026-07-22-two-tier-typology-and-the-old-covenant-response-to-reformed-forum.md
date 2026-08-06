@@ -5,8 +5,9 @@ excerpt: "A roundtable discussion with Brandon Adams, Sam Renihan, and Richard B
 tags:
   - "1689 Federalism"
   - "Covenant Theology"
-draft: true
 author: ""
+updatedAt: "2026-08-06"
+updateCount: 1
 ---
 
 *Participants: Brandon Adams ([1689federalism.com](https://www.1689federalism.com/)); Sam Renihan, author of* The Mystery of Christ: His Covenant and His Kingdom; *Richard Barcellos, author of* More Than a Memory: The Lord's Supper as a Means of Grace. *This discussion responds primarily to Reformed Forum Christ the Center Episode 736.*
