@@ -7,7 +7,7 @@ tags:
   - "Trinity"
 author: "Jeff Chavez"
 updatedAt: "2026-08-12"
-updateCount: 1
+updateCount: 2
 ---
 
 The doctrine of the Trinity is not a truth invented by men but a mystery revealed by God Himself throughout the Scriptures. As I read recent posts and arguments from Oneness apologists, I can't help but pray to the Father that He may reveal this truth to them, that they may know Him and Jesus Christ whom He sent by the help of the Holy Spirit. It also led me to review the books I have to deepen my delight in knowing that the one God is the Father, the Son, and the Holy Spirit.
@@ -18,6 +18,9 @@ Here are some quotations from theologians past and present who wrestled with thi
 
 > "The doctrine of the Trinity is the most sublime truth of the Christian faith and its supreme treasure."
 > – Scott Swain
+
+> "God is always the Trinity who made himself known in hidden form in the Old Testament and makes himself known in revealed form in the New Testament." 
+> – Fred Sanders, The Triune God
 
 > "If the Trinity were something we could shave off God, we would not be relieving him of some irksome weight; we would be shearing him of precisely what is so delightful about him. For God is triune, and it is as triune that he is so good and desirable."
 > – Michael Reeves, *Delighting in the Trinity: An Introduction to the Christian Faith*
