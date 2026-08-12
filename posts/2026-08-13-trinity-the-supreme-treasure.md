@@ -1,6 +1,6 @@
 ---
 title: "Trinity: The Supreme Treasure"
-date: "2026-08-13"
+date: "2026-08-12"
 excerpt: "The doctrine of the Trinity is not a truth invented by men but a mystery revealed by God Himself throughout the Scriptures."
 tags:
   - "Classical Theism"
