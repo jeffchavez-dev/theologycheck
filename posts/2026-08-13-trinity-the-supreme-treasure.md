@@ -7,7 +7,7 @@ tags:
   - "Trinity"
 author: "Jeff Chavez"
 updatedAt: "2026-08-12"
-updateCount: 2
+updateCount: 3
 ---
 
 The doctrine of the Trinity is not a truth invented by men but a mystery revealed by God Himself throughout the Scriptures. As I read recent posts and arguments from Oneness apologists, I can't help but pray to the Father that He may reveal this truth to them, that they may know Him and Jesus Christ whom He sent by the help of the Holy Spirit. It also led me to review the books I have to deepen my delight in knowing that the one God is the Father, the Son, and the Holy Spirit.
@@ -56,5 +56,7 @@ Here are some quotations from theologians past and present who wrestled with thi
 > — Gregory Nazianzen
 
 ---
+
+Is the One God in Three Persons your supreme treasure?
 
 To the Triune God alone be the glory!
