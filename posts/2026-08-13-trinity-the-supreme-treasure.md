@@ -3,15 +3,16 @@ title: "Trinity: The Supreme Treasure"
 date: "2026-08-13"
 excerpt: "The doctrine of the Trinity is not a truth invented by men but a mystery revealed by God Himself throughout the Scriptures."
 tags:
-  - Classical Theism
-  - Trinity
+  - "Classical Theism"
+  - "Trinity"
 author: "Jeff Chavez"
-draft: true
+updatedAt: "2026-08-12"
+updateCount: 1
 ---
 
-The doctrine of the Trinity is not a truth invented by men but a mystery revealed by God Himself throughout the Scriptures. As I read recents posts and arguments from Oneness apologists, I can't help but pray to the Father that He may reveal this truth to them that they may know Him and Jesus Christ whom He sent by the help of the Holy Spirit. It also led me to review the books I have to help me increase my delight in knowing that the one God is the Father, the Son, and the Holy Spirit.
+The doctrine of the Trinity is not a truth invented by men but a mystery revealed by God Himself throughout the Scriptures. As I read recent posts and arguments from Oneness apologists, I can't help but pray to the Father that He may reveal this truth to them, that they may know Him and Jesus Christ whom He sent by the help of the Holy Spirit. It also led me to review the books I have to deepen my delight in knowing that the one God is the Father, the Son, and the Holy Spirit.
 
-Here are some quotations that helped me better grasp the significance of the doctrine of the Trinity.
+Here are some quotations from theologians past and present who wrestled with this biblical truth and concluded that it is a biblical doctrine and that it is central to the Christian faith and practice. These helped me better grasp the significance of the doctrine of the Trinity.
 
 ---
 
