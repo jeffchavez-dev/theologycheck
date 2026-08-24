@@ -3,14 +3,16 @@ title: "John Owen's 17 Reasons and Differences Between the Mosaic and the Covena
 date: "2026-08-19"
 excerpt: "John Owen's careful enumeration of seventeen differences between the Mosaic Covenant and the New Covenant of Grace — drawn from his commentary on Hebrews."
 tags:
-  - Covenant Theology
-  - Reformed
-  - 1689 Federalism
-author: "Jeff Chavez"
+  - "Covenant Theology"
+  - "Reformed"
+  - "1689 Federalism"
 draft: true
+author: "Jeff Chavez"
+updatedAt: "2026-08-24"
+updateCount: 1
 ---
 
-## Difference 1
+The difference between the Mosaic Covenant and the New Covenant of Grace has been a matter of debate. John Owen's insight into this difference is very significant. ## Difference 1
 
 These two covenants differ in the circumstance of time as to their promulgation, declaration, and establishment. The first covenant was made at the time that God brought the children of Israel out of Egypt, and took its date from the third month after their coming up from thence, Exo 19:24. From the time of what is reported in the latter place, wherein the people give their actual consent unto the terms of it, it began its formal obligation as a covenant. The new covenant was declared and made known "in the latter days," Heb. 1:1-2; "in the dispensation of the fullness of times," Eph. 1:10. And it took date, as a covenant formally obliging the whole church, from the death, resurrection, ascension of Christ, and sending of the Holy Ghost.
 
@@ -164,3 +166,6 @@ They differ in their efficacy; for the old covenant "made nothing perfect," it c
 ## Difference 17
 
 They differ in their duration: for the one was to be removed, and the other to abide for ever; which must be declared on the ensuing verses.
+
+Reference:
+- The reader may also find the source [here](https://www.thecalvinist.net/post/1689-Baptist-Confession-Chapter-7:-Of-Gods-Covenant-Commentary).
