@@ -1,5 +1,5 @@
 ---
-title: "\"For Us and For Our Salvation\": Why This Reformation Month Conference Mattered"
+title: "The Nicene Creed Conference: \"For Us and For Our Salvation\""
 date: "2026-08-19"
 excerpt: "A conference that uses Reformation Month to send us back to 325 and 381 is not wandering off-theme — it is doing exactly what the Reformers did."
 tags:
@@ -8,7 +8,7 @@ tags:
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-08-25"
-updateCount: 10
+updateCount: 11
 ---
 
 In celebration of the 1700th anniversary of one of the greatest creeds of Christendom, the Nicene Creed, the [Philippine Gospel Network](https://www.facebook.com/gospelnetworkph) held a conference. The title of this conference was taken from a line of this creed.
@@ -40,5 +40,11 @@ This doctrine is presently relevant to our worship, mission, and hope. Our hope 
 **Session 6** closed the conference on where ecclesiology, “the holy Catholic Church,” belongs, under the doctrine of God. Ptr. Derick Parfan built on John Webster's principle that *"there can be no doctrine of the church that is not fully about God."* He gave a careful walk-through of the four marks: one, holy, catholic, and apostolic church, as a corrective to our era's individualism. Cyprian's dictum, echoed by Augustine and Calvin, that *"you cannot have God as your Father if you do not have the church as your mother,"* is a hard word for low-ecclesiology evangelicalism to hear, but it is precisely the word this conference was built to deliver.
 
 Taken together, these six sessions make a simple but urgent case: *a church that cannot confess the Nicene Creed will eventually lose the gospel it was written to protect.* Attending such a conference in the context of broad evangelicalism is refreshing. I love the creeds, and the Nicene Creed as it was handed down to us by the providence of the simple and merciful God,  and the theological retrieval of our day will be advanced freshly if we preserve what our forebears confessed. But in all these things, we must study, appropriate, and confess this creed in the posture of humility. 
+
+I pray that more churches will hold more conferences on the retrieval of the riches of what true Christianity believes. We need churches that will recover the doctrines, convictions, and practices that have shaped faithful Christianity through the centuries. I believe that there is a great need to teach these truths again, not as relics of the past, but as biblical convictions that still govern how Christians understand God, Christ, salvation, the church, and the Christian life.
+
+I pray that pastors will open the Scriptures and lead their congregations back to the truths that have been neglected, forgotten, or replaced by lesser things. I pray that churches will give their people more than inspirational messages. Give them doctrine. Give them substance. Give them the faith once delivered to the saints. Give them Scriptures! 
+
+May these conferences become places where Christians learn to read the Bible with greater care, along with communal reading of it, recover the riches of historic creeds and confessions, and gain a deeper love for the truth. We have much to recover. And the riches are still there *for us and for our salvation.*
 
 To the Triune God alone be the glory!
