@@ -8,9 +8,8 @@ tags:
 draft: true
 author: "Jeff Chavez"
 updatedAt: "2026-08-25"
-updateCount: 5
+updateCount: 6
 ---
-
 
 **Session 1** set the terms. Ptr. James Bryner Chu opened with van Dixhorn's observation that cults hide what they believe, while only Trinitarian Christians can confess the Nicene Creed and mean every word of it. Ptr. James gave three reasons why the creed still matters: (1) it is scripturally grounded, not scripture-adjacent;  (2) it is part of our family inheritance, functioning like a grammar book that teaches us how the early Christians spoke of God; (3) and familiarity with it is itself a mode of honoring the fifth commandment, honoring the fathers who handed the faith down to us. 
 
@@ -26,10 +25,10 @@ If there was a time when the Son was not, it would follow then that there was a 
 
 This doctrine is presently relevant to our worship, mission, and hope. Our hope rests upon the incarnate, risen, and returning God-man, the LORD Jesus Christ. This creed helps us to recover the firm and true and joyful and hopeful belief in Christ. We must consider adding the Nicene Creed to our churches' foremost confession today.
 
-**Session 5**, on the Holy Spirit, gave Ptr. Raffy Garcia room to correct a real deficiency in Reformed pneumatology at street level. Citing Barna's finding that many self-identified Christians treat the Spirit as an impersonal force, Garcia warned that losing sight of the Spirit's personhood turns Him into "a genie that can be manipulated, not a God who has to be honored." His treatment of the *filioque* controversy, and Calvin's language of "distinction without division," modeled how to hold East and West in charitable tension rather than easy dismissal. The practical payoff was Christ-centered: we worship the Spirit rightly by directing our attention to the Son.
+**Session 5**, on the Holy Spirit, gave Ptr. Raffy Garcia room to correct a real deficiency in Reformed pneumatology at street level. He cited Barna's finding that many self-identified Christians treat the Spirit as an impersonal force. Ptr. Raffy warned that losing sight of the Spirit's personhood turns Him into "a genie that can be manipulated, not a God who has to be honored." I am amazed with his treatment of the *filioque* controversy, and Calvin's language of "distinction without division," modeled how to hold East and West with charity rather than dismissing it quickly. The practical payoff was Christ-centered: we worship the Spirit rightly by directing our attention to the Son.
 
-**Session 6** closed the conference on where ecclesiology belongs, under the doctrine of God. Ptr. Derick Parfan built on John Webster's principle that *"there can be no doctrine of the church that is not fully about God."* He gave a careful walk-through of the four marks: one, holy, catholic, apostolic — as a corrective to our era's individualism. Cyprian's dictum, echoed by Augustine and Calvin, that *"you cannot have God as your Father if you do not have the church as your mother,"* is a hard word for low-ecclesiology evangelicalism to hear, but it is precisely the word this conference was built to deliver.
+**Session 6** closed the conference on where ecclesiology “the holy Catholic Church” belongs, under the doctrine of God. Ptr. Derick Parfan built on John Webster's principle that *"there can be no doctrine of the church that is not fully about God."* He gave a careful walk-through of the four marks: one, holy, catholic, and apostolic church, as a corrective to our era's individualism. Cyprian's dictum, echoed by Augustine and Calvin, that *"you cannot have God as your Father if you do not have the church as your mother,"* is a hard word for low-ecclesiology evangelicalism to hear, but it is precisely the word this conference was built to deliver.
 
-Taken together, these six sessions make a simple but urgent case: *a church that cannot confess the Nicene Creed will eventually lose the gospel it was written to protect.* Attending such a conference in the context of broad evangelicalism is refreshing. I love the creeds, and the theological retrieval of our day will be advanced freshly if we preserve what our forebears confessed. But in all these things, we must study, appropriate, and confess this creed in the posture of humility. 
+Taken together, these six sessions make a simple but urgent case: *a church that cannot confess the Nicene Creed will eventually lose the gospel it was written to protect.* Attending such a conference in the context of broad evangelicalism is refreshing. I love the creeds, and the Nicene Creed as it was handed down to us by the providence of the simple and merciful God,  and the theological retrieval of our day will be advanced freshly if we preserve what our forebears confessed. But in all these things, we must study, appropriate, and confess this creed in the posture of humility. 
 
 To the Triune God alone be the glory!
