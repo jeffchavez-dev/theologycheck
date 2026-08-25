@@ -8,7 +8,7 @@ tags:
 draft: true
 author: "Jeff Chavez"
 updatedAt: "2026-08-25"
-updateCount: 4
+updateCount: 5
 ---
 
 
@@ -28,8 +28,8 @@ This doctrine is presently relevant to our worship, mission, and hope. Our hope 
 
 **Session 5**, on the Holy Spirit, gave Ptr. Raffy Garcia room to correct a real deficiency in Reformed pneumatology at street level. Citing Barna's finding that many self-identified Christians treat the Spirit as an impersonal force, Garcia warned that losing sight of the Spirit's personhood turns Him into "a genie that can be manipulated, not a God who has to be honored." His treatment of the *filioque* controversy, and Calvin's language of "distinction without division," modeled how to hold East and West in charitable tension rather than easy dismissal. The practical payoff was Christ-centered: we worship the Spirit rightly by directing our attention to the Son.
 
-**Session 6** closed the conference where ecclesiology belongs — under the doctrine of God. Ptr. Derick Parfan built on John Webster's principle that "there can be no doctrine of the church that is not fully about God," then walked through the four marks — one, holy, catholic, apostolic — as a corrective to our era's individualism. Cyprian's dictum, echoed by Augustine and Calvin, that "you cannot have God as your Father if you do not have the church as your mother," is a hard word for low-ecclesiology evangelicalism to hear, but it is precisely the word this conference was built to deliver.
+**Session 6** closed the conference on where ecclesiology belongs, under the doctrine of God. Ptr. Derick Parfan built on John Webster's principle that *"there can be no doctrine of the church that is not fully about God."* He gave a careful walk-through of the four marks: one, holy, catholic, apostolic — as a corrective to our era's individualism. Cyprian's dictum, echoed by Augustine and Calvin, that *"you cannot have God as your Father if you do not have the church as your mother,"* is a hard word for low-ecclesiology evangelicalism to hear, but it is precisely the word this conference was built to deliver.
 
-Taken together, these six sessions make a simple but urgent case: a church that cannot confess the Nicene Creed will eventually lose the gospel it was written to protect. That is the conference's real relevance — not nostalgia for old words, but recovery of the only grammar precise enough to keep us worshiping the God who is actually there.
+Taken together, these six sessions make a simple but urgent case: *a church that cannot confess the Nicene Creed will eventually lose the gospel it was written to protect.* Attending such a conference in the context of broad evangelicalism is refreshing. I love the creeds, and the theological retrieval of our day will be advanced freshly if we preserve what our forebears confessed. But in all these things, we must study, appropriate, and confess this creed in the posture of humility. 
 
-Indeed, we must study, appropriate and confess this creed in the posture of humility. 
+To the Triune God alone be the glory!
