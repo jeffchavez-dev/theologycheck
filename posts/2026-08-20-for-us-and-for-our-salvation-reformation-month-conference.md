@@ -8,10 +8,10 @@ tags:
 draft: true
 author: "Jeff Chavez"
 updatedAt: "2026-08-25"
-updateCount: 8
+updateCount: 9
 ---
 
-In celebration of the 1700th year anniversary of one of the greatest creeds of the Christendom, the Nicene Creed, a conference was held. The title of this conference was taken from a line this creed.
+In celebration of the 1700th anniversary of one of the greatest creeds of Christendom, the Nicene Creed, the [Philippine Gospel Network](https://www.facebook.com/gospelnetworkph) held a conference. The title of this conference was taken from a line of this creed.
 
 *For us and for our salvation*
 *he came down from heaven;*
