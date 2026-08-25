@@ -8,9 +8,14 @@ tags:
 draft: true
 author: "Jeff Chavez"
 updatedAt: "2026-08-25"
-updateCount: 6
+updateCount: 7
 ---
 
+The title of this blog is taken from the Nicene Creed’s line,
+
+*For us and for our salvation,*
+*He came down from heaven.*
+Was anointed of the Holy Spirit
 **Session 1** set the terms. Ptr. James Bryner Chu opened with van Dixhorn's observation that cults hide what they believe, while only Trinitarian Christians can confess the Nicene Creed and mean every word of it. Ptr. James gave three reasons why the creed still matters: (1) it is scripturally grounded, not scripture-adjacent;  (2) it is part of our family inheritance, functioning like a grammar book that teaches us how the early Christians spoke of God; (3) and familiarity with it is itself a mode of honoring the fifth commandment, honoring the fathers who handed the faith down to us. 
 
 He ended with a suggestion on the practical use of the creed: public confession in worship, personal familiarity, contemplative memorization, and persistence in doing so. In our home, this has become a part of our family worship. Gladly, there are helpful ways to memorize the creed. One way is to [sing it](https://youtu.be/N7ZQfNjvDuw?si=4fvD6KRjJmo-eXOZ)! Jaroslav Pelikan's question nailed the whole session: what do you value most in the Nicene Creed? For Ptr. James, it was the first word, "We." 
