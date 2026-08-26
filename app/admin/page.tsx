@@ -53,6 +53,10 @@ export default function AdminPage() {
   const [emailModal, setEmailModal] = useState<{ title: string; excerpt: string; slug: string } | null>(null)
   const [emailCopied, setEmailCopied] = useState(false)
 
+  // Slug editing
+  const [editingSlugField, setEditingSlugField] = useState(false)
+  const [slugFieldVal, setSlugFieldVal] = useState('')
+
   // Subscriber edit state
   const [editingSubscriber, setEditingSubscriber] = useState<string | null>(null)
   const [editingSubscriberVal, setEditingSubscriberVal] = useState('')
@@ -218,6 +222,7 @@ export default function AdminPage() {
     setSelectedTags(post.tags ?? []); setAuthor(post.author ?? '')
     setUpdatedAt(post.updatedAt ?? ''); setUpdateCount(post.updateCount ?? 0)
     setSeries(post.series ?? ''); setSeriesOrder(post.seriesOrder ?? 0)
+    setEditingSlugField(false); setSlugFieldVal(slug)
     setError(''); setPanelOpen(false)
     window.scrollTo(0, 0)
   }
@@ -236,12 +241,14 @@ export default function AdminPage() {
     const res = await fetch('/api/posts', {
       method: isEdit ? 'PUT' : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug: editingSlug, title, excerpt, body, tags: selectedTags, date, draft: asDraft, scheduled: asScheduled, author, dropCapParagraph, series, seriesOrder: resolvedSeriesOrder }),
+      body: JSON.stringify({ slug: editingSlug, newSlug: editingSlugField && slugFieldVal && slugFieldVal !== editingSlug ? slugFieldVal : undefined, title, excerpt, body, tags: selectedTags, date, draft: asDraft, scheduled: asScheduled, author, dropCapParagraph, series, seriesOrder: resolvedSeriesOrder }),
     })
     if (res.ok) {
       const data = await res.json()
-      const resolvedSlug = isEdit ? editingSlug! : data.slug
-      if (!isEdit && data.slug) setEditingSlug(data.slug)
+      const resolvedSlug = isEdit ? (data.slug ?? editingSlug!) : data.slug
+      if (data.slug) { setEditingSlug(data.slug); setSlugFieldVal(data.slug) }
+      else if (!isEdit && data.slug) setEditingSlug(data.slug)
+      setEditingSlugField(false)
       setDraft(asDraft); setScheduled(asScheduled)
       const msg = asScheduled
         ? 'Post saved as coming soon.'
@@ -579,6 +586,37 @@ export default function AdminPage() {
               <label className="form-label">Title</label>
               <input className="form-input" value={title} onChange={e => setTitle(e.target.value)} placeholder="Post title" />
             </div>
+
+            {editingSlug && (
+              <div className="form-group">
+                <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  URL Slug
+                  <button
+                    type="button"
+                    onClick={() => { setEditingSlugField(v => !v); setSlugFieldVal(editingSlug) }}
+                    style={{ fontSize: 11, padding: '1px 7px', borderRadius: 4, border: '1px solid #c8b89a', background: editingSlugField ? '#8b1a1a' : '#f5efe6', color: editingSlugField ? '#fff' : '#8b1a1a', cursor: 'pointer', fontFamily: 'inherit', letterSpacing: '0.05em' }}
+                  >{editingSlugField ? 'Cancel' : 'Edit'}</button>
+                </label>
+                {editingSlugField ? (
+                  <input
+                    className="form-input"
+                    value={slugFieldVal}
+                    onChange={e => setSlugFieldVal(e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/--+/g, '-'))}
+                    placeholder="new-url-slug"
+                    style={{ fontFamily: 'monospace', fontSize: 13 }}
+                  />
+                ) : (
+                  <div style={{ fontFamily: 'monospace', fontSize: 12, color: '#6b5c4e', padding: '6px 0', wordBreak: 'break-all' }}>
+                    /blog/{editingSlug}
+                  </div>
+                )}
+                {editingSlugField && (
+                  <p style={{ fontSize: 11, color: '#8b1a1a', margin: '4px 0 0', fontStyle: 'italic' }}>
+                    Warning: changing the slug changes the URL. Old links will break.
+                  </p>
+                )}
+              </div>
+            )}
 
             <div className="form-group">
               <label className="form-label">Excerpt</label>

@@ -141,7 +141,7 @@ export async function POST(req: NextRequest) {
 
 // PUT — update existing post via GitHub API
 export async function PUT(req: NextRequest) {
-  const { slug, title, excerpt, body, tags, date: inputDate, draft, scheduled, author, dropCapParagraph, series, seriesOrder } = await req.json()
+  const { slug, newSlug, title, excerpt, body, tags, date: inputDate, draft, scheduled, author, dropCapParagraph, series, seriesOrder } = await req.json()
   if (!slug || !title || !body) return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
 
   const file = findFile(slug)
@@ -153,7 +153,25 @@ export async function PUT(req: NextRequest) {
   const updateCount = (existing.data.updateCount ?? 0) + 1
   const markdown = buildMarkdown(title, date, excerpt ?? '', tags ?? [], draft ?? false, body, author ?? existing.data.author ?? '', updatedAt, updateCount, dropCapParagraph ?? existing.data.dropCapParagraph ?? 0, series ?? existing.data.series ?? '', seriesOrder ?? existing.data.seriesOrder ?? 0, scheduled ?? existing.data.scheduled ?? false)
 
-  const githubPath = `posts/${file}`
+  const cleanNewSlug = newSlug && newSlug.trim() && newSlug.trim() !== slug ? newSlug.trim() : null
+  const targetFile = cleanNewSlug ? `${date}-${cleanNewSlug}.md` : file
+  const githubPath = `posts/${targetFile}`
+
+  if (cleanNewSlug) {
+    // Write to new filename, then delete old file
+    const writeRes = await githubWriteFile(githubPath, markdown, `Rename post: ${slug} → ${date}-${cleanNewSlug}`)
+    if (!writeRes.ok) {
+      const err = await writeRes.json()
+      return NextResponse.json({ error: err.message ?? 'GitHub write failed' }, { status: 500 })
+    }
+    const oldSha = await githubGetSHA(`posts/${file}`)
+    if (oldSha) await githubDeleteFile(`posts/${file}`, oldSha, `Remove old slug: ${slug}`)
+    const resolvedSlug = `${date}-${cleanNewSlug}`
+    revalidatePath('/'); revalidatePath('/series'); revalidatePath(`/blog/${slug}`); revalidatePath(`/blog/${resolvedSlug}`)
+    if (series) revalidatePath(`/series/${series.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`)
+    return NextResponse.json({ ok: true, slug: resolvedSlug })
+  }
+
   const sha = await githubGetSHA(githubPath)
   const res = await githubWriteFile(githubPath, markdown, `Update post: ${title}`, sha)
   if (!res.ok) {
@@ -162,7 +180,7 @@ export async function PUT(req: NextRequest) {
   }
   revalidatePath('/'); revalidatePath('/series'); revalidatePath(`/blog/${slug}`)
   if (series) revalidatePath(`/series/${series.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`)
-  return NextResponse.json({ ok: true })
+  return NextResponse.json({ ok: true, slug })
 }
 
 // PATCH — batch update seriesOrder for multiple posts
