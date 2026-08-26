@@ -7,8 +7,8 @@ tags:
   - "Trinity"
 dropCapParagraph: 1
 author: "Jeff Chavez"
-updatedAt: "2026-08-25"
-updateCount: 11
+updatedAt: "2026-08-26"
+updateCount: 12
 ---
 
 In celebration of the 1700th anniversary of one of the greatest creeds of Christendom, the Nicene Creed, the [Philippine Gospel Network](https://www.facebook.com/gospelnetworkph) held a conference. The title of this conference was taken from a line of this creed.
