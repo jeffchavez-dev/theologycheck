@@ -4,11 +4,11 @@ date: "2026-08-25"
 excerpt: "An engagement and critique of Kenotic Christology — arguing that Kenoticism is incompatible with Chalcedonian orthodoxy and the classical doctrine of divine immutability."
 tags:
   - "Classical Theism"
-dropCapParagraph: 1
+draft: true
+dropCapParagraph: 2
 author: "NoblemanPH"
 updatedAt: "2026-08-26"
-updateCount: 0
-draft: true
+updateCount: 1
 ---
 
 *A guest post from a friend, NoblemanPH, a student of [IRBS](https://www.facebook.com/IRBSTheologicalSeminary). The reader may read this article in [Academia](https://www.academia.edu/171737984/Against_Kenoticism_An_Engagement_and_Critique_on_Kenotic_Christology).*
