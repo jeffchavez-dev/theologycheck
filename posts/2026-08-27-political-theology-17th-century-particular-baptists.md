@@ -16,7 +16,7 @@ Theology in Particular of IRBS Media recently replayed one of their greatest hit
 
 ---
 
-This episode originated from a listener suggestion. Joe Annity reads the question at length, noting it is so well-framed it practically wrote the interview.
+This episode originated from a listener suggestion. Joe Anady reads the question at length, noting it is so well-framed it practically wrote the interview.
 
 The listener writes:
 
@@ -198,7 +198,7 @@ There is no reason to think the early Baptists had any different framework. Thei
 
 ### Keep the Main Thing the Main Thing
 
-*Joe Annity's pastoral caution:*
+*Joe Anady's pastoral caution:*
 
 > "I think it's so important for us as Christians and ministers to keep the focus on the advancement of the kingdom of God — the preaching of the gospel, the teaching of the word of God to the people of God so that they obey all that Christ has commanded. We need to be concerned with promoting and maintaining sound doctrine, caring for souls. I am concerned that it's possible for Christians and ministers to become so preoccupied with political issues that we actually begin to grow distracted from the main thing."
 
@@ -216,4 +216,4 @@ There is no reason to think the early Baptists had any different framework. Thei
 
 ---
 
-*Notes from [Theology in Particular, Episode 72](https://youtu.be/5Uq1h-R3FM8?si=sG2YFONy7vXEMpAq) — a podcast of International Reformed Baptist Seminary (IRBS). Hosts: Joe Annity | Guest: James Renihan. Originally aired: December 2022 | Replayed: July 2026.*
+*Notes from [Theology in Particular, Episode 72](https://youtu.be/5Uq1h-R3FM8?si=sG2YFONy7vXEMpAq) — a podcast of International Reformed Baptist Seminary (IRBS). Hosts: Joe Anady | Guest: James Renihan. Originally aired: December 2022 | Replayed: July 2026.*
