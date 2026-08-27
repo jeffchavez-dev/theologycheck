@@ -311,6 +311,10 @@ a { color: inherit; text-decoration: none; }
 .post-content h3 { font-size: 19px; font-weight: 500; color: #2a1a0e; margin: 1.5rem 0 0.75rem; }
 /* Simple inline quote — left border style */
 .post-content blockquote { border-left: 3px solid #8b1a1a; margin: 1.5rem 0; padding: 0.5rem 0 0.5rem 1.25rem; color: #5a3e28; font-style: italic; }
+.post-content table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; font-size: 0.9rem; }
+.post-content th, .post-content td { border: 1px solid #d9cfc4; padding: 0.5rem 0.85rem; text-align: left; }
+.post-content th { background: #f0ebe3; font-weight: 600; color: #3a2e22; }
+.post-content tr:nth-child(even) td { background: #faf7f3; }
 
 /* Full pull-quote card — only ❝¶ blockquotes wrapped in <div class="pull-quote"> */
 .post-content .pull-quote blockquote {

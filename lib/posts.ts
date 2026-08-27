@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import remarkGfm from 'remark-gfm'
 // remark-footnotes is a CJS module with a .default property
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const footnotes = require('remark-footnotes').default
@@ -53,7 +54,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   if (!fs.existsSync(filePath)) return null
   const raw = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(raw)
-  const processed = await remark().use(footnotes, { inlineNotes: true }).use(html, { sanitize: false }).process(content)
+  const processed = await remark().use(footnotes, { inlineNotes: true }).use(remarkGfm).use(html, { sanitize: false }).process(content)
   const dropCapParagraph: number = data.dropCapParagraph ?? 0
   let htmlContent = processed.toString()
   if (dropCapParagraph > 0) {
