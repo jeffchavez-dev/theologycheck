@@ -47,7 +47,9 @@ const dated: [string, string][] = [
   ["2026-08-20-john-owen-17-differences-mosaic-covenant-grace", "john-owen-17-differences-mosaic-covenant-grace"],
   ["2026-08-23-natural-theology-and-christian-contemplation", "natural-theology-and-christian-contemplation"],
   ["2026-08-26-against-kenoticism-an-engagement-and-critique", "against-kenoticism-an-engagement-and-critique"],
+  ["2026-08-27-against-kenoticism-an-engagement-and-critique", "against-kenoticism-an-engagement-and-critique"],
   ["2026-08-27-political-theology-17th-century-particular-baptists", "political-theology-17th-century-particular-baptists"],
+  ["2026-08-28-against-kenoticism-a-biblical-refutation", "against-kenoticism-a-biblical-refutation"],
   ["2026-09-14-natural-theology-and-the-beatific-vision", "natural-theology-and-the-beatific-vision"],
 ];
 
