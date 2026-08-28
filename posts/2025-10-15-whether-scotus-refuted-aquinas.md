@@ -7,9 +7,8 @@ tags:
   - "Thomism"
 dropCapParagraph: 1
 author: "Jeff Chavez"
-updatedAt: "2025-10-15"
-updateCount: 0
-draft: true
+updatedAt: "2026-08-28"
+updateCount: 1
 ---
 
 **Answer: We deny along with the Reformed Orthodox**
