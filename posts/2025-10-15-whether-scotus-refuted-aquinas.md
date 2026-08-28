@@ -5,10 +5,10 @@ excerpt: "Did Duns Scotus refute Aquinas's analogical view? We deny, along with 
 tags:
   - "Classical Theism"
   - "Thomism"
-dropCapParagraph: 1
+dropCapParagraph: 2
 author: "Jeff Chavez"
 updatedAt: "2026-08-28"
-updateCount: 3
+updateCount: 4
 ---
 
 **Answer: We deny, along with the Reformed Orthodox**
