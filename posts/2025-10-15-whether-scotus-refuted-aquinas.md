@@ -8,7 +8,7 @@ tags:
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-08-28"
-updateCount: 1
+updateCount: 2
 ---
 
 **Answer: We deny along with the Reformed Orthodox**
@@ -57,7 +57,9 @@ To the Triune God alone be the glory!
 
 ---
 
-A good friend pointed out that Scotus' univocity is "more modest". And "there is at least some univocal predication which grounds analogical predication. Analogical predication is mixture of equivocity and univocity." Good thing, he also recommended reading Thomas Williams' "THE DOCTRINE OF UNIVOCITY IS TRUE AND SALUTARY," and Stephen D. Dumont's "Transcendental being: Scotus and scotists" to get a better understanding of Scotus' univocity.
+A good friend pointed out that Scotus' univocity is "more modest". And "there is at least some univocal predication which grounds analogical predication. Analogical predication is a mixture of equivocity and univocity." Good thing, he also recommended reading Thomas Williams' "THE DOCTRINE OF UNIVOCITY IS TRUE AND SALUTARY," and Stephen D. Dumont's "Transcendental Being: Scotus and Scotists" to get a better understanding of Scotus' univocity.
+
+Another friend recommended the work by Richard Muller entitled "[Not Scotist](https://www.sci-hub.box/10.1179/1462245913z.00000000011)" which argues against the dominance of the Scotist concept in the writings of early modern Protestantism.
 
 ---
 
