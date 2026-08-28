@@ -24,12 +24,27 @@ export interface Post {
   scheduled?: boolean
 }
 
+// Strip the YYYY-MM-DD- date prefix from a filename to get the URL slug
+export function fileToSlug(filename: string): string {
+  return filename.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '')
+}
+
+// Find the file on disk that corresponds to a date-free slug
+export function findFileBySlug(slug: string): string | null {
+  if (!fs.existsSync(postsDir)) return null
+  const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'))
+  return files.find(f =>
+    f === `${slug}.md` ||
+    (/^\d{4}-\d{2}-\d{2}-/.test(f) && f.replace(/^\d{4}-\d{2}-\d{2}-/, '') === `${slug}.md`)
+  ) ?? null
+}
+
 export function getAllPosts(): Post[] {
   if (!fs.existsSync(postsDir)) return []
   const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'))
   return files
     .map(file => {
-      const slug = file.replace(/\.md$/, '')
+      const slug = fileToSlug(file)
       const raw = fs.readFileSync(path.join(postsDir, file), 'utf8')
       const { data } = matter(raw)
       return {
@@ -50,8 +65,9 @@ export function getAllPosts(): Post[] {
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-  const filePath = path.join(postsDir, `${slug}.md`)
-  if (!fs.existsSync(filePath)) return null
+  const file = findFileBySlug(slug)
+  if (!file) return null
+  const filePath = path.join(postsDir, file)
   const raw = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(raw)
   const processed = await remark().use(footnotes, { inlineNotes: true }).use(remarkGfm).use(html, { sanitize: false }).process(content)

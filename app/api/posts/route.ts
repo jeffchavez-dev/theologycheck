@@ -18,7 +18,14 @@ function slugify(title: string) {
 function findFile(slug: string) {
   if (!fs.existsSync(postsDir)) return null
   const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'))
-  return files.find(f => f === `${slug}.md` || f.endsWith(`-${slug}.md`)) ?? null
+  return files.find(f =>
+    f === `${slug}.md` ||
+    (/^\d{4}-\d{2}-\d{2}-/.test(f) && f.replace(/^\d{4}-\d{2}-\d{2}-/, '') === `${slug}.md`)
+  ) ?? null
+}
+
+function fileToSlug(filename: string): string {
+  return filename.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '')
 }
 
 function yamlStr(s: string) {
@@ -111,7 +118,7 @@ export async function GET(req: NextRequest) {
   if (!fs.existsSync(postsDir)) return NextResponse.json([])
   const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'))
   const posts = files.map(file => {
-    const slug = file.replace(/\.md$/, '')
+    const slug = fileToSlug(file)
     const raw = fs.readFileSync(path.join(postsDir, file), 'utf8')
     const { data } = matter(raw)
     return { slug, title: data.title ?? slug, date: data.date ?? '', draft: data.draft ?? false, scheduled: data.scheduled ?? false, series: data.series ?? '', seriesOrder: data.seriesOrder ?? 0 }
@@ -134,9 +141,8 @@ export async function POST(req: NextRequest) {
     const err = await res.json()
     return NextResponse.json({ error: err.message ?? 'GitHub write failed' }, { status: 500 })
   }
-  const postSlug = `${date}-${slug}`
-  revalidatePath('/'); revalidatePath('/series'); revalidatePath(`/blog/${postSlug}`)
-  return NextResponse.json({ slug: postSlug })
+  revalidatePath('/'); revalidatePath('/series'); revalidatePath(`/blog/${slug}`)
+  return NextResponse.json({ slug })
 }
 
 // PUT — update existing post via GitHub API
@@ -166,10 +172,9 @@ export async function PUT(req: NextRequest) {
     }
     const oldSha = await githubGetSHA(`posts/${file}`)
     if (oldSha) await githubDeleteFile(`posts/${file}`, oldSha, `Remove old slug: ${slug}`)
-    const resolvedSlug = `${date}-${cleanNewSlug}`
-    revalidatePath('/'); revalidatePath('/series'); revalidatePath(`/blog/${slug}`); revalidatePath(`/blog/${resolvedSlug}`)
+    revalidatePath('/'); revalidatePath('/series'); revalidatePath(`/blog/${slug}`); revalidatePath(`/blog/${cleanNewSlug}`)
     if (series) revalidatePath(`/series/${series.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`)
-    return NextResponse.json({ ok: true, slug: resolvedSlug })
+    return NextResponse.json({ ok: true, slug: cleanNewSlug })
   }
 
   const sha = await githubGetSHA(githubPath)
@@ -178,9 +183,10 @@ export async function PUT(req: NextRequest) {
     const err = await res.json()
     return NextResponse.json({ error: err.message ?? 'GitHub write failed' }, { status: 500 })
   }
-  revalidatePath('/'); revalidatePath('/series'); revalidatePath(`/blog/${slug}`)
+  const cleanSlug = fileToSlug(file)
+  revalidatePath('/'); revalidatePath('/series'); revalidatePath(`/blog/${cleanSlug}`)
   if (series) revalidatePath(`/series/${series.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`)
-  return NextResponse.json({ ok: true, slug })
+  return NextResponse.json({ ok: true, slug: cleanSlug })
 }
 
 // PATCH — batch update seriesOrder for multiple posts
