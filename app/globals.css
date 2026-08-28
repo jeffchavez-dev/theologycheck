@@ -307,8 +307,8 @@ a { color: inherit; text-decoration: none; }
   text-shadow: 1px 1px 0 #c47c2b;
 }
 .post-content p { margin-bottom: 1.25rem; }
-.post-content h2 { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 500; color: #2a1a0e; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 0.5px solid #c49a5a; }
-.post-content h3 { font-size: 19px; font-weight: 500; color: #2a1a0e; margin: 1.5rem 0 0.75rem; }
+.post-content h2 { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 700; color: #2a1a0e; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 0.5px solid #c49a5a; }
+.post-content h3 { font-size: 19px; font-weight: 700; font-style: italic; color: #2a1a0e; margin: 1.5rem 0 0.75rem; }
 /* Simple inline quote — left border style */
 .post-content blockquote { border-left: 3px solid #8b1a1a; margin: 1.5rem 0; padding: 0.5rem 0 0.5rem 1.25rem; color: #5a3e28; font-style: italic; }
 .post-content table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; font-size: 0.9rem; }
