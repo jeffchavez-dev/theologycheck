@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 // Redirects: dated slugs → date-free slugs (permanent 301 for SEO)
 const dated: [string, string][] = [
   ["2025-05-01-classical-apologetics-and-neutrality", "classical-apologetics-and-neutrality"],
+  ["2025-07-24-incarnation-neither-subtraction-nor-addition", "incarnation-neither-subtraction-nor-addition"],
   ["2025-10-15-whether-scotus-refuted-aquinas", "whether-scotus-refuted-aquinas"],
   ["2025-07-07-divine-impassibility-and-the-knowledge-of-god", "divine-impassibility-and-the-knowledge-of-god"],
   ["2025-07-17-proving-the-being-of-god-from-the-works-of-creation-by-john-gill", "proving-the-being-of-god-from-the-works-of-creation-by-john-gill"],
