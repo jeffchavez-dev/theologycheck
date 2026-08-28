@@ -8,12 +8,12 @@ tags:
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-08-28"
-updateCount: 2
+updateCount: 3
 ---
 
-**Answer: We deny along with the Reformed Orthodox**
+**Answer: We deny, along with the Reformed Orthodox**
 
-A friend forwarded a post about a claim that Scotus refuted Aquinas. Well, if Scotus refuted Aquinas' analogical view, I don't know what is left of the Reformed Orthodox doctrine of analogy, which rejected Scotus' univocity and affirmed Thomistic formulations. The claim did not include the affirmation of Scotus' univocal core, but in history, there is nothing that is highly contrasted against the Thomistic analogical view or analogy of being (analogia entis) except Scotus' univocity of being.[^1]
+A friend forwarded a post claiming that Scotus refuted Aquinas. Well, if Scotus refuted Aquinas' analogical view, I don't know what is left of the Reformed Orthodox doctrine of analogy, which rejected Scotus' univocity and affirmed Thomistic formulations. The claim did not include affirming Scotus' univocal core, but in history, nothing is more sharply contrasted with the Thomistic analogical view or analogy of being (analogia entis) than Scotus' univocity of being.[^1]
 
 For a starter, let's have Ronni Kuritz define for us analogical, univocal, and equivocal (let's include equivocation for complete comparison) languages,
 
