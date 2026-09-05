@@ -54,6 +54,7 @@ const dated: [string, string][] = [
   ["2026-08-27-political-theology-17th-century-particular-baptists", "political-theology-17th-century-particular-baptists"],
   ["2026-08-28-against-kenoticism-a-biblical-refutation", "against-kenoticism-a-biblical-refutation"],
   ["2026-09-14-natural-theology-and-the-beatific-vision", "natural-theology-and-the-beatific-vision"],
+  ["2025-09-02-on-eternal-generation-and-essential-communication", "on-eternal-generation-and-essential-communication"],
 ];
 
 const nextConfig: NextConfig = {
