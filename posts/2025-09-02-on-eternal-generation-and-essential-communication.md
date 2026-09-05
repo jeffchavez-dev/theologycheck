@@ -7,9 +7,8 @@ tags:
   - "Trinity"
 dropCapParagraph: 1
 author: "Jeff Chavez"
-updatedAt: "2025-09-02"
-updateCount: 0
-draft: true
+updatedAt: "2026-09-05"
+updateCount: 1
 ---
 
 > "Wherefore let him who can understand the generation of the Son from the Father without time, understand also the procession of the Holy Spirit from both without time… As the Father hath life in Himself, so hath He given to the Son to have life in Himself," not that the Father gave life to the Son already existing without life, but that He so begat Him apart from time, that the life which the Father gave to the Son by begetting Him is co-eternal with the life of the Father who gave it… But let no one think of any times therein which imply a sooner and a later; because these things are not there at all. How, then, would it not be most absurd to call Him the Son of both: when, just as generation from the Father, without any changeableness of nature, gives to the Son essence, without beginning of time; so procession from both, without any changeableness of nature, gives to the Holy Spirit essence without beginning of time?" (Augustine. On the Trinity. Book XV. 26. 47)
