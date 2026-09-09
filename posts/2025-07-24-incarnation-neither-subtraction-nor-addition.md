@@ -6,9 +6,8 @@ tags:
   - "Classical Theism"
 dropCapParagraph: 1
 author: "Jeff Chavez"
-updatedAt: "2025-07-24"
-updateCount: 0
-draft: true
+updatedAt: "2026-09-09"
+updateCount: 1
 ---
 
 A dear pastor friend shared with us his insights into the mystery of the Son of God assuming human nature. He writes,
