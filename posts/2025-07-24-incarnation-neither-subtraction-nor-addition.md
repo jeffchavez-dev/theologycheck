@@ -46,6 +46,10 @@ The concept of "terminative assumption" is advanced within classical Christian t
 
 Soli Deo Trino Gloria!
 
+## Further Studies
+
+- [Terminative Assumption of the Son: Discussing the Incarnation](https://www.youtube.com/live/SWbXSeXh2d4?si=wd0yimiu9XxkgH38)
+
 ---
 
 [^1]: https://theologycheck.blog/2022/08/03/he-emptied-himself/
