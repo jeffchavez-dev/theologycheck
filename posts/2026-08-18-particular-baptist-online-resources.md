@@ -8,7 +8,7 @@ tags:
   - "Reformed"
 author: "Jeff Chavez"
 updatedAt: "2026-09-22"
-updateCount: 1
+updateCount: 2
 ---
 
 The Particular Baptist tradition is rich with primary sources — confessions, catechisms, sermons, and theological treatises — many of which are now freely available online. The following is a curated collection of those resources, organized by category. The bulk of these links were originally compiled at [Petty France](https://pettyfrance.wordpress.com/online-particular-baptist-resources/), a blog dedicated to Particular Baptist history and resources, to which I owe the credit for this collection. I have reorganized and supplemented them here, and will continue to add more. May they serve your study of this faithful stream of Reformed Christianity.
@@ -187,11 +187,25 @@ The following are contemporary books and academic journals by Reformed Baptist s
 
 - [*The Mystery of Christ, His Covenant, and His Kingdom*](https://www.amazon.com/Mystery-Christ-His-Covenant-Kingdom/dp/1943539154) — James Renihan (2022). A synthetic, pastor-theologian treatment of the covenant of grace as it finds its fulfillment in Christ, written as an accessible guide to the 1689 Federalist understanding of redemptive history.
 
+- [*Covenant Theology: From Adam to Christ*](https://www.amazon.com/Covenant-Theology-Adam-Christ/dp/0976003937) — Nehemiah Coxe & John Owen, ed. Ronald Miller, James Renihan & Francisco Orozco (RBAP, 2005). A foundational compilation bringing together Nehemiah Coxe's *Discourse on the Covenants* and John Owen's *Biblical Theology*, introduced and edited by Renihan, Miller, and Orozco. Indispensable for understanding the historical and exegetical roots of 1689 Federalism.
+
+- [*The Covenant of Works: Its Confessional and Scriptural Basis*](https://www.amazon.com/Covenant-Works-Confessional-Scriptural-Basis/dp/0991659961) — Richard C. Barcellos (RBAP, 2016). A focused exegetical and confessional study of the covenant of works, defending its scriptural grounding and its place within the Westminster and 2LCF confessional traditions.
+
+- [*Getting the Garden Right: Adam's Work and God's Rest in Light of Christ*](https://www.amazon.com/Getting-Garden-Right-Adams-Christ/dp/1943539081) — Richard C. Barcellos (Founders Press, 2017). Examines the Adamic administration — its covenantal structure, sabbatarian implications, and redemptive-historical significance — with particular attention to how Adam's work and God's rest find their eschatological fulfillment in Christ.
+
+- [*The Kingdom of God: A Baptist Expression of Covenant Theology*](https://www.amazon.com/Kingdom-God-Baptist-Expression-Covenant/dp/1533641897) — Jeffrey D. Johnson (Free Grace Press, 2014). A Baptist articulation of the kingdom of God within a covenantal framework, arguing that the kingdom's inauguration in Christ fulfills and transcends the typological structures of the old covenant.
+
+- [*The Fatal Flaw of the Theology Behind Infant Baptism*](https://www.amazon.com/Fatal-Flaw-Theology-Behind-Baptism/dp/0974342610) — Jeffrey D. Johnson (Free Grace Press, 2010). A pointed critique of the covenantal grounding for infant baptism, arguing that the theological system underlying paedobaptism contains a fatal internal inconsistency when measured against the new covenant's exclusive membership structure.
+
 ### The 1689 Confession
 
 - [*A Modern Exposition of the 1689 Baptist Confession of Faith*](https://www.amazon.com/Modern-Exposition-Baptist-Confession-Faith/dp/1783971878) — Samuel E. Waldron (1989, repr. 2016). The standard modern commentary on the Second London Confession, chapter by chapter, written for pastors, students, and serious laypeople.
 
 - [*1689 Baptist Confession of Faith & the Baptist Catechism*](https://www.amazon.com/1689-Baptist-Confession-Faith-Catechism/dp/1599253771) — James Renihan (2018). A critical edition of the 2LCF and the Baptist Catechism with a substantial historical and theological introduction, tracing their origins and reception.
+
+- [*A New Exposition of the London Baptist Confession of Faith of 1689*](https://www.amazon.com/New-Exposition-London-Baptist-Confession/dp/1527108902) — Rob Ventura (Christian Focus, 2022). A pastoral and theological exposition of the 1689 Confession chapter by chapter, written by a Reformed Baptist pastor for congregational and personal use.
+
+- [*To the Judicious and Impartial Reader: Baptist Symbolics, Volume 2*](https://www.amazon.com/Judicious-Impartial-Reader-Contextual-Historical-Exposition-ebook/dp/B0CF3MXN16) — James M. Renihan (Founders Press, 2022). The second volume in Renihan's *Baptist Symbolics* series, offering a contextual-historical exposition of the 2LCF, tracking the sources of each article and situating the confession within the broader Reformed confessional tradition.
 
 ### Baptist History & Ecclesiology
 
@@ -209,6 +223,22 @@ The following are contemporary books and academic journals by Reformed Baptist s
 
 - [*For the Vindication of the Truth: Baptist Symbolics, Volume 1 — A Brief Exposition of the First London Baptist Confession of Faith*](https://www.amazon.com/Vindication-Truth-Symbolics-Exposition-Confession/dp/B0HFB8VZV1) — James Renihan (2026). The first volume in a projected series on Baptist symbolics, offering a detailed historical and theological exposition of the 1644/1646 First London Confession.
 
+- [*The Baptist Story: From English Sect to Global Movement*](https://www.amazon.com/Baptist-Story-English-Sect-Global/dp/1433673754) — Anthony Chute, Nathan Finn & Michael A. G. Haykin (B&H Academic, 2015). A readable survey of Baptist history from the English Separatist roots through the global expansion of the Baptist movement, attending to both Particular and General Baptist streams. A useful entry-level textbook for students and layreaders.
+
+- [*Readings in Baptist History: Four Centuries of Selected Documents*](https://www.amazon.com/Readings-Baptist-History-Centuries-Documents/dp/0805446745) — ed. Joseph Early, Jr. (B&H Academic, 2008). A primary source anthology spanning four centuries of Baptist life and thought — confessions, letters, associational minutes, and theological writings — tracing the development of Baptist identity from the 17th century to the present.
+
+### Church Membership & Discipline
+
+- [*Biblical Foundations for Baptist Churches: A Contemporary Ecclesiology*](https://www.amazon.com/Biblical-Foundations-Baptist-Churches-Contemporary/dp/0825445116) — John S. Hammett (Kregel, 2005). A comprehensive Baptist ecclesiology engaging the nature of the church, its membership, polity, ordinances, and mission from a confessional Baptist standpoint. A thorough academic treatment with pastoral application.
+
+- [*Church Membership: How the World Knows Who Represents Jesus*](https://www.amazon.com/Church-Membership-How-World-Knows/dp/1433532379) — Jonathan Leeman (Crossway, 2012). A 9Marks treatment of formal church membership as a public declaration of allegiance to Jesus, recovering its theological weight and ecclesiological necessity against the consumerism of contemporary evangelicalism.
+
+- [*40 Questions About Church Membership and Discipline*](https://www.amazon.com/40-Questions-About-Church-Membership/dp/0825444454) — Jeremy M. Kimble (Kregel, 2017). A structured Q&A treatment covering the theology, practice, and biblical basis of church membership and the proper exercise of restorative church discipline.
+
+- [*Is Church Membership Biblical?*](https://www.amazon.com/Church-Membership-Biblical-Cultivating-Godliness/dp/1601784295) — Ryan M. McGraw (Reformation Heritage Books, 2014). A concise booklet arguing from Scripture and the Reformed confessional tradition for the necessity of formal church membership, addressing common objections.
+
+- [*Going Beyond the Five Points: Pursuing a More Comprehensive Reformation*](https://www.amazon.com/Going-Beyond-Five-Points-Comprehensive/dp/1512173878) — ed. Rob Ventura, with Barcellos, Waldron, Blackburn & Martin (Founders Press, 2015). Essays arguing that a genuinely Reformed theology entails not only the five points of Calvinism but also confessional ecclesiology, sacramentology, and the regulative principle of worship — a call to a more comprehensive reformation.
+
 ### Classical Theism & Baptist Theology
 
 - [*Confessing the Impassible God: The Biblical, Classical, & Confessional Doctrine of Divine Impassibility*](https://www.amazon.com/Confessing-Impassible-God-Confessional-Impassibility/dp/0991659929) — ed. Ronald S. Baines, Richard Barcellos, et al. (2015). A multi-author RBAP volume defending divine impassibility from biblical, historical, and confessional angles. Contributors include leading Reformed Baptist scholars, situating the doctrine squarely within the 2LCF heritage.
@@ -218,6 +248,14 @@ The following are contemporary books and academic journals by Reformed Baptist s
 ### The Lord's Supper
 
 - [*The Lord's Supper as a Means of Grace: More Than a Memory*](https://www.amazon.com/Lords-Supper-Means-Grace-ebook/dp/B00HREGCV8) — Richard C. Barcellos (2013). Argues against the merely memorialist view of the Lord's Supper prevalent in Baptist circles, recovering the classical Reformed understanding of the Supper as a genuine means of grace.
+
+- [*Amidst Us Our Belovèd Stands: Recovering Sacrament in the Baptist Tradition*](https://www.amazon.com/Amidst-Our-Beloved-Stands-Recovering/dp/1683595858) — Michael A. G. Haykin (Lexham Press, 2022). A historical and theological study recovering a richer sacramental theology within the Baptist tradition, arguing from primary sources that Baptists have historically held a higher view of the Lord's Supper than the dominant memorialist consensus allows.
+
+- [*In Remembrance of Him: Profiting from the Lord's Supper*](https://www.amazon.com/Remembrance-Him-Profiting-Lords-Supper/dp/1601781733) — Guilelmus Saldenus & Wilhelmus à Brakel (Reformation Heritage Books, 2012). Two classic Dutch Reformed devotional treatments of the Lord's Supper combined in one volume: Saldenus on preparation for the Supper and Brakel on its profitable reception. A devotional complement to the more systematic treatments listed above.
+
+- [*The Mystery of the Lord's Supper: Sermons by Robert Bruce*](https://www.amazon.com/Mystery-Lords-Supper-Sermons-Robert/dp/1845500563) — Robert Bruce, ed. T. F. Torrance (Christian Focus, 2005). Five early 17th-century sermons on 1 Corinthians 11 by the Scottish Reformed minister Robert Bruce, in which he articulates a high Reformed view of the real spiritual presence of Christ in the Supper. A classic of sacramental piety within the Reformed tradition.
+
+- [*The Mystical Presence: And the Doctrine of the Reformed Church on the Lord's Supper*](https://www.amazon.com/Mystical-Presence-Doctrine-Reformed-Supper/dp/1470172453) — John Williamson Nevin (Wipf & Stock, 2012 repr.). A landmark 19th-century Mercersburg theology text arguing for the spiritual real presence of Christ in the Eucharist against the merely memorial view, historically significant for its retrieval of Calvin's eucharistic theology against the low-church evangelicalism of Nevin's era.
 
 ### Academic Journals
 
@@ -240,3 +278,11 @@ The following are contemporary books and academic journals by Reformed Baptist s
   - "The Consequence of Perfection" — Drew Sparks
   - "Do We Worship an Emotional God?" — Josh Tinkham
   - Book reviews include *Simply Trinity* by Matthew Barrett and *The Gospel of John* by Cyril of Alexandria (Ancient Christian Texts)
+
+### Pastoral & Healthy Church Studies
+
+- [*Nine Marks of a Healthy Church*](https://www.amazon.com/Nine-Marks-Healthy-Church-4th/dp/1433578115) — Mark Dever (Crossway, 4th ed. 2021). The foundational 9Marks text outlining nine biblical characteristics of a healthy church: expository preaching, biblical theology, the gospel, conversion, evangelism, membership, discipline, discipleship, and leadership. Widely used in Reformed and Baptist church-planting and revitalization.
+
+- [*What Is a Healthy Church?*](https://www.amazon.com/What-Healthy-Church-9Marks-Building/dp/1433588323) — Mark Dever (Crossway). A brief companion to *Nine Marks*, introducing the marks of a healthy church for congregational reading and discussion.
+
+- [*What Is a Healthy Church Member?*](https://www.amazon.com/What-Healthy-Church-Member-Building/dp/1433502127) — Thabiti M. Anyabwile (Crossway, 2008). Identifies ten marks of a healthy church member — theological literacy, genuine conversion, biblical evangelism, growth in holiness, among others — arguing that congregational health depends on individual members pursuing these qualities as a matter of biblical discipleship.
