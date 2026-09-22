@@ -162,3 +162,73 @@ Records from the early general assemblies of Particular Baptist churches in Engl
 ---
 
 *This list will be updated as more resources are discovered. If you know of a primary source not listed here, feel free to reach out.*
+
+---
+
+## Contemporary Works in Reformed Baptist Theology
+
+The following are contemporary books and academic journals by Reformed Baptist scholars. They engage the primary sources above and contribute to the ongoing retrieval of confessional Baptist theology within the broader stream of classical theism and Reformed orthodoxy.
+
+### Covenant Theology & Baptist Distinctives
+
+- [*The Distinctiveness of Baptist Covenant Theology*](https://www.amazon.com/Distinctiveness-Baptist-Covenant-Theology/dp/1599253259) — Pascal Denault (2013, rev. 2017). The most widely cited modern defense of 1689 Federalism. Denault argues that the Particular Baptists held a genuinely distinct covenantal structure from their Presbyterian contemporaries, grounded in the new covenant's exclusive membership.
+
+- [*Recovering a Covenantal Heritage: Essays in Baptist Covenant Theology*](https://www.amazon.com/Recovering-Covenantal-Heritage-Covenant-Theology/dp/1499714483) — ed. Richard C. Barcellos (2014). A collection of essays from RBAP scholars retrieving and defending the Baptist covenantal tradition from the 17th century Reformed orthodox sources.
+
+- [*Covenant Theology: A Baptist Distinctive*](https://www.amazon.com/COVENANT-THEOLOGY-Distinctive-Earl-Blackburn/dp/1599253267) — ed. Earl M. Blackburn, Walter Chantry, et al. (2012). A multi-author introduction to the Baptist distinctive in covenant theology, accessible to pastors and lay readers.
+
+- [*A Reformed Baptist Manifesto*](https://www.amazon.com/Reformed-Baptist-Manifesto-Samuel-Waldron/dp/0976003902) — Samuel E. Waldron & Richard C. Barcellos (2004). A confessional and ecclesiological statement defining what it means to be Reformed and Baptist, engaging the broader evangelical and Reformed world.
+
+- [*In Defense of the Decalogue: A Critique of New Covenant Theology*](https://www.amazon.com/Defense-Decalogue-Critique-Covenant-Theology/dp/0965495590) — Richard C. Barcellos (2001). A Reformed Baptist critique of New Covenant Theology's rejection of the moral law, arguing for the Decalogue's abiding authority from within a 1689 Federalist framework.
+
+- [*The Family Tree of Reformed Biblical Theology: Geerhardus Vos and John Owen, Their Methods of and Contributions to the Articulation of Redemptive History*](https://www.amazon.com/Family-Tree-Reformed-Biblical-Theology/dp/0980217954) — Richard C. Barcellos (2010). Traces the roots of Reformed Biblical Theology through Vos and Owen, with implications for Baptist covenant theology.
+
+### The 1689 Confession
+
+- [*A Modern Exposition of the 1689 Baptist Confession of Faith*](https://www.amazon.com/Modern-Exposition-Baptist-Confession-Faith/dp/1783971878) — Samuel E. Waldron (1989, repr. 2016). The standard modern commentary on the Second London Confession, chapter by chapter, written for pastors, students, and serious laypeople.
+
+- [*1689 Baptist Confession of Faith & the Baptist Catechism*](https://www.amazon.com/1689-Baptist-Confession-Faith-Catechism/dp/1599253771) — James Renihan (2018). A critical edition of the 2LCF and the Baptist Catechism with a substantial historical and theological introduction, tracing their origins and reception.
+
+### Baptist History & Ecclesiology
+
+- [*Edification and Beauty: The Practical Ecclesiology of the English Particular Baptists, 1675–1705*](https://www.amazon.com/Edification-Beauty-Practical-Ecclesiology-Particular/dp/160608481X) — James M. Renihan (2009). A scholarly historical study of Particular Baptist church life and ecclesiological practice in the post-Confession era, drawing from primary assembly documents and church records.
+
+- [*Faith and Life for Baptists: The Documents of the London Particular Baptist General Assemblies*](https://www.amazon.com/Faith-Life-Baptists-Particular-Assemblies-ebook/dp/B01LQZIPN6) — James M. Renihan (2016). A critical edition and introduction to the documents produced by the London Particular Baptist General Assemblies (1689–1692), essential primary sources for understanding early Particular Baptist polity.
+
+- [*The Reformed Theology of Benjamin Keach (1640–1704)*](https://www.amazon.com/Reformed-Theology-Benjamin-1640-1704-Publications/dp/1907600000) — Jonathan W. Arnold (2019). An academic study of Keach's theological method and content, situating him within the broader Reformed orthodox tradition and demonstrating the catholicity of his convictions.
+
+- [*The Confessing Baptist: Essays on the Use of Creeds in Baptist Faith and Life*](https://www.amazon.com/Confessing-Baptist-Essays-Creeds-Faith/dp/1952599369) — various contributors (2022). A collection of essays defending the use of confessions and creeds within Baptist churches, against both bare biblicism and confessional minimalism.
+
+- [*For the Vindication of the Truth: Baptist Symbolics, Volume 1 — A Brief Exposition of the First London Baptist Confession of Faith*](https://www.amazon.com/Vindication-Truth-Symbolics-Exposition-Confession/dp/B0HFB8VZV1) — James Renihan (2026). The first volume in a projected series on Baptist symbolics, offering a detailed historical and theological exposition of the 1644/1646 First London Confession.
+
+### Classical Theism & Baptist Theology
+
+- [*Confessing the Impassible God: The Biblical, Classical, & Confessional Doctrine of Divine Impassibility*](https://www.amazon.com/Confessing-Impassible-God-Confessional-Impassibility/dp/0991659929) — ed. Ronald S. Baines, Richard Barcellos, et al. (2015). A multi-author RBAP volume defending divine impassibility from biblical, historical, and confessional angles. Contributors include leading Reformed Baptist scholars, situating the doctrine squarely within the 2LCF heritage.
+
+- [*Trinity and Creation: A Scriptural and Confessional Account*](https://www.amazon.com/Trinity-Creation-Scriptural-Confessional-Account/dp/1725280345) — Richard C. Barcellos (2019). Examines the doctrine of the Trinity and creation from a confessional Reformed Baptist perspective, engaging classical Trinitarian categories and their implications for understanding God's works ad extra.
+
+### The Lord's Supper
+
+- [*The Lord's Supper as a Means of Grace: More Than a Memory*](https://www.amazon.com/Lords-Supper-Means-Grace-ebook/dp/B00HREGCV8) — Richard C. Barcellos (2013). Argues against the merely memorialist view of the Lord's Supper prevalent in Baptist circles, recovering the classical Reformed understanding of the Supper as a genuine means of grace.
+
+### Academic Journals
+
+- [*Journal of the Institute of Reformed Baptist Studies (JIRBS) 2014*](https://www.amazon.com/Journal-Institute-Reformed-Baptist-Studies/dp/0976003988) — ed. James M. Renihan (RBAP). A theological journal committed to confessional Reformed Baptist theology as summarized in the Second London Confession.
+
+- [*JIRBS 2016*](https://www.amazon.com/Journal-Institute-Reformed-Baptist-Studies/dp/0991659988) — ed. James M. Renihan & Richard C. Barcellos (RBAP).
+
+- [*JIRBS 2017*](https://www.amazon.com/Journal-Institute-Reformed-Baptist-Studies/dp/0996519807) — ed. James M. Renihan & Richard C. Barcellos (RBAP).
+
+- [*Journal of International Reformed Baptist Seminary 2024*](https://www.amazon.com/Journal-International-Reformed-Baptist-Seminary/dp/1738556085) — ed. Richard C. Barcellos, James M. Renihan & Drew Sparks (Broken Wharfe). Articles include:
+  - "The Doctrine of the Christian Sabbath" — Richard C. Barcellos
+  - "Troubling the Churches" — James M. Renihan
+  - "In Defense of Classical Theism" — Drew Sparks
+  - "Nice and Hot Disputes" — Ashley J. Charles
+  - Book reviews
+
+- [*Journal of International Reformed Baptist Seminary 2025*](https://www.amazon.com/Journal-International-Reformed-Baptist-Seminary/dp/1917873050) — ed. Richard Barcellos et al. (Broken Wharfe). Articles include:
+  - "Is Nicaea a Caveat or a Control?" — Daniel D. Schreiderer
+  - "The Nicene Creed: An Introduction" — Cameron G. Porter
+  - "The Consequence of Perfection" — Drew Sparks
+  - "Do We Worship an Emotional God?" — Josh Tinkham
+  - Book reviews include *Simply Trinity* by Matthew Barrett and *The Gospel of John* by Cyril of Alexandria (Ancient Christian Texts)
