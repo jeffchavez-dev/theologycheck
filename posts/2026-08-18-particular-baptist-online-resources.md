@@ -257,6 +257,16 @@ The following are contemporary books and academic journals by Reformed Baptist s
 
 - [*The Mystical Presence: And the Doctrine of the Reformed Church on the Lord's Supper*](https://www.amazon.com/Mystical-Presence-Doctrine-Reformed-Supper/dp/1470172453) — John Williamson Nevin (Wipf & Stock, 2012 repr.). A landmark 19th-century Mercersburg theology text arguing for the spiritual real presence of Christ in the Eucharist against the merely memorial view, historically significant for its retrieval of Calvin's eucharistic theology against the low-church evangelicalism of Nevin's era.
 
+- [*The Lord's Supper: Remembering and Proclaiming Christ Until He Comes*](https://www.amazon.com/Lords-Supper-Remembering-Proclaiming-Testament/dp/0805447571) — ed. Thomas R. Schreiner & Matthew R. Crawford (B&H Academic, 2010). A multi-author volume in the New American Commentary Studies series covering the biblical, historical, and theological dimensions of the Lord's Supper, from Old Testament antecedents through the patristic period and into contemporary debates about presence and practice.
+
+- [*More Than a Symbol: The British Baptist Recovery of Baptismal Sacramentalism*](https://www.amazon.com/More-than-Symbol-Baptismal-Sacramentalism/dp/1597527335) — Stanley Keith Fowler (Paternoster, 2002). A scholarly study of how British Baptist theologians in the 20th century — including H. Wheeler Robinson and Neville Clark — moved toward a richer sacramental theology of baptism, recovering symbolic-realist categories against the purely ordinance-only tradition. Useful for understanding the range of Baptist sacramental thought.
+
+- [*Promise and Presence: An Exploration in Sacramental Theology*](https://www.amazon.com/Promise-Presence-Exploration-Sacramental-Theology/dp/1610976053) — John E. Colwell (Paternoster, 2005). An exploration of sacramental theology from a Baptist perspective, arguing for a sacramental realism grounded in the divine promise and presence rather than in sacerdotal mechanisms or bare memorialism.
+
+### Baptism
+
+- [*Believer's Baptism: Sign of the New Covenant in Christ*](https://www.amazon.com/Believers-Baptism-Covenant-American-Commentary/dp/0805432493) — ed. Thomas R. Schreiner & Shawn D. Wright (B&H Academic, 2006). A multi-author New American Commentary Studies volume making the biblical-theological case for credobaptism. Covers Old Testament covenant background, the Gospels, Paul, and Hebrews, as well as historical and practical essays. The standard academic Baptist response to paedobaptist covenant theology.
+
 ### Academic Journals
 
 - [*Journal of the Institute of Reformed Baptist Studies (JIRBS) 2014*](https://www.amazon.com/Journal-Institute-Reformed-Baptist-Studies/dp/0976003988) — ed. James M. Renihan (RBAP). A theological journal committed to confessional Reformed Baptist theology as summarized in the Second London Confession.
