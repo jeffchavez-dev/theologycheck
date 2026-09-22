@@ -183,6 +183,10 @@ The following are contemporary books and academic journals by Reformed Baptist s
 
 - [*The Family Tree of Reformed Biblical Theology: Geerhardus Vos and John Owen, Their Methods of and Contributions to the Articulation of Redemptive History*](https://www.amazon.com/Family-Tree-Reformed-Biblical-Theology/dp/0980217954) — Richard C. Barcellos (2010). Traces the roots of Reformed Biblical Theology through Vos and Owen, with implications for Baptist covenant theology.
 
+- [*From Shadow to Substance: The Federal Theology of the English Particular Baptists (1642–1704)*](https://www.amazon.com/Shadow-Substance-Theology-Particular-1642-1704/dp/1907600310) — James Renihan (2018). A major academic study tracing the development of federal theology among the Particular Baptists from the early confessions through the post-Confession era, demonstrating their coherent and distinctive covenantal framework.
+
+- [*The Mystery of Christ, His Covenant, and His Kingdom*](https://www.amazon.com/Mystery-Christ-His-Covenant-Kingdom/dp/1943539154) — James Renihan (2022). A synthetic, pastor-theologian treatment of the covenant of grace as it finds its fulfillment in Christ, written as an accessible guide to the 1689 Federalist understanding of redemptive history.
+
 ### The 1689 Confession
 
 - [*A Modern Exposition of the 1689 Baptist Confession of Faith*](https://www.amazon.com/Modern-Exposition-Baptist-Confession-Faith/dp/1783971878) — Samuel E. Waldron (1989, repr. 2016). The standard modern commentary on the Second London Confession, chapter by chapter, written for pastors, students, and serious laypeople.
