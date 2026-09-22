@@ -201,7 +201,11 @@ The following are contemporary books and academic journals by Reformed Baptist s
 
 - [*The Reformed Theology of Benjamin Keach (1640–1704)*](https://www.amazon.com/Reformed-Theology-Benjamin-1640-1704-Publications/dp/1907600000) — Jonathan W. Arnold (2019). An academic study of Keach's theological method and content, situating him within the broader Reformed orthodox tradition and demonstrating the catholicity of his convictions.
 
+- [*Orthodox, Puritan, Baptist: Hercules Collins (1647–1702) and Particular Baptist Identity in Early Modern England*](https://www.amazon.com/Orthodox-Puritan-Baptist-Particular-Historical/dp/3525550863) — G. Stephen Weaver, Jr. (2015). A scholarly monograph in the *Reformed Historical Theology* series situating Hercules Collins — one of the foremost Particular Baptist theologians of the post-Confession era — within the streams of Reformed orthodoxy, Puritanism, and Baptist identity. Essential reading for anyone engaging Collins's primary works listed above.
+
 - [*The Confessing Baptist: Essays on the Use of Creeds in Baptist Faith and Life*](https://www.amazon.com/Confessing-Baptist-Essays-Creeds-Faith/dp/1952599369) — various contributors (2022). A collection of essays defending the use of confessions and creeds within Baptist churches, against both bare biblicism and confessional minimalism.
+
+- [*Theologians of the Baptist Tradition*](https://www.amazon.com/Theologians-Baptist-Tradition-Timothy-George/dp/0805417729) — ed. Timothy George & David S. Dockery (2001). A survey of significant Baptist theologians from John Bunyan and Benjamin Keach through the 20th century, with individual chapters on each figure. Useful for understanding how Baptist theology developed across the tradition's history.
 
 - [*For the Vindication of the Truth: Baptist Symbolics, Volume 1 — A Brief Exposition of the First London Baptist Confession of Faith*](https://www.amazon.com/Vindication-Truth-Symbolics-Exposition-Confession/dp/B0HFB8VZV1) — James Renihan (2026). The first volume in a projected series on Baptist symbolics, offering a detailed historical and theological exposition of the 1644/1646 First London Confession.
 
