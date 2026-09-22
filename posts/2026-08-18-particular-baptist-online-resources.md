@@ -3,11 +3,12 @@ title: "Particular Baptist Online Resources"
 date: "2026-08-18"
 excerpt: "A curated collection of primary sources, confessions, catechisms, and writings from the Particular Baptist tradition — freely available online."
 tags:
-  - Baptist
-  - 1689 Federalism
-  - Reformed
+  - "Baptist"
+  - "1689 Federalism"
+  - "Reformed"
 author: "Jeff Chavez"
-draft: true
+updatedAt: "2026-09-22"
+updateCount: 1
 ---
 
 The Particular Baptist tradition is rich with primary sources — confessions, catechisms, sermons, and theological treatises — many of which are now freely available online. The following is a curated collection of those resources, organized by category. The bulk of these links were originally compiled at [Petty France](https://pettyfrance.wordpress.com/online-particular-baptist-resources/), a blog dedicated to Particular Baptist history and resources, to which I owe the credit for this collection. I have reorganized and supplemented them here, and will continue to add more. May they serve your study of this faithful stream of Reformed Christianity.
