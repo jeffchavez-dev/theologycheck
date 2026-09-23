@@ -55,6 +55,7 @@ const dated: [string, string][] = [
   ["2026-08-28-against-kenoticism-a-biblical-refutation", "against-kenoticism-a-biblical-refutation"],
   ["2026-09-14-natural-theology-and-the-beatific-vision", "natural-theology-and-the-beatific-vision"],
   ["2025-09-02-on-eternal-generation-and-essential-communication", "on-eternal-generation-and-essential-communication"],
+  ["2026-09-23-faith-is-the-eye-that-drops-the-tears-of-repentance", "faith-is-the-eye-that-drops-the-tears-of-repentance"],
 ];
 
 const nextConfig: NextConfig = {
