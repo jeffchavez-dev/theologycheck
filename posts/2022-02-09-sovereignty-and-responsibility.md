@@ -6,8 +6,9 @@ tags:
   - "Classical Theism"
   - "Reformed"
 dropCapParagraph: 1
-draft: true
 author: "Jeff Chavez"
+updatedAt: "2026-09-30"
+updateCount: 1
 ---
 
 The issue of God's sovereignty and human responsibility seems to be one of the most difficult biblical truths that are hard to grasp. It is like a puzzle that cannot be resolved. It may be hard for us since we are of finite minds. But for God, and in His revealed Word, we see its compatibility. God's sovereignty and human responsibility do not contradict each other. God's sovereignty does not abolish human responsibility and human responsibility does not negate God's sovereignty.
