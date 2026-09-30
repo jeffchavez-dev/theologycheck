@@ -1,22 +1,23 @@
 ---
 title: "Is God the Author of Sin? Yes and No!"
-date: "2022-07-09"
+date: "2026-09-19"
 excerpt: "It is one thing to say that God is the author of sin to mean that He is the actor/doer of sin — this we deny. It is another to say that God is the transcendent and holy author of sin as He is the willing and active permitter of sin — this we affirm."
 tags:
   - "Classical Theism"
   - "Reformed"
 dropCapParagraph: 1
-draft: true
 author: "Jeff Chavez"
+updatedAt: "2026-09-30"
+updateCount: 1
 ---
 
-In [one of our previous blogs](https://theologycheck.blog/blog/sovereignty-and-responsibility), I affirmed this, "we can say that 'God is the author of evil or sin.' He ordained evil to take place; unless He does so, it won't occur." It must be said at the outside that in affirming God's authorship of sin, we are not saying that God commits sin! It is simply stating the fact that sin and evil will not be in this world apart from God's will.
+In [one of our previous blogs](https://theologycheck.blog/blog/sovereignty-and-responsibility), I affirmed this: "We can say that 'God is the author of evil or sin.' He ordained evil to take place; unless He does so, it won't occur." It must be said at the outset that in affirming God's authorship of sin, we are not saying that God commits sin! It is simply stating the fact that sin and evil will not be in this world apart from God's will.
 
 ## God Is Not The Author Of Sin
 
-The Scripture is clear, God cannot sin. He is light and there is no darkness in Him! See the following passages.
+The Scripture is clear: God cannot sin. He is light, and there is no darkness in Him! See the following passages.
 
-James 1:13 asserts that God "cannot be tempted with evil, and He Himself tempts no one". This premise is foundational that if God is not tempted, then He has no evil disposition whereby He can tempt others.
+James 1:13 asserts that God "cannot be tempted with evil, and He Himself tempts no one". This premise is foundational: if God is not tempted, then He has no evil disposition whereby He can tempt others.
 
 Hebrews 6:18 and Titus 1:2 demonstrate that God can't lie.
 
@@ -42,7 +43,7 @@ Our confession's denial of God being the author of sin is clarified by the next 
 
 Dr. Jim Renihan also noted this in his exposition of the second London Baptist Confession of Faith, and emphatically deny that God is not the author of sin.[^1]
 
-In 1645, the Westminster Assembly, with unanimous consent, published a pamphlet with the long but expressive title *A Short Declaration of the Assembly of Divines, By way of Detestation of this Abominable and Blasphemous Opinion, That God is, and hath a hand in, and is the Author of the Sinfulnesses of his People*. It was a response to a book by the deceased author John Archer in which Archer apparently "in expresse Termes, and in a very foul manner propounded, maintained, and purposely at large prosecuted" the notion that God is not only the author of sin, but also of the depravity of humanity. The divines call this notion "most vile and Blasphemous" remarking that any such idea has by "the general consent of Christians Teachers and writers, both Ancient, and Modern, and these as well Papists as Protestants" been rejected and "even detested and abhorred." They assert that the confessions of the Reformed churches "make Satan, and man himself the only causes or Authors of sin." The Assembly, supported by Parliament, ordered Archer's book to be burned by the "Common Hangman" at which time their pamphlet was to be read aloud.
+In 1645, the Westminster Assembly, with unanimous consent, published a pamphlet with the long but expressive title *A Short Declaration of the Assembly of Divines, By way of Detestation of this Abominable and Blasphemous Opinion, That God is, and hath a hand in, and is the Author of the Sinfulnesses of his People*. It was a response to a book by the deceased author John Archer in which Archer apparently "in expresse Termes, and in a very foul manner propounded, maintained, and purposely at large prosecuted" the notion that God is not only the author of sin, but also of the depravity of humanity. The divines call this notion "most vile and blasphemous," remarking that any such idea has by "the general consent of Christians, Teachers and writers, both Ancient, and Modern, and these as well Papists as Protestants" been rejected and "even detested and abhorred." They assert that the confessions of the Reformed churches "make Satan, and man himself the only causes or Authors of sin." The Assembly, supported by Parliament, ordered Archer's book to be burned by the "Common Hangman," at which time their pamphlet was to be read aloud.
 
 John Calvin also maintained this truth when he wrote his fifth argument against Pighius,
 
@@ -62,11 +63,11 @@ Therefore, it is one thing to say that God is the author of sin to mean that He 
 
 It is another to say that God is the transcendent and holy author of sin as He is the willing and active permitter of sin. This is unobjectionable and **WE AFFIRM THIS** (though it must be articulated clearly as Edwards stated above)! The Proximate (secondary) and Remote (primary) cause also explain that the proximate cause is the doer of sin. God causes sin to occur but is not the actual actor of sin.
 
-In this blog post, I realized that people may easily misunderstand me when I say that God is the author of sin as a willing and active permitter of sin without which sin and evil cannot take place. So, anyone who maintains this (I myself) should be careful in saying this or not to say this immediately when asked about the topic. Deny that God is the author of sin, and clarify if further asked about it.
+In this blog post, I realized that people may easily misunderstand me when I say that God is the author of sin as a willing and active permitter of sin, without which sin and evil cannot take place. So, anyone who maintains this (I myself) should be careful in saying this or not to say this immediately when asked about the topic. First, deny that God is the author of sin, and clarify if further asked about it.
 
 James Anderson further comments, "The core notion… is that sin is always a creaturely action and never a divine action. Creatures commit evil acts, but God never commits evil acts, even though he foreordains the evil acts of creatures—which is not the same thing at all." (*Calvinism and the Problem of Evil*)
 
-It is not the Transcendent God who sins but the creaturely agents who intend evil and act upon it. God authors the plot, and the actors act willing to commit the crime. The primary agent and secondary agent. The difference is the internal desires. They meant evil for evil. God meant evil for good. God does not have evil intentions. Evil doesn't occur independently. No evil scheme outside of God's powerful hand. The perpetrator cannot say that he is forced. The only sin that exists is that which exists in the heart of the perpetrator. The individual is culpable. God is the author in the One grand story of Redemption through His Son for His greater glory.[^5]
+It is not the Transcendent God who sins but the creaturely agents who intend evil and act upon it. God authors the plot, and the actors act willingly to commit the crime. The primary agent and the secondary agent. The difference is the internal desires. They meant evil for evil. God meant evil for good. God does not have evil intentions. Evil doesn't occur independently. No evil scheme outside of God's powerful hand. The perpetrator cannot say that he is forced. The only sin that exists is that which exists in the heart of the perpetrator. The individual is culpable. God is the author in the one grand story of Redemption through His Son for His greater glory.[^5]
 
 To God be the glory!
 
