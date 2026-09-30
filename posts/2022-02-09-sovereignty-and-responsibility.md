@@ -1,6 +1,6 @@
 ---
 title: "Sovereignty and Responsibility"
-date: "2022-02-09"
+date: "2026-08-01"
 excerpt: "God's sovereignty and human responsibility do not contradict each other. God's sovereignty does not abolish human responsibility and human responsibility does not negate God's sovereignty."
 tags:
   - "Classical Theism"
