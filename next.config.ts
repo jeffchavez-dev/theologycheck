@@ -57,6 +57,7 @@ const dated: [string, string][] = [
   ["2025-09-02-on-eternal-generation-and-essential-communication", "on-eternal-generation-and-essential-communication"],
   ["2026-09-23-faith-is-the-eye-that-drops-the-tears-of-repentance", "faith-is-the-eye-that-drops-the-tears-of-repentance"],
   ["2022-02-09-sovereignty-and-responsibility", "sovereignty-and-responsibility"],
+  ["2022-07-09-is-god-the-author-of-sin-yes-and-no", "is-god-the-author-of-sin-yes-and-no"],
 ];
 
 const nextConfig: NextConfig = {
