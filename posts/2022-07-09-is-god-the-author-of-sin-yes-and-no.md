@@ -7,8 +7,8 @@ tags:
   - "Reformed"
 dropCapParagraph: 1
 author: "Jeff Chavez"
-updatedAt: "2026-09-30"
-updateCount: 1
+updatedAt: "2026-10-07"
+updateCount: 2
 ---
 
 In [one of our previous blogs](https://theologycheck.blog/blog/sovereignty-and-responsibility), I affirmed this: "We can say that 'God is the author of evil or sin.' He ordained evil to take place; unless He does so, it won't occur." It must be said at the outset that in affirming God's authorship of sin, we are not saying that God commits sin! It is simply stating the fact that sin and evil will not be in this world apart from God's will.
@@ -37,15 +37,17 @@ A robust doctrine of God, which [classical theism](https://theologycheck.blog/bl
 
 Now, our confession, as a faithful summary of the Scriptures, clearly states that God is not the author of sin.
 
-> God hath decreed in himself, from all eternity, by the most wise and holy counsel of His own will, freely and unchangeably, all things, whatsoever comes to pass; yet so as thereby is God neither the author of sin nor hath fellowship with any therein; nor is violence offered to the will of the creature, nor yet is the liberty or contingency of second causes taken away, but rather established; in which appears His wisdom in disposing all things, and power and faithfulness in accomplishing His decree. — LBCF 3.1
+> God hath decreed in himself, from all eternity, by the most wise and holy counsel of His own will, freely and unchangeably, all things, whatsoever comes to pass; yet so as thereby is **God neither the author of sin nor hath fellowship with any therein;** nor is violence offered to the will of the creature, nor yet is the liberty or contingency of second causes taken away, but rather established; in which appears His wisdom in disposing all things, and power and faithfulness in accomplishing His decree. — LBCF 3.1
 
-Our confession's denial of God being the author of sin is clarified by the next statement *nor hath fellowship with any therein*. God is not the author of sin in that he does not join the sinful act that takes place making him a sinner and doer of the evil and horrible acts.
+> The almighty power, unsearchable wisdom, and infinite goodness of God, so far manifest themselves in his providence, that his determinate counsel extendeth itself even to the first fall, and all other sinful actions both of angels and men; and that not by a bare permission, which also he most wisely and powerfully boundeth, and otherwise ordereth and governeth, in a manifold dispensation to his most holy ends; yet so, as the sinfulness of their acts proceedeth only from the creatures, and not from God, who, being most holy and righteous, **neither is nor can be the author **or approver of sin. — LBCF 5.4
 
-Dr. Jim Renihan also noted this in his exposition of the second London Baptist Confession of Faith, and emphatically deny that God is not the author of sin.[^1]
+Our confession's twofold denial of God being the author of sin is clarified by the statements *nor hath fellowship with any therein* and *neither is nor can be the author or approver of sin*. God is not the author of sin in that he does not join the sinful act that takes place, making him a sinner and doer of evil and horrible acts. This is true even though we affirm that God's decree *extends to the first fall and all other sinful actions*. Sin is against God's holiness. Our confession strongly holds to the truth that God is holy, wise, and light, and in Him there is no darkness at all. 
 
-In 1645, the Westminster Assembly, with unanimous consent, published a pamphlet with the long but expressive title *A Short Declaration of the Assembly of Divines, By way of Detestation of this Abominable and Blasphemous Opinion, That God is, and hath a hand in, and is the Author of the Sinfulnesses of his People*. It was a response to a book by the deceased author John Archer in which Archer apparently "in expresse Termes, and in a very foul manner propounded, maintained, and purposely at large prosecuted" the notion that God is not only the author of sin, but also of the depravity of humanity. The divines call this notion "most vile and blasphemous," remarking that any such idea has by "the general consent of Christians, Teachers and writers, both Ancient, and Modern, and these as well Papists as Protestants" been rejected and "even detested and abhorred." They assert that the confessions of the Reformed churches "make Satan, and man himself the only causes or Authors of sin." The Assembly, supported by Parliament, ordered Archer's book to be burned by the "Common Hangman," at which time their pamphlet was to be read aloud.
+Dr. Jim Renihan also noted this in his exposition of the second London Baptist Confession of Faith, and emphatically denies that God is not the author of sin.[^1]
 
-John Calvin also maintained this truth when he wrote his fifth argument against Pighius,
+> In 1645, the Westminster Assembly, with unanimous consent, published a pamphlet with the long but expressive title *A Short Declaration of the Assembly of Divines, By way of Detestation of this Abominable and Blasphemous Opinion, That God is, and hath a hand in, and is the Author of the Sinfulnesses of his People*. It was a response to a book by the deceased author John Archer in which Archer apparently "in expresse Termes, and in a very foul manner propounded, maintained, and purposely at large prosecuted" the notion that God is not only the author of sin, but also of the depravity of humanity. The divines call this notion "most vile and blasphemous," remarking that any such idea has by "the general consent of Christians, Teachers and writers, both Ancient, and Modern, and these as well Papists as Protestants" been rejected and "even detested and abhorred." They assert that the confessions of the Reformed churches "make Satan, and man himself the only causes or Authors of sin." The Assembly, supported by Parliament, ordered Archer's book to be burned by the "Common Hangman," at which time their pamphlet was to be read aloud.
+
+Indeed, to make God the doer and actor of sin is *most vile and blasphemous*, and no Christian should ever read Scriptures as such. John Calvin also maintained this truth when he wrote his fifth argument against Pighius,
 
 > God is not made the author of evil deeds when he is said to lead the ungodly where he wills and to accomplish and execute his work through them, but rather we shall acknowledge that he is a wonderfully expert craftsman who can use even bad tools well. We shall be compelled to admire his justice, which not only finds a way through iniquity but also employs that very iniquity to a good end.[^2]
 
