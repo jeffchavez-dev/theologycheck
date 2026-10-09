@@ -4,14 +4,16 @@ date: "2026-10-09"
 excerpt: "Warfield's objective is to show that a minister must be both learned and religious. There is no dichotomy between a minister's intellectual and spiritual life."
 tags:
   - "Ministry"
-dropCapParagraph: 1
 draft: true
+dropCapParagraph: 1
 author: "Jeff Chavez"
+updatedAt: "2026-10-09"
+updateCount: 1
 ---
 
-B.B. Warfield's essay, "The Religious Life of Theological Students," is a must-read for men desiring to pursue any form of theological study, whether formal or informal. The Master's Seminary made it available [online](https://tms.edu/wp-content/uploads/2021/09/tmsj6g.pdf) as one of "the time-honored articles from past generations of theologians and scholars." Warfield's objective is to show that a minister must be both learned and religious. There is no dichotomy between a minister's intellectual and spiritual life. Here are some lessons I learned, with relevant quotations from the essay.
+Benjamin B. Warfield's essay, "The Religious Life of Theological Students," is a must-read for men desiring to pursue any form of theological study, whether formal or informal. The Master's Seminary made it available [online](https://tms.edu/wp-content/uploads/2021/09/tmsj6g.pdf) as one of "the time-honored articles from past generations of theologians and scholars." Warfield's objective is to show that a minister must be both learned and religious. There is no dichotomy between a minister's intellectual and spiritual life. Here are some lessons I learned, with relevant quotations from the essay.
 
-* Knowledge and Godliness are both indispensable for Theological students
+## * Knowledge and Godliness are both indispensable for Theological students
    * "...the man without learning, no matter with what other gifts he may be endowed, is unfit for its duties. But learning, though indispensable, is not the most indispensable thing for a minister... A minister must be learned, on pain of being utterly incompetent for his work. But before and above being learned, a minister must be godly." p. 182
 * Every vocation must be done for the glory of God and that includes theological studies
    * "...as students of theology your vocation is to study theology; and to study it diligently, in accordance with the apostolic injunction: "Whatsoever ye do, do it heartily, as to the Lord." It is precisely for this that you are students of theology; this is your "next duty," and the neglect of duty is not a fruitful religious exercise." p. 184
