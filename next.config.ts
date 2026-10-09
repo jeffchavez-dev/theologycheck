@@ -60,6 +60,8 @@ const dated: [string, string][] = [
   ["2022-07-09-is-god-the-author-of-sin-yes-and-no", "is-god-the-author-of-sin-yes-and-no"],
   ["2026-10-09-the-religious-life-of-theological-students", "the-religious-life-of-theological-students"],
   ["2025-08-19-particular-baptists-are-also-reformed", "particular-baptists-are-also-reformed"],
+  ["2024-11-05-historical-roots-of-particular-baptist-1", "historical-roots-of-particular-baptist-1"],
+  ["2024-11-08-historical-roots-of-particular-baptist-2", "historical-roots-of-particular-baptist-2"],
 ];
 
 const nextConfig: NextConfig = {
