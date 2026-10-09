@@ -4,11 +4,10 @@ date: "2026-10-09"
 excerpt: "Warfield's objective is to show that a minister must be both learned and religious. There is no dichotomy between a minister's intellectual and spiritual life."
 tags:
   - "Ministry"
-draft: true
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-10-09"
-updateCount: 2
+updateCount: 3
 ---
 
 Benjamin B. Warfield's essay, "The Religious Life of Theological Students," is a must-read for men desiring to pursue any form of theological study, whether formal or informal. The Master's Seminary made it available [online](https://tms.edu/wp-content/uploads/2021/09/tmsj6g.pdf) as one of "the time-honored articles from past generations of theologians and scholars." Warfield's objective is to show that a minister must be both learned and religious. There is no dichotomy between a minister's intellectual and spiritual life. Here are some lessons I learned, with relevant quotations from the essay.
