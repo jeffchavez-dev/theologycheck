@@ -19,8 +19,6 @@ interface Props {
   allTags: string[]
 }
 
-const romanNumerals = ['II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
-
 export default function PostsFilter({ featured, rest, allTags }: Props) {
   const router = useRouter()
   const [activeTag, setActiveTag] = useState<string | null>(null)
@@ -59,6 +57,10 @@ export default function PostsFilter({ featured, rest, allTags }: Props) {
     return acc
   }, {})
 
+  const gridPosts = activeTag
+    ? allPosts.filter(p => p.tags.includes(activeTag))
+    : allPosts
+
   return (
     <>
       {/* Tag filter bar */}
@@ -80,49 +82,35 @@ export default function PostsFilter({ featured, rest, allTags }: Props) {
         ))}
       </div>
 
-      {/* Featured / latest post */}
-      {showFeatured && filteredFeatured ? (
-        <div className="featured-post">
-          <span className="featured-badge">Latest Post</span>
-          <h2><Link href={`/blog/${filteredFeatured.slug}`}>{filteredFeatured.title}</Link></h2>
-          <p className="excerpt">{filteredFeatured.excerpt}</p>
-          <div className="post-meta">
-            <span>{new Date(filteredFeatured.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            {filteredFeatured.tags.map(tag => (
-              <button key={tag} className="post-tag post-tag-btn" onClick={() => selectTag(tag)}>{tag}</button>
-            ))}
-          </div>
+      {/* Card grid */}
+      {gridPosts.length > 0 ? (
+        <div className="posts-card-grid">
+          {gridPosts.map((post, i) => (
+            <Link key={post.slug} href={`/blog/${post.slug}`} className="home-post-card">
+              <div className="home-post-card-meta">
+                <span className="home-post-card-type">Post</span>
+                <span className="home-post-card-date">
+                  {new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </span>
+              </div>
+              {i === 0 && !activeTag && <span className="featured-badge" style={{ marginBottom: '0.5rem', display: 'inline-block' }}>Latest</span>}
+              <h2 className="home-post-card-title">{post.title}</h2>
+              <p className="home-post-card-excerpt">{post.excerpt}</p>
+              {post.tags?.length > 0 && (
+                <div className="home-post-card-tags">
+                  {post.tags.map(tag => (
+                    <span key={tag} className="search-result-tag">{tag}</span>
+                  ))}
+                </div>
+              )}
+            </Link>
+          ))}
         </div>
-      ) : !activeTag ? (
+      ) : allPosts.length === 0 ? (
         <div className="featured-post" style={{ textAlign: 'center', padding: '3rem' }}>
           <p className="excerpt">No posts yet. <Link href="/admin" style={{ color: '#8b1a1a', textDecoration: 'underline' }}>Go to Admin</Link> to write your first post.</p>
         </div>
-      ) : null}
-
-      {/* Posts list */}
-      {listPosts.length > 0 && (
-        <>
-          <div className="section-label">{activeTag ? `Posts tagged "${activeTag}"` : 'All Posts'}</div>
-          <div className="posts-grid">
-            {listPosts.map((post, i) => (
-              <div key={post.slug} className="post-card">
-                <div className="post-number">{romanNumerals[i] ?? i + 2}</div>
-                <div>
-                  <h3><Link href={`/blog/${post.slug}`}>{post.title}</Link></h3>
-                  <p className="excerpt">{post.excerpt}</p>
-                  <div className="post-meta">
-                    {post.tags.map(tag => (
-                      <button key={tag} className="post-tag post-tag-btn" onClick={() => selectTag(tag)}>{tag}</button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </>
-      )}
-
-      {activeTag && !showFeatured && listPosts.length === 0 && (
+      ) : (
         <div className="featured-post" style={{ textAlign: 'center', padding: '2rem' }}>
           <p className="excerpt">No posts found for &ldquo;{activeTag}&rdquo;.</p>
         </div>

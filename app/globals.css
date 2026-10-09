@@ -288,6 +288,18 @@ a { color: inherit; text-decoration: none; }
 .post-card h3 a:hover { color: #8b1a1a; }
 .post-card .excerpt { font-size: 13.5px; margin-bottom: 7px; }
 
+/* Homepage card grid */
+.posts-card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+.home-post-card { display: flex; flex-direction: column; background: #fff8ee; border: 1px solid #e0c88a; border-radius: 4px; padding: 1.25rem 1.4rem; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s; }
+.home-post-card:hover { box-shadow: 0 4px 16px rgba(60,20,0,0.1); border-color: #c49a5a; }
+.home-post-card-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+.home-post-card-type { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.08em; color: #8b1a1a; text-transform: uppercase; }
+.home-post-card-date { font-size: 12px; color: #8a7455; }
+.home-post-card-title { font-size: 17px; font-weight: 500; color: #1a0a04; line-height: 1.35; margin-bottom: 0.5rem; }
+.home-post-card:hover .home-post-card-title { color: #8b1a1a; }
+.home-post-card-excerpt { font-size: 13.5px; color: #5a4a35; line-height: 1.6; flex: 1; margin-bottom: 0.75rem; }
+.home-post-card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+
 .divider { text-align: center; color: #8b1a1a; font-size: 14px; margin: 0.5rem 0 1.5rem; letter-spacing: 0.5em; opacity: 0.5; }
 
 /* Single post */
