@@ -59,6 +59,7 @@ const dated: [string, string][] = [
   ["2022-02-09-sovereignty-and-responsibility", "sovereignty-and-responsibility"],
   ["2022-07-09-is-god-the-author-of-sin-yes-and-no", "is-god-the-author-of-sin-yes-and-no"],
   ["2026-10-09-the-religious-life-of-theological-students", "the-religious-life-of-theological-students"],
+  ["2025-08-19-particular-baptists-are-also-reformed", "particular-baptists-are-also-reformed"],
 ];
 
 const nextConfig: NextConfig = {
