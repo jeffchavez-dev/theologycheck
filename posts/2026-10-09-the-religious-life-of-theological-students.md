@@ -4,7 +4,6 @@ date: "2026-10-09"
 excerpt: "Warfield's objective is to show that a minister must be both learned and religious. There is no dichotomy between a minister's intellectual and spiritual life."
 tags:
   - "Ministry"
-draft: true
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-10-10"
