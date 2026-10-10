@@ -23,6 +23,7 @@ export default function FootnoteSidenotes() {
     const refs = document.querySelectorAll<HTMLAnchorElement>('[data-footnote-ref]')
 
     let lastBottom = 0
+    let num = 1
 
     refs.forEach(ref => {
       const fnId = ref.getAttribute('href')?.slice(1) // strip leading #
@@ -36,7 +37,8 @@ export default function FootnoteSidenotes() {
 
       const sidenote = document.createElement('div')
       sidenote.className = 'fn-sidenote'
-      sidenote.innerHTML = fnMap[fnId]
+      sidenote.innerHTML = `<span class="fn-sidenote-num">${num}</span>${fnMap[fnId]}`
+      num++
       article.appendChild(sidenote)
 
       const top = Math.max(supTop - 4, lastBottom + 8)
