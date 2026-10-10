@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import EditButton from '@/components/EditButton'
 import CopyLink from '@/components/CopyLink'
 import QuoteShare from '@/components/QuoteShare'
+import FootnoteSidenotes from '@/components/FootnoteSidenotes'
 
 export async function generateStaticParams() {
   return getAllPosts().map(p => ({ slug: p.slug }))
@@ -135,6 +136,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         className="post-content"
         dangerouslySetInnerHTML={{ __html: post.content ?? '' }}
       />
+      <FootnoteSidenotes />
       <QuoteShare />
 
       {post.tags.includes('1689 Federalism') && (

@@ -303,7 +303,28 @@ a { color: inherit; text-decoration: none; }
 .divider { text-align: center; color: #8b1a1a; font-size: 14px; margin: 0.5rem 0 1.5rem; letter-spacing: 0.5em; opacity: 0.5; }
 
 /* Single post */
-.post-page { max-width: 680px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+.post-page { max-width: 680px; margin: 0 auto; padding: 2.5rem 1.5rem; position: relative; }
+
+/* Sidenote footnotes — wide screens only */
+@media (min-width: 1100px) {
+  .post-page { max-width: 1060px; }
+  .post-header, .post-content, .post-footer, .series-outline, .post-recommended-study { max-width: 640px; }
+  .fn-sidenote {
+    position: absolute;
+    right: 0;
+    width: 340px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #5a4a35;
+    background: #fffaf2;
+    border-left: 3px solid #c49a5a;
+    padding: 0.5rem 0.85rem;
+    border-radius: 0 2px 2px 0;
+  }
+  .fn-sidenote p { margin: 0 0 0.35rem; }
+  .fn-sidenote p:last-child { margin: 0; }
+  .fn-sidenote a { color: #8b1a1a; }
+}
 .post-header { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 0.5px solid #c49a5a; text-align: center; }
 .post-header .post-tags { margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
 .post-header h1 { font-family: 'Cinzel', serif; font-size: 28px; font-weight: 500; color: #1e1208; line-height: 1.3; margin-bottom: 1rem; }
