@@ -64,6 +64,7 @@ const dated: [string, string][] = [
   ["2024-11-08-historical-roots-of-particular-baptist-2", "historical-roots-of-particular-baptist-2"],
   ["2021-03-03-the-five-points-of-reformed-baptist", "the-five-points-of-reformed-baptist"],
   ["2025-12-27-book-review-let-us-worship-god", "book-review-let-us-worship-god"],
+  ["2024-02-13-review-abraham-booths-an-essay-on-the-kingdom-of-christ", "review-abraham-booths-an-essay-on-the-kingdom-of-christ"],
 ];
 
 const nextConfig: NextConfig = {
