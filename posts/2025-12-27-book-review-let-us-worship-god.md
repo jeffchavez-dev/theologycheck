@@ -6,8 +6,9 @@ tags:
   - "Reformed"
   - "Book Review"
 dropCapParagraph: 1
-draft: true
 author: "Jeff Chavez"
+updatedAt: "2026-10-18"
+updateCount: 1
 ---
 
 True worship is the very purpose of why we live. It belongs to the essence of who we are.
