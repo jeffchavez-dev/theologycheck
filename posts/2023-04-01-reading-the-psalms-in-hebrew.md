@@ -1,12 +1,13 @@
 ---
 title: "Calendar of Readings in Hebrew through the Book of Psalms Organized by Joseph A. Pipa"
-date: "2023-04-01"
+date: "2026-01-01"
 excerpt: "A year-long calendar for reading through the Psalms in Hebrew, organized by Joseph A. Pipa Jr. of Greenville Presbyterian Theological Seminary."
 tags:
   - "Resources"
 dropCapParagraph: 1
-draft: true
 author: "Jeff Chavez"
+updatedAt: "2026-10-18"
+updateCount: 1
 ---
 
 This is from the [Calendar of Readings in Hebrew through the book of Psalms](https://gpts.edu/wp-content/uploads/2018/12/Calendar-Readings-in-Psalms-Hebr.pdf) organized by [Joseph A. Pipa](https://gpts.edu/about/faculty-staff/pipa/) Jr. from Greenville Presbyterian Theological Seminary. I use this to read through the Psalms using the Hebrew Bible in a year.
