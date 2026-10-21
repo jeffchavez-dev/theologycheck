@@ -120,6 +120,11 @@ Records from the early general assemblies of Particular Baptist churches in Engl
 ### Charles Marie Du Veil
 - [*A Literal Explanation of the Acts of the Apostles*](https://books.google.com/books?id=7glDAQAAMAAJ&dq)
 
+### Henry Jessey (1603–1663)
+- [*The Exceeding Riches of Grace Advanced*](https://books.google.com/books?id=v8FlAAAAcAAJ) (1647) — Google Books
+- [*A Storehouse of Provision*](https://books.google.com/books?id=onxmAAAAcAAJ) (1650) — Google Books
+- [*Miscellanea Sacra: or, Diverse Necessary Truths*](https://books.google.com/books?id=fDZkAAAAcAAJ) (1665, posthumous) — Google Books
+
 ### Benjamin Keach (1640–1704)
 - [Collected Works](http://digitalpuritan.net/benjamin-keach/) — Digital Puritan
 - [*Tropologia*](https://archive.org/details/gtropologaakeyt00keacgoog) — Archive.org
