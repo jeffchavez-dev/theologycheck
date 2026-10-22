@@ -8,11 +8,13 @@ dropCapParagraph: 1
 author: "Jeff Chavez"
 ---
 
+*The following is a modernized transcription of Thomas Harrison's funeral sermon on Mordecai Abbott, Esq., originally preached at Lorimer's Hall on April 7, 1700, and printed later that year. Spelling, capitalization, and punctuation have been updated to modern conventions, and a few archaic contractions and verb forms have been adjusted for readability (e.g., "receiv'd" to "received," "intrusted" to "entrusted"). No paraphrasing has been done — the wording, phrasing, and sentence structure remain Harrison's own throughout.*[^1]
+
 Thomas Harrison was the son of 1LCF subscriber Edward Harrison (a former vicar in Kensworth, Hertfordshire who served in Petty France church, London) and a recognized London Baptist pastor. James and Samuel Renihan write:
 
-> "Some men subscribed to both Confessions — William Kiffen, Hanserd Knollys, and Henry Forty as well as the father/son pairs Benjamin Coxe and Nehemiah Coxe and Edward Harrison and Thomas Harrison — and these men knew what they believed throughout these years."[^1]
+> "Some men subscribed to both Confessions — William Kiffen, Hanserd Knollys, and Henry Forty as well as the father/son pairs Benjamin Coxe and Nehemiah Coxe and Edward Harrison and Thomas Harrison — and these men knew what they believed throughout these years."[^2]
 
-> "The resources he provided for my studies, the guidance he gave, and the knowledge he shared make me thankful that he is my Benjamin Coxe, or my Edward Harrison, as I am his Nehemiah Coxe, or his Thomas Harrison."[^2]
+> "The resources he provided for my studies, the guidance he gave, and the knowledge he shared make me thankful that he is my Benjamin Coxe, or my Edward Harrison, as I am his Nehemiah Coxe, or his Thomas Harrison."[^3]
 
 Harrison's 1700 funeral sermon on Mordecai Abbott, Esq., takes its text from Matthew 25:21 — "Well done, good and faithful servant... enter thou into the joy of thy Lord." He argued that those who serve Christ faithfully in this life will have a joyful and happy state in the next. Harrison preaches on those who count as faithful servants, expounds on what that future joy actually involves, and demonstrates the sure connection between faithful service now and glory hereafter. He ends the sermon with a direct application: examine yourself, be spurred on by the reward set before you, and find comfort in the loss of godly friends — comfort he extends to Mordecai Abbott's own grieving widow and family, holding up Abbott as a faithful servant now entered into the Joy of his Master.
 
@@ -195,6 +197,8 @@ Follow his example, as he followed Christ's. Strive to serve your Lord in your d
 
 ---
 
-[^1]: James M. Renihan, *Baptist Symbolics, Volume 1* (Founders Press, 2022), 9.
+[^1]: Source: [*A Funeral Sermon on Mordecai Abbott, Esq.* (1700)](https://commons.wikimedia.org/wiki/File:A_funeral_sermon_on_Mordecai_Abbott_esq;_..._1700_(IA_bim_early-english-books-1641-1700_a-funeral-sermon-on-mord_harrison-thomas-baptis_1700).pdf) — Wikimedia Commons, via the Internet Archive (Early English Books, 1641–1700).
 
-[^2]: Samuel D. Renihan, *From Shadow to Substance* (Christian Focus, 2018), v.
+[^2]: James M. Renihan, *Baptist Symbolics, Volume 1* (Founders Press, 2022), 9.
+
+[^3]: Samuel D. Renihan, *From Shadow to Substance* (Christian Focus, 2018), v.
