@@ -180,6 +180,14 @@ Every study page must use the same outer wrapper, header order, and outline cont
 
 ---
 
+## Footnotes
+
+Blog posts use GFM footnotes (`[^1]` inline, `[^1]: ...` definitions at the bottom of the `.md` file).
+
+- **Desktop (≥1100px):** `FootnoteSidenotes` client component repositions footnotes as right-margin sidenotes. The bottom `<section data-footnotes>` and its preceding `<hr>` are hidden via CSS (`globals.css` inside the `@media (min-width: 1100px)` block) so they never show at the bottom on desktop.
+- **Mobile (<1100px):** sidenotes are not rendered; the standard GFM footnote section at the bottom is shown as-is.
+- Always write footnotes as standard GFM — the sidenote behaviour is automatic. Never add a manual "Footnotes" heading or a custom footnote section.
+
 ## Common pitfalls
 - **Never** instantiate `new Resend(key)` or similar SDK clients at module level — Vercel evaluates module-level code during build when env vars are absent. Always instantiate inside the handler function.
 - **Never** define React components inside another component — causes remounting on every render (breaks input focus, resets state).

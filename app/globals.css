@@ -333,6 +333,10 @@ a { color: inherit; text-decoration: none; }
     margin-bottom: 0.3rem;
     opacity: 0.8;
   }
+  /* Hide bottom footnote section on desktop — sidenotes are used instead */
+  .post-content [data-footnotes],
+  .post-content [data-footnotes] + * ,
+  .post-content hr:has(+ [data-footnotes]) { display: none; }
 }
 .post-header { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 0.5px solid #c49a5a; text-align: center; }
 .post-header .post-tags { margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
