@@ -9,7 +9,7 @@ tags:
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-10-29"
-updateCount: 1
+updateCount: 2
 ---
 
 Sam Waldron, president of Covenant Baptist Theological Seminary, has publicly affirmed two conclusions that converge with the basic tenets of 1689 Federalism: that the New Covenant is the Covenant of Grace, and that the Old Covenant is, in some sense, a covenant of works. In his post "1689 Baptist Covenant Theology,"[^1] it is interesting to note how Waldron finds the response of those who equate the New Covenant with the Covenant of Grace "satisfying." He writes:
@@ -56,9 +56,9 @@ That the Old Covenant is *a* — not *the* — covenant of works is affirmed by 
 >
 > — Hercules Collins, *Believers Baptism from Heaven, and of Divine Institution*[^9]
 
-The Particular Baptists strongly affirmed that the Old Covenant is a temporal and typological covenant of works for life in Canaan. This cannot be denied or avoided when one considers the very nature of the Old Covenant and its contrast with the New. Waldron himself acknowledges that it "cannot be avoided."
+The Particular Baptists generally affirmed that the Old Covenant is a temporal and typological covenant of works for life in Canaan. This cannot be denied or avoided when one considers the very nature of the Old Covenant and its contrast with the New. Waldron himself acknowledges that it "cannot be avoided."
 
-This affirmation from one of the leading Reformed Baptist seminaries is truly an advancement in recovering the Particular Baptist heritage. I hope that more will come to this understanding, as it not only helps us respond to our Presbyterian brethren but enables us to better understand the glorious work of the only Redeemer of God's elect — the Lord Jesus Christ — both in the Old and the New Covenants.
+This affirmation from one of the leading Reformed Baptist seminaries is truly an advancement in recovering the Particular Baptist covenantal heritage. I hope that more will come to this understanding, as it not only helps us respond to our Presbyterian brethren but enables us to better understand the glorious work of the only Redeemer of God's elect — the Lord Jesus Christ — both in the Old and the New Covenants.
 
 To the Triune God alone be the glory.
 
