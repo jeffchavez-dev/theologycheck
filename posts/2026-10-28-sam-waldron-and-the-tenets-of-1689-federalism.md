@@ -7,8 +7,9 @@ tags:
   - "1689 Federalism"
   - "Reformed"
 dropCapParagraph: 1
-draft: true
 author: "Jeff Chavez"
+updatedAt: "2026-10-29"
+updateCount: 1
 ---
 
 Sam Waldron, president of Covenant Baptist Theological Seminary, has publicly affirmed two conclusions that converge with the basic tenets of 1689 Federalism: that the New Covenant is the Covenant of Grace, and that the Old Covenant is, in some sense, a covenant of works. In his post "1689 Baptist Covenant Theology,"[^1] it is interesting to note how Waldron finds the response of those who equate the New Covenant with the Covenant of Grace "satisfying." He writes:
@@ -17,7 +18,7 @@ Sam Waldron, president of Covenant Baptist Theological Seminary, has publicly af
 
 > "Not only are the two covenants made with two different peoples, they also are different kinds of covenants. I think it is clear that in some sense the Old Covenant must be described as a covenant of works. In using this language I do not at all intend to say that it was a republication of the Covenant of Works… I think that the characterization of the Old Covenant as a kind of covenant of works must be qualified in all sorts of ways, but I do not think that it can be avoided. Exodus 19:5–6 and Jeremiah 31:31–34 clearly distinguish the Old and New Covenants as two different covenants."
 
-The retrospective application of the New Covenant in the Old Testament, and the characterization of the Old Covenant as, in some sense, a covenant of works — these are conclusions that 1689 Federalists have consistently drawn from Scripture and the 1689 Confession. Here are some representative quotes:
+The retrospective application of the New Covenant in the Old Testament, and the characterization of the Old Covenant as, in some sense, a covenant of works — these are conclusions that 1689 Federalists have consistently drawn from Scripture and the framers of the 1689 Confession. Here are some representative quotes:
 
 > "The redemptive-historical focus of 7.3 informs much of this chapter. Paragraph six gathers up another of its threads… affirming that His work is retrospective, applied to the elect who lived before the time of incarnation. All who are saved receive forgiveness and life in the same way… Salvation for those who lived before the cross was by prospective faith, looking forward to the time of fulfillment."
 >
