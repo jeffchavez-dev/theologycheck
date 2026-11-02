@@ -69,6 +69,7 @@ const dated: [string, string][] = [
   ["2026-10-22-thomas-harrison-funeral-sermon-mordecai-abbott", "thomas-harrison-funeral-sermon-mordecai-abbott"],
   ["2026-10-26-mosaic-covenant-a-covenant-of-works", "mosaic-covenant-a-covenant-of-works"],
   ["2026-10-28-sam-waldron-and-the-tenets-of-1689-federalism", "sam-waldron-and-the-tenets-of-1689-federalism"],
+  ["2026-11-02-a-biblical-look-at-theonomy", "a-biblical-look-at-theonomy"],
 ];
 
 const nextConfig: NextConfig = {
