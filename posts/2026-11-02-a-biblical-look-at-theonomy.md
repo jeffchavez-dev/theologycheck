@@ -7,8 +7,9 @@ tags:
   - "Baptist"
   - "Reformed"
 dropCapParagraph: 1
-draft: true
 author: "Jeff Chavez"
+updatedAt: "2026-11-04"
+updateCount: 1
 ---
 
 In this post, Tom Hicks from Covenant Baptist Theological Seminary provides nine reasons why Theonomy is unbiblical.[^1] Our friends must be careful when they say "Say Yes to Theonomy!" Theonomy has many faces. Theonomy is very subtle in its agenda. We should be equipped to challenge its assertions.
