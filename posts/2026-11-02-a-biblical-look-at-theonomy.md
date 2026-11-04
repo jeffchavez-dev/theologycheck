@@ -112,6 +112,13 @@ Indeed, we must reject their misleading rhetoric: "Theonomy simply means that Go
 
 ---
 
+## References
+
+- Tom Hicks. [Why Theonomy is Unbiblical?](https://cbtseminary.org/why-is-theonomy-unbiblical/) Covenant Baptist Theological Seminary.
+- Tom Hicks. [Why Theonomy is Unbiblical?](https://pastortomhicks.com/2020/11/17/why-is-theonomy-unbiblical/) This article has 16 reasons why Theonomy is Unbiblical.
+
+---
+
 ## Works Cited
 
 - Baines, Ronald S. "Separating God's Two Kingdoms: Regular Baptists in Maine and Nova Scotia, 1796–1815." PhD diss., University of Maine, 2014.
@@ -126,7 +133,7 @@ Indeed, we must reject their misleading rhetoric: "Theonomy simply means that Go
 
 ---
 
-[^1]: Some of the most prominent early proponents of Reconstructionist Theonomy include Greg Bahnsen, Rousas Rushdoony, and Gary North. The modern version associated with Doug Wilson, Joel Webbon, and others is called General Equity Theonomy. Tom Hicks's full treatment is available at [cbtseminary.org](https://cbtseminary.org/why-is-theonomy-unbiblical/) and at [pastortomhicks.com](https://pastortomhicks.com/2020/11/17/why-is-theonomy-unbiblical/) (the latter has 16 reasons).
+[^1]: According to Tom Hicks, "Some of the most prominent early proponents of this kind of theonomy include Greg Bahnsen, Rousas Rushdoony, and Gary North." This theonomy is Reconstructionist Theonomy. The modern one by Doug Wilson, Joel Webbon, and others is called General Equity Theonomy. For a discussion of "general equity theonomy," [see here](https://pastortomhicks.com/2021/03/16/is-general-equity-theonomy-a-confessional-and-biblical-doctrine/).
 
 [^2]: Michael Beck and Charles Lee Irons, *Covenant Lord and Cultic Boundary: A Dialectic Inquiry Concerning Meredith Kline and the Reformed Two-Kingdom Project* (Eugene, OR: Pickwick Publications, 2021), pp. 37–38.
 
