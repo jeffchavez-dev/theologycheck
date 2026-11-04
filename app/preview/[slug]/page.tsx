@@ -2,6 +2,7 @@ import { getPostBySlug } from '@/lib/posts'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import QuoteShare from '@/components/QuoteShare'
+import FootnoteSidenotes from '@/components/FootnoteSidenotes'
 // Never statically generated — always dynamic so drafts/scheduled are accessible
 export const dynamic = 'force-dynamic'
 
@@ -55,6 +56,7 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
           dangerouslySetInnerHTML={{ __html: post.content ?? '' }}
         />
         <QuoteShare />
+        <FootnoteSidenotes />
 
         <footer className="post-footer">
           <div className="divider">✦ ✦ ✦</div>
