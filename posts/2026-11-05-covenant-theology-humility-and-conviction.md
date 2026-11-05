@@ -6,20 +6,24 @@ tags:
   - "Baptist"
   - "1689 Federalism"
   - "Reformed"
-dropCapParagraph: 1
 draft: true
+dropCapParagraph: 1
 author: "Jeff Chavez"
+updatedAt: "2026-11-05"
+updateCount: 1
 ---
 
 In our local church, we are going through our study on Covenant Theology. It is such a refreshing study as our pastor seeks to faithfully teach us the importance of the biblical covenants and how different understandings of it have been articulated over the course of time within Reformed Theology. In our first session, our pastor quoted T.M. Moore to strengthen the reality that a study of the biblical and theological covenants is one of the most life-changing truths one can ever encounter.
 
 > "Understanding and learning to live within the covenant God has entered into with us can enable us to sail above our circumstances… maintaining a covenant mind-set can help us in setting the kind of priorities in life that will enable us to serve and honor God each day. Living self-consciously in the light of God's covenant can guide our decisions and choices in the path of righteousness, and move us to undertakings of faith that we might not otherwise consider or think ourselves capable of. The covenant can embolden us in the face of adversity and trial, fill us continuously with the joy of our salvation, give us wisdom and strength to serve others in love, and make our lives an ongoing service of worship to the living God."[^1]
 
+Indeed, contemplating on God’s gracious condescension by way of covenants in the history of redemption yield sufficient grace to help us in various circumstances of our lives. 
+
 What captured my attention during our third session were the points our pastor highlighted from Richard Lucas's "The Past and Future of Baptist Covenantal Theology" (SBJT, 2023). Lucas makes a candid concession about the twentieth-century Reformed Baptists' dependence on Westminster and John Murray:
 
 > "In terms of covenantal theology, these twentieth-century Reformed Baptists were heavily influenced by Westminster Theological Seminary in Philadelphia, and in particular John Murray. They assumed the covenant theology expressed in their confession was the same as the Westminster Confession of Faith, other than in reference to the mode and subjects of baptism. To be fair, there was not readily available to them hardly any writings on covenant theology by Baptists, so they learned their covenant theology from paedobaptists. John Murray, partly in reaction to the rising influence of dispensationalism, emphasized the unity of substance in the covenant of grace throughout the biblical covenants (including the gracious nature of the Mosaic Covenant). The Reformed Baptists, also eager to distance themselves from dispensationalism, likewise adopted the same formula to articulate the covenant of grace as found in the Westminster Confession of Faith, namely that in substance there is one covenant of grace, but various administrations represented by the subordinate biblical covenants."[^2]
 
-I realized that every theologian's background and context heavily influence their articulation of each perspective. That's why Lucas, in the introductory section of his article, observes:
+Though others may not agree to this. Such concession which our pastor also taught made me realize that every theologian's background and context heavily influence their articulation of each perspective. That's why Lucas, in the introductory section of his article, observes:
 
 > "In the comparison of these two views that follows, my analysis will arrive at more modest (and I hope less provocative) conclusions for the future of Baptist covenantal theology. In my estimation, proponents of progressive covenantalism and 1689 Federalism are largely talking past each other because of continued misunderstanding. This lack of understanding springs from a variety of factors, including different vocabulary and terminology, different historical development and origins, different conversation partners, different ecclesiological settings, and also (quite frankly) in many cases a lack of a deep understanding of their own professed view."[^3]
 
@@ -27,7 +31,7 @@ Furthermore:
 
 > "1689 Federalism has primarily been a historical retrieval movement, whereas progressive covenantalism has primarily been interacting in the realm of contemporary theological discourse, doing fresh exegesis, and building on developments within the biblical theology movement. It is no coincidence that the scholars developing and defining 1689 Federalism all have PhDs in historical theology, while the leading progressive covenantal scholars all have PhDs in biblical studies and systematics."[^4]
 
-This demonstrates the need for humility. Pascal Denault, in his study of Baptist Covenant Theology, revised his own view on the Mosaic Covenant.[^5] The theologians of the Westminster Assembly articulated their covenant theology in various ways, especially on the number of covenants made between God and man.[^6] Books have been written addressing multiple views on the covenants.[^7] This doesn't mean, however, that one cannot have his convictions. Anyone can fairly hold his own theological persuasion as he learns from the giants of the past. But this must be done in a posture of humility and wisdom. Rather than highlighting differences absolutely, we can positively advance our views in their distinct emphases without blurring what unifies us. Lucas puts it well:
+This demonstrates the need for humility, deeper meditation of the Scriptural data on covenant theology, and a submissive heart to yield to the conclusions that the Scripture brings us. Pascal Denault, in his study of Baptist Covenant Theology, revised his own view on the Mosaic Covenant.[^5] The theologians of the Westminster Assembly articulated their covenant theology in various ways, especially on the number of covenants made between God and man.[^6] Books have been written addressing multiple views on the covenants.[^7] This doesn't mean, however, that one cannot have his convictions. Anyone can fairly hold his own theological persuasion as he learns from the giants of the past. But this must be done in a posture of humility and wisdom. Rather than highlighting differences absolutely, we can positively advance our views in their distinct emphases without blurring what unifies us. Lucas puts it well:
 
 > "Not a few defenders of new covenant theology have come over to this position from the classic Reformed camp, and thus almost inevitably feel obliged to defend their move, which tempts them to look for differences rather than seek out common ground. Absolute lines are sometimes drawn, where complementary differences in emphasis may be wiser."[^4]
 
