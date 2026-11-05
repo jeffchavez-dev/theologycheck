@@ -10,7 +10,7 @@ draft: true
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-11-05"
-updateCount: 3
+updateCount: 4
 ---
 
 In our local church, we are going through a study on Covenant Theology. It is such a refreshing study as our pastor seeks to faithfully teach us the importance of the biblical covenants and how different understandings of it have been articulated over the course of time within Reformed Theology. In our first session, our pastor quoted T.M. Moore to strengthen the reality that a study of the biblical and theological covenants is one of the most life-changing truths one can ever encounter.
