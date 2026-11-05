@@ -72,6 +72,7 @@ const dated: [string, string][] = [
   ["2026-11-02-a-biblical-look-at-theonomy", "a-biblical-look-at-theonomy"],
   ["2026-11-03-a-confessional-refutation-of-theonomy-lckc", "a-confessional-refutation-of-theonomy-lckc"],
   ["2026-11-04-amillennialism-as-eschatology-of-victory", "amillennialism-as-eschatology-of-victory"],
+  ["2026-11-05-covenant-theology-humility-and-conviction", "covenant-theology-humility-and-conviction"],
 ];
 
 const nextConfig: NextConfig = {
