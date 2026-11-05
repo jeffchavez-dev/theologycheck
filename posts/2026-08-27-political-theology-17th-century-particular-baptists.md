@@ -5,11 +5,10 @@ excerpt: "What did the 17th century Particular Baptists believe about the relati
 tags:
   - "Political Theology"
   - "Particular Baptist"
-draft: true
 dropCapParagraph: 1
 author: "Jeff Chavez"
-updatedAt: "2026-08-27"
-updateCount: 1
+updatedAt: "2026-11-05"
+updateCount: 2
 ---
 
 Theology in Particular of IRBS Media recently replayed one of their greatest hits — [Dr. Renihan's interview on the Political Theology of the 17th Century Particular Baptists](https://youtu.be/5Uq1h-R3FM8?si=sG2YFONy7vXEMpAq). Here's some of the things that I've learned from this informatively clear response in answer to the question provided by one of the podcast's listeners.
