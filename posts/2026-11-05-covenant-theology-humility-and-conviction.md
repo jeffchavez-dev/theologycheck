@@ -8,8 +8,8 @@ tags:
   - "Reformed"
 dropCapParagraph: 1
 author: "Jeff Chavez"
-updatedAt: "2026-11-05"
-updateCount: 5
+updatedAt: "2026-11-06"
+updateCount: 6
 ---
 
 In our local church, we are going through a study on Covenant Theology. It is such a refreshing study as our pastor seeks to faithfully teach us the importance of the biblical covenants and how different understandings of it have been articulated over the course of time within Reformed Theology. In our first session, our pastor quoted T.M. Moore to strengthen the reality that a study of the biblical and theological covenants is one of the most life-changing truths one can ever encounter.
@@ -36,7 +36,7 @@ This demonstrates the need for humility, deeper meditation of the Scriptural dat
 
 Our study together is itself a small example of that posture — learning from the tradition, holding convictions, and doing so with our brothers.
 
-Finally, our study shows that we do not study for the sake of studying theology but that we may grow in the grace and knowledge of the Only Redeemer of God's elect, the Mediator of the New Covenant of Grace, the LORD Jesus Christ.
+Finally, our study shows that we do not study for the sake of studying theology. The grow is to be like Him as we behold Him in our study, to grow in the grace and knowledge of the Only Redeemer of God's elect, the Mediator of the New Covenant of Grace, the LORD Jesus Christ.
 
 To the Triune God alone be the glory!
 
