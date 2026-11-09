@@ -151,8 +151,7 @@ export default function PostsFilter({ featured, rest, allTags }: Props) {
                 className={`archive-month-btn${activeMonth === ym ? ' active' : ''}`}
                 onClick={() => selectMonth(activeMonth === ym ? null : ym)}
               >
-                <span className="archive-month-name">{label}</span>
-                <span className="archive-month-count">{count}</span>
+                {label} <span className="archive-month-count">({count})</span>
               </button>
             </li>
           ))}
