@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="main">
+      <div className="home-wrapper">
         <PostsFilter featured={featured} rest={rest} allTags={allTags} />
         <div className="divider">✦ ✦ ✦</div>
       </div>
