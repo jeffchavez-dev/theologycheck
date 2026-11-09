@@ -8,15 +8,21 @@ tags:
   - "Reformed"
 dropCapParagraph: 1
 author: "Jeff Chavez"
-updatedAt: "2026-10-29"
-updateCount: 2
+updatedAt: "2026-11-09"
+updateCount: 3
 ---
 
 Sam Waldron, president of Covenant Baptist Theological Seminary, has publicly affirmed two conclusions that converge with the basic tenets of 1689 Federalism: that the New Covenant is the Covenant of Grace, and that the Old Covenant is, in some sense, a covenant of works. In his post "1689 Baptist Covenant Theology,"[^1] it is interesting to note how Waldron finds the response of those who equate the New Covenant with the Covenant of Grace "satisfying." He writes:
 
 > "…The question has been discussed among those who subscribe the 1689 whether this means that the New Covenant is the Covenant of Grace. I have come to that opinion myself. It is only in the New Covenant that the types and shadows pass away and the Redeemer and His redemptive work are accomplished. The difficulty with this view is that it seems to say that the covenant of grace was not in operation during the Old Testament. Since the 1689 plainly says that people were only ever saved by the grace of the Covenant of Grace, this is a problem. The response of those who equate the New Covenant with the Covenant of Grace is, however, satisfying. It is simply that the grace of the New Covenant was applied retrospectively by God in the Old Testament."
 
+Most of the time, when critics hear the assertion that "the New Covenant is the Covenant of Grace," they think that this means that there is no Covenant of Grace or even "grace" in the Old Covenant. *"How can the Old Covenant people be saved if there is no grace?"* the critics continued. But that is a response without understanding why the 1689 Federalists assert this and what it means. Sam Waldron is satisfied, however, that the assertion teaches that the New Covenant's grace is applied to God's people in the Old. This is far from saying that there is no grace in the Old. On the other hand, we can say that the Covenant of Grace is revealed in the Old without being formally covenanted. This is the exact statement of the 1689 Confession 7.2-3, "... it pleased the Lord to make a covenant of grace... This covenant is *revealed* in the gospel; first of all to Adam in the promise of salvation by the seed of the woman, and afterwards by farther steps, until the full discovery thereof was completed in the New Testament." The Covenant of Grace is the effectual power of the New Covenant working in the elect of the Old, making them *willing and able to believe*.
+
+On the distinction between the Old and New Covenants, he notes, 
+
 > "Not only are the two covenants made with two different peoples, they also are different kinds of covenants. I think it is clear that in some sense the Old Covenant must be described as a covenant of works. In using this language I do not at all intend to say that it was a republication of the Covenant of Works… I think that the characterization of the Old Covenant as a kind of covenant of works must be qualified in all sorts of ways, but I do not think that it can be avoided. Exodus 19:5–6 and Jeremiah 31:31–34 clearly distinguish the Old and New Covenants as two different covenants."
+
+In this regard, when critics hear the assertion that "the Old Covenant is a covenant of works," they think that this means that the Old Covenant saints were saved by works. This is not only contrary to the Baptist Confession but absolutely opposed to the gospel message in the Old. 
 
 The retrospective application of the New Covenant in the Old Testament, and the characterization of the Old Covenant as, in some sense, a covenant of works — these are conclusions that 1689 Federalists have consistently drawn from Scripture and the framers of the 1689 Confession. Here are some representative quotes:
 
