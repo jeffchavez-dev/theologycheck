@@ -35,6 +35,7 @@ export default function Header() {
             )}
           </div>
           <Link href="/study">Study</Link>
+          <Link href="/1689-federalism">1689 Federalism</Link>
           <SearchBar />
           <Link href="/about">About</Link>
         </nav>
