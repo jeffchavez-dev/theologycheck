@@ -74,6 +74,7 @@ const dated: [string, string][] = [
   ["2026-11-04-amillennialism-as-eschatology-of-victory", "amillennialism-as-eschatology-of-victory"],
   ["2026-11-05-covenant-theology-humility-and-conviction", "covenant-theology-humility-and-conviction"],
   ["2026-11-10-recovering-the-particular-baptist-view", "recovering-the-particular-baptist-view"],
+  ["2026-11-19-the-importance-of-christian-axioms", "the-importance-of-christian-axioms"],
 ];
 
 const nextConfig: NextConfig = {
