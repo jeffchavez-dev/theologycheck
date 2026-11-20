@@ -40,6 +40,7 @@ When drafting or editing a post, link key terms and topics to existing Theology 
 
 Known links to use:
 - "classical theism" → `/blog/what-is-classical-theism`
+- "1689 Federalism" / "1689 Federalist" → `/1689-federalism`
 
 Add new entries to this list whenever a new post is published that could serve as a destination for future cross-links.
 
