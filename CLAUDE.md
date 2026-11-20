@@ -2,6 +2,9 @@
 
 # Theology Check — Project Guide for Claude
 
+## Writing Style
+Before drafting or editing any blog post, article, or page copy, read **STYLE.md** in the project root. It governs voice, opening structure, quotation style, sentence rhythm, Latin/technical vocabulary, closings (doxology), and a list of patterns to avoid (anti-Claudisms). Follow it without being asked.
+
 ## Overview
 Reformed Baptist theology blog at **theologycheck.blog**.
 Stack: **Next.js 16 App Router** · TypeScript · Markdown posts · Vercel (hosting) · GitHub (storage)
