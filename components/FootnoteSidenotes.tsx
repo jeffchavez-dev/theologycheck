@@ -52,10 +52,8 @@ function positionSidenotes(article: HTMLElement, footnotesSection: HTMLElement) 
       toggle.className = 'fn-sidenote-toggle'
       toggle.textContent = 'Show more'
       toggle.addEventListener('click', () => {
-        const collapsed = sidenote.classList.toggle('fn-sidenote--collapsed')
-        toggle.textContent = collapsed ? 'Show more' : 'Show less'
-        // Reflow all sidenotes below this one
-        positionSidenotes(article, footnotesSection)
+        const isNowCollapsed = sidenote.classList.toggle('fn-sidenote--collapsed')
+        toggle.textContent = isNowCollapsed ? 'Show more' : 'Show less'
       })
       sidenote.appendChild(toggle)
     }
