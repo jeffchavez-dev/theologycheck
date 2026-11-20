@@ -2011,9 +2011,9 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   flex-direction: column;
   background: #fffaf2;
 }
-.fed-cap-card-header { padding: 0.85rem 1rem; background: #2a1a0e; }
-.fed-cap-card-name { font-family: 'Cinzel', serif; font-size: 15px; font-weight: 700; color: #fffaf2; display: block; }
-.fed-cap-card-ref { font-size: 11px; color: #c49a5a; font-style: italic; display: block; margin-top: 2px; }
+.fed-cap-card-header { padding: 0.85rem 1rem; background: #e8d5b8; border-bottom: 2px solid #c49a5a; }
+.fed-cap-card-name { font-family: 'Cinzel', serif; font-size: 15px; font-weight: 700; color: #2a1a0e; display: block; }
+.fed-cap-card-ref { font-size: 11px; color: #8b1a1a; font-style: italic; display: block; margin-top: 2px; }
 .fed-cap-section { padding: 0.75rem 1rem; border-top: 1px solid #e8d4b8; }
 .fed-cap-section-head {
   font-family: 'Cinzel', serif;
@@ -2115,6 +2115,9 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
     .fed-mem-side--old .fed-mem-ref { color: #8b6040; }
     .fed-mem-compare { border-color: #5a3a1a; }
     .fed-cap-card { background: #1a1008; border-color: #5a3a1a; }
+    .fed-cap-card-header { background: #2a1a0a; border-bottom-color: #5a3a1a; }
+    .fed-cap-card-name { color: #d4b896; }
+    .fed-cap-card-ref { color: #c49a5a; }
     .fed-cap-section { border-top-color: #2a1a0a; }
     .fed-cap-section li { color: #c0a880; }
     .fed-cap-points { background: #2a1a0a; }
@@ -2142,6 +2145,9 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   .fed-mem-side--old .fed-mem-ref { color: #8b6040; }
   .fed-mem-compare { border-color: #5a3a1a; }
   .fed-cap-card { background: #1a1008; border-color: #5a3a1a; }
+  .fed-cap-card-header { background: #2a1a0a; border-bottom-color: #5a3a1a; }
+  .fed-cap-card-name { color: #d4b896; }
+  .fed-cap-card-ref { color: #c49a5a; }
   .fed-cap-section { border-top-color: #2a1a0a; }
   .fed-cap-section li { color: #c0a880; }
   .fed-cap-points { background: #2a1a0a; }

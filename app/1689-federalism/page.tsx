@@ -37,9 +37,9 @@ const subPurpose = [
 
 // Diagram 4 — Westminster vs 1689
 const wm1689Subs = [
-  { name: 'Abrahamic', ref: 'Gen 15 · 17', y: 44 },
-  { name: 'Mosaic',    ref: 'Ex 19 · Deut', y: 96 },
-  { name: 'Davidic',  ref: '2 Sam 7',      y: 148 },
+  { name: 'Abrahamic', ref: 'Gen 15 · 17', y: 28 },
+  { name: 'Mosaic',    ref: 'Ex 19 · Deut', y: 80 },
+  { name: 'Davidic',  ref: '2 Sam 7',      y: 132 },
 ]
 
 // Diagram 5 — Covenant membership
@@ -316,14 +316,14 @@ export default function FederalismPage() {
               </g>
             ))}
             {/* Vertical convergence bar + arrow */}
-            <line x1="594" y1="63" x2="594" y2="167" className="fed-svg-dashed" strokeWidth="1.5" />
-            <line x1="594" y1="115" x2="628" y2="115" className="fed-svg-solid" strokeWidth="2" />
-            <polygon points="640,115 628,108 628,122" className="fed-svg-arrowhead" />
+            <line x1="594" y1="47" x2="594" y2="151" className="fed-svg-dashed" strokeWidth="1.5" />
+            <line x1="594" y1="99" x2="628" y2="99" className="fed-svg-solid" strokeWidth="2" />
+            <polygon points="640,99 628,92 628,106" className="fed-svg-arrowhead" />
             {/* NC = CoG */}
-            <rect x="642" y="85" width="158" height="60" rx="4" className="fed-cmp-nc-rect" />
-            <text x="721" y="107" textAnchor="middle" className="fed-cmp-nc-main">New Covenant</text>
-            <text x="721" y="123" textAnchor="middle" className="fed-cmp-nc-eq">= Covenant of Grace</text>
-            <text x="721" y="137" textAnchor="middle" className="fed-cmp-nc-ref">Jer 31 · Heb 8</text>
+            <rect x="642" y="69" width="158" height="60" rx="4" className="fed-cmp-nc-rect" />
+            <text x="721" y="91" textAnchor="middle" className="fed-cmp-nc-main">New Covenant</text>
+            <text x="721" y="107" textAnchor="middle" className="fed-cmp-nc-eq">= Covenant of Grace</text>
+            <text x="721" y="121" textAnchor="middle" className="fed-cmp-nc-ref">Jer 31 · Heb 8</text>
             <text x="613" y="186" textAnchor="middle" className="fed-cmp-caption">"distinct covenants, one purpose"</text>
           </svg>
         </div>
