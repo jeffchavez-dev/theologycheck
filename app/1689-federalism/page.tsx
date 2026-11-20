@@ -49,7 +49,7 @@ export default function FederalismPage() {
       </div>
 
       <p className="fed-page-intro">
-        1689 Federalism holds that the New Covenant <em>is</em> the Covenant of Grace — not merely its final administration. The Old Testament covenants were real and distinct, but subservient: they revealed and anticipated the covenant that Christ would enact. This is not a retrieval project. It is a way of reading Scripture.
+        I hold with the Particular Baptists that the New Covenant <em>is</em> the Covenant of Grace, not merely its final administration. The Old Testament covenants were real and distinct, but subservient: they revealed and anticipated the covenant that Christ would enact. This is not a retrieval project. It is a way of reading Scripture.
       </p>
 
       {/* ── Diagram 1: Covenant Timeline ── */}
@@ -60,7 +60,7 @@ export default function FederalismPage() {
           <span className="fed-figure-chip">Edward Hutchinson <em>· Particular Baptist, 1676</em></span>
         </div>
         <p className="fed-infographic-desc">
-          The substance of the Covenant of Grace — Christ — is present from Genesis 3:15. But a promise is not yet a covenant. The Old Testament covenants reveal and anticipate. The New Covenant <em>enacts</em>. John Owen and Edward Hutchinson both argued from the Greek of Hebrews 8:6: the New Covenant was <em>νενομοθέτηται</em> — legislated, ratified, brought formally into force.
+          The substance of the Covenant of Grace (Christ) is present from Genesis 3:15. But a promise is not yet a covenant. The Old Testament covenants reveal and anticipate. The New Covenant <em>enacts</em>. John Owen and Edward Hutchinson both argued from the Greek of Hebrews 8:6: the New Covenant was <em>νενομοθέτηται</em>: legislated, ratified, brought formally into force.
         </p>
 
         <div className="fed-svg-wrap">
@@ -106,7 +106,7 @@ export default function FederalismPage() {
           <span className="fed-figure-chip">Thomas Patient <em>· Particular Baptist, c. 1654</em></span>
         </div>
         <p className="fed-infographic-desc">
-          Hebrews 8:10–12, quoting Jeremiah 31:33–34, gives the definition of the New Covenant. These four promises are what the Covenant of Grace <em>is</em>. This is why the Particular Baptists equated the two — not by assertion, but by exegesis.
+          Hebrews 8:10–12, quoting Jeremiah 31:33–34, gives the definition of the New Covenant. These four promises are what the Covenant of Grace <em>is</em>. I find it remarkable that the Particular Baptists grounded this equation not in a bare assertion but in a close reading of this single passage. The identification is exegetical through and through.
         </p>
 
         <div className="fed-def-diagram">
@@ -141,7 +141,7 @@ export default function FederalismPage() {
           <span className="fed-figure-chip">Samuel Renihan <em>· 1689 Federalist, 2019</em></span>
         </div>
         <p className="fed-infographic-desc">
-          The Mosaic Covenant has a works-structure — <em>do this and live</em> — but it is neither the original Covenant of Works nor the Covenant of Grace. It is a third thing: the <em>foedus subserviens</em>. Works-featured in form; grace-serving in purpose.
+          The Mosaic Covenant has a works-structure (<em>do this and live</em>), but it is neither the original Covenant of Works nor the Covenant of Grace. It is a third thing: the <em>foedus subserviens</em>. Works-featured in form; grace-serving in purpose. This distinction, I am convinced, is one of the most clarifying contributions of the Particular Baptist tradition to Reformed covenant theology.
         </p>
 
         <div className="fed-rel-diagram">
