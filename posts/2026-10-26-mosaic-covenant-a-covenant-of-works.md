@@ -6,9 +6,11 @@ tags:
   - "Baptist"
   - "1689 Federalism"
   - "Reformed"
-dropCapParagraph: 1
 draft: true
+dropCapParagraph: 1
 author: "Jeff Chavez"
+updatedAt: "2026-11-20"
+updateCount: 1
 ---
 
 Can we call the Mosaic Covenant a republication of the Covenant of Works? I believe we can, and I believe the [1689 Federalist](/1689-federalism) tradition gives us the clearest account of why — not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture.
@@ -77,11 +79,11 @@ The confusion is understandable. When critics hear "covenant of works," they ass
 
 This is why the term *subservient covenant* (*foedus subserviens*), used by John Cameron, John Owen, Nehemiah Coxe, and Samuel Renihan, is more precise. It tells us not only what the Mosaic *looked like* but what it was *for*.
 
-Philip Cary pressed this point with uncommon sharpness:
+Philip Cary pressed this point:
 
 > "A subserviency in any thing to promote the ends of something else, does not make it to be the thing itself; the ends whereof are promoted thereby."[^19]
 
-Subservience is a relation, not an identity. The Mosaic promoted the ends of the Covenant of Grace without becoming the Covenant of Grace. That is exactly the precision the debate requires.
+Subservience is a relation, not an identity. The Mosaic promoted the ends of the Covenant of Grace without becoming the Covenant of Grace. That is exactly the precision the debate requires. Just because it promotes the ends of the Covenant of Grace doesn't make it an administration of it.
 
 John Owen states the distinction clearly:
 
