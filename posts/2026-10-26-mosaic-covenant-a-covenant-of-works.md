@@ -74,6 +74,12 @@ Renihan captures the terminological history behind this precision. The term *foe
 
 > "Based on the laws, the promises, and the threats of the covenant, the Mosaic Covenant was a covenant of works for life in the land of Canaan… Cameron stepped… to speak of the *vetus foedus sive foedus subserviens*, the old covenant or the subservient covenant."[^14]
 
+Pascal Denault, summarizing the distinctive logic of 1689 Federalism on precisely this point, draws the contrast with the Westminster model in terms that make clear why "subservient" does the work that "covenant of works" alone cannot:
+
+> "The 1689 federalism replaced the paedobaptist concept of one covenant of grace under different administrations by the one covenant of grace revealed by farther steps model. The understanding of this particular federalism is that the covenant of grace was not formally established during the O.T. period, but was revealed through the different covenants. Therefore, according to this view, the Old Covenant was both distinct from and subservient to the covenant of grace."[^15]
+
+The phrase "both distinct from *and* subservient to" is the precise two-sided claim. "Covenant of works" captures only the first half — the Mosaic is distinct from, and structurally unlike, the Covenant of Grace. "Subservient covenant" captures both halves at once: distinct from, yes, but also *serving*. That is the full 1689 Federalist position.
+
 To call the Mosaic a "subservient covenant," then, is not to retreat from the republication thesis — it is to state it more carefully. The Mosaic *has* works-features: it republishes the law's demand, imposes sanctions, and operates on a do-this-and-live logic for national tenure in Canaan. But those works-features were not ends in themselves. They were the form of a covenant whose substance was always elsewhere — in the promises given to Abraham, fulfilled in Christ, and ratified in the New Covenant blood of the Mediator.
 
 In simple conclusion, the republication of the Covenant of Works is not an error but a vital component of redemptive history that exposes man's unrighteousness and establishes the legal grounds for Christ's imputed righteousness. But the more precise and less easily misread term is *subservient covenant*: a covenant that is works-structured in form and grace-serving in purpose, a handmaid to the gospel it was always designed to introduce.
@@ -87,6 +93,7 @@ In simple conclusion, the republication of the Covenant of Works is not an error
 - Collins, Hercules. *Believers-Baptism from Heaven, and of Divine Institution*. London: J. Hancock, 1691.
 - Coxe, Nehemiah. *Vindiciae Veritatis, Or A Confutation of the Heresies and Gross Errours asserted By Thomas Collier*. London: Nathaniel Ponder, 1677.
 - Denault, Pascal. *The Distinctiveness of Baptist Covenant Theology: A Comparison Between Seventeenth-Century Particular Baptist and Paedobaptist Federalism*. Revised Edition. Birmingham, AL: Solid Ground Christian Books, 2013.
+- Denault, Pascal. "From the Covenant of Works to the Covenant of Grace." *Founders Journal* 108 (2017). https://founders.org/articles/from-the-covenant-of-works-to-the-covenant-of-grace/.
 - Johnson, Jeffrey D. *The Fatal Flaw of the Theology of the Federal Vision*. Conway, AR: Free Grace Press, 2014.
 - Keach, Benjamin. *The Everlasting Covenant, A Sweet Cordial for a Drooping Soul*. London: H. Barnard, 1693.
 - Owen, John. *A Continuation of the Exposition of the Epistle of Paul the Apostle to the Hebrews*. London: Nathaniel Ponder, 1680.
@@ -122,3 +129,5 @@ In simple conclusion, the republication of the Covenant of Works is not an error
 [^13]: Coxe, *Discourse of the Covenants*, p. 181.
 
 [^14]: Samuel D. Renihan, *The Mystery of Christ, His Covenant, and His Kingdom* (Cape Coral, FL: Founders Press, 2019).
+
+[^15]: Pascal Denault, "From the Covenant of Works to the Covenant of Grace," *Founders Journal* 108 (2017), https://founders.org/articles/from-the-covenant-of-works-to-the-covenant-of-grace/.
