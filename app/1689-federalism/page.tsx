@@ -56,7 +56,7 @@ export default function FederalismPage() {
   const posts = getAllPosts().filter(p => p.tags.includes('1689 Federalism'))
 
   return (
-    <div className="main">
+    <div className="fed-page-wrap">
       <div className="study-page-header">
         <div className="section-label">1689 Federalism</div>
         <h1 className="study-book-title">Particular Baptist Covenant Theology</h1>
@@ -72,8 +72,12 @@ export default function FederalismPage() {
       {/* ── Infographic 1: Revealed → Enacted ── */}
       <section className="fed-infographic-section">
         <h2 className="fed-infographic-title">One Covenant of Grace, Revealed by Steps</h2>
+        <div className="fed-figures-row">
+          <span className="fed-figure-chip">John Owen <em>· Hebrews Commentary, 1680</em></span>
+          <span className="fed-figure-chip">Edward Hutchinson <em>· Particular Baptist, 1676</em></span>
+        </div>
         <p className="fed-infographic-desc">
-          The substance of the Covenant of Grace — Christ — is present from Genesis 3:15. But a promise is not yet a covenant. The Old Testament covenants reveal and anticipate. The New Covenant <em>enacts</em>. Edward Hutchinson (1676) saw this in the Greek of Hebrews 8:6: the New Covenant was <em>νενομοθέτηται</em> — legislated, ratified, brought formally into force.
+          The substance of the Covenant of Grace — Christ — is present from Genesis 3:15. But a promise is not yet a covenant. The Old Testament covenants reveal and anticipate. The New Covenant <em>enacts</em>. John Owen and Edward Hutchinson both argued from the Greek of Hebrews 8:6: the New Covenant was <em>νενομοθέτηται</em> — legislated, ratified, brought formally into force. This verb marks the transition from promise to enacted covenant.
         </p>
 
         <div className="fed-timeline-wrap">
@@ -98,6 +102,10 @@ export default function FederalismPage() {
       {/* ── Infographic 2: NC = CoG ── */}
       <section className="fed-infographic-section">
         <h2 className="fed-infographic-title">The New Covenant Is the Covenant of Grace</h2>
+        <div className="fed-figures-row">
+          <span className="fed-figure-chip">Hercules Collins <em>· 1689 LBCF Signer</em></span>
+          <span className="fed-figure-chip">Thomas Patient <em>· Particular Baptist, c. 1654</em></span>
+        </div>
         <p className="fed-infographic-desc">
           Hebrews 8:10–12, quoting Jeremiah 31:33–34, gives the definition of the New Covenant. These four promises are what the Covenant of Grace <em>is</em>. This is why the Particular Baptists equated the two — not by assertion, but by exegesis.
         </p>
@@ -120,6 +128,11 @@ export default function FederalismPage() {
       {/* ── Infographic 3: Subservient Covenant ── */}
       <section className="fed-infographic-section">
         <h2 className="fed-infographic-title">The Mosaic Covenant: Subservient, Not Identical</h2>
+        <div className="fed-figures-row">
+          <span className="fed-figure-chip">John Cameron <em>· coined foedus subserviens, 1608</em></span>
+          <span className="fed-figure-chip">Nehemiah Coxe <em>· Particular Baptist, 1681</em></span>
+          <span className="fed-figure-chip">Samuel Renihan <em>· 1689 Federalist, 2019</em></span>
+        </div>
         <p className="fed-infographic-desc">
           The Mosaic Covenant has a works-structure — <em>do this and live</em> — but it is neither the original Covenant of Works nor the Covenant of Grace. It is a third thing: the <em>foedus subserviens</em>. Works-featured in form; grace-serving in purpose.
         </p>

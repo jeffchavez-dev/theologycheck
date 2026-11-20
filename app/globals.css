@@ -225,6 +225,9 @@ a { color: inherit; text-decoration: none; }
 /* Homepage wrapper — wider than .main to accommodate archive sidebar */
 .home-wrapper { max-width: 1080px; margin: 0 auto; padding: 2.5rem 1.5rem; }
 
+/* 1689 Federalism page — wider than .main for infographics */
+.fed-page-wrap { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+
 /* Homepage sidebar layout */
 .home-with-sidebar {
   display: grid;
@@ -1549,6 +1552,42 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   .fed-sub-col--right .fed-sub-list li { align-items: flex-start; text-align: left; }
   .fed-sub-center { order: -1; }
   .fed-infographic-section { padding: 1.25rem 1rem 1.5rem; }
+}
+
+/* 1689 Federalism — figure attribution chips */
+.fed-figures-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+.fed-figure-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid #c8a97a;
+  background: #fdf6ec;
+  color: #5a3e28;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.fed-figure-chip em {
+  color: #8a6040;
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: dark) {
+  .fed-figure-chip {
+    border-color: #6b4a2a;
+    background: #2a1a0a;
+    color: #d4b896;
+  }
+  .fed-figure-chip em { color: #a07858; }
 }
 
 /* 1689 Federalism post list */
