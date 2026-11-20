@@ -109,6 +109,16 @@ Soli Deo Trino Gloria!
 
 ---
 
+## Further Reading
+
+I mentioned John Cameron above as the coiner of *foedus subserviens*. For those who want to trace that history more rigorously, two resources are worth your time.
+
+Richard Muller's article in the *Mid-America Journal of Theology* examines Cameron's covenant theology within its broader Reformed scholastic context, showing that the subservient covenant concept was not a novelty but a carefully argued position within the stream of post-Reformation orthodoxy. Muller's precision here is valuable: he resists both the dismissal of Cameron as an outlier and the anachronistic reading of him through later lenses. [Read the article (PDF).](https://www.midamerica.edu/files/pdf/journal/17-muller.pdf)
+
+The Upper Register has a detailed study tracing the subservient covenant through Cameron, Samuel Bolton, and Moïse Amyraut, arguing that this 17th-century Reformed tradition anticipated much of what Meredith Kline later argued about the Mosaic economy. I find it a useful companion to the Particular Baptist sources, since it shows the view was not a Baptist invention but a retrieval from within the broader Reformed covenant tradition. [Read the study.](https://upper-register.com/topics/covenant-theology/subservient-cov/)
+
+---
+
 ## Works Cited
 
 - Barcellos, Richard C. "John Owen and New Covenant Theology." In *Covenant Theology: From Adam to Christ*, edited by Ronald D. Miller, James M. Renihan, and Francisco Orozco, 349–388. Palmdale, CA: Reformed Baptist Academic Press, 2005.
