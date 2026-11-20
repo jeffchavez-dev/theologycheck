@@ -2,6 +2,7 @@ import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import DownloadDiagram from '@/components/DownloadDiagram'
+import AdminGate from '@/components/AdminGate'
 
 export const metadata: Metadata = {
   title: '1689 Federalism',
@@ -109,6 +110,7 @@ export default function FederalismPage() {
   const posts = getAllPosts().filter(p => p.tags.includes('1689 Federalism'))
 
   return (
+    <AdminGate>
     <div className="fed-page-wrap">
       <div className="study-page-header">
         <div className="section-label">1689 Federalism</div>
@@ -456,5 +458,6 @@ export default function FederalismPage() {
         )}
       </section>
     </div>
+    </AdminGate>
   )
 }
