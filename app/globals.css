@@ -1554,6 +1554,264 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   .fed-infographic-section { padding: 1.25rem 1rem 1.5rem; }
 }
 
+/* ── 1689 Fed: SVG Timeline Diagram ── */
+.fed-svg-wrap { overflow-x: auto; margin: 1.25rem 0 0.5rem; }
+.fed-timeline-svg { display: block; width: 100%; min-width: 500px; height: auto; }
+
+.fed-svg-dashed { stroke: #c8a97a; }
+.fed-svg-solid  { stroke: #8b1a1a; }
+.fed-svg-arrowhead { fill: #8b1a1a; }
+
+.fed-svg-promise-node { fill: #fdf6ec; stroke: #c8a97a; stroke-width: 2; }
+.fed-svg-nc-node { fill: #8b1a1a; }
+.fed-svg-nc-ring { stroke: #8b1a1a; }
+
+.fed-svg-node-label {
+  fill: #3d2b1a;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+.fed-svg-node-ref {
+  fill: #8a6040;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 10px;
+  font-style: italic;
+}
+.fed-svg-nc-label {
+  fill: #8b1a1a;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+.fed-svg-nc-greek {
+  fill: #3d2b1a;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 11.5px;
+  font-style: italic;
+  font-weight: 600;
+}
+.fed-svg-nc-enacted {
+  fill: #8b1a1a;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+.fed-svg-legend {
+  fill: #8a6040;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 10px;
+  font-style: italic;
+}
+
+/* ── 1689 Fed: Definition Diagram (NC = CoG) ── */
+.fed-def-diagram { margin: 1rem 0; }
+
+.fed-def-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  border: 2px solid #8b1a1a;
+  border-radius: 6px;
+  padding: 0.9rem 1.5rem;
+  background: #fdf6ec;
+  text-align: center;
+}
+.fed-def-header-ref {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #8b1a1a;
+  letter-spacing: 0.03em;
+}
+.fed-def-header-eq {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.85rem;
+  color: #8a6040;
+  font-style: italic;
+}
+.fed-def-header-claim {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  color: #3d2b1a;
+  font-style: italic;
+}
+.fed-def-arrow-down {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #8b1a1a;
+  line-height: 1.6;
+}
+
+/* ── 1689 Fed: Relationship Diagram (Subservient) ── */
+.fed-rel-diagram { margin: 1rem 0; }
+
+.fed-rel-row {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 0.75rem;
+}
+.fed-rel-box {
+  flex: 1;
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.fed-rel-box--left  { border: 1.5px solid #c8a97a; background: #fdf8f0; }
+.fed-rel-box--center { border: 2px solid #8b1a1a; background: #fff8f5; flex: 1.3; }
+.fed-rel-box--right { border: 1.5px solid #c8a97a; background: #fdf8f0; }
+
+.fed-rel-box-title {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #3d2b1a;
+  line-height: 1.3;
+}
+.fed-rel-box--center .fed-rel-box-title { color: #8b1a1a; font-size: 0.8rem; }
+
+.fed-rel-box-latin {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: #8a6040;
+}
+.fed-rel-box-sub {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.75rem;
+  color: #8a6040;
+}
+
+.fed-rel-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.4rem;
+  flex-shrink: 0;
+  gap: 0.1rem;
+}
+.fed-rel-conn-label {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.7rem;
+  color: #8a6040;
+  font-style: italic;
+  white-space: nowrap;
+}
+.fed-rel-conn-line {
+  width: 100%;
+  min-width: 20px;
+  height: 1.5px;
+  background: #c8a97a;
+}
+.fed-rel-conn-arrow {
+  font-size: 1.2rem;
+  color: #c8a97a;
+  line-height: 0.8;
+}
+
+.fed-rel-detail {
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  gap: 0.75rem;
+  border-top: 1px solid #e8d8c0;
+  padding-top: 0.75rem;
+}
+.fed-rel-col {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.88rem;
+  color: #3d2b1a;
+}
+.fed-rel-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.fed-rel-col li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+.fed-rel-col li::before {
+  content: '—';
+  color: #c8a97a;
+  flex-shrink: 0;
+}
+.fed-rel-col--purpose { text-align: right; }
+.fed-rel-col--purpose li { flex-direction: row-reverse; }
+.fed-rel-col-head {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a6040;
+}
+.fed-rel-col-sep {
+  background: #e8d8c0;
+  align-self: stretch;
+  width: 1.5px;
+}
+
+/* Dark mode: SVG */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    .fed-svg-dashed { stroke: #9a7050; }
+    .fed-svg-solid  { stroke: #c04040; }
+    .fed-svg-arrowhead { fill: #c04040; }
+    .fed-svg-promise-node { fill: #2a1a0a; stroke: #9a7050; }
+    .fed-svg-nc-node { fill: #c04040; }
+    .fed-svg-nc-ring { stroke: #c04040; }
+    .fed-svg-node-label { fill: #d4b896; }
+    .fed-svg-node-ref { fill: #a07858; }
+    .fed-svg-nc-label { fill: #e06060; }
+    .fed-svg-nc-greek { fill: #d4b896; }
+    .fed-svg-nc-enacted { fill: #e06060; }
+    .fed-svg-legend { fill: #a07858; }
+
+    .fed-def-header { background: #2a1a0a; border-color: #c04040; }
+    .fed-def-header-ref { color: #e06060; }
+    .fed-def-header-eq { color: #a07858; }
+    .fed-def-header-claim { color: #d4b896; }
+    .fed-def-arrow-down { color: #c04040; }
+
+    .fed-rel-box--left, .fed-rel-box--right { border-color: #6b4a2a; background: #2a1a0a; }
+    .fed-rel-box--center { border-color: #c04040; background: #1f0f0f; }
+    .fed-rel-box-title { color: #d4b896; }
+    .fed-rel-box--center .fed-rel-box-title { color: #e06060; }
+    .fed-rel-box-latin, .fed-rel-box-sub { color: #a07858; }
+    .fed-rel-conn-label { color: #a07858; }
+    .fed-rel-conn-line { background: #6b4a2a; }
+    .fed-rel-conn-arrow { color: #9a7050; }
+    .fed-rel-detail { border-top-color: #3a2a1a; }
+    .fed-rel-col { color: #d4b896; }
+    .fed-rel-col li::before { color: #9a7050; }
+    .fed-rel-col-head { color: #a07858; }
+    .fed-rel-col-sep { background: #3a2a1a; }
+  }
+}
+
+/* Mobile: stack relationship diagram */
+@media (max-width: 640px) {
+  .fed-rel-row { flex-direction: column; gap: 0.5rem; }
+  .fed-rel-connector { flex-direction: row; padding: 0 0.5rem; }
+  .fed-rel-conn-line { width: 24px; height: 1.5px; }
+  .fed-rel-detail { grid-template-columns: 1fr; }
+  .fed-rel-col-sep { display: none; }
+  .fed-rel-col--purpose { text-align: left; }
+  .fed-rel-col--purpose li { flex-direction: row; }
+}
+
 /* 1689 Federalism — figure attribution chips */
 .fed-figures-row {
   display: flex;
