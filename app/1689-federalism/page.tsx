@@ -1,10 +1,11 @@
 import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import DownloadDiagram from '@/components/DownloadDiagram'
 
 export const metadata: Metadata = {
   title: '1689 Federalism',
-  description: 'An introduction to 1689 Federalism and the Particular Baptist understanding of the biblical covenants — with key infographics and articles.',
+  description: 'An introduction to 1689 Federalism and the Particular Baptist understanding of the biblical covenants, with key infographics and articles.',
 }
 
 const timelineNodes = [
@@ -15,16 +16,16 @@ const timelineNodes = [
 ]
 
 const ncPromises = [
-  { ref: 'Heb 8:10a', quote: '"I will put my laws into their minds, and write them on their hearts"', note: 'Internal transformation — not an external code but inward obedience' },
-  { ref: 'Heb 8:10b', quote: '"I will be their God, and they shall be my people"', note: 'Covenant union — personal, unbreakable, already accomplished' },
-  { ref: 'Heb 8:11',  quote: '"They shall all know me, from the least of them to the greatest"', note: 'Universal knowledge — no mediator required between members' },
-  { ref: 'Heb 8:12',  quote: '"I will be merciful toward their iniquities, and I will remember their sins no more"', note: 'Full and final forgiveness — not typified, but accomplished' },
+  { ref: 'Heb 8:10a', quote: '"I will put my laws into their minds, and write them on their hearts"', note: 'Internal transformation: not an external code but inward obedience' },
+  { ref: 'Heb 8:10b', quote: '"I will be their God, and they shall be my people"', note: 'Covenant union: personal, unbreakable, already accomplished' },
+  { ref: 'Heb 8:11',  quote: '"They shall all know me, from the least of them to the greatest"', note: 'Universal knowledge: no mediator required between members' },
+  { ref: 'Heb 8:12',  quote: '"I will be merciful toward their iniquities, and I will remember their sins no more"', note: 'Full and final forgiveness: not typified, but accomplished' },
 ]
 
 const subForm = [
   { text: '"Do this and live" sanctions', ref: 'Ex 19:5' },
   { text: 'National blessings and curses', ref: 'Deut 28' },
-  { text: 'Could be — and was — broken', ref: 'Jer 31:32' },
+  { text: 'Could be, and was, broken', ref: 'Jer 31:32' },
   { text: 'Ministration of condemnation', ref: '2 Cor 3:9' },
 ]
 
@@ -44,17 +45,17 @@ const wm1689Subs = [
 
 // Diagram 5 — Covenant membership
 const oldCovFeatures = [
-  { text: 'Entry by circumcision — a physical, outward sign', ref: 'Gen 17:12' },
+  { text: 'Entry by circumcision, a physical, outward sign', ref: 'Gen 17:12' },
   { text: 'Mixed membership: regenerate and unregenerate together', ref: 'Rom 9:6–7' },
-  { text: 'National and ethnic — the people of Israel', ref: 'Ex 19:5' },
+  { text: 'National and ethnic: the people of Israel', ref: 'Ex 19:5' },
   { text: 'Law on stone tablets, imposed externally', ref: 'Ex 31:18' },
   { text: 'Many members did not personally know the Lord', ref: 'Jer 31:34' },
 ]
 const newCovFeatures = [
   { text: 'Entry by faith and profession, sealed in baptism', ref: 'Acts 2:38' },
-  { text: 'Regenerate only — all members truly know the Lord', ref: 'Heb 8:11' },
-  { text: 'All nations — no ethnic boundary', ref: 'Gal 3:28' },
-  { text: 'Law on the heart — inward transformation', ref: 'Heb 8:10' },
+  { text: 'Regenerate only: all members truly know the Lord', ref: 'Heb 8:11' },
+  { text: 'All nations: no ethnic boundary', ref: 'Gal 3:28' },
+  { text: 'Law on the heart: inward transformation', ref: 'Heb 8:10' },
   { text: '"They shall all know me, from least to greatest"', ref: 'Jer 31:34' },
 ]
 
@@ -70,7 +71,7 @@ const covenantCapabilities = [
     ],
     limit: [
       'Could not secure eternal inheritance by circumcision',
-      'Did not justify — faith counted Abraham as righteous (Gen 15:6)',
+      'Did not justify; faith counted Abraham as righteous (Gen 15:6)',
     ],
     points: 'Christ as the true Seed in whom all nations are blessed (Gal 3:16)',
   },
@@ -83,10 +84,10 @@ const covenantCapabilities = [
       'The legal frame for the second Adam to be born under the law',
     ],
     limit: [
-      'Could not give life — the law is not of faith (Gal 3:21)',
+      'Could not give life: the law is not of faith (Gal 3:21)',
       'Could not write the law on the heart or finally forgive (Heb 10:1–4)',
     ],
-    points: 'Christ fulfilling every demand the law made on our behalf (Rom 8:3–4; Gal 4:4)',
+    points: 'Christ born under the law to redeem those under it: the Mosaic typified the terms he would fulfill in the Covenant of Redemption (Gal 4:4; Rom 8:3–4)',
   },
   {
     name: 'Davidic',
@@ -98,7 +99,7 @@ const covenantCapabilities = [
     ],
     limit: [
       'Could not secure an eternal kingdom through any earthly son',
-      'Every king in the line eventually died — the throne could not hold',
+      'Every king in the line eventually died; the throne could not hold',
     ],
     points: 'Christ as the eternal Son of David, reigning forever (Luke 1:32–33)',
   },
@@ -132,7 +133,7 @@ export default function FederalismPage() {
           The substance of the Covenant of Grace (Christ) is present from Genesis 3:15. But a promise is not yet a covenant. The Old Testament covenants reveal and anticipate. The New Covenant <em>enacts</em>. John Owen and Edward Hutchinson both argued from the Greek of Hebrews 8:6: the New Covenant was <em>νενομοθέτηται</em>: legislated, ratified, brought formally into force.
         </p>
 
-        <div className="fed-svg-wrap">
+        <div className="fed-svg-wrap" id="diagram-timeline">
           <svg viewBox="0 0 900 190" xmlns="http://www.w3.org/2000/svg" className="fed-timeline-svg" aria-label="Covenant timeline from Fall to New Covenant">
             {/* Dashed promise track */}
             <line x1="62" y1="90" x2="556" y2="90" strokeDasharray="7 4" strokeWidth="2" className="fed-svg-dashed" />
@@ -165,6 +166,7 @@ export default function FederalismPage() {
             <text x="304" y="172" className="fed-svg-legend">Covenant Enacted</text>
           </svg>
         </div>
+        <DownloadDiagram targetId="diagram-timeline" filename="covenant-timeline" />
       </section>
 
       {/* ── Diagram 2: NC = CoG ── */}
@@ -178,7 +180,7 @@ export default function FederalismPage() {
           Hebrews 8:10–12, quoting Jeremiah 31:33–34, gives the definition of the New Covenant. These four promises are what the Covenant of Grace <em>is</em>. I find it remarkable that the Particular Baptists grounded this equation not in a bare assertion but in a close reading of this single passage. The identification is exegetical through and through.
         </p>
 
-        <div className="fed-def-diagram">
+        <div className="fed-def-diagram" id="diagram-nc-cog">
           <div className="fed-def-header">
             <span className="fed-def-header-ref">Hebrews 8:10–12</span>
             <span className="fed-def-header-eq">defines</span>
@@ -199,6 +201,7 @@ export default function FederalismPage() {
         <p className="fed-infographic-footer">
           "Let us give a Definition of the Covenant of Grace… The Sum of this Covenant we have in Heb. 8. 10, 11, 12." — Hercules Collins (1695)
         </p>
+        <DownloadDiagram targetId="diagram-nc-cog" filename="new-covenant-covenant-of-grace" />
       </section>
 
       {/* ── Diagram 3: Subservient Covenant ── */}
@@ -213,7 +216,11 @@ export default function FederalismPage() {
           The Mosaic Covenant has a works-structure (<em>do this and live</em>), but it is neither the original Covenant of Works nor the Covenant of Grace. It is a third thing: the <em>foedus subserviens</em>. Works-featured in form; grace-serving in purpose. This distinction, I am convinced, is one of the most clarifying contributions of the Particular Baptist tradition to Reformed covenant theology.
         </p>
 
-        <div className="fed-rel-diagram">
+        <blockquote className="fed-infographic-pullquote">
+          "A subserviency in any thing to promote the ends of something else, does not make it to be the thing itself; the ends whereof are promoted thereby." — Philip Cary, <em>A Solemn Call</em> (1690)
+        </blockquote>
+
+        <div className="fed-rel-diagram" id="diagram-subservient">
           {/* Three-box relationship row */}
           <div className="fed-rel-row">
             <div className="fed-rel-box fed-rel-box--left">
@@ -266,6 +273,7 @@ export default function FederalismPage() {
         <p className="fed-infographic-footer">
           "The former was added and made subservient to the latter's great ends… which was designed by God only to be a handmaid to it." — Nehemiah Coxe
         </p>
+        <DownloadDiagram targetId="diagram-subservient" filename="mosaic-subservient-covenant" />
       </section>
 
       {/* ── Diagram 4: Westminster vs 1689 ── */}
@@ -278,7 +286,7 @@ export default function FederalismPage() {
         <p className="fed-infographic-desc">
           Both traditions confess one Covenant of Grace. The difference is structural. Westminster sees the Old and New Testaments as two administrations of a single covenant. 1689 Federalism sees the Old Testament covenants as distinct and subservient: real covenants in their own right, each designed to serve the one Covenant of Grace that Christ would formally enact in the New Covenant.
         </p>
-        <div className="fed-compare-svg-wrap">
+        <div className="fed-compare-svg-wrap" id="diagram-comparison">
           <svg viewBox="0 0 820 215" xmlns="http://www.w3.org/2000/svg" className="fed-compare-svg" aria-label="Diagram comparing Westminster and 1689 covenant models">
             {/* ── LEFT: Westminster ── */}
             <text x="195" y="18" textAnchor="middle" className="fed-cmp-heading">Westminster Federalism</text>
@@ -327,6 +335,7 @@ export default function FederalismPage() {
             <text x="613" y="186" textAnchor="middle" className="fed-cmp-caption">"distinct covenants, one purpose"</text>
           </svg>
         </div>
+        <DownloadDiagram targetId="diagram-comparison" filename="westminster-vs-1689-federalism" />
       </section>
 
       {/* ── Diagram 5: Covenant Membership ── */}
@@ -339,7 +348,7 @@ export default function FederalismPage() {
         <p className="fed-infographic-desc">
           If the New Covenant is the Covenant of Grace itself and not merely its latest administration, then its membership is not national or ethnic but spiritual. This is one of the most practically significant implications of the 1689 Federalist reading: all who are in the New Covenant truly and personally know the Lord. The community of the New Covenant is therefore constituted differently from the community of the Old.
         </p>
-        <div className="fed-mem-compare">
+        <div className="fed-mem-compare" id="diagram-membership">
           <div className="fed-mem-side fed-mem-side--old">
             <span className="fed-mem-head">Old Covenant</span>
             <span className="fed-mem-sign">Circumcision</span>
@@ -369,11 +378,12 @@ export default function FederalismPage() {
         <p className="fed-infographic-footer">
           "The New Covenant is not like the old covenant which was made with Israel, that national church... It is a spiritual covenant, made only with the spiritual seed." — Benjamin Keach
         </p>
+        <DownloadDiagram targetId="diagram-membership" filename="old-new-covenant-membership" />
       </section>
 
       {/* ── Diagram 6: Covenant Capabilities ── */}
       <section className="fed-infographic-section">
-        <h2 className="fed-infographic-title">What Each Covenant Could — and Could Not — Do</h2>
+        <h2 className="fed-infographic-title">What Each Covenant Could and Could Not Do</h2>
         <div className="fed-figures-row">
           <span className="fed-figure-chip">Nehemiah Coxe <em>· Discourse of the Covenants, 1681</em></span>
           <span className="fed-figure-chip">John Owen <em>· Hebrews Commentary, 1680</em></span>
@@ -381,7 +391,7 @@ export default function FederalismPage() {
         <p className="fed-infographic-desc">
           Every Old Testament covenant gave something real. None gave everything. Each had a form suited to its purpose and a limitation that pointed beyond itself to Christ. This is precisely why the Particular Baptists called them subservient: not because they were false, but because they were temporary instruments designed to serve a greater covenant they could not themselves become.
         </p>
-        <div className="fed-cap-grid">
+        <div className="fed-cap-grid" id="diagram-capabilities">
           {covenantCapabilities.map((cov, i) => (
             <div key={i} className="fed-cap-card">
               <div className="fed-cap-card-header">
@@ -403,6 +413,7 @@ export default function FederalismPage() {
             </div>
           ))}
         </div>
+        <DownloadDiagram targetId="diagram-capabilities" filename="covenant-capabilities" />
       </section>
 
       {/* ── Study Guide ── */}
