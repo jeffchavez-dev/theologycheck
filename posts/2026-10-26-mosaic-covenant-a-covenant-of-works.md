@@ -22,6 +22,28 @@ Can we call the Mosaic Covenant a republication of the Covenant of Works? The 16
 
 ## The Nature and Purpose of the Law at Sinai
 
+Scripture itself gives three distinct reasons for the giving of the law at Sinai. Each one answers a different question about why God placed Israel under this covenant structure — and each one points beyond the covenant to Christ.
+
+### 1. To Expose and Condemn Sin (Gal. 3:19, 22; 2 Cor. 3:7–9; Rom. 3:19–20)
+
+The law was not given as a renewed offer of life but as a prosecutor. Paul's argument in Galatians is explicit: the law "was added because of transgressions" (Gal. 3:19) — not to provide a way through them, but to make them visible and to stop every mouth before God. "The Scripture imprisoned everything under sin" (Gal. 3:22); the law does not unlock the prison, it reveals that the prisoner is already there. So Paul again in Romans: "Now we know that whatever the law says it speaks to those who are under the law, so that every mouth may be stopped and the whole world may be held accountable to God. For by works of the law no human being will be justified in his sight, since through the law comes knowledge of sin" (Rom. 3:19–20).
+
+The same function is what gives Paul's contrast in 2 Corinthians its force: the old covenant is a "ministry of condemnation" and a "ministry of death" (2 Cor. 3:7–9) — not because it was wicked, but because that is precisely what a covenant of perfect demand, imposed on a people utterly incapable of meeting it, must produce. It was given to manifest guilt, not to relieve it.
+
+### 2. A Schoolmaster to Drive Sinners to Christ (Gal. 3:24; Heb. 10:1)
+
+The law's condemning work was not its final word. Paul calls the law a *paidagogos* — a guardian or schoolmaster — "until Christ came, in order that we might be justified by faith" (Gal. 3:24). The condemned sinner, finding no relief in the law's demands, is driven to look elsewhere. The law evacuates the sinner of all self-righteousness and points, by its very severity, to the one who could fulfill what no Israelite could.
+
+The writer of Hebrews makes the same point from the sacrificial system: "the law has but a shadow of the good things to come instead of the true form of these realities" (Heb. 10:1). The repeated offerings could never finally atone — by design. They trained Israel to see the inadequacy of every human approach to God and to hold out for the substance the shadows promised.
+
+### 3. Legal Provision for Christ Born Under the Law (Gal. 4:4; Rom. 8:3–4)
+
+There is a third function, peculiar to the 1689 Federalist reading: the Sinai covenant provided the legal economy necessary for Christ to fulfill the law on behalf of the elect. "When the fullness of time had come, God sent forth his Son, born of woman, born under the law, to redeem those who were under the law" (Gal. 4:4). Christ was not merely born into a cultural context — he was born into a specific covenantal obligation. He could only fulfill and exhaust the law's demands by standing formally under them.
+
+Paul draws the conclusion in Romans 8: "God has done what the law, weakened by the flesh, could not do. By sending his own Son in the likeness of sinful flesh and for sin, he condemned sin in the flesh, in order that the righteous requirement of the law might be fulfilled in us" (Rom. 8:3–4). The law's righteous requirement was not abolished — it was met, in Christ, for those who are in him.
+
+These three scriptural purposes — condemnation, pedagogy, legal provision for the second Adam — are what the Particular Baptists had in view when they called the Mosaic Covenant a republication of the Covenant of Works. The following quotations develop each of these in turn.
+
 > "True, there was another Edition or Administration of it [the covenant of works] given to Israel, which tho' it was a covenant of works, i.e. *Do this and live*, yet it was not given by the Lord to the same End and Design, as the Covenant was given to our first parents, viz. It was not given to justifie them, or to give them eternal Life."
 >
 > — Benjamin Keach, *The Everlasting Covenant*[^3]
