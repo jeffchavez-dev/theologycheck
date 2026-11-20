@@ -47,6 +47,10 @@ These three scriptural purposes — condemnation, pedagogy, and legal provision 
 >
 > — Benjamin Keach, *The Everlasting Covenant*[^3]
 
+> "Indeed, I think, one great end of God in bringing Israel under this Sinai covenant, was to make way for Christ, his being born or made under the law, in order to the fulfilling of it for us. I do not see how (by any visible dispensation) Jesus Christ could have been born actually under the law, if this Sinai covenant had not been made."
+>
+> — Samuel Petto, quoted in Pascal Denault, *The Distinctiveness of Baptist Covenant Theology*[^4]
+
 > "In the Mosaical economy, there was such a remembrance of the Covenant of Works revived, with the terms and sanction thereof; as that hereupon it is called the ministration of condemnation, and did engender unto bondage... But yet the promise of salvation by the Messiah... was not enervated thereby; but even this was laid in a subserviency to Gospel ends."
 >
 > — Nehemiah Coxe, *Vindiciae Veritatis*[^5]
@@ -62,10 +66,6 @@ These three scriptural purposes — condemnation, pedagogy, and legal provision 
 > "An open manifestation of the covenant of works was needed, not to kill, but to show all the world — Israel in particular — that they were already dead, sick, and in need of a physician... It did not bring about man's condemnation, but the manifestation of man's condemnation."
 >
 > — Jeffrey D. Johnson, *The Fatal Flaw of the Theology of the Federal Vision*[^8]
-
-> "Indeed, I think, one great end of God in bringing Israel under this Sinai covenant, was to make way for Christ, his being born or made under the law, in order to the fulfilling of it for us. I do not see how (by any visible dispensation) Jesus Christ could have been born actually under the law, if this Sinai covenant had not been made."
->
-> — Samuel Petto, quoted in Pascal Denault, *The Distinctiveness of Baptist Covenant Theology*[^4]
 
 ## A More Precise Term: The Subservient Covenant
 
