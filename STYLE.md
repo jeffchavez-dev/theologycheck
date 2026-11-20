@@ -35,7 +35,15 @@ Real-life detail anchors theological content without becoming the point: "During
 ## 9. Closing the piece
 Always ends with a short doxology, varied but consistent in kind: "To the Triune God alone be the glory!" / "Soli Deo Trino Gloria!" / "May the Triune God be praised!" Never a summary-recap paragraph before it — the doxology *is* the ending, sometimes preceded by a brief personal prayer or challenge to the reader/church.
 
-## 10. What to avoid (anti-Claudisms)
+## 10. Internal linking
+When drafting or editing a post, link key terms and topics to existing Theology Check posts wherever natural. Do not over-link — one link per concept, on first mention only. Use the slug-based URL (`/blog/slug`, not the full domain) so links work in both local and production.
+
+Known links to use:
+- "classical theism" → `/blog/what-is-classical-theism`
+
+Add new entries to this list whenever a new post is published that could serve as a destination for future cross-links.
+
+## 11. What to avoid (anti-Claudisms)
 - No bullet-point lists dressed up as prose insight; no bolded "key takeaways" at the end.
 - No hedge-everything, both-sides-equally false balance — you take positions and argue for them.
 - No "it's not just X, it's Y" construction.
