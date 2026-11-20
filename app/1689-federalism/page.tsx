@@ -35,6 +35,75 @@ const subPurpose = [
   { text: 'Frame for Christ born under the law', ref: 'Gal 4:4' },
 ]
 
+// Diagram 4 — Westminster vs 1689
+const wm1689Subs = [
+  { name: 'Abrahamic', ref: 'Gen 15 · 17', y: 44 },
+  { name: 'Mosaic',    ref: 'Ex 19 · Deut', y: 96 },
+  { name: 'Davidic',  ref: '2 Sam 7',      y: 148 },
+]
+
+// Diagram 5 — Covenant membership
+const oldCovFeatures = [
+  { text: 'Entry by circumcision — a physical, outward sign', ref: 'Gen 17:12' },
+  { text: 'Mixed membership: regenerate and unregenerate together', ref: 'Rom 9:6–7' },
+  { text: 'National and ethnic — the people of Israel', ref: 'Ex 19:5' },
+  { text: 'Law on stone tablets, imposed externally', ref: 'Ex 31:18' },
+  { text: 'Many members did not personally know the Lord', ref: 'Jer 31:34' },
+]
+const newCovFeatures = [
+  { text: 'Entry by faith and profession, sealed in baptism', ref: 'Acts 2:38' },
+  { text: 'Regenerate only — all members truly know the Lord', ref: 'Heb 8:11' },
+  { text: 'All nations — no ethnic boundary', ref: 'Gal 3:28' },
+  { text: 'Law on the heart — inward transformation', ref: 'Heb 8:10' },
+  { text: '"They shall all know me, from least to greatest"', ref: 'Jer 31:34' },
+]
+
+// Diagram 6 — Covenant capabilities
+const covenantCapabilities = [
+  {
+    name: 'Abrahamic',
+    ref: 'Gen 15 · 17',
+    gave: [
+      'Promised seed, land, and blessing to Abraham',
+      'Foundation of the nation of Israel',
+      'Circumcision as the sign of national covenant membership',
+    ],
+    limit: [
+      'Could not secure eternal inheritance by circumcision',
+      'Did not justify — faith counted Abraham as righteous (Gen 15:6)',
+    ],
+    points: 'Christ as the true Seed in whom all nations are blessed (Gal 3:16)',
+  },
+  {
+    name: 'Mosaic',
+    ref: 'Ex 19 · Deut',
+    gave: [
+      'National law governing Israel\'s life in Canaan',
+      'A sacrificial system of types and shadows pointing forward',
+      'The legal frame for the second Adam to be born under the law',
+    ],
+    limit: [
+      'Could not give life — the law is not of faith (Gal 3:21)',
+      'Could not write the law on the heart or finally forgive (Heb 10:1–4)',
+    ],
+    points: 'Christ fulfilling every demand the law made on our behalf (Rom 8:3–4; Gal 4:4)',
+  },
+  {
+    name: 'Davidic',
+    ref: '2 Sam 7 · Ps 89',
+    gave: [
+      'Promise of an eternal throne for the line of David',
+      'A royal dynasty typifying the coming eternal King',
+      'The hope of a Son whose kingdom would have no end',
+    ],
+    limit: [
+      'Could not secure an eternal kingdom through any earthly son',
+      'Every king in the line eventually died — the throne could not hold',
+    ],
+    points: 'Christ as the eternal Son of David, reigning forever (Luke 1:32–33)',
+  },
+]
+
 export default function FederalismPage() {
   const posts = getAllPosts().filter(p => p.tags.includes('1689 Federalism'))
 
@@ -54,7 +123,7 @@ export default function FederalismPage() {
 
       {/* ── Diagram 1: Covenant Timeline ── */}
       <section className="fed-infographic-section">
-        <h2 className="fed-infographic-title">One Covenant of Grace, Revealed by Steps</h2>
+        <h2 className="fed-infographic-title">One Covenant of Grace, Revealed by Farther Steps</h2>
         <div className="fed-figures-row">
           <span className="fed-figure-chip">John Owen <em>· Hebrews Commentary, 1680</em></span>
           <span className="fed-figure-chip">Edward Hutchinson <em>· Particular Baptist, 1676</em></span>
@@ -197,6 +266,157 @@ export default function FederalismPage() {
         <p className="fed-infographic-footer">
           "The former was added and made subservient to the latter's great ends… which was designed by God only to be a handmaid to it." — Nehemiah Coxe
         </p>
+      </section>
+
+      {/* ── Diagram 4: Westminster vs 1689 ── */}
+      <section className="fed-infographic-section">
+        <h2 className="fed-infographic-title">Westminster vs. 1689: Two Models of Covenant</h2>
+        <div className="fed-figures-row">
+          <span className="fed-figure-chip">Westminster Confession <em>· 1647</em></span>
+          <span className="fed-figure-chip">1689 London Baptist Confession <em>· 1689</em></span>
+        </div>
+        <p className="fed-infographic-desc">
+          Both traditions confess one Covenant of Grace. The difference is structural. Westminster sees the Old and New Testaments as two administrations of a single covenant. 1689 Federalism sees the Old Testament covenants as distinct and subservient: real covenants in their own right, each designed to serve the one Covenant of Grace that Christ would formally enact in the New Covenant.
+        </p>
+        <div className="fed-compare-svg-wrap">
+          <svg viewBox="0 0 820 215" xmlns="http://www.w3.org/2000/svg" className="fed-compare-svg" aria-label="Diagram comparing Westminster and 1689 covenant models">
+            {/* ── LEFT: Westminster ── */}
+            <text x="195" y="18" textAnchor="middle" className="fed-cmp-heading">Westminster Federalism</text>
+            <rect x="45" y="28" width="300" height="42" rx="4" className="fed-cmp-cog-rect" />
+            <text x="195" y="46" textAnchor="middle" className="fed-cmp-cog-label">Covenant of Grace</text>
+            <text x="195" y="62" textAnchor="middle" className="fed-cmp-cog-sub">one covenant</text>
+            {/* Fork down */}
+            <line x1="195" y1="70" x2="195" y2="86" className="fed-svg-solid" strokeWidth="1.5" />
+            <line x1="118" y1="86" x2="272" y2="86" className="fed-svg-solid" strokeWidth="1.5" />
+            <line x1="118" y1="86" x2="118" y2="100" className="fed-svg-solid" strokeWidth="1.5" />
+            <line x1="272" y1="86" x2="272" y2="100" className="fed-svg-solid" strokeWidth="1.5" />
+            {/* OT Admin */}
+            <rect x="48" y="100" width="140" height="58" rx="4" className="fed-cmp-admin-rect" />
+            <text x="118" y="122" textAnchor="middle" className="fed-cmp-admin-label">Old Testament</text>
+            <text x="118" y="136" textAnchor="middle" className="fed-cmp-admin-sub">Administration</text>
+            <text x="118" y="150" textAnchor="middle" className="fed-cmp-admin-ref">Gen – Mal</text>
+            {/* NT Admin */}
+            <rect x="202" y="100" width="140" height="58" rx="4" className="fed-cmp-admin-rect" />
+            <text x="272" y="122" textAnchor="middle" className="fed-cmp-admin-label">New Testament</text>
+            <text x="272" y="136" textAnchor="middle" className="fed-cmp-admin-sub">Administration</text>
+            <text x="272" y="150" textAnchor="middle" className="fed-cmp-admin-ref">Matt – Rev</text>
+            <text x="195" y="186" textAnchor="middle" className="fed-cmp-caption">"one covenant, two forms"</text>
+
+            {/* ── DIVIDER ── */}
+            <line x1="405" y1="8" x2="405" y2="207" className="fed-cmp-divider" strokeDasharray="4 3" />
+
+            {/* ── RIGHT: 1689 ── */}
+            <text x="613" y="18" textAnchor="middle" className="fed-cmp-heading">1689 Federalism</text>
+            {wm1689Subs.map((c, i) => (
+              <g key={i}>
+                <rect x="420" y={c.y} width="148" height="38" rx="4" className="fed-cmp-sub-rect" />
+                <text x="494" y={c.y + 16} textAnchor="middle" className="fed-cmp-sub-label">{c.name}</text>
+                <text x="494" y={c.y + 29} textAnchor="middle" className="fed-cmp-sub-ref">{c.ref}</text>
+                <line x1="568" y1={c.y + 19} x2="594" y2={c.y + 19} className="fed-svg-dashed" strokeWidth="1.5" />
+              </g>
+            ))}
+            {/* Vertical convergence bar + arrow */}
+            <line x1="594" y1="63" x2="594" y2="167" className="fed-svg-dashed" strokeWidth="1.5" />
+            <line x1="594" y1="115" x2="628" y2="115" className="fed-svg-solid" strokeWidth="2" />
+            <polygon points="640,115 628,108 628,122" className="fed-svg-arrowhead" />
+            {/* NC = CoG */}
+            <rect x="642" y="85" width="158" height="60" rx="4" className="fed-cmp-nc-rect" />
+            <text x="721" y="107" textAnchor="middle" className="fed-cmp-nc-main">New Covenant</text>
+            <text x="721" y="123" textAnchor="middle" className="fed-cmp-nc-eq">= Covenant of Grace</text>
+            <text x="721" y="137" textAnchor="middle" className="fed-cmp-nc-ref">Jer 31 · Heb 8</text>
+            <text x="613" y="186" textAnchor="middle" className="fed-cmp-caption">"distinct covenants, one purpose"</text>
+          </svg>
+        </div>
+      </section>
+
+      {/* ── Diagram 5: Covenant Membership ── */}
+      <section className="fed-infographic-section">
+        <h2 className="fed-infographic-title">Who Belongs? Old Covenant vs. New Covenant Membership</h2>
+        <div className="fed-figures-row">
+          <span className="fed-figure-chip">Nehemiah Coxe <em>· Discourse of the Covenants, 1681</em></span>
+          <span className="fed-figure-chip">Benjamin Keach <em>· The Everlasting Covenant, 1693</em></span>
+        </div>
+        <p className="fed-infographic-desc">
+          If the New Covenant is the Covenant of Grace itself and not merely its latest administration, then its membership is not national or ethnic but spiritual. This is one of the most practically significant implications of the 1689 Federalist reading: all who are in the New Covenant truly and personally know the Lord. The community of the New Covenant is therefore constituted differently from the community of the Old.
+        </p>
+        <div className="fed-mem-compare">
+          <div className="fed-mem-side fed-mem-side--old">
+            <span className="fed-mem-head">Old Covenant</span>
+            <span className="fed-mem-sign">Circumcision</span>
+            <ul className="fed-mem-list">
+              {oldCovFeatures.map((f, i) => (
+                <li key={i} className="fed-mem-item">
+                  <span className="fed-mem-text">{f.text}</span>
+                  <span className="fed-mem-ref">{f.ref}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="fed-mem-divider" />
+          <div className="fed-mem-side fed-mem-side--new">
+            <span className="fed-mem-head">New Covenant</span>
+            <span className="fed-mem-sign">Baptism</span>
+            <ul className="fed-mem-list">
+              {newCovFeatures.map((f, i) => (
+                <li key={i} className="fed-mem-item">
+                  <span className="fed-mem-text">{f.text}</span>
+                  <span className="fed-mem-ref">{f.ref}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <p className="fed-infographic-footer">
+          "The New Covenant is not like the old covenant which was made with Israel, that national church... It is a spiritual covenant, made only with the spiritual seed." — Benjamin Keach
+        </p>
+      </section>
+
+      {/* ── Diagram 6: Covenant Capabilities ── */}
+      <section className="fed-infographic-section">
+        <h2 className="fed-infographic-title">What Each Covenant Could — and Could Not — Do</h2>
+        <div className="fed-figures-row">
+          <span className="fed-figure-chip">Nehemiah Coxe <em>· Discourse of the Covenants, 1681</em></span>
+          <span className="fed-figure-chip">John Owen <em>· Hebrews Commentary, 1680</em></span>
+        </div>
+        <p className="fed-infographic-desc">
+          Every Old Testament covenant gave something real. None gave everything. Each had a form suited to its purpose and a limitation that pointed beyond itself to Christ. This is precisely why the Particular Baptists called them subservient: not because they were false, but because they were temporary instruments designed to serve a greater covenant they could not themselves become.
+        </p>
+        <div className="fed-cap-grid">
+          {covenantCapabilities.map((cov, i) => (
+            <div key={i} className="fed-cap-card">
+              <div className="fed-cap-card-header">
+                <span className="fed-cap-card-name">{cov.name}</span>
+                <span className="fed-cap-card-ref">{cov.ref}</span>
+              </div>
+              <div className="fed-cap-section fed-cap-gave">
+                <div className="fed-cap-section-head">Gave</div>
+                <ul>{cov.gave.map((item, j) => <li key={j}>{item}</li>)}</ul>
+              </div>
+              <div className="fed-cap-section fed-cap-limit">
+                <div className="fed-cap-section-head">Could not</div>
+                <ul>{cov.limit.map((item, j) => <li key={j}>{item}</li>)}</ul>
+              </div>
+              <div className="fed-cap-points">
+                <span className="fed-cap-points-label">Points to Christ</span>
+                <span className="fed-cap-points-text">{cov.points}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Study Guide ── */}
+      <section className="fed-infographic-section">
+        <h2 className="fed-infographic-title">Go Deeper</h2>
+        <div className="fed-study-callout">
+          <div className="fed-study-callout-label">Study Guide</div>
+          <div className="fed-study-callout-title">The Mystery of Christ, His Covenant, and His Kingdom</div>
+          <div className="fed-study-callout-author">Samuel D. Renihan</div>
+          <p className="fed-study-callout-desc">
+            The most accessible single-volume introduction to 1689 Federalism. Renihan traces the full covenantal structure of Scripture from creation to consummation, showing how the Particular Baptist reading differs from both Westminster and Baptist theology that follows the Westminster pattern. I have put together a chapter-by-chapter study guide for this book.
+          </p>
+          <Link href="/study/mystery-of-christ" className="fed-study-callout-link">Open Study Guide →</Link>
+        </div>
       </section>
 
       {/* ── Articles ── */}
