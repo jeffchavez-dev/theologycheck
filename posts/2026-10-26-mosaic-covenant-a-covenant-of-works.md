@@ -45,33 +45,33 @@ These three scriptural purposes — condemnation, pedagogy, and legal provision 
 
 > "True, there was another Edition or Administration of it [the covenant of works] given to Israel, which tho' it was a covenant of works, i.e. *Do this and live*, yet it was not given by the Lord to the same End and Design, as the Covenant was given to our first parents, viz. It was not given to justifie them, or to give them eternal Life."
 >
-> — Benjamin Keach, *The Everlasting Covenant*[^3]
+> — Benjamin Keach, *The Everlasting Covenant*[^5]
 
 > "Indeed, I think, one great end of God in bringing Israel under this Sinai covenant, was to make way for Christ, his being born or made under the law, in order to the fulfilling of it for us. I do not see how (by any visible dispensation) Jesus Christ could have been born actually under the law, if this Sinai covenant had not been made."
 >
-> — Samuel Petto, quoted in Pascal Denault, *The Distinctiveness of Baptist Covenant Theology*[^4]
+> — Samuel Petto, quoted in Pascal Denault, *The Distinctiveness of Baptist Covenant Theology*[^6]
 
 > "In the Mosaical economy, there was such a remembrance of the Covenant of Works revived, with the terms and sanction thereof; as that hereupon it is called the ministration of condemnation, and did engender unto bondage... But yet the promise of salvation by the Messiah... was not enervated thereby; but even this was laid in a subserviency to Gospel ends."
 >
-> — Nehemiah Coxe, *Vindiciae Veritatis*[^5]
+> — Nehemiah Coxe, *Vindiciae Veritatis*[^7]
 
 > "Now this is no other but the covenant of works revived. Nor had this covenant of Sinai any promise of eternal life annexed to it, as such, but only the promise inseparable from the covenant of works which it revived, saying, 'Do this, and live.'"
 >
-> — John Owen, *An Exposition of the Epistle to the Hebrews*[^6]
+> — John Owen, *An Exposition of the Epistle to the Hebrews*[^8]
 
 > "The Mosaic Covenant is a covenant of obedience for life in the land of Canaan... The Mosaic Covenant echoes Adam's covenant in Eden and revives the Covenant of Works in key ways, but it is not the same covenant. The place is different, the parties are different, the promises are different, and the positive laws are entirely different."
 >
-> — Samuel D. Renihan, *The Mystery of Christ, His Covenant, and His Kingdom*[^7]
+> — Samuel D. Renihan, *The Mystery of Christ, His Covenant, and His Kingdom*[^9]
 
 > "An open manifestation of the covenant of works was needed, not to kill, but to show all the world — Israel in particular — that they were already dead, sick, and in need of a physician... It did not bring about man's condemnation, but the manifestation of man's condemnation."
 >
-> — Jeffrey D. Johnson, *The Fatal Flaw of the Theology of the Federal Vision*[^8]
+> — Jeffrey D. Johnson, *The Fatal Flaw of the Theology of the Federal Vision*[^10]
 
 ## A More Precise Term: The Subservient Covenant
 
 The term "covenant of works" for the Mosaic Covenant, while not inaccurate, has consistently generated confusion among non-federalists. Earl Blackburn states the objection plainly:
 
-> "Republicationism does not take into full consideration the true nature of the Covenant of Works… It confuses the nature of salvation and justification. Are salvation and justification by works, or by works and grace?"[^9]
+> "Republicationism does not take into full consideration the true nature of the Covenant of Works… It confuses the nature of salvation and justification. Are salvation and justification by works, or by works and grace?"[^11]
 
 The confusion is understandable. When critics hear "covenant of works," they assume the claim is that fallen Israelites were expected to earn eternal life by perfect obedience, which would indeed be a confusion of law and gospel. But this is not the claim. The 1689 Federalist use of "covenant of works" for the Mosaic refers only to its *structure*, its *do this and live* sanctions governing national life in Canaan, not to its ultimate design. The works-character describes the *form*; it does not describe the *end*.
 
@@ -79,25 +79,25 @@ This is why the term *subservient covenant* (*foedus subserviens*), used by John
 
 John Owen states the distinction clearly:
 
-> "Sinai should not then be thought of as the covenant of works; but Sinai does involve a renewal of the principles which partly constituted the covenant of works. On the other hand, the Sinai covenant cannot be thought of as the covenant of grace… It is a subservient covenant to the covenant of grace."[^10]
+> "Sinai should not then be thought of as the covenant of works; but Sinai does involve a renewal of the principles which partly constituted the covenant of works. On the other hand, the Sinai covenant cannot be thought of as the covenant of grace… It is a subservient covenant to the covenant of grace."[^12]
 
 Coxe develops this at length. The national covenant made with Israel was neither the original Covenant of Works nor the Covenant of Grace; it was a third, distinct arrangement whose entire purpose was to serve the ends of the covenant of grace:
 
-> "All the dealings of God with [Israel] as a select and peculiar People in Covenant with himself, were in Subserviency to the great Ends of this Covenant with Abraham… And that Covenant of Peculiarity is in the New Testament always styled Old, and Carnal; a Covenant that was to wax old and vanish away…"[^11]
+> "All the dealings of God with [Israel] as a select and peculiar People in Covenant with himself, were in Subserviency to the great Ends of this Covenant with Abraham… And that Covenant of Peculiarity is in the New Testament always styled Old, and Carnal; a Covenant that was to wax old and vanish away…"[^13]
 
-> "The former was added and made subservient to the latter's great ends. The springs of new covenant mercy, which God had before opened to all nations, were not to be shut up again by this covenant… which was designed by God only to be a handmaid to it."[^12]
+> "The former was added and made subservient to the latter's great ends. The springs of new covenant mercy, which God had before opened to all nations, were not to be shut up again by this covenant… which was designed by God only to be a handmaid to it."[^14]
 
 The language of "handmaid" is telling. The Mosaic covenant does not compete with the Covenant of Grace; it serves it. Its laws, its sanctions, its national blessings and curses, its sacrificial system: all of it was designed to hold the promise before Israel's eyes, discipline the nation toward the coming Seed, and drive the godly remnant to look beyond their external privileges to the substance those privileges shadowed. As Coxe puts it:
 
-> "The State of Israel after the Flesh being typical; The Israel of God among them, were taught to look above, and beyond their external priviledges, unto those things that were shadowed by them, as set before their Faith in the promises of Grace by Christ; and so to live upon the Grace of that Covenant, which their outward State, and Covenant of Peculiarity was subservient to…"[^13]
+> "The State of Israel after the Flesh being typical; The Israel of God among them, were taught to look above, and beyond their external priviledges, unto those things that were shadowed by them, as set before their Faith in the promises of Grace by Christ; and so to live upon the Grace of that Covenant, which their outward State, and Covenant of Peculiarity was subservient to…"[^15]
 
 Renihan captures the terminological history behind this precision. The term *foedus subserviens*, the subservient covenant, was coined to hold together what must be held together: that the Mosaic has a genuine works-structure (laws, promises, threats) while its ultimate design is grace-serving:
 
-> "Based on the laws, the promises, and the threats of the covenant, the Mosaic Covenant was a covenant of works for life in the land of Canaan… Cameron stepped… to speak of the *vetus foedus sive foedus subserviens*, the old covenant or the subservient covenant."[^14]
+> "Based on the laws, the promises, and the threats of the covenant, the Mosaic Covenant was a covenant of works for life in the land of Canaan… Cameron stepped… to speak of the *vetus foedus sive foedus subserviens*, the old covenant or the subservient covenant."[^16]
 
 Pascal Denault, summarizing the distinctive logic of 1689 Federalism on precisely this point, draws the contrast with the Westminster model in terms that make clear why "subservient" does the work that "covenant of works" alone cannot:
 
-> "The 1689 federalism replaced the paedobaptist concept of one covenant of grace under different administrations by the one covenant of grace revealed by farther steps model. The understanding of this particular federalism is that the covenant of grace was not formally established during the O.T. period, but was revealed through the different covenants. Therefore, according to this view, the Old Covenant was both distinct from and subservient to the covenant of grace."[^15]
+> "The 1689 federalism replaced the paedobaptist concept of one covenant of grace under different administrations by the one covenant of grace revealed by farther steps model. The understanding of this particular federalism is that the covenant of grace was not formally established during the O.T. period, but was revealed through the different covenants. Therefore, according to this view, the Old Covenant was both distinct from and subservient to the covenant of grace."[^17]
 
 The phrase "both distinct from *and* subservient to" is the precise two-sided claim. "Covenant of works" captures only the first half: the Mosaic is distinct from, and structurally unlike, the Covenant of Grace. "Subservient covenant" captures both halves at once. Distinct from, yes, but also *serving*. That is the full 1689 Federalist position.
 
@@ -131,24 +131,28 @@ Soli Deo Trino Gloria!
 
 [^4]: Samuel Petto, quoted in Pascal Denault, *The Distinctiveness of Baptist Covenant Theology*, rev. ed. (Birmingham, AL: Solid Ground Christian Books, 2013).
 
-[^5]: Nehemiah Coxe, *Vindiciae Veritatis, Or A Confutation of the Heresies and Gross Errours Asserted By Thomas Collier* (London: Nathaniel Ponder, 1677).
+[^5]: Benjamin Keach, *The Everlasting Covenant, A Sweet Cordial for a Drooping Soul* (London: H. Barnard, 1693).
 
-[^6]: John Owen, *A Continuation of the Exposition of the Epistle of Paul the Apostle to the Hebrews* (London: Nathaniel Ponder, 1680).
+[^6]: Samuel Petto, quoted in Pascal Denault, *The Distinctiveness of Baptist Covenant Theology*, rev. ed. (Birmingham, AL: Solid Ground Christian Books, 2013).
 
-[^7]: Samuel D. Renihan, *The Mystery of Christ, His Covenant, and His Kingdom* (Cape Coral, FL: Founders Press, 2019).
+[^7]: Nehemiah Coxe, *Vindiciae Veritatis, Or A Confutation of the Heresies and Gross Errours Asserted By Thomas Collier* (London: Nathaniel Ponder, 1677).
 
-[^8]: Jeffrey D. Johnson, *The Fatal Flaw of the Theology of the Federal Vision* (Conway, AR: Free Grace Press, 2014).
+[^8]: John Owen, *A Continuation of the Exposition of the Epistle of Paul the Apostle to the Hebrews* (London: Nathaniel Ponder, 1680).
 
-[^9]: Earl Blackburn, quoted in *Baptist Dogmatics*, as cited in Jeff Chavez, "A Critique of 'A Critique of 1689 Federalism,'" Theology Check (blog), 2023.
+[^9]: Samuel D. Renihan, *The Mystery of Christ, His Covenant, and His Kingdom* (Cape Coral, FL: Founders Press, 2019).
 
-[^10]: John Owen, quoted in Richard C. Barcellos, "John Owen and New Covenant Theology," in *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005), 349–388.
+[^10]: Jeffrey D. Johnson, *The Fatal Flaw of the Theology of the Federal Vision* (Conway, AR: Free Grace Press, 2014).
 
-[^11]: Nehemiah Coxe, *A Discourse of the Covenants That God Made with Men Before the Law*, p. 75, in Nehemiah Coxe and John Owen, *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005).
+[^11]: Earl Blackburn, quoted in *Baptist Dogmatics*, as cited in Jeff Chavez, "A Critique of 'A Critique of 1689 Federalism,'" Theology Check (blog), 2023.
 
-[^12]: Coxe, *Discourse of the Covenants*, pp. 106–107.
+[^12]: John Owen, quoted in Richard C. Barcellos, "John Owen and New Covenant Theology," in *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005), 349–388.
 
-[^13]: Coxe, *Discourse of the Covenants*, p. 181.
+[^13]: Nehemiah Coxe, *A Discourse of the Covenants That God Made with Men Before the Law*, p. 75, in Nehemiah Coxe and John Owen, *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005).
 
-[^14]: Samuel D. Renihan, *The Mystery of Christ, His Covenant, and His Kingdom* (Cape Coral, FL: Founders Press, 2019).
+[^14]: Coxe, *Discourse of the Covenants*, pp. 106–107.
 
-[^15]: Pascal Denault, "From the Covenant of Works to the Covenant of Grace," *Founders Journal* 108 (2017), https://founders.org/articles/from-the-covenant-of-works-to-the-covenant-of-grace/.
+[^15]: Coxe, *Discourse of the Covenants*, p. 181.
+
+[^16]: Samuel D. Renihan, *The Mystery of Christ, His Covenant, and His Kingdom* (Cape Coral, FL: Founders Press, 2019).
+
+[^17]: Pascal Denault, "From the Covenant of Works to the Covenant of Grace," *Founders Journal* 108 (2017), https://founders.org/articles/from-the-covenant-of-works-to-the-covenant-of-grace/.
