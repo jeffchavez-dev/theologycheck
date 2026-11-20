@@ -4,8 +4,8 @@ import { useEffect } from 'react'
 const COLLAPSE_THRESHOLD = 180 // px — sidenotes taller than this get a toggle
 const GAP = 8
 
-function restack(sidenotes: HTMLElement[]) {
-  let lastBottom = 0
+function restack(sidenotes: HTMLElement[], startBottom = 0) {
+  let lastBottom = startBottom
   for (const sn of sidenotes) {
     const naturalTop = parseFloat(sn.dataset.naturalTop ?? '0')
     const top = Math.max(naturalTop, lastBottom + GAP)
@@ -65,9 +65,12 @@ function positionSidenotes(article: HTMLElement, footnotesSection: HTMLElement) 
       toggle.addEventListener('click', () => {
         const isNowCollapsed = sidenote.classList.toggle('fn-sidenote--collapsed')
         toggle.textContent = isNowCollapsed ? 'Show more' : 'Show less'
-        // Restack from this sidenote onward so expanded content doesn't overlap the next
+        // Restack from this sidenote onward, anchored to the bottom of whatever precedes it
         const idx = rendered.indexOf(sidenote)
-        restack(rendered.slice(idx))
+        const prevBottom = idx > 0
+          ? parseFloat(rendered[idx - 1].style.top) + rendered[idx - 1].offsetHeight
+          : 0
+        restack(rendered.slice(idx), prevBottom)
       })
       sidenote.appendChild(toggle)
     }
