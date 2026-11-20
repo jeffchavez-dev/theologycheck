@@ -10,7 +10,7 @@ draft: true
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-11-20"
-updateCount: 1
+updateCount: 2
 ---
 
 Can we call the Mosaic Covenant a republication of the Covenant of Works? I believe we can, and I believe the [1689 Federalist](/1689-federalism) tradition gives us the clearest account of why — not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture.
@@ -111,9 +111,9 @@ The phrase "both distinct from *and* subservient to" is the precise two-sided cl
 
 To call the Mosaic a "subservient covenant," then, is not to retreat from the republication thesis; it is to state it more carefully. The Mosaic *has* works-features: it republishes the law's demand, imposes sanctions, and operates on a do-this-and-live logic for national tenure in Canaan. But those works-features were not ends in themselves. They were the form of a covenant whose substance was always elsewhere, in the promises given to Abraham, fulfilled in Christ, and ratified in the New Covenant blood of the Mediator.
 
-Let the church recover this precision. The *foedus subserviens* is not a novelty of seventeenth-century Particular Baptist ingenuity; it is a retrieval of what the Scriptures themselves taught Israel to expect — a covenant that prosecuted and prepared, that condemned and beckoned, that served by its very severity the grace it could never itself deliver. How wonderful that the God who gave the law in thunder at Sinai is the same God who fulfilled it in silence at Calvary.
+Let the church recover this precision. The *foedus subserviens* is not a novelty of seventeenth-century Particular Baptist ingenuity; it is a retrieval of what the Scriptures themselves taught Israel to expect: a covenant that condemned and prepared, that served by its very severity the grace it could never itself deliver. How wonderful that the God who gave the law in thunder at Sinai is the same God who fulfilled it through the blood of the Lamb at Calvary.
 
-Soli Deo Trino Gloria!
+Soli Deo Gloria!
 
 ---
 
