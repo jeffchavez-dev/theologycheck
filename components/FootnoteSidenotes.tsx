@@ -2,6 +2,17 @@
 import { useEffect } from 'react'
 
 const COLLAPSE_THRESHOLD = 180 // px — sidenotes taller than this get a toggle
+const GAP = 8
+
+function restack(sidenotes: HTMLElement[]) {
+  let lastBottom = 0
+  for (const sn of sidenotes) {
+    const naturalTop = parseFloat(sn.dataset.naturalTop ?? '0')
+    const top = Math.max(naturalTop, lastBottom + GAP)
+    sn.style.top = `${top}px`
+    lastBottom = top + sn.offsetHeight
+  }
+}
 
 function positionSidenotes(article: HTMLElement, footnotesSection: HTMLElement) {
   const fnMap: Record<string, string> = {}
@@ -13,11 +24,11 @@ function positionSidenotes(article: HTMLElement, footnotesSection: HTMLElement) 
 
   const refs = document.querySelectorAll<HTMLAnchorElement>('[data-footnote-ref]')
 
-  // Remove any previously rendered sidenotes before repositioning
   article.querySelectorAll('.fn-sidenote').forEach(el => el.remove())
 
   let lastBottom = 0
   let num = 1
+  const rendered: HTMLElement[] = []
 
   refs.forEach(ref => {
     const fnId = ref.getAttribute('href')?.slice(1)
@@ -41,10 +52,10 @@ function positionSidenotes(article: HTMLElement, footnotesSection: HTMLElement) 
 
     article.appendChild(sidenote)
 
-    const top = Math.max(supTop - 4, lastBottom + 8)
+    const top = Math.max(supTop - 4, lastBottom + GAP)
+    sidenote.dataset.naturalTop = String(supTop - 4)
     sidenote.style.top = `${top}px`
 
-    // Add expand toggle for tall sidenotes
     if (sidenote.offsetHeight > COLLAPSE_THRESHOLD) {
       sidenote.classList.add('fn-sidenote--collapsible', 'fn-sidenote--collapsed')
 
@@ -54,11 +65,15 @@ function positionSidenotes(article: HTMLElement, footnotesSection: HTMLElement) 
       toggle.addEventListener('click', () => {
         const isNowCollapsed = sidenote.classList.toggle('fn-sidenote--collapsed')
         toggle.textContent = isNowCollapsed ? 'Show more' : 'Show less'
+        // Restack from this sidenote onward so expanded content doesn't overlap the next
+        const idx = rendered.indexOf(sidenote)
+        restack(rendered.slice(idx))
       })
       sidenote.appendChild(toggle)
     }
 
     lastBottom = top + sidenote.offsetHeight
+    rendered.push(sidenote)
   })
 }
 
@@ -69,7 +84,6 @@ export default function FootnoteSidenotes() {
     if (!footnotesSection || !article) return
     if (window.innerWidth < 1100) return
 
-    // Wait for fonts so layout measurements are accurate
     document.fonts.ready.then(() => {
       positionSidenotes(article, footnotesSection)
       footnotesSection.style.display = 'none'
