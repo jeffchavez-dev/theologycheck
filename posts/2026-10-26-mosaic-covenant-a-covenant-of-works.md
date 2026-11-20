@@ -77,6 +77,12 @@ The confusion is understandable. When critics hear "covenant of works," they ass
 
 This is why the term *subservient covenant* (*foedus subserviens*), used by John Cameron, John Owen, Nehemiah Coxe, and Samuel Renihan, is more precise. It tells us not only what the Mosaic *looked like* but what it was *for*.
 
+Philip Cary pressed this point with uncommon sharpness:
+
+> "A subserviency in any thing to promote the ends of something else, does not make it to be the thing itself; the ends whereof are promoted thereby."[^19]
+
+Subservience is a relation, not an identity. The Mosaic promoted the ends of the Covenant of Grace without becoming the Covenant of Grace. That is exactly the precision the debate requires.
+
 John Owen states the distinction clearly:
 
 > "Sinai should not then be thought of as the covenant of works; but Sinai does involve a renewal of the principles which partly constituted the covenant of works. On the other hand, the Sinai covenant cannot be thought of as the covenant of grace… It is a subservient covenant to the covenant of grace."[^13]
@@ -168,3 +174,5 @@ The Upper Register has a detailed study tracing the subservient covenant through
 [^17]: Samuel D. Renihan, *The Mystery of Christ, His Covenant, and His Kingdom* (Cape Coral, FL: Founders Press, 2019).
 
 [^18]: Pascal Denault, "From the Covenant of Works to the Covenant of Grace," *Founders Journal* 108 (2017), https://founders.org/articles/from-the-covenant-of-works-to-the-covenant-of-grace/.
+
+[^19]: Philip Cary, *A Solemn Call Unto All That Would Be Owned as Christ's Faithful Witnesses* (1690), p. 223; quoted in Samuel D. Renihan, "17th-Century Particular Baptist Covenant Theology," p. 14.
