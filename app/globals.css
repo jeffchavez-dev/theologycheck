@@ -1258,7 +1258,300 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   color: #4a3020; line-height: 1.65; margin: 0; font-style: italic;
 }
 
-/* 1689 Federalism page */
+/* ── 1689 Federalism page ── */
+.fed-page-intro {
+  font-size: 1.05rem;
+  color: #2a1a0e;
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.fed-infographic-section {
+  margin: 0 0 3.5rem;
+  padding: 2rem 2rem 2.25rem;
+  border: 1px solid #d9c9b0;
+  background: #faf6ef;
+}
+
+.fed-infographic-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8b1a1a;
+  margin-bottom: 0.6rem;
+}
+
+.fed-infographic-desc {
+  font-size: 0.95rem;
+  color: #4a3020;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  max-width: 660px;
+}
+
+.fed-infographic-footer {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #6b4f35;
+  font-style: italic;
+  border-top: 1px solid #d9c9b0;
+  padding-top: 0.9rem;
+}
+
+/* Timeline */
+.fed-timeline-wrap { overflow-x: auto; }
+
+.fed-timeline-track {
+  display: flex;
+  position: relative;
+  padding: 2.75rem 0 1.25rem;
+  min-width: 480px;
+}
+
+.fed-timeline-track::before {
+  content: '';
+  position: absolute;
+  top: 2.75rem;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    #8b1a1a 0, #8b1a1a 7px, transparent 7px, transparent 14px
+  );
+}
+
+.fed-tnode {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  padding: 0 0.25rem;
+}
+
+.fed-tnode-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid #8b1a1a;
+  background: #faf6ef;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.fed-tnode--end .fed-tnode-dot {
+  background: #8b1a1a;
+  width: 17px;
+  height: 17px;
+  border-color: #5a0f0f;
+}
+
+.fed-tnode--end::before {
+  content: '';
+  position: absolute;
+  top: calc(2.75rem - 0.5px);
+  right: 50%;
+  left: -50%;
+  height: 2px;
+  background: #8b1a1a;
+  transform: translateY(-50%);
+}
+
+.fed-tnode-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a0f0a;
+  margin-top: 0.6rem;
+  font-weight: 500;
+}
+
+.fed-tnode--end .fed-tnode-label { color: #8b1a1a; }
+
+.fed-tnode-ref {
+  font-size: 0.75rem;
+  color: #8b1a1a;
+  margin-top: 0.15rem;
+  font-style: italic;
+}
+
+.fed-tnode-note {
+  font-size: 0.75rem;
+  color: #6b4f35;
+  margin-top: 0.3rem;
+  line-height: 1.4;
+}
+
+.fed-timeline-legend-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.fed-tlegend {
+  font-size: 0.78rem;
+  color: #6b4f35;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fed-tlegend::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  flex-shrink: 0;
+}
+
+.fed-tlegend--dashed::before {
+  background: repeating-linear-gradient(
+    to right,
+    #8b1a1a 0, #8b1a1a 5px, transparent 5px, transparent 10px
+  );
+}
+
+.fed-tlegend--solid::before { background: #8b1a1a; }
+
+/* NC = CoG grid */
+.fed-nc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.fed-nc-card {
+  border: 1px solid #d9c9b0;
+  background: #f5efe3;
+  padding: 1rem 1.1rem;
+}
+
+.fed-nc-ref {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8b1a1a;
+  margin-bottom: 0.4rem;
+}
+
+.fed-nc-quote {
+  font-size: 0.88rem;
+  color: #1a0f0a;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0 0 0.5rem;
+  border-left: 2px solid #8b1a1a;
+  padding-left: 0.65rem;
+}
+
+.fed-nc-note {
+  font-size: 0.8rem;
+  color: #6b4f35;
+  line-height: 1.5;
+}
+
+/* Subservient diagram */
+.fed-sub-diagram {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.fed-sub-col-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8b1a1a;
+  margin-bottom: 0.65rem;
+}
+
+.fed-sub-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.fed-sub-list li {
+  font-size: 0.88rem;
+  color: #2a1a0e;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid #e8dcc8;
+}
+
+.fed-sub-list li:last-child { border-bottom: none; }
+
+.fed-sub-ref {
+  font-size: 0.72rem;
+  color: #8b1a1a;
+  font-style: italic;
+}
+
+.fed-sub-col--right .fed-sub-col-label { text-align: right; }
+.fed-sub-col--right .fed-sub-list li { align-items: flex-end; text-align: right; }
+
+.fed-sub-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 1.25rem;
+  border: 2px solid #8b1a1a;
+  background: #f5efe3;
+  min-width: 140px;
+  gap: 0.4rem;
+}
+
+.fed-sub-center-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a0f0a;
+  font-weight: 500;
+}
+
+.fed-sub-center-latin {
+  font-style: italic;
+  font-size: 0.82rem;
+  color: #8b1a1a;
+}
+
+.fed-sub-center-desc {
+  font-size: 0.75rem;
+  color: #6b4f35;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .fed-nc-grid { grid-template-columns: 1fr; }
+  .fed-sub-diagram {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .fed-sub-col--right .fed-sub-col-label { text-align: left; }
+  .fed-sub-col--right .fed-sub-list li { align-items: flex-start; text-align: left; }
+  .fed-sub-center { order: -1; }
+  .fed-infographic-section { padding: 1.25rem 1rem 1.5rem; }
+}
+
+/* 1689 Federalism post list */
 .federalism-post-list {
   list-style: none;
   margin: 2rem 0 3rem;
