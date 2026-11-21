@@ -1,6 +1,6 @@
 ---
 title: "Mosaic Covenant: A Covenant of Works for the Gospel"
-date: "2026-10-26"
+date: "2026-11-20"
 excerpt: "Can we call the Mosaic Covenant a republication of the Covenant of Works, even though Scripture calls it one of the “covenants of promise”? I believe we can. And the right term is not “covenant of works” alone, but subservient covenant: a covenant of works precisely for the gospel."
 tags:
   - "Baptist"
@@ -9,7 +9,7 @@ tags:
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-11-21"
-updateCount: 8
+updateCount: 9
 ---
 
 Can we call the Mosaic Covenant a republication of the Covenant of Works, even though Scripture calls it one of the “covenants of promise”? I believe we can. And the right term is not “covenant of works” alone, but a *subservient covenant*: a covenant of works precisely for the gospel. The [1689 Federalist](/1689-federalism) or Particular Baptist position gives us the clearest account of why, not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture. 
