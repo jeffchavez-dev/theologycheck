@@ -1,7 +1,7 @@
 ---
 title: "Mosaic Covenant: A Covenant of Works for the Gospel"
 date: "2026-10-26"
-excerpt: "Can we call the Mosaic Covenant a republication of the Covenant of Works, even though Scripture calls it one of the “covenants of promise”? I believe we can. And the right term is not “covenant of works” alone, but subservient covenant: a covenant of works precisely for the gospel."
+excerpt: “Can we call the Mosaic Covenant a republication of the Covenant of Works, even though Scripture calls it one of the \”covenants of promise\”? I believe we can. And the right term is not \”covenant of works\” alone, but subservient covenant: a covenant of works precisely for the gospel.”
 tags:
   - "Baptist"
   - "1689 Federalism"
@@ -13,7 +13,7 @@ updatedAt: "2026-11-21"
 updateCount: 6
 ---
 
-Can we call the Mosaic Covenant a republication of the Covenant of Works, even though Scripture calls it one of the “covenants of promise”? I believe we can. And the right term is not “covenant of works” alone, but a subservient covenant: a covenant of works precisely for the gospel. The [1689 Federalist](/1689-federalism) or Particular Baptist position gives us the clearest account of why, not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture. 
+Can we call the Mosaic Covenant a republication of the Covenant of Works, even though Scripture calls it one of the “covenants of promise”? I believe we can. And the right term is not “covenant of works” alone, but a *subservient covenant*: a covenant of works precisely for the gospel. The [1689 Federalist](/1689-federalism) or Particular Baptist position gives us the clearest account of why, not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture. 
 
 My argument is this: the Mosaic Covenant is a covenant of works for the gospel. Not a rival to grace, but its servant. It has a works-structure, yes. But that works-structure was never an end in itself. It was the appointed form by which God exposed sin, drove sinners to Christ, and provided the legal frame for the second Adam to do what the first could not. Here is how the 1689 Federalist tradition lays that out.
 
