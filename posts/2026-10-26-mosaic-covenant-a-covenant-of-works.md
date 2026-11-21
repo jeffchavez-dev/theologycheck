@@ -1,5 +1,5 @@
 ---
-title: "Mosaic Covenant: A Covenant of Works"
+title: "Mosaic Covenant: A Covenant of Works for the Gospel"
 date: "2026-10-26"
 excerpt: "Can we call the Mosaic Covenant a republication of the Covenant of Works? I believe we can — and that the 1689 Federalist tradition gives us the most careful account of why, grounded in Scripture and the best of the Particular Baptist inheritance."
 tags:
@@ -9,11 +9,11 @@ tags:
 draft: true
 dropCapParagraph: 1
 author: "Jeff Chavez"
-updatedAt: "2026-11-20"
-updateCount: 2
+updatedAt: "2026-11-21"
+updateCount: 3
 ---
 
-Can we call the Mosaic Covenant a republication of the Covenant of Works? I believe we can, and I believe the [1689 Federalist](/1689-federalism) tradition gives us the clearest account of why — not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture.
+Can we call the Mosaic Covenant a republication of the Covenant of Works, or is there a better term? I believe we can, and I believe the [1689 Federalist](/1689-federalism) or Particular Baptist position gives us the clearest account of why, not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture. Furthermore, I wanted to develop in this blog that the Mosaic Covenant is a covenant of works precisely for the gospel. It serves the purposes of the gospel, which is different from the original Covenant of Works with Adam. But first, let me lay out the purpose and function of this earthly, temporal, and national edition of the Covenant of Works. 
 
 ## The Purpose and Function of Republication
 
@@ -43,7 +43,7 @@ There is a third function, peculiar to the 1689 Federalist reading, and I think 
 
 Paul draws the conclusion in Romans 8: "God has done what the law, weakened by the flesh, could not do. By sending his own Son in the likeness of sinful flesh and for sin, he condemned sin in the flesh, in order that the righteous requirement of the law might be fulfilled in us" (Rom. 8:3–4). The law's righteous requirement was not abolished. It was met, in Christ, for those who are in him.
 
-These three scriptural purposes — condemnation, pedagogy, and legal provision for the second Adam — are what the Particular Baptists had in view when they called the Mosaic Covenant a republication of the Covenant of Works.[^5] The following quotations develop each of these in turn.
+These three scriptural purposes: condemnation, pedagogy, and legal provision for the second Adam, are what the Particular Baptists had in view when they called the Mosaic Covenant a republication of the Covenant of Works.[^5] These make the Mosaic not an obstacle to the gospel but its servant. The following quotations develop each of these in turn.
 
 > "True, there was another Edition or Administration of it [the covenant of works] given to Israel, which tho' it was a covenant of works, i.e. *Do this and live*, yet it was not given by the Lord to the same End and Design, as the Covenant was given to our first parents, viz. It was not given to justifie them, or to give them eternal Life."
 >
@@ -71,27 +71,23 @@ These three scriptural purposes — condemnation, pedagogy, and legal provision 
 
 ## A More Precise Term: The Subservient Covenant
 
-The term "covenant of works" for the Mosaic Covenant, while not inaccurate, has consistently generated confusion among non-federalists. Earl Blackburn states the objection plainly:
+My claim is that the Mosaic Covenant is a covenant of works for the gospel. However, the term "covenant of works" for the Mosaic Covenant, while not inaccurate, has consistently generated confusion among non-federalists. Earl Blackburn states the objection plainly:
 
 > "Republicationism does not take into full consideration the true nature of the Covenant of Works… It confuses the nature of salvation and justification. Are salvation and justification by works, or by works and grace?"[^12]
 
-The confusion is understandable. When critics hear "covenant of works," they assume the claim is that fallen Israelites were expected to earn eternal life by perfect obedience, which would indeed be a confusion of law and gospel. But this is not the claim. The 1689 Federalist use of "covenant of works" for the Mosaic refers only to its *structure*, its *do this and live* sanctions governing national life in Canaan, not to its ultimate design. The works-character describes the *form*; it does not describe the *end*.
+I share this sentiment. The confusion is understandable. Especially when I talk to brothers who are sincere and want to understand the position. However, I want to point out that, often, when inquirers hear "covenant of works," they assume the claim is that fallen Israelites were expected to earn eternal life by perfect obedience, which would indeed be a confusion of law and gospel. But this is not the claim. The 1689 Federalist use of "covenant of works" for the Mosaic refers only to its *structure*, its *do this and live* sanctions governing national life in Canaan, not to its ultimate design. The works-character describes the *form*; it does not describe the *end*.
 
 This is why the term *subservient covenant* (*foedus subserviens*), used by John Cameron, John Owen, Nehemiah Coxe, and Samuel Renihan, is more precise. It tells us not only what the Mosaic *looked like* but what it was *for*.
 
-Philip Cary pressed this point:
+Philip Cary, who served as a representative for the Dartmouth congregation at the London Particular Baptist General Assemblies in 1689 and 1692,  pressed this point:
 
 > "A subserviency in any thing to promote the ends of something else, does not make it to be the thing itself; the ends whereof are promoted thereby."[^19]
 
 Subservience is a relation, not an identity. The Mosaic promoted the ends of the Covenant of Grace without becoming the Covenant of Grace. That is exactly the precision the debate requires. Just because it promotes the ends of the Covenant of Grace doesn't make it an administration of it.
 
-Sinclair Ferguson, drawing on Owen, captures the structural logic:
+John Owen states the distinction clearly:
 
-> "Sinai should not then be thought of as the covenant of works; but Sinai does involve a renewal of the principles which partly constituted the covenant of works. On the other hand, the Sinai covenant cannot be thought of as the covenant of grace."[^13]
-
-Richard Barcellos, summarizing Owen's position in the same essay, makes the positive conclusion explicit:
-
-> "The Old Covenant is not a covenant of works in itself, nor a 'legal' administration of the covenant of grace. It is a subservient covenant to the covenant of grace."[^20]
+> "Sinai should not then be thought of as the covenant of works; but Sinai does involve a renewal of the principles which partly constituted the covenant of works. On the other hand, the Sinai covenant cannot be thought of as the covenant of grace… It is a subservient covenant to the covenant of grace."[^13]
 
 Coxe develops this at length. The national covenant made with Israel was neither the original Covenant of Works nor the Covenant of Grace; it was a third, distinct arrangement whose entire purpose was to serve the ends of the covenant of grace:
 
@@ -169,7 +165,7 @@ The Upper Register has a detailed study tracing the subservient covenant through
 
 [^12]: Earl Blackburn, quoted in *Baptist Dogmatics*, as cited in Jeff Chavez, "A Critique of 'A Critique of 1689 Federalism,'" Theology Check (blog), 2023.
 
-[^13]: Sinclair B. Ferguson, *John Owen on the Christian Life* (Edinburgh: Banner of Truth, 1987), p. 28; quoted in Richard C. Barcellos, "John Owen and New Covenant Theology," in *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005), p. 361 n. 18.
+[^13]: John Owen, quoted in Richard C. Barcellos, "John Owen and New Covenant Theology," in *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005), 349–388.
 
 [^14]: Nehemiah Coxe, *A Discourse of the Covenants That God Made with Men Before the Law*, p. 75, in Nehemiah Coxe and John Owen, *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005).
 
@@ -182,5 +178,3 @@ The Upper Register has a detailed study tracing the subservient covenant through
 [^18]: Pascal Denault, "From the Covenant of Works to the Covenant of Grace," *Founders Journal* 108 (2017), https://founders.org/articles/from-the-covenant-of-works-to-the-covenant-of-grace/.
 
 [^19]: Philip Cary, *A Solemn Call Unto All That Would Be Owned as Christ's Faithful Witnesses* (1690), p. 223; quoted in Samuel D. Renihan, "17th-Century Particular Baptist Covenant Theology," p. 14.
-
-[^20]: Richard C. Barcellos, "John Owen and New Covenant Theology," in *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005), p. 361 n. 29.
