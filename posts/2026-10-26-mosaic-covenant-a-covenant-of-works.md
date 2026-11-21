@@ -10,10 +10,10 @@ draft: true
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-11-21"
-updateCount: 4
+updateCount: 5
 ---
 
-Can we call the Mosaic Covenant a republication of the Covenant of Works, or is there a better term? I believe we can, and I believe the [1689 Federalist](/1689-federalism) or Particular Baptist position gives us the clearest account of why, not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture. Furthermore, I wanted to develop in this blog that the Mosaic Covenant is a covenant of works precisely for the gospel. It serves the purposes of the gospel, which is different from the original Covenant of Works with Adam. But first, let me lay out the purpose and function of this earthly, temporal, and national edition of the Covenant of Works. 
+Can we call the Mosaic Covenant a republication or recapitulation of the Covenant of Works, or is there a better term because Scripture calls it one of the "covenants of promise"? I believe we can, and I believe the [1689 Federalist](/1689-federalism) or Particular Baptist position gives us the clearest account of why, not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture. Furthermore, I wanted to develop in this blog that the Mosaic Covenant is a covenant of works precisely for the gospel. It serves the purposes of the gospel, which is different from the original Covenant of Works with Adam. But first, let me lay out the purpose and function of this earthly, temporal, and national edition of the Covenant of Works. 
 
 ## The Purpose and Function of Republication
 
