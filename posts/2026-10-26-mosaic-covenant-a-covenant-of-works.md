@@ -10,7 +10,7 @@ draft: true
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-11-21"
-updateCount: 3
+updateCount: 4
 ---
 
 Can we call the Mosaic Covenant a republication of the Covenant of Works, or is there a better term? I believe we can, and I believe the [1689 Federalist](/1689-federalism) or Particular Baptist position gives us the clearest account of why, not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture. Furthermore, I wanted to develop in this blog that the Mosaic Covenant is a covenant of works precisely for the gospel. It serves the purposes of the gospel, which is different from the original Covenant of Works with Adam. But first, let me lay out the purpose and function of this earthly, temporal, and national edition of the Covenant of Works. 
@@ -110,6 +110,8 @@ Pascal Denault, summarizing the distinctive logic of 1689 Federalism on precisel
 The phrase "both distinct from *and* subservient to" is the precise two-sided claim. "Covenant of works" captures only the first half: the Mosaic is distinct from, and structurally unlike, the Covenant of Grace. "Subservient covenant" captures both halves at once. Distinct from, yes, but also *serving*. That is the full 1689 Federalist position.
 
 To call the Mosaic a "subservient covenant," then, is not to retreat from the republication thesis; it is to state it more carefully. The Mosaic *has* works-features: it republishes the law's demand, imposes sanctions, and operates on a do-this-and-live logic for national tenure in Canaan. But those works-features were not ends in themselves. They were the form of a covenant whose substance was always elsewhere, in the promises given to Abraham, fulfilled in Christ, and ratified in the New Covenant blood of the Mediator.
+
+Thanks be to God because the Mosaic Covenant, though breakable and unable to give eternal life to those who belong to it, is not an end in itself. It points to something different and other than itself. It points to Christ, the Mediator of the New Covenant. 
 
 Let the church recover this precision. The *foedus subserviens* is not a novelty of seventeenth-century Particular Baptist ingenuity; it is a retrieval of what the Scriptures themselves taught Israel to expect: a covenant that condemned and prepared, that served by its very severity the grace it could never itself deliver. How wonderful that the God who gave the law in thunder at Sinai is the same God who fulfilled it through the blood of the Lamb at Calvary.
 
