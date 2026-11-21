@@ -17,8 +17,8 @@ export default function Home() {
         <div className="hero-content">
           <div className="hero-line" />
           <p>
-            &ldquo;Id ergo quod subsistit in Deo, est suum esse.&rdquo;<br />
-            <span className="hero-ref">— Thomas Aquinas, Iª q. 3 a. 4 s. c.</span>
+            &ldquo;[Theology is] a work of pious intelligence whose foundation and first moving cause is God&rsquo;s loving communication of knowledge of himself to the saints, and whose end is the vision of God.&rdquo;<br />
+            <span className="hero-ref">— John Webster</span>
           </p>
         </div>
       </div>
