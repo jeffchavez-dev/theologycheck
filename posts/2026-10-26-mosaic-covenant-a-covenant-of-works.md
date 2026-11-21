@@ -6,11 +6,10 @@ tags:
   - "Baptist"
   - "1689 Federalism"
   - "Reformed"
-draft: true
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-11-21"
-updateCount: 7
+updateCount: 8
 ---
 
 Can we call the Mosaic Covenant a republication of the Covenant of Works, even though Scripture calls it one of the “covenants of promise”? I believe we can. And the right term is not “covenant of works” alone, but a *subservient covenant*: a covenant of works precisely for the gospel. The [1689 Federalist](/1689-federalism) or Particular Baptist position gives us the clearest account of why, not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture. 
