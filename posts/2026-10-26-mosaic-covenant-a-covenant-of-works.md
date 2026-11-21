@@ -85,9 +85,13 @@ Philip Cary pressed this point:
 
 Subservience is a relation, not an identity. The Mosaic promoted the ends of the Covenant of Grace without becoming the Covenant of Grace. That is exactly the precision the debate requires. Just because it promotes the ends of the Covenant of Grace doesn't make it an administration of it.
 
-John Owen states the distinction clearly:
+Sinclair Ferguson, drawing on Owen, captures the structural logic:
 
-> "Sinai should not then be thought of as the covenant of works; but Sinai does involve a renewal of the principles which partly constituted the covenant of works. On the other hand, the Sinai covenant cannot be thought of as the covenant of grace… It is a subservient covenant to the covenant of grace."[^13]
+> "Sinai should not then be thought of as the covenant of works; but Sinai does involve a renewal of the principles which partly constituted the covenant of works. On the other hand, the Sinai covenant cannot be thought of as the covenant of grace."[^13]
+
+Richard Barcellos, summarizing Owen's position in the same essay, makes the positive conclusion explicit:
+
+> "The Old Covenant is not a covenant of works in itself, nor a 'legal' administration of the covenant of grace. It is a subservient covenant to the covenant of grace."[^20]
 
 Coxe develops this at length. The national covenant made with Israel was neither the original Covenant of Works nor the Covenant of Grace; it was a third, distinct arrangement whose entire purpose was to serve the ends of the covenant of grace:
 
@@ -165,7 +169,7 @@ The Upper Register has a detailed study tracing the subservient covenant through
 
 [^12]: Earl Blackburn, quoted in *Baptist Dogmatics*, as cited in Jeff Chavez, "A Critique of 'A Critique of 1689 Federalism,'" Theology Check (blog), 2023.
 
-[^13]: John Owen, quoted in Richard C. Barcellos, "John Owen and New Covenant Theology," in *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005), 349–388.
+[^13]: Sinclair B. Ferguson, *John Owen on the Christian Life* (Edinburgh: Banner of Truth, 1987), p. 28; quoted in Richard C. Barcellos, "John Owen and New Covenant Theology," in *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005), p. 361 n. 18.
 
 [^14]: Nehemiah Coxe, *A Discourse of the Covenants That God Made with Men Before the Law*, p. 75, in Nehemiah Coxe and John Owen, *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005).
 
@@ -178,3 +182,5 @@ The Upper Register has a detailed study tracing the subservient covenant through
 [^18]: Pascal Denault, "From the Covenant of Works to the Covenant of Grace," *Founders Journal* 108 (2017), https://founders.org/articles/from-the-covenant-of-works-to-the-covenant-of-grace/.
 
 [^19]: Philip Cary, *A Solemn Call Unto All That Would Be Owned as Christ's Faithful Witnesses* (1690), p. 223; quoted in Samuel D. Renihan, "17th-Century Particular Baptist Covenant Theology," p. 14.
+
+[^20]: Richard C. Barcellos, "John Owen and New Covenant Theology," in *Covenant Theology: From Adam to Christ*, ed. Ronald D. Miller, James M. Renihan, and Francisco Orozco (Palmdale, CA: Reformed Baptist Academic Press, 2005), p. 361 n. 29.
