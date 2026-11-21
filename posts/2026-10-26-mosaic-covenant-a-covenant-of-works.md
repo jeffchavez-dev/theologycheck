@@ -1,7 +1,7 @@
 ---
 title: "Mosaic Covenant: A Covenant of Works for the Gospel"
 date: "2026-10-26"
-excerpt: "Can we call the Mosaic Covenant a republication of the Covenant of Works? I believe we can — and that the 1689 Federalist tradition gives us the most careful account of why, grounded in Scripture and the best of the Particular Baptist inheritance."
+excerpt: "Can we call the Mosaic Covenant a republication of the Covenant of Works, even though Scripture calls it one of the “covenants of promise”? I believe we can. And the right term is not “covenant of works” alone, but subservient covenant: a covenant of works precisely for the gospel."
 tags:
   - "Baptist"
   - "1689 Federalism"
@@ -10,10 +10,12 @@ draft: true
 dropCapParagraph: 1
 author: "Jeff Chavez"
 updatedAt: "2026-11-21"
-updateCount: 5
+updateCount: 6
 ---
 
-Can we call the Mosaic Covenant a republication or recapitulation of the Covenant of Works, or is there a better term because Scripture calls it one of the "covenants of promise"? I believe we can, and I believe the [1689 Federalist](/1689-federalism) or Particular Baptist position gives us the clearest account of why, not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture. Furthermore, I wanted to develop in this blog that the Mosaic Covenant is a covenant of works precisely for the gospel. It serves the purposes of the gospel, which is different from the original Covenant of Works with Adam. But first, let me lay out the purpose and function of this earthly, temporal, and national edition of the Covenant of Works. 
+Can we call the Mosaic Covenant a republication of the Covenant of Works, even though Scripture calls it one of the “covenants of promise”? I believe we can. And the right term is not “covenant of works” alone, but a subservient covenant: a covenant of works precisely for the gospel. The [1689 Federalist](/1689-federalism) or Particular Baptist position gives us the clearest account of why, not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture. 
+
+My argument is this: the Mosaic Covenant is a covenant of works for the gospel. Not a rival to grace, but its servant. It has a works-structure, yes. But that works-structure was never an end in itself. It was the appointed form by which God exposed sin, drove sinners to Christ, and provided the legal frame for the second Adam to do what the first could not. Here is how the 1689 Federalist tradition lays that out.
 
 ## The Purpose and Function of Republication
 
