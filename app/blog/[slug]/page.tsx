@@ -7,9 +7,10 @@ import EditButton from '@/components/EditButton'
 import CopyLink from '@/components/CopyLink'
 import QuoteShare from '@/components/QuoteShare'
 import FootnoteSidenotes from '@/components/FootnoteSidenotes'
+import AdminGate from '@/components/AdminGate'
 
 export async function generateStaticParams() {
-  return getAllPosts().map(p => ({ slug: p.slug }))
+  return getAllPosts({ includeAdminOnly: true }).map(p => ({ slug: p.slug }))
 }
 
 export async function generateMetadata(
@@ -43,6 +44,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const post = await getPostBySlug(slug)
   if (!post) notFound()
+  const adminOnly = post.adminOnly ?? false
 
   // Build full series outline (published + scheduled) for the top panel
   let seriesOutline: {
@@ -87,7 +89,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const wordCount = post.content?.replace(/<[^>]+>/g, '').split(/\s+/).length ?? 0
   const readTime = Math.max(1, Math.round(wordCount / 200))
 
-  return (
+  const content = (
     <article className="post-page">
       <header className="post-header">
         <div className="post-tags">
@@ -162,4 +164,6 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       <EditButton slug={slug} />
     </article>
   )
+
+  return adminOnly ? <AdminGate>{content}</AdminGate> : content
 }

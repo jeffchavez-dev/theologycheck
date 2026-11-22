@@ -22,6 +22,7 @@ export interface Post {
   series?: string
   seriesOrder?: number
   scheduled?: boolean
+  adminOnly?: boolean
 }
 
 // Strip the YYYY-MM-DD- date prefix from a filename to get the URL slug
@@ -39,7 +40,7 @@ export function findFileBySlug(slug: string): string | null {
   ) ?? null
 }
 
-export function getAllPosts(): Post[] {
+export function getAllPosts({ includeAdminOnly = false } = {}): Post[] {
   if (!fs.existsSync(postsDir)) return []
   const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'))
   return files
@@ -56,11 +57,12 @@ export function getAllPosts(): Post[] {
         author: data.author || '',
         draft: data.draft || false,
         scheduled: data.scheduled || false,
+        adminOnly: data.adminOnly || false,
         series: data.series || '',
         seriesOrder: data.seriesOrder ?? 0,
       }
     })
-    .filter(post => !post.draft && !post.scheduled && post.date <= new Date().toISOString().split('T')[0])
+    .filter(post => !post.draft && !post.scheduled && post.date <= new Date().toISOString().split('T')[0] && (includeAdminOnly || !post.adminOnly))
     .sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 
@@ -91,5 +93,6 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     dropCapParagraph,
     series: data.series || '',
     seriesOrder: data.seriesOrder ?? 0,
+    adminOnly: data.adminOnly || false,
   }
 }
