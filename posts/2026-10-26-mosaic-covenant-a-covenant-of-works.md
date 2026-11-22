@@ -8,8 +8,8 @@ tags:
   - "Reformed"
 dropCapParagraph: 1
 author: "Jeff Chavez"
-updatedAt: "2026-11-21"
-updateCount: 9
+updatedAt: "2026-11-22"
+updateCount: 10
 ---
 
 Can we call the Mosaic Covenant a republication of the Covenant of Works, even though Scripture calls it one of the “covenants of promise”? I believe we can. And the right term is not “covenant of works” alone, but a *subservient covenant*: a covenant of works precisely for the gospel. The [1689 Federalist](/1689-federalism) or Particular Baptist position gives us the clearest account of why, not as a theological novelty, but as the most careful reading of the covenantal structure of Scripture. 
@@ -129,19 +129,7 @@ Richard Muller's article in the *Mid-America Journal of Theology* examines Camer
 The Upper Register has a detailed study tracing the subservient covenant through Cameron, Samuel Bolton, and Moïse Amyraut, arguing that this 17th-century Reformed tradition anticipated much of what Meredith Kline later argued about the Mosaic economy. I find it a useful companion to the Particular Baptist sources, since it shows the view was not a Baptist invention but a retrieval from within the broader Reformed covenant tradition. [Read the study.](https://upper-register.com/topics/covenant-theology/subservient-cov/)
 
 ---
-
-## Works Cited
-
-- Barcellos, Richard C. "John Owen and New Covenant Theology." In *Covenant Theology: From Adam to Christ*, edited by Ronald D. Miller, James M. Renihan, and Francisco Orozco, 349–388. Palmdale, CA: Reformed Baptist Academic Press, 2005.
-- Coxe, Nehemiah. *Vindiciae Veritatis, Or A Confutation of the Heresies and Gross Errours asserted By Thomas Collier*. London: Nathaniel Ponder, 1677.
-- Denault, Pascal. *The Distinctiveness of Baptist Covenant Theology: A Comparison Between Seventeenth-Century Particular Baptist and Paedobaptist Federalism*. Revised Edition. Birmingham, AL: Solid Ground Christian Books, 2013.
-- Denault, Pascal. "From the Covenant of Works to the Covenant of Grace." *Founders Journal* 108 (2017). https://founders.org/articles/from-the-covenant-of-works-to-the-covenant-of-grace/.
-- Johnson, Jeffrey D. *The Fatal Flaw of the Theology of the Federal Vision*. Conway, AR: Free Grace Press, 2014.
-- Keach, Benjamin. *The Everlasting Covenant, A Sweet Cordial for a Drooping Soul*. London: H. Barnard, 1693.
-- Owen, John. *A Continuation of the Exposition of the Epistle of Paul the Apostle to the Hebrews*. London: Nathaniel Ponder, 1680.
-- Renihan, Samuel D. *The Mystery of Christ, His Covenant, and His Kingdom*. Cape Coral, FL: Founders Press, 2019.
-- Wartanian, Simon. *1689 Reformed Baptist Federalism*. Self-published PDF.
-
+For the full Bibliography, read this paper in [Academia](https://www.academia.edu/181596760/Mosaic_Covenant_A_Covenant_of_Works_for_the_Gospel).
 ---
 
 [^1]: Nehemiah Coxe, *Vindiciae Veritatis, Or A Confutation of the Heresies and Gross Errours Asserted By Thomas Collier* (London: Nathaniel Ponder, 1677). The function of the Mosaic economy as "ministration of condemnation" is not incidental to Paul's argument in 2 Corinthians 3 — it is the whole point of the contrast. See also Romans 3:19.
