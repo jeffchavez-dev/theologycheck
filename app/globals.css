@@ -2221,16 +2221,22 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   .misc-n { color: #7a6040; }
 }
 
-/* ── Simplified diagram design (match misconceptions aesthetic) ── */
+/* ── Simplified diagram design (always light — matches misconceptions) ── */
+
+/* Section wrapper always light */
+.fed-infographic-section { background: #fdfaf4; border-color: #d4c4a8; }
 
 /* NC = CoG */
 .fed-nc-card { background: #fdfaf4; border: 1px solid #d4c4a8; }
-.fed-def-header { border: 1px solid #d4c4a8; }
+.fed-def-header { background: #fdfaf4; border: 1px solid #d4c4a8; }
+.fed-def-header-ref { color: #8b6040; }
 
 /* Mosaic Subservient boxes */
 .fed-rel-box--left, .fed-rel-box--right { border: 1px solid #d4c4a8; background: #fdfaf4; }
 .fed-rel-box--center { border: 1px solid #8b1a1a; background: #fdfaf4; }
 .fed-rel-box--center .fed-rel-box-title { color: #8b1a1a; }
+.fed-rel-box-title { color: #3a2a1a; }
+.fed-rel-box-latin, .fed-rel-box-sub { color: #8b6040; }
 
 /* Westminster vs 1689 SVG: de-emphasise fills */
 .fed-cmp-cog-rect { fill: #f0e8d8; stroke: #8b1a1a; stroke-width: 1.5; }
@@ -2245,42 +2251,23 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-mem-compare { border: 1px solid #d4c4a8; border-radius: 6px; }
 .fed-mem-divider { background: #d4c4a8; }
 .fed-mem-side--old, .fed-mem-side--new { background: #fdfaf4; }
-.fed-mem-side--old .fed-mem-head, .fed-mem-side--new .fed-mem-head { color: #2a1a0e; }
+.fed-mem-side--old .fed-mem-head, .fed-mem-side--new .fed-mem-head { color: #3a2a1a; }
 .fed-mem-side--old .fed-mem-sign, .fed-mem-side--new .fed-mem-sign { background: #f0e8d8; color: #3a2a1a; border: 1px solid #d4c4a8; }
 .fed-mem-side--old .fed-mem-text, .fed-mem-side--new .fed-mem-text { color: #3a2a1a; }
 .fed-mem-side--old .fed-mem-ref, .fed-mem-side--new .fed-mem-ref { color: #8b6040; }
 
-/* Capabilities: clean header */
-.fed-cap-card { background: #fdfaf4; border: 1px solid #d4c4a8; }
+/* Capabilities: clean, muted section headers */
+.fed-cap-card { background: #fdfaf4; border: 1px solid #d4c4a8; border-radius: 4px; }
 .fed-cap-card-header { background: #f0e8d8; border-bottom: 1px solid #d4c4a8; }
+.fed-cap-gave .fed-cap-section-head { color: #5a7a50; }
+.fed-cap-limit .fed-cap-section-head { color: #8b6040; }
+.fed-cap-section li { color: #3a2a1a; }
+.fed-cap-gave li::before { color: #5a7a50; }
+.fed-cap-limit li::before { color: #8b6040; }
 .fed-cap-points { background: #f0e8d8; border-top: 1px solid #d4c4a8; }
+.fed-cap-points-label { color: #8b6040; }
+.fed-cap-points-text { color: #4a3020; }
 .fed-cap-section { border-top: 1px solid #d4c4a8; }
-
-/* Dark mode re-overrides for simplified diagram styles */
-@media (prefers-color-scheme: dark) {
-  .fed-nc-card { background: #1a1008; border-color: #3a2a14; }
-  .fed-def-header { background: #1a1008; border-color: #3a2a14; }
-  .fed-rel-box--left, .fed-rel-box--right { background: #1a1008; border-color: #3a2a14; }
-  .fed-rel-box--center { background: #1a1008; border-color: #8b1a1a; }
-  .fed-cmp-cog-rect { fill: #2a1a0a; stroke: #c04040; }
-  .fed-cmp-cog-label { fill: #d4b896; }
-  .fed-cmp-cog-sub { fill: #a07858; }
-  .fed-cmp-nc-rect { fill: #2a1a0a; stroke: #c04040; }
-  .fed-cmp-nc-main { fill: #d4b896; }
-  .fed-cmp-nc-eq { fill: #c04040; }
-  .fed-cmp-nc-ref { fill: #a07858; }
-  .fed-mem-compare { border-color: #3a2a14; }
-  .fed-mem-divider { background: #3a2a14; }
-  .fed-mem-side--old, .fed-mem-side--new { background: #1a1008; }
-  .fed-mem-side--old .fed-mem-head, .fed-mem-side--new .fed-mem-head { color: #d4b896; }
-  .fed-mem-side--old .fed-mem-sign, .fed-mem-side--new .fed-mem-sign { background: #2a1a0a; color: #c49a5a; border-color: #3a2a14; }
-  .fed-mem-side--old .fed-mem-text, .fed-mem-side--new .fed-mem-text { color: #c0a880; }
-  .fed-mem-side--old .fed-mem-ref, .fed-mem-side--new .fed-mem-ref { color: #8b6040; }
-  .fed-cap-card { background: #1a1008; border-color: #3a2a14; }
-  .fed-cap-card-header { background: #2a1a0a; border-bottom-color: #3a2a14; }
-  .fed-cap-points { background: #2a1a0a; border-top-color: #3a2a14; }
-  .fed-cap-section { border-top-color: #2a1a0a; }
-}
 
 /* ── 1689 Misconceptions Grid ── */
 .misc-grid {
