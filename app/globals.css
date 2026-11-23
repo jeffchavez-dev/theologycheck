@@ -2119,10 +2119,10 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 
 /* ── Study Guide callout ── */
 .fed-study-callout {
-  border: 1.5px solid #c49a5a;
+  border: 1.5px solid #d4c4a8;
   border-radius: 8px;
   padding: 1.5rem 1.75rem;
-  background: #fffaf2;
+  background: #fdfaf4;
 }
 .fed-study-callout-label {
   font-family: 'Cinzel', serif;
@@ -2138,7 +2138,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   font-family: 'Cinzel', serif;
   font-size: 17px;
   font-weight: 500;
-  color: #1e1208;
+  color: #2a1a0e;
   line-height: 1.3;
   margin-bottom: 0.2rem;
   display: block;
@@ -2152,10 +2152,10 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   font-weight: 700;
   color: #8b1a1a;
   text-decoration: none;
-  border-bottom: 1.5px solid #c49a5a;
+  border-bottom: 1.5px solid #d4c4a8;
   padding-bottom: 1px;
 }
-.fed-study-callout-link:hover { color: #5a1010; }
+.fed-study-callout-link:hover { color: #8b1a1a; }
 
 /* Mobile responsive — new diagrams */
 @media (max-width: 700px) {
@@ -2275,10 +2275,10 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 /* Capabilities: clean, muted section headers */
 .fed-cap-card { background: #fdfaf4; border: 1px solid #d4c4a8; border-radius: 4px; }
 .fed-cap-card-header { background: #f0e8d8; border-bottom: 1px solid #d4c4a8; }
-.fed-cap-gave .fed-cap-section-head { color: #5a7a50; }
+.fed-cap-gave .fed-cap-section-head { color: #8b6040; }
 .fed-cap-limit .fed-cap-section-head { color: #8b6040; }
 .fed-cap-section li { color: #3a2a1a; }
-.fed-cap-gave li::before { color: #5a7a50; }
+.fed-cap-gave li::before { color: #8b6040; }
 .fed-cap-limit li::before { color: #8b6040; }
 .fed-cap-points { background: #f0e8d8; border-top: 1px solid #d4c4a8; }
 .fed-cap-points-label { color: #8b6040; }
@@ -2303,7 +2303,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   width: 42px;
   height: 42px;
   margin-bottom: 0.85rem;
-  color: #3a2a14;
+  color: #3a2a1a;
 }
 .misc-icon svg {
   width: 42px;
@@ -2315,7 +2315,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   font-size: 0.58rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #9a8060;
+  color: #8b6040;
   font-family: var(--font-sans, system-ui);
   margin: 0 0 0.3rem;
 }
@@ -2324,14 +2324,14 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   font-weight: 600;
   font-size: 0.92rem;
   line-height: 1.3;
-  color: #2a1a08;
+  color: #3a2a1a;
   margin: 0 0 0.5rem;
   text-wrap: balance;
 }
 .misc-fact {
   font-size: 0.74rem;
   line-height: 1.7;
-  color: #6a5030;
+  color: #8b6040;
   margin: 0;
 }
 @media (max-width: 640px)  { .misc-grid { grid-template-columns: 1fr; } }
@@ -2346,7 +2346,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   border-top: 1px solid var(--fed-border, #d4c4a8);
   font-size: 0.65rem;
   letter-spacing: 0.06em;
-  color: #9a8060;
+  color: #8b6040;
 }
 .misc-abbr-label {
   font-weight: 600;
