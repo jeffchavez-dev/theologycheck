@@ -3,9 +3,11 @@ title: "The Believer's Union with Christ: Its Theology and Key Distinctions in t
 date: "2026-11-22"
 excerpt: "Union with Christ is not a hidden jewel to be employed on special occasions. It is the first and principal grace from which all other saving graces flow. This paper traces its scriptural foundations, its threefold aspects, and the vital Puritan distinction within mystical union that keeps regeneration and faith in right order."
 tags: ["Reformed", "Particular Baptist", "Soteriology", "Baptist"]
-author: "Neiko Paje"
-dropCapParagraph: 1
+author: "NoblemanPH"
+dropCapParagraph: 2
 ---
+
+*A guest post from a friend, [NoblemanPH](https://www.facebook.com/IRBSTheologicalSeminary), a student of [IRBS](https://www.facebook.com/IRBSTheologicalSeminary). The reader may read this article in [Academia](https://www.academia.edu/179746434/The_Believers_Union_With_Christ_Its_Theology_and_Key_Distinctions_In_the_Reformed_Thought).*
 
 The doctrine of union with Christ has been the foundational truth and reality for all of the believers' soteriological blessings. It is the glue that holds together the benefits of the Spirit's application of redemption towards sinners. As Petrus Van Mastricht writes, our "union with the Redeemer…is the proximate terminus to which faith strives" and "from union with Christ freely flows forth the communion of his benefits."[^1] Because believers are now united to Christ, Jesus' words that say, "and I give eternal life to them, and they will never perish; and no one will snatch them out of My hand" (John 10:28), hold infallibly. It is in this reality of our union with Him that we can confidently say, together with the apostle Paul, that there is nothing in this world and in the world to come that "will be able to separate us from the love of God, which is in Christ Jesus our Lord." (Romans 8:39)
 

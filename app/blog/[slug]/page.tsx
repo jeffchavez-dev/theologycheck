@@ -8,6 +8,7 @@ import CopyLink from '@/components/CopyLink'
 import QuoteShare from '@/components/QuoteShare'
 import FootnoteSidenotes from '@/components/FootnoteSidenotes'
 import AdminGate from '@/components/AdminGate'
+import { nameToSlug, getAllAuthorProfiles } from '@/lib/authors'
 
 export async function generateStaticParams() {
   return getAllPosts({ includeAdminOnly: true }).map(p => ({ slug: p.slug }))
@@ -45,6 +46,10 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const post = await getPostBySlug(slug)
   if (!post) notFound()
   const adminOnly = post.adminOnly ?? false
+  const profiles = getAllAuthorProfiles()
+  const authorHasProfile = post.author
+    ? profiles.some(p => nameToSlug(p.name) === nameToSlug(post.author!))
+    : false
 
   // Build full series outline (published + scheduled) for the top panel
   let seriesOutline: {
@@ -97,7 +102,19 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </div>
         <h1>{post.title}</h1>
         <div className="post-meta" style={{ justifyContent: 'center' }}>
-          {post.author && <><span>By {post.author}</span><span>·</span></>}
+          {post.author && (
+            <>
+              <span>
+                By{' '}
+                {authorHasProfile ? (
+                  <Link href={`/author/${nameToSlug(post.author)}`} style={{ textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                    {post.author}
+                  </Link>
+                ) : post.author}
+              </span>
+              <span>·</span>
+            </>
+          )}
           <span>{date}</span>
           <span>·</span>
           <span>{readTime} min read</span>
