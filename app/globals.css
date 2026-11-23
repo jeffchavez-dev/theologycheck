@@ -1304,8 +1304,8 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-infographic-section {
   margin: 0 0 3.5rem;
   padding: 2rem 2rem 2.25rem;
-  border: 1px solid #e8ddd0;
-  background: #ffffff;
+  border: 1px solid #d4c4a8;
+  background: #fdfaf4;
 }
 .fed-download-btn {
   display: inline-block;
@@ -1321,7 +1321,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   letter-spacing: 0.03em;
   transition: background 0.15s, color 0.15s;
 }
-.fed-download-btn:hover { background: #f5ede0; }
+.fed-download-btn:hover { background: #f0e8d8; }
 .fed-download-btn:disabled { opacity: 0.5; cursor: wait; }
 
 .fed-infographic-title {
@@ -1384,8 +1384,8 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-infographic-pullquote {
   margin: 1rem 0 1.25rem;
   padding: 0.85rem 1.25rem;
-  border-left: 3px solid #c49a5a;
-  background: #f9f4ec;
+  border-left: 3px solid #8b6040;
+  background: #f0e8d8;
   font-family: 'EB Garamond', serif;
   font-size: 0.95rem;
   font-style: italic;
@@ -1431,7 +1431,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   height: 13px;
   border-radius: 50%;
   border: 2px solid #8b1a1a;
-  background: #faf6ef;
+  background: #fdfaf4;
   position: relative;
   z-index: 1;
   flex-shrink: 0;
@@ -1457,25 +1457,25 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 
 .fed-tnode-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
+  font-size: 10px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #1a0f0a;
+  color: #3a2a1a;
   margin-top: 0.6rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .fed-tnode--end .fed-tnode-label { color: #8b1a1a; }
 
 .fed-tnode-ref {
-  font-size: 0.75rem;
-  color: #8b1a1a;
+  font-size: 11px;
+  color: #8b6040;
   margin-top: 0.15rem;
   font-style: italic;
 }
 
 .fed-tnode-note {
-  font-size: 0.75rem;
+  font-size: 11px;
   color: #6b4f35;
   margin-top: 0.3rem;
   line-height: 1.4;
@@ -1489,7 +1489,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 
 .fed-tlegend {
-  font-size: 0.78rem;
+  font-size: 11px;
   color: #6b4f35;
   display: flex;
   align-items: center;
@@ -1571,10 +1571,11 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 
 .fed-sub-col-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 10px;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #8b1a1a;
+  color: #8b6040;
   margin-bottom: 0.65rem;
 }
 
@@ -1586,21 +1587,21 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 
 .fed-sub-list li {
-  font-size: 0.88rem;
-  color: #2a1a0e;
+  font-size: 12.5px;
+  color: #3a2a1a;
   line-height: 1.4;
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
   padding-bottom: 0.55rem;
-  border-bottom: 1px solid #e8dcc8;
+  border-bottom: 1px solid #d4c4a8;
 }
 
 .fed-sub-list li:last-child { border-bottom: none; }
 
 .fed-sub-ref {
-  font-size: 0.72rem;
-  color: #8b1a1a;
+  font-size: 11px;
+  color: #8b6040;
   font-style: italic;
 }
 
@@ -1613,8 +1614,8 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   align-items: center;
   text-align: center;
   padding: 1rem 1.25rem;
-  border: 2px solid #8b1a1a;
-  background: #f5efe3;
+  border: 1px solid #8b1a1a;
+  background: #fdfaf4;
   min-width: 140px;
   gap: 0.4rem;
 }
@@ -1656,11 +1657,11 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-svg-wrap { overflow-x: auto; margin: 1.25rem 0 0.5rem; }
 .fed-timeline-svg { display: block; width: 100%; min-width: 500px; height: auto; }
 
-.fed-svg-dashed { stroke: #c8a97a; }
+.fed-svg-dashed { stroke: #d4c4a8; }
 .fed-svg-solid  { stroke: #8b1a1a; }
 .fed-svg-arrowhead { fill: #8b1a1a; }
 
-.fed-svg-promise-node { fill: #fdf6ec; stroke: #c8a97a; stroke-width: 2; }
+.fed-svg-promise-node { fill: #fdfaf4; stroke: #d4c4a8; stroke-width: 2; }
 .fed-svg-nc-node { fill: #8b1a1a; }
 .fed-svg-nc-ring { stroke: #8b1a1a; }
 
@@ -1711,10 +1712,10 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   justify-content: center;
   gap: 0.6rem;
   flex-wrap: wrap;
-  border: 2px solid #8b1a1a;
+  border: 1px solid #8b1a1a;
   border-radius: 6px;
   padding: 0.9rem 1.5rem;
-  background: #fdf6ec;
+  background: #fdfaf4;
   text-align: center;
 }
 .fed-def-header-ref {
@@ -1819,7 +1820,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   display: grid;
   grid-template-columns: 1fr 2px 1fr;
   gap: 0.75rem;
-  border-top: 1px solid #e8d8c0;
+  border-top: 1px solid #d4c4a8;
   padding-top: 0.75rem;
 }
 .fed-rel-col {
@@ -1842,7 +1843,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 .fed-rel-col li::before {
   content: '—';
-  color: #c8a97a;
+  color: #d4c4a8;
   flex-shrink: 0;
 }
 .fed-rel-col--purpose { text-align: right; }
@@ -1856,7 +1857,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   color: #8b6040;
 }
 .fed-rel-col-sep {
-  background: #e8d8c0;
+  background: #d4c4a8;
   align-self: stretch;
   width: 1.5px;
 }
@@ -2079,10 +2080,10 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   flex-direction: column;
   background: #fffaf2;
 }
-.fed-cap-card-header { padding: 0.85rem 1rem; background: #e8d5b8; border-bottom: 2px solid #c49a5a; }
+.fed-cap-card-header { padding: 0.85rem 1rem; background: #f0e8d8; border-bottom: 1px solid #d4c4a8; }
 .fed-cap-card-name { font-family: 'Cinzel', serif; font-size: 15px; font-weight: 700; color: #2a1a0e; display: block; }
 .fed-cap-card-ref { font-size: 11px; color: #8b1a1a; font-style: italic; display: block; margin-top: 2px; }
-.fed-cap-section { padding: 0.75rem 1rem; border-top: 1px solid #e8d4b8; }
+.fed-cap-section { padding: 0.75rem 1rem; border-top: 1px solid #d4c4a8; }
 .fed-cap-section-head {
   font-family: 'Cinzel', serif;
   font-size: 10px;
@@ -2103,7 +2104,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 .fed-cap-gave li::before { content: '✓'; position: absolute; left: 0; color: #2a5a1a; font-size: 11px; top: 1px; }
 .fed-cap-limit li::before { content: '✗'; position: absolute; left: 0; color: #8b1a1a; font-size: 11px; top: 1px; }
-.fed-cap-points { padding: 0.75rem 1rem; background: #f5ede0; border-top: 2px solid #c49a5a; margin-top: auto; }
+.fed-cap-points { padding: 0.75rem 1rem; background: #f0e8d8; border-top: 1px solid #d4c4a8; margin-top: auto; }
 .fed-cap-points-label {
   font-family: 'Cinzel', serif;
   font-size: 9.5px;
