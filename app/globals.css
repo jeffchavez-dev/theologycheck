@@ -1269,7 +1269,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .coxe-node--d5 > .coxe-node-row .coxe-node-text { color: #6a4e38; font-style: italic; font-size: 0.9rem; }
 
 /* ── 1689 Federalism quote rows ─────────────────────────────────────────── */
-.fed-quote { border-bottom: 1px solid #ede0cc44; }
+.fed-quote { border-bottom: 1px solid #d4c4a8; }
 .fed-quote:last-child { border-bottom: none; }
 .fed-quote-header {
   display: flex; align-items: baseline; gap: 0.5rem;
@@ -1287,7 +1287,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-quote-body { padding: 0.25rem 0.5rem 0.75rem 2.5rem; }
 .fed-quote-text {
   font-family: 'EB Garamond', Georgia, serif; font-size: 0.9rem;
-  color: #4a3020; line-height: 1.65; margin: 0; font-style: italic;
+  color: #3a2a1a; line-height: 1.65; margin: 0; font-style: italic;
 }
 
 /* ── 1689 Federalism page ── */
@@ -1313,8 +1313,8 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   padding: 0.4rem 0.9rem;
   font-family: 'EB Garamond', serif;
   font-size: 0.8rem;
-  color: #6b4c2a;
-  border: 1px solid #c49a5a;
+  color: #8b6040;
+  border: 1px solid #d4c4a8;
   background: transparent;
   border-radius: 2px;
   cursor: pointer;
@@ -1375,21 +1375,21 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-infographic-footer {
   margin-top: 1.5rem;
   font-size: 0.85rem;
-  color: #6b4f35;
+  color: #8b6040;
   font-style: italic;
-  border-top: 1px solid #d9c9b0;
+  border-top: 1px solid #d4c4a8;
   padding-top: 0.9rem;
 }
 
 .fed-infographic-pullquote {
   margin: 1rem 0 1.25rem;
   padding: 0.85rem 1.25rem;
-  border-left: 3px solid #8b6040;
+  border-left: 3px solid #d4c4a8;
   background: #f0e8d8;
   font-family: 'EB Garamond', serif;
   font-size: 0.95rem;
   font-style: italic;
-  color: #4a3520;
+  color: #3a2a1a;
   line-height: 1.6;
 }
 
@@ -1465,7 +1465,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   font-weight: 700;
 }
 
-.fed-tnode--end .fed-tnode-label { color: #8b1a1a; }
+.fed-tnode--end .fed-tnode-label { color: #8b6040; }
 
 .fed-tnode-ref {
   font-size: 11px;
@@ -1476,7 +1476,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 
 .fed-tnode-note {
   font-size: 11px;
-  color: #6b4f35;
+  color: #8b6040;
   margin-top: 0.3rem;
   line-height: 1.4;
 }
@@ -1490,7 +1490,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 
 .fed-tlegend {
   font-size: 11px;
-  color: #6b4f35;
+  color: #8b6040;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -1507,11 +1507,11 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-tlegend--dashed::before {
   background: repeating-linear-gradient(
     to right,
-    #8b1a1a 0, #8b1a1a 5px, transparent 5px, transparent 10px
+    #d4c4a8 0, #d4c4a8 5px, transparent 5px, transparent 10px
   );
 }
 
-.fed-tlegend--solid::before { background: #8b1a1a; }
+.fed-tlegend--solid::before { background: #d4c4a8; }
 
 /* NC = CoG grid */
 .fed-nc-grid {
@@ -1556,7 +1556,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 
 .fed-nc-note {
   font-size: 12px;
-  color: #6b4f35;
+  color: #8b6040;
   line-height: 1.5;
   padding: 0.4rem 1rem 0.75rem;
 }
@@ -1637,7 +1637,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 
 .fed-sub-center-desc {
   font-size: 0.75rem;
-  color: #6b4f35;
+  color: #8b6040;
   line-height: 1.5;
 }
 
@@ -1658,21 +1658,21 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-timeline-svg { display: block; width: 100%; min-width: 500px; height: auto; }
 
 .fed-svg-dashed { stroke: #d4c4a8; }
-.fed-svg-solid  { stroke: #8b1a1a; }
-.fed-svg-arrowhead { fill: #8b1a1a; }
+.fed-svg-solid  { stroke: #d4c4a8; }
+.fed-svg-arrowhead { fill: #d4c4a8; }
 
 .fed-svg-promise-node { fill: #fdfaf4; stroke: #d4c4a8; stroke-width: 2; }
-.fed-svg-nc-node { fill: #8b1a1a; }
-.fed-svg-nc-ring { stroke: #8b1a1a; }
+.fed-svg-nc-node { fill: #3a2a1a; }
+.fed-svg-nc-ring { stroke: #d4c4a8; }
 
 .fed-svg-node-label {
-  fill: #3d2b1a;
+  fill: #3a2a1a;
   font-family: 'Cinzel', Georgia, serif;
   font-size: 11px;
   font-weight: 600;
 }
 .fed-svg-node-ref {
-  fill: #8a6040;
+  fill: #8b6040;
   font-family: 'EB Garamond', Georgia, serif;
   font-size: 10px;
   font-style: italic;
@@ -1684,14 +1684,14 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   font-weight: 700;
 }
 .fed-svg-nc-greek {
-  fill: #3d2b1a;
+  fill: #3a2a1a;
   font-family: 'EB Garamond', Georgia, serif;
   font-size: 11.5px;
   font-style: italic;
   font-weight: 600;
 }
 .fed-svg-nc-enacted {
-  fill: #8b1a1a;
+  fill: #8b6040;
   font-family: 'EB Garamond', Georgia, serif;
   font-size: 9px;
   letter-spacing: 0.08em;
@@ -1934,7 +1934,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 
 .fed-figure-chip em {
-  color: #8a6040;
+  color: #8b6040;
   font-style: italic;
 }
 
@@ -2012,7 +2012,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-cmp-cog-sub { font-size: 10px; fill: #8b6040; font-style: italic; font-family: 'EB Garamond', serif; }
 .fed-cmp-admin-rect { fill: #fdfaf4; stroke: #d4c4a8; stroke-width: 1.5; }
 .fed-cmp-admin-label { font-family: 'EB Garamond', serif; font-size: 12px; font-weight: 600; fill: #3a2a1a; }
-.fed-cmp-admin-sub { font-size: 11px; fill: #6b4f35; font-family: 'EB Garamond', serif; }
+.fed-cmp-admin-sub { font-size: 11px; fill: #8b6040; font-family: 'EB Garamond', serif; }
 .fed-cmp-admin-ref { font-size: 9.5px; fill: #8b6040; font-style: italic; font-family: 'EB Garamond', serif; }
 .fed-cmp-sub-rect { fill: #f0e8d8; stroke: #d4c4a8; stroke-width: 1.5; }
 .fed-cmp-sub-label { font-family: 'EB Garamond', serif; font-size: 12px; font-weight: 600; fill: #3a2a1a; }
@@ -2092,7 +2092,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   letter-spacing: 0.08em;
   margin-bottom: 0.5rem;
 }
-.fed-cap-gave .fed-cap-section-head { color: #2a5a1a; }
+.fed-cap-gave .fed-cap-section-head { color: #8b6040; }
 .fed-cap-limit .fed-cap-section-head { color: #8b6040; }
 .fed-cap-section ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.3rem; }
 .fed-cap-section li {
@@ -2102,7 +2102,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   padding-left: 1.1rem;
   position: relative;
 }
-.fed-cap-gave li::before { content: '✓'; position: absolute; left: 0; color: #2a5a1a; font-size: 11px; top: 1px; }
+.fed-cap-gave li::before { content: '✓'; position: absolute; left: 0; color: #8b6040; font-size: 11px; top: 1px; }
 .fed-cap-limit li::before { content: '✗'; position: absolute; left: 0; color: #8b6040; font-size: 11px; top: 1px; }
 .fed-cap-points { padding: 0.75rem 1rem; background: #f0e8d8; border-top: 1px solid #d4c4a8; margin-top: auto; }
 .fed-cap-points-label {
@@ -2235,11 +2235,11 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 /* Westminster vs 1689 SVG: de-emphasise fills */
 .fed-cmp-cog-rect { fill: #f0e8d8; stroke: #8b1a1a; stroke-width: 1.5; }
 .fed-cmp-cog-label { fill: #3a2a1a; }
-.fed-cmp-cog-sub { fill: #7a6040; }
+.fed-cmp-cog-sub { fill: #8b6040; }
 .fed-cmp-nc-rect { fill: #f0e8d8; stroke: #8b1a1a; stroke-width: 1.5; }
 .fed-cmp-nc-main { fill: #3a2a1a; }
 .fed-cmp-nc-eq { fill: #8b1a1a; }
-.fed-cmp-nc-ref { fill: #7a6040; }
+.fed-cmp-nc-ref { fill: #8b6040; }
 
 /* OC list inside center rel-box */
 .fed-rel-oc-list {
@@ -2282,7 +2282,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-cap-limit li::before { color: #8b6040; }
 .fed-cap-points { background: #f0e8d8; border-top: 1px solid #d4c4a8; }
 .fed-cap-points-label { color: #8b6040; }
-.fed-cap-points-text { color: #4a3020; }
+.fed-cap-points-text { color: #3a2a1a; }
 .fed-cap-section { border-top: 1px solid #d4c4a8; }
 
 /* ── 1689 Misconceptions Grid ── */
