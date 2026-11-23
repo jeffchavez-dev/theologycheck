@@ -1774,7 +1774,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   color: #3d2b1a;
   line-height: 1.3;
 }
-.fed-rel-box--center .fed-rel-box-title { color: #8b1a1a; font-size: 0.8rem; }
+.fed-rel-box--center .fed-rel-box-title { color: #8b6040; font-size: 0.8rem; }
 
 .fed-rel-box-latin {
   font-family: 'EB Garamond', Georgia, serif;
@@ -2035,7 +2035,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 .fed-mem-divider { background: #d4c4a8; }
 .fed-mem-side { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; }
-.fed-mem-side--old { background: #fdfaf4; }
+.fed-mem-side--old { background: #f0e8d8; }
 .fed-mem-side--new { background: #fdfaf4; }
 .fed-mem-head {
   font-family: 'Cinzel', serif;
@@ -2082,7 +2082,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 .fed-cap-card-header { padding: 0.85rem 1rem; background: #f0e8d8; border-bottom: 1px solid #d4c4a8; }
 .fed-cap-card-name { font-family: 'Cinzel', serif; font-size: 15px; font-weight: 700; color: #2a1a0e; display: block; }
-.fed-cap-card-ref { font-size: 11px; color: #8b1a1a; font-style: italic; display: block; margin-top: 2px; }
+.fed-cap-card-ref { font-size: 11px; color: #8b6040; font-style: italic; display: block; margin-top: 2px; }
 .fed-cap-section { padding: 0.75rem 1rem; border-top: 1px solid #d4c4a8; }
 .fed-cap-section-head {
   font-family: 'Cinzel', serif;
@@ -2093,7 +2093,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   margin-bottom: 0.5rem;
 }
 .fed-cap-gave .fed-cap-section-head { color: #2a5a1a; }
-.fed-cap-limit .fed-cap-section-head { color: #8b1a1a; }
+.fed-cap-limit .fed-cap-section-head { color: #8b6040; }
 .fed-cap-section ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.3rem; }
 .fed-cap-section li {
   font-size: 12.5px;
@@ -2103,7 +2103,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   position: relative;
 }
 .fed-cap-gave li::before { content: '✓'; position: absolute; left: 0; color: #2a5a1a; font-size: 11px; top: 1px; }
-.fed-cap-limit li::before { content: '✗'; position: absolute; left: 0; color: #8b1a1a; font-size: 11px; top: 1px; }
+.fed-cap-limit li::before { content: '✗'; position: absolute; left: 0; color: #8b6040; font-size: 11px; top: 1px; }
 .fed-cap-points { padding: 0.75rem 1rem; background: #f0e8d8; border-top: 1px solid #d4c4a8; margin-top: auto; }
 .fed-cap-points-label {
   font-family: 'Cinzel', serif;
@@ -2228,7 +2228,7 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 /* Mosaic Subservient boxes */
 .fed-rel-box--left, .fed-rel-box--right { border: 1px solid #d4c4a8; background: #fdfaf4; }
 .fed-rel-box--center { border: 1px solid #8b1a1a; background: #fdfaf4; }
-.fed-rel-box--center .fed-rel-box-title { color: #8b1a1a; }
+.fed-rel-box--center .fed-rel-box-title { color: #8b6040; }
 .fed-rel-box-title { color: #3a2a1a; }
 .fed-rel-box-latin, .fed-rel-box-sub { color: #8b6040; }
 
@@ -2265,7 +2265,8 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 /* Membership: both sides light */
 .fed-mem-compare { border: 1px solid #d4c4a8; border-radius: 6px; }
 .fed-mem-divider { background: #d4c4a8; }
-.fed-mem-side--old, .fed-mem-side--new { background: #fdfaf4; }
+.fed-mem-side--old { background: #f0e8d8; }
+.fed-mem-side--new { background: #fdfaf4; }
 .fed-mem-side--old .fed-mem-head, .fed-mem-side--new .fed-mem-head { color: #3a2a1a; }
 .fed-mem-side--old .fed-mem-sign, .fed-mem-side--new .fed-mem-sign { background: #f0e8d8; color: #3a2a1a; border: 1px solid #d4c4a8; }
 .fed-mem-side--old .fed-mem-text, .fed-mem-side--new .fed-mem-text { color: #3a2a1a; }
