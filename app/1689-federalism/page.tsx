@@ -3,6 +3,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import DownloadDiagram from '@/components/DownloadDiagram'
 import AdminGate from '@/components/AdminGate'
+import Misconceptions1689 from '@/components/Misconceptions1689'
 
 export const metadata: Metadata = {
   title: '1689 Federalism',
@@ -431,6 +432,8 @@ export default function FederalismPage() {
           <Link href="/study/mystery-of-christ" className="fed-study-callout-link">Open Study Guide →</Link>
         </div>
       </section>
+
+      <Misconceptions1689 />
 
       {/* ── Articles ── */}
       <section className="fed-infographic-section">

@@ -2183,4 +2183,61 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   .fed-study-callout { background: #1a1008; border-color: #5a3a1a; }
   .fed-study-callout-title { color: #d4b896; }
   .fed-study-callout-desc { color: #c0a880; }
+  .misc-card { background: #1a1008; border-color: #3a2a14; }
+  .misc-icon svg { stroke: #d4b896; }
+  .misc-claim { color: #d4b896; }
+  .misc-fact { color: #a08060; }
+  .misc-n { color: #7a6040; }
 }
+
+/* ── 1689 Misconceptions Grid ── */
+.misc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--fed-border, #d4c4a8);
+  border-left: 1px solid var(--fed-border, #d4c4a8);
+  margin-top: 1.5rem;
+}
+.misc-card {
+  border-right: 1px solid var(--fed-border, #d4c4a8);
+  border-bottom: 1px solid var(--fed-border, #d4c4a8);
+  background: var(--fed-card-bg, #fdfaf4);
+  padding: 1.3rem 1.2rem;
+}
+.misc-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 0.85rem;
+  color: #3a2a14;
+}
+.misc-icon svg {
+  width: 42px;
+  height: 42px;
+  display: block;
+  stroke: currentColor;
+}
+.misc-n {
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #9a8060;
+  font-family: var(--font-sans, system-ui);
+  margin: 0 0 0.3rem;
+}
+.misc-claim {
+  font-family: var(--font-serif, Georgia, serif);
+  font-weight: 600;
+  font-size: 0.92rem;
+  line-height: 1.3;
+  color: #2a1a08;
+  margin: 0 0 0.5rem;
+  text-wrap: balance;
+}
+.misc-fact {
+  font-size: 0.74rem;
+  line-height: 1.7;
+  color: #6a5030;
+  margin: 0;
+}
+@media (max-width: 640px)  { .misc-grid { grid-template-columns: 1fr; } }
+@media (min-width: 641px) and (max-width: 880px) { .misc-grid { grid-template-columns: repeat(2, 1fr); } }
