@@ -25,17 +25,17 @@ const ncPromises = [
 ]
 
 const subForm = [
-  { text: '"Do this and live" sanctions', ref: 'Ex 19:5' },
-  { text: 'National blessings and curses', ref: 'Deut 28' },
-  { text: 'Could be, and was, broken', ref: 'Jer 31:32' },
-  { text: 'Ministration of condemnation', ref: '2 Cor 3:9' },
+  { text: 'Adamic: seed promised, enmity set (Gen 3:15)', ref: 'Post-fall' },
+  { text: 'Abrahamic: promise of seed, land, and nations', ref: 'Gen 15/17' },
+  { text: 'Mosaic: "Do this and live" national sanctions', ref: 'Ex 19:5' },
+  { text: 'Davidic: promise of an eternal throne and son', ref: '2 Sam 7:16' },
 ]
 
 const subPurpose = [
-  { text: 'Handmaid to the Covenant of Grace', ref: 'Coxe' },
-  { text: 'Shadow of the heavenly substance', ref: 'Col 2:17' },
-  { text: 'Schoolmaster to lead to Christ', ref: 'Gal 3:24' },
-  { text: 'Frame for Christ born under the law', ref: 'Gal 4:4' },
+  { text: 'Each reveals a need only Christ can fulfill', ref: 'Heb 10:1' },
+  { text: "All typify aspects of Christ’s person and work", ref: 'Col 2:17' },
+  { text: 'Together, schoolmasters leading to Christ', ref: 'Gal 3:24' },
+  { text: 'Each gives way to the New Covenant it served', ref: 'Heb 8:13' },
 ]
 
 // Diagram 4 — Westminster vs 1689
@@ -122,7 +122,7 @@ export default function FederalismPage() {
       </div>
 
       <p className="fed-page-intro">
-        I hold with the Particular Baptists that the New Covenant <em>is</em> the Covenant of Grace, not merely its final administration. The Old Testament covenants were real and distinct, but subservient: they revealed and anticipated the covenant that Christ would enact. This is not a retrieval project. It is a way of reading Scripture.
+        I hold with the Particular Baptists that the New Covenant <em>is</em> the Covenant of Grace, not merely its final administration. The Old Testament covenants were real and distinct, but subservient: they revealed and anticipated the covenant that Christ would enact.
       </p>
 
       {/* ── Diagram 1: Covenant Timeline ── */}
@@ -213,9 +213,9 @@ export default function FederalismPage() {
         <DownloadDiagram targetId="diagram-nc-cog" filename="new-covenant-covenant-of-grace" />
       </section>
 
-      {/* ── Diagram 3: Subservient Covenant ── */}
+      {/* ── Diagram 3: Subservient Covenants ── */}
       <section className="fed-infographic-section">
-        <h2 className="fed-infographic-title">The Mosaic Covenant: Subservient, Not Identical</h2>
+        <h2 className="fed-infographic-title">Old Covenant Administrations: Subservient to the Covenant of Grace</h2>
         <div className="fed-figures-row">
           <span className="fed-figure-chip">John Cameron <em>· coined foedus subserviens, 1608</em></span>
           <span className="fed-figure-chip">Nehemiah Coxe <em>· Particular Baptist, 1681</em></span>
@@ -224,7 +224,7 @@ export default function FederalismPage() {
         <details className="fed-desc-details">
           <summary className="fed-desc-toggle">Notes</summary>
           <p className="fed-infographic-desc">
-            The Mosaic Covenant has a works-structure (<em>do this and live</em>), but it is neither the original Covenant of Works nor the Covenant of Grace. It is a third thing: the <em>foedus subserviens</em>. Works-featured in form; grace-serving in purpose. This distinction, I am convinced, is one of the most clarifying contributions of the Particular Baptist tradition to Reformed covenant theology.
+            The Particular Baptist position is not merely about the Mosaic Covenant — it concerns all Old Covenant administrations. The Adamic (post-fall), Abrahamic, Mosaic, and Davidic covenants are each real and distinct, yet none of them <em>is</em> the Covenant of Grace. Each is a <em>foedus subserviens</em>: a covenant that serves the grace covenant without being it. Works-featured in form; grace-serving in purpose. This is what distinguishes the 1689 Federalist reading from both covenant theology and New Covenant theology.
           </p>
         </details>
 
@@ -240,17 +240,21 @@ export default function FederalismPage() {
               <div className="fed-rel-box-sub">Adam · Eden</div>
             </div>
             <div className="fed-rel-connector">
-              <div className="fed-rel-conn-label">shares form</div>
+              <div className="fed-rel-conn-label">distinct from</div>
               <div className="fed-rel-conn-line" />
               <div className="fed-rel-conn-arrow">›</div>
             </div>
             <div className="fed-rel-box fed-rel-box--center">
-              <div className="fed-rel-box-title">Mosaic Covenant</div>
               <div className="fed-rel-box-latin">foedus subserviens</div>
-              <div className="fed-rel-box-sub">Sinai · Ex 19</div>
+              <ul className="fed-rel-oc-list">
+                <li><span className="fed-rel-oc-name">Adamic</span><span className="fed-rel-oc-ref">Gen 3:15</span></li>
+                <li><span className="fed-rel-oc-name">Abrahamic</span><span className="fed-rel-oc-ref">Gen 15/17</span></li>
+                <li><span className="fed-rel-oc-name">Mosaic</span><span className="fed-rel-oc-ref">Ex 19</span></li>
+                <li><span className="fed-rel-oc-name">Davidic</span><span className="fed-rel-oc-ref">2 Sam 7</span></li>
+              </ul>
             </div>
             <div className="fed-rel-connector">
-              <div className="fed-rel-conn-label">serves purpose</div>
+              <div className="fed-rel-conn-label">each serves</div>
               <div className="fed-rel-conn-line" />
               <div className="fed-rel-conn-arrow">›</div>
             </div>
@@ -285,7 +289,7 @@ export default function FederalismPage() {
         <p className="fed-infographic-footer">
           "The former was added and made subservient to the latter's great ends… which was designed by God only to be a handmaid to it." — Nehemiah Coxe
         </p>
-        <DownloadDiagram targetId="diagram-subservient" filename="mosaic-subservient-covenant" />
+        <DownloadDiagram targetId="diagram-subservient" filename="old-covenant-subservient" />
       </section>
 
       {/* ── Diagram 4: Westminster vs 1689 ── */}

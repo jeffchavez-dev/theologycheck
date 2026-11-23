@@ -2173,14 +2173,6 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
     .fed-mem-side--old .fed-mem-text { color: #c0a880; }
     .fed-mem-side--old .fed-mem-ref { color: #8b6040; }
     .fed-mem-compare { border-color: #5a3a1a; }
-    .fed-cap-card { background: #1a1008; border-color: #5a3a1a; }
-    .fed-cap-card-header { background: #2a1a0a; border-bottom-color: #5a3a1a; }
-    .fed-cap-card-name { color: #d4b896; }
-    .fed-cap-card-ref { color: #c49a5a; }
-    .fed-cap-section { border-top-color: #2a1a0a; }
-    .fed-cap-section li { color: #c0a880; }
-    .fed-cap-points { background: #2a1a0a; }
-    .fed-cap-points-text { color: #c0a880; }
     .fed-study-callout { background: #1a1008; border-color: #5a3a1a; }
     .fed-study-callout-title { color: #d4b896; }
     .fed-study-callout-desc { color: #c0a880; }
@@ -2203,14 +2195,6 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   .fed-mem-side--old .fed-mem-text { color: #c0a880; }
   .fed-mem-side--old .fed-mem-ref { color: #8b6040; }
   .fed-mem-compare { border-color: #5a3a1a; }
-  .fed-cap-card { background: #1a1008; border-color: #5a3a1a; }
-  .fed-cap-card-header { background: #2a1a0a; border-bottom-color: #5a3a1a; }
-  .fed-cap-card-name { color: #d4b896; }
-  .fed-cap-card-ref { color: #c49a5a; }
-  .fed-cap-section { border-top-color: #2a1a0a; }
-  .fed-cap-section li { color: #c0a880; }
-  .fed-cap-points { background: #2a1a0a; }
-  .fed-cap-points-text { color: #c0a880; }
   .fed-study-callout { background: #1a1008; border-color: #5a3a1a; }
   .fed-study-callout-title { color: #d4b896; }
   .fed-study-callout-desc { color: #c0a880; }
@@ -2246,6 +2230,27 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-cmp-nc-main { fill: #3a2a1a; }
 .fed-cmp-nc-eq { fill: #8b1a1a; }
 .fed-cmp-nc-ref { fill: #7a6040; }
+
+/* OC list inside center rel-box */
+.fed-rel-oc-list {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.fed-rel-oc-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.72rem;
+  border-bottom: 1px solid #d4c4a8;
+  padding-bottom: 0.25rem;
+}
+.fed-rel-oc-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.fed-rel-oc-name { font-weight: 600; color: #3a2a1a; }
+.fed-rel-oc-ref { color: #8b6040; font-style: italic; font-size: 0.65rem; margin-left: 0.5rem; }
 
 /* Membership: both sides light */
 .fed-mem-compare { border: 1px solid #d4c4a8; border-radius: 6px; }
