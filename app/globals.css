@@ -1521,34 +1521,44 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 
 .fed-nc-card {
-  border: 1px solid #d9c9b0;
-  background: #f5efe3;
-  padding: 1rem 1.1rem;
+  border: 1px solid #d4c4a8;
+  background: #fdfaf4;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
 }
 
 .fed-nc-ref {
   font-family: 'Cinzel', serif;
   font-size: 0.68rem;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #8b1a1a;
-  margin-bottom: 0.4rem;
+  display: block;
+  padding: 0.65rem 1rem 0.5rem;
+  background: #f0e8d8;
+  border-bottom: 1px solid #d4c4a8;
 }
 
 .fed-nc-quote {
-  font-size: 0.88rem;
-  color: #1a0f0a;
-  line-height: 1.6;
+  font-size: 12.5px;
+  color: #3a2a1a;
+  line-height: 1.55;
   font-style: italic;
-  margin: 0 0 0.5rem;
+  margin: 0;
+  padding: 0.75rem 1rem 0.5rem;
   border-left: 2px solid #8b1a1a;
-  padding-left: 0.65rem;
+  margin: 0.65rem 1rem 0;
 }
 
 .fed-nc-note {
-  font-size: 0.8rem;
+  font-size: 12px;
   color: #6b4f35;
   line-height: 1.5;
+  padding: 0.4rem 1rem 0.75rem;
 }
 
 /* Subservient diagram */
@@ -1752,9 +1762,9 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   justify-content: center;
   gap: 0.25rem;
 }
-.fed-rel-box--left  { border: 1.5px solid #c8a97a; background: #fdf8f0; }
-.fed-rel-box--center { border: 2px solid #8b1a1a; background: #fff8f5; flex: 1.3; }
-.fed-rel-box--right { border: 1.5px solid #c8a97a; background: #fdf8f0; }
+.fed-rel-box--left  { border: 1px solid #d4c4a8; background: #fdfaf4; }
+.fed-rel-box--center { border: 1px solid #8b1a1a; background: #fdfaf4; flex: 1.3; }
+.fed-rel-box--right { border: 1px solid #d4c4a8; background: #fdfaf4; }
 
 .fed-rel-box-title {
   font-family: 'Cinzel', Georgia, serif;
@@ -1797,11 +1807,11 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
   width: 100%;
   min-width: 20px;
   height: 1.5px;
-  background: #c8a97a;
+  background: #d4c4a8;
 }
 .fed-rel-conn-arrow {
   font-size: 1.2rem;
-  color: #c8a97a;
+  color: #d4c4a8;
   line-height: 0.8;
 }
 
@@ -1814,8 +1824,8 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 }
 .fed-rel-col {
   font-family: 'EB Garamond', Georgia, serif;
-  font-size: 0.88rem;
-  color: #3d2b1a;
+  font-size: 12.5px;
+  color: #3a2a1a;
 }
 .fed-rel-col ul {
   list-style: none;
@@ -1839,11 +1849,11 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 .fed-rel-col--purpose li { flex-direction: row-reverse; }
 .fed-rel-col-head {
   font-family: 'Cinzel', Georgia, serif;
-  font-size: 0.72rem;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #8a6040;
+  color: #8b6040;
 }
 .fed-rel-col-sep {
   background: #e8d8c0;
@@ -1995,65 +2005,64 @@ a.series-outline-item-title:hover { color: #8b1a1a; text-decoration: underline; 
 /* ── Diagram 4: Westminster vs 1689 SVG ── */
 .fed-compare-svg-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; }
 .fed-compare-svg { width: 100%; display: block; min-width: 580px; }
-.fed-cmp-heading { font-family: 'Cinzel', serif; font-size: 11.5px; font-weight: 700; fill: #5a4a35; }
-.fed-cmp-cog-rect { fill: #8b1a1a; }
-.fed-cmp-cog-label { font-family: 'EB Garamond', serif; font-size: 13px; font-weight: 600; fill: #fffaf2; }
-.fed-cmp-cog-sub { font-size: 10px; fill: rgba(255,250,242,0.7); font-style: italic; font-family: 'EB Garamond', serif; }
-.fed-cmp-admin-rect { fill: #fffaf2; stroke: #c49a5a; stroke-width: 1.5; }
-.fed-cmp-admin-label { font-family: 'EB Garamond', serif; font-size: 12px; font-weight: 600; fill: #2a1a0e; }
-.fed-cmp-admin-sub { font-size: 11px; fill: #5a4a35; font-family: 'EB Garamond', serif; }
+.fed-cmp-heading { font-family: 'Cinzel', serif; font-size: 10px; font-weight: 700; fill: #8b6040; text-transform: uppercase; letter-spacing: 0.08em; }
+.fed-cmp-cog-rect { fill: #f0e8d8; stroke: #8b1a1a; stroke-width: 1.5; }
+.fed-cmp-cog-label { font-family: 'Cinzel', serif; font-size: 12px; font-weight: 700; fill: #3a2a1a; }
+.fed-cmp-cog-sub { font-size: 10px; fill: #8b6040; font-style: italic; font-family: 'EB Garamond', serif; }
+.fed-cmp-admin-rect { fill: #fdfaf4; stroke: #d4c4a8; stroke-width: 1.5; }
+.fed-cmp-admin-label { font-family: 'EB Garamond', serif; font-size: 12px; font-weight: 600; fill: #3a2a1a; }
+.fed-cmp-admin-sub { font-size: 11px; fill: #6b4f35; font-family: 'EB Garamond', serif; }
 .fed-cmp-admin-ref { font-size: 9.5px; fill: #8b6040; font-style: italic; font-family: 'EB Garamond', serif; }
-.fed-cmp-sub-rect { fill: #f5ede0; stroke: #c49a5a; stroke-width: 1.5; }
-.fed-cmp-sub-label { font-family: 'EB Garamond', serif; font-size: 12px; font-weight: 600; fill: #2a1a0e; }
+.fed-cmp-sub-rect { fill: #f0e8d8; stroke: #d4c4a8; stroke-width: 1.5; }
+.fed-cmp-sub-label { font-family: 'EB Garamond', serif; font-size: 12px; font-weight: 600; fill: #3a2a1a; }
 .fed-cmp-sub-ref { font-size: 9.5px; fill: #8b6040; font-style: italic; font-family: 'EB Garamond', serif; }
-.fed-cmp-nc-rect { fill: #8b1a1a; }
-.fed-cmp-nc-main { font-family: 'Cinzel', serif; font-size: 12px; font-weight: 700; fill: #fffaf2; }
-.fed-cmp-nc-eq { font-size: 10.5px; fill: #f5d9a0; font-style: italic; font-family: 'EB Garamond', serif; }
-.fed-cmp-nc-ref { font-size: 9.5px; fill: rgba(255,250,242,0.65); font-family: 'EB Garamond', serif; }
-.fed-cmp-divider { stroke: #c49a5a; stroke-opacity: 0.4; }
+.fed-cmp-nc-rect { fill: #f0e8d8; stroke: #8b1a1a; stroke-width: 1.5; }
+.fed-cmp-nc-main { font-family: 'Cinzel', serif; font-size: 12px; font-weight: 700; fill: #3a2a1a; }
+.fed-cmp-nc-eq { font-size: 10.5px; fill: #8b1a1a; font-style: italic; font-family: 'EB Garamond', serif; }
+.fed-cmp-nc-ref { font-size: 9.5px; fill: #8b6040; font-family: 'EB Garamond', serif; }
+.fed-cmp-divider { stroke: #d4c4a8; stroke-opacity: 1; }
 .fed-cmp-caption { font-size: 10.5px; fill: #8b6040; font-style: italic; font-family: 'EB Garamond', serif; }
 
 /* ── Diagram 5: Membership ── */
 .fed-mem-compare {
   display: grid;
-  grid-template-columns: 1fr 2px 1fr;
+  grid-template-columns: 1fr 1px 1fr;
   margin: 1.5rem 0;
-  border: 1px solid #d4b48a;
-  border-radius: 8px;
+  border: 1px solid #d4c4a8;
+  border-radius: 6px;
   overflow: hidden;
 }
-.fed-mem-divider { background: #c49a5a; }
+.fed-mem-divider { background: #d4c4a8; }
 .fed-mem-side { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; }
-.fed-mem-side--old { background: #f5ede0; }
-.fed-mem-side--new { background: #1e1208; }
+.fed-mem-side--old { background: #fdfaf4; }
+.fed-mem-side--new { background: #fdfaf4; }
 .fed-mem-head {
   font-family: 'Cinzel', serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   display: block;
   margin-bottom: 0.4rem;
+  color: #2a1a0e;
 }
-.fed-mem-side--old .fed-mem-head { color: #2a1a0e; }
-.fed-mem-side--new .fed-mem-head { color: #fffaf2; }
 .fed-mem-sign {
-  font-size: 11.5px;
-  font-style: italic;
+  font-family: 'Cinzel', serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   display: inline-block;
-  padding: 2px 10px;
+  padding: 3px 10px;
   border-radius: 20px;
   margin-bottom: 1rem;
   align-self: flex-start;
+  background: #f0e8d8;
+  color: #3a2a1a;
+  border: 1px solid #d4c4a8;
 }
-.fed-mem-side--old .fed-mem-sign { background: #d4b48a; color: #2a1a0e; }
-.fed-mem-side--new .fed-mem-sign { background: #3a2010; color: #c49a5a; border: 1px solid #5a3a1a; }
 .fed-mem-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; }
 .fed-mem-item { display: flex; flex-direction: column; gap: 2px; }
-.fed-mem-text { font-size: 13px; line-height: 1.5; }
-.fed-mem-side--old .fed-mem-text { color: #3a2a1a; }
-.fed-mem-side--new .fed-mem-text { color: #d4c0a0; }
-.fed-mem-ref { font-size: 11px; font-style: italic; }
-.fed-mem-side--old .fed-mem-ref { color: #8b6040; }
-.fed-mem-side--new .fed-mem-ref { color: #c49a5a; }
+.fed-mem-text { font-size: 12.5px; line-height: 1.5; color: #3a2a1a; }
+.fed-mem-ref { font-size: 11px; font-style: italic; color: #8b6040; }
 
 /* ── Diagram 6: Capabilities ── */
 .fed-cap-grid {
