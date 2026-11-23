@@ -132,9 +132,12 @@ export default function FederalismPage() {
           <span className="fed-figure-chip">John Owen <em>· Hebrews Commentary, 1680</em></span>
           <span className="fed-figure-chip">Edward Hutchinson <em>· Particular Baptist, 1676</em></span>
         </div>
-        <p className="fed-infographic-desc">
-          The substance of the Covenant of Grace (Christ) is present from Genesis 3:15. But a promise is not yet a covenant. The Old Testament covenants reveal and anticipate. The New Covenant <em>enacts</em>. John Owen and Edward Hutchinson both argued from the Greek of Hebrews 8:6: the New Covenant was <em>νενομοθέτηται</em>: legislated, ratified, brought formally into force.
-        </p>
+        <details className="fed-desc-details">
+          <summary className="fed-desc-toggle">Notes</summary>
+          <p className="fed-infographic-desc">
+            The substance of the Covenant of Grace (Christ) is present from Genesis 3:15. But a promise is not yet a covenant. The Old Testament covenants reveal and anticipate. The New Covenant <em>enacts</em>. John Owen and Edward Hutchinson both argued from the Greek of Hebrews 8:6: the New Covenant was <em>νενομοθέτηται</em>: legislated, ratified, brought formally into force.
+          </p>
+        </details>
 
         <div className="fed-svg-wrap" id="diagram-timeline">
           <svg viewBox="0 0 900 190" xmlns="http://www.w3.org/2000/svg" className="fed-timeline-svg" aria-label="Covenant timeline from Fall to New Covenant">
@@ -179,9 +182,12 @@ export default function FederalismPage() {
           <span className="fed-figure-chip">Hercules Collins <em>· 1689 LBCF Signer</em></span>
           <span className="fed-figure-chip">Thomas Patient <em>· Particular Baptist, c. 1654</em></span>
         </div>
-        <p className="fed-infographic-desc">
-          Hebrews 8:10–12, quoting Jeremiah 31:33–34, gives the definition of the New Covenant. These four promises are what the Covenant of Grace <em>is</em>. I find it remarkable that the Particular Baptists grounded this equation not in a bare assertion but in a close reading of this single passage. The identification is exegetical through and through.
-        </p>
+        <details className="fed-desc-details">
+          <summary className="fed-desc-toggle">Notes</summary>
+          <p className="fed-infographic-desc">
+            Hebrews 8:10–12, quoting Jeremiah 31:33–34, gives the definition of the New Covenant. These four promises are what the Covenant of Grace <em>is</em>. I find it remarkable that the Particular Baptists grounded this equation not in a bare assertion but in a close reading of this single passage. The identification is exegetical through and through.
+          </p>
+        </details>
 
         <div className="fed-def-diagram" id="diagram-nc-cog">
           <div className="fed-def-header">
@@ -215,9 +221,12 @@ export default function FederalismPage() {
           <span className="fed-figure-chip">Nehemiah Coxe <em>· Particular Baptist, 1681</em></span>
           <span className="fed-figure-chip">Samuel Renihan <em>· 1689 Federalist, 2019</em></span>
         </div>
-        <p className="fed-infographic-desc">
-          The Mosaic Covenant has a works-structure (<em>do this and live</em>), but it is neither the original Covenant of Works nor the Covenant of Grace. It is a third thing: the <em>foedus subserviens</em>. Works-featured in form; grace-serving in purpose. This distinction, I am convinced, is one of the most clarifying contributions of the Particular Baptist tradition to Reformed covenant theology.
-        </p>
+        <details className="fed-desc-details">
+          <summary className="fed-desc-toggle">Notes</summary>
+          <p className="fed-infographic-desc">
+            The Mosaic Covenant has a works-structure (<em>do this and live</em>), but it is neither the original Covenant of Works nor the Covenant of Grace. It is a third thing: the <em>foedus subserviens</em>. Works-featured in form; grace-serving in purpose. This distinction, I am convinced, is one of the most clarifying contributions of the Particular Baptist tradition to Reformed covenant theology.
+          </p>
+        </details>
 
         <blockquote className="fed-infographic-pullquote">
           "A subserviency in any thing to promote the ends of something else, does not make it to be the thing itself; the ends whereof are promoted thereby." — Philip Cary, <em>A Solemn Call</em> (1690)
@@ -286,9 +295,12 @@ export default function FederalismPage() {
           <span className="fed-figure-chip">Westminster Confession <em>· 1647</em></span>
           <span className="fed-figure-chip">1689 London Baptist Confession <em>· 1689</em></span>
         </div>
-        <p className="fed-infographic-desc">
-          Both traditions confess one Covenant of Grace. The difference is structural. Westminster sees the Old and New Testaments as two administrations of a single covenant. 1689 Federalism sees the Old Testament covenants as distinct and subservient: real covenants in their own right, each designed to serve the one Covenant of Grace that Christ would formally enact in the New Covenant.
-        </p>
+        <details className="fed-desc-details">
+          <summary className="fed-desc-toggle">Notes</summary>
+          <p className="fed-infographic-desc">
+            Both traditions confess one Covenant of Grace. The difference is structural. Westminster sees the Old and New Testaments as two administrations of a single covenant. 1689 Federalism sees the Old Testament covenants as distinct and subservient: real covenants in their own right, each designed to serve the one Covenant of Grace that Christ would formally enact in the New Covenant.
+          </p>
+        </details>
         <div className="fed-compare-svg-wrap" id="diagram-comparison">
           <svg viewBox="0 0 820 215" xmlns="http://www.w3.org/2000/svg" className="fed-compare-svg" aria-label="Diagram comparing Westminster and 1689 covenant models">
             {/* ── LEFT: Westminster ── */}
@@ -348,9 +360,12 @@ export default function FederalismPage() {
           <span className="fed-figure-chip">Nehemiah Coxe <em>· Discourse of the Covenants, 1681</em></span>
           <span className="fed-figure-chip">Benjamin Keach <em>· The Everlasting Covenant, 1693</em></span>
         </div>
-        <p className="fed-infographic-desc">
-          If the New Covenant is the Covenant of Grace itself and not merely its latest administration, then its membership is not national or ethnic but spiritual. This is one of the most practically significant implications of the 1689 Federalist reading: all who are in the New Covenant truly and personally know the Lord. The community of the New Covenant is therefore constituted differently from the community of the Old.
-        </p>
+        <details className="fed-desc-details">
+          <summary className="fed-desc-toggle">Notes</summary>
+          <p className="fed-infographic-desc">
+            If the New Covenant is the Covenant of Grace itself and not merely its latest administration, then its membership is not national or ethnic but spiritual. This is one of the most practically significant implications of the 1689 Federalist reading: all who are in the New Covenant truly and personally know the Lord. The community of the New Covenant is therefore constituted differently from the community of the Old.
+          </p>
+        </details>
         <div className="fed-mem-compare" id="diagram-membership">
           <div className="fed-mem-side fed-mem-side--old">
             <span className="fed-mem-head">Old Covenant</span>
@@ -391,9 +406,12 @@ export default function FederalismPage() {
           <span className="fed-figure-chip">Nehemiah Coxe <em>· Discourse of the Covenants, 1681</em></span>
           <span className="fed-figure-chip">John Owen <em>· Hebrews Commentary, 1680</em></span>
         </div>
-        <p className="fed-infographic-desc">
-          Every Old Testament covenant gave something real. None gave everything. Each had a form suited to its purpose and a limitation that pointed beyond itself to Christ. This is precisely why the Particular Baptists called them subservient: not because they were false, but because they were temporary instruments designed to serve a greater covenant they could not themselves become.
-        </p>
+        <details className="fed-desc-details">
+          <summary className="fed-desc-toggle">Notes</summary>
+          <p className="fed-infographic-desc">
+            Every Old Testament covenant gave something real. None gave everything. Each had a form suited to its purpose and a limitation that pointed beyond itself to Christ. This is precisely why the Particular Baptists called them subservient: not because they were false, but because they were temporary instruments designed to serve a greater covenant they could not themselves become.
+          </p>
+        </details>
         <div className="fed-cap-grid" id="diagram-capabilities">
           {covenantCapabilities.map((cov, i) => (
             <div key={i} className="fed-cap-card">

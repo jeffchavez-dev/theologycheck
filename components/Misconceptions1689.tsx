@@ -247,9 +247,12 @@ export default function Misconceptions1689() {
   return (
     <section className="fed-infographic-section">
       <h2 className="fed-infographic-title">Common Misconceptions</h2>
-      <p className="fed-infographic-desc">
-        A working catalogue of frequently heard objections and misreadings of 1689 Federalism — with brief corrections. More entries forthcoming.
-      </p>
+      <details className="fed-desc-details">
+        <summary className="fed-desc-toggle">Notes</summary>
+        <p className="fed-infographic-desc">
+          A working catalogue of frequently heard objections and misreadings of 1689 Federalism — with brief corrections. More entries forthcoming.
+        </p>
+      </details>
       <div className="misc-grid">
         {cards.map(c => (
           <div key={c.n} className="misc-card">
@@ -259,6 +262,15 @@ export default function Misconceptions1689() {
             <p className="misc-fact">{c.fact}</p>
           </div>
         ))}
+      </div>
+      <div className="misc-abbr-legend">
+        <span className="misc-abbr-label">Abbrev.:</span>
+        <span>NC = New Covenant</span>
+        <span>CoG = Covenant of Grace</span>
+        <span>CoW = Covenant of Works</span>
+        <span>MC = Mosaic Covenant</span>
+        <span>AC = Adamic Covenant</span>
+        <span>OC = Old Covenant</span>
       </div>
     </section>
   )
