@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import DownloadDiagram from '@/components/DownloadDiagram'
 import AdminGate from '@/components/AdminGate'
 import Misconceptions1689 from '@/components/Misconceptions1689'
+import VennComparison from '@/components/VennComparison'
 
 export const metadata: Metadata = {
   title: '1689 Federalism',
@@ -356,6 +357,9 @@ export default function FederalismPage() {
         </div>
         <DownloadDiagram targetId="diagram-comparison" filename="westminster-vs-1689-federalism" />
       </section>
+
+      {/* ── Diagram 4b: Three Traditions Venn ── */}
+      <VennComparison />
 
       {/* ── Diagram 5: Covenant Membership ── */}
       <section className="fed-infographic-section">
