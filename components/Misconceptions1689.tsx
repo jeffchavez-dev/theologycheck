@@ -2,7 +2,7 @@ const cards = [
   {
     n: '01', label: 'Novelty',
     claim: 'Invented by James Renihan',
-    fact: 'The view traces to 17th-century Particular Baptists — Nehemiah Coxe and the framers of the 1689 LBC. Renihan recovered and articulated it; he did not invent it.',
+    fact: 'The view traces to 17th-century Particular Baptists, including Nehemiah Coxe and the framers of the 1689 LBC. Renihan recovered and articulated it; he did not invent it.',
     icon: (
       <svg viewBox="0 0 42 42" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M34 3 C22 9 12 20 9 37"/><path d="M34 3 C38 13 30 26 9 37"/>
@@ -42,7 +42,7 @@ const cards = [
   {
     n: '04', label: 'Sources',
     claim: 'Borrowed from Meredith Kline',
-    fact: 'Both critique the OC-as-CoG view, but 1689 Federalism derives its position from the Particular Baptist tradition and confessional documents — not from Kline\'s framework.',
+    fact: 'Both critique the OC-as-CoG view, but 1689 Federalism derives its position from the Particular Baptist tradition and confessional documents, not from Kline\'s framework.',
     icon: (
       <svg viewBox="0 0 42 42" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 36 L5 32 L5 8 L21 12 Z"/>
@@ -69,7 +69,7 @@ const cards = [
   {
     n: '06', label: 'Preaching',
     claim: 'Inhibits preaching the gospel from the OT',
-    fact: 'The CoG was present and proclaimed in the OT — to Adam, Abraham, David. The gospel is woven through the OT promise-covenant structures, and 1689 Federalism affirms this fully.',
+    fact: 'The CoG was present and proclaimed in the OT: to Adam, Abraham, David. The gospel is woven through the OT promise-covenant structures, and 1689 Federalism affirms this fully.',
     icon: (
       <svg viewBox="0 0 42 42" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M6 32 Q2 32 2 26 L2 14 Q2 8 6 8 L36 8 L36 32 Q36 36 32 36 L6 36 Q2 36 2 32"/>
@@ -112,7 +112,7 @@ const cards = [
   {
     n: '09', label: 'Exclusivity',
     claim: 'The only valid reading of the 1689 LBC',
-    fact: '1689 Federalism claims exegetical and confessional warrant — not exclusive ownership. Other readings within the Particular Baptist tradition have standing and deserve honest engagement.',
+    fact: '1689 Federalism claims exegetical and confessional warrant, not exclusive ownership. Other readings within the Particular Baptist tradition have standing and deserve honest engagement.',
     icon: (
       <svg viewBox="0 0 42 42" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="1" y="14" width="11" height="24" rx="0.5"/><path d="M1 14 Q6.5 6 12 14"/>
@@ -127,7 +127,7 @@ const cards = [
   {
     n: '10', label: 'Revelation',
     claim: 'No progressive revelation of the Covenant of Grace',
-    fact: '1689 Federalism affirms progressive revelation. The CoG was disclosed incrementally — from Gen 3:15 through Abraham, David, and the prophets — until its full NC administration.',
+    fact: '1689 Federalism affirms progressive revelation. The CoG was disclosed incrementally, from Gen 3:15 through Abraham, David, and the prophets, until its full NC administration.',
     icon: (
       <svg viewBox="0 0 42 42" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="4,38 4,32 10,32 10,26 16,26 16,20 22,20 22,14 28,14 28,8 34,8"/>
@@ -143,7 +143,7 @@ const cards = [
   {
     n: '11', label: 'Covenant',
     claim: 'No Covenant of Grace in the Old Testament',
-    fact: '1689 Federalism affirms a CoG in the OT — rooted in Gen 3:15 and present through the patriarchal and Mosaic periods — administered through types and shadows pointing to Christ.',
+    fact: '1689 Federalism affirms a CoG in the OT, rooted in Gen 3:15 and present through the patriarchal and Mosaic periods, administered through types and shadows pointing to Christ.',
     icon: (
       <svg viewBox="0 0 42 42" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="5" y="8" width="32" height="26" rx="1"/>
@@ -175,7 +175,7 @@ const cards = [
   {
     n: '13', label: 'Diversity',
     claim: 'Flattens the OC covenants into a single CoW',
-    fact: '1689 Federalism distinguishes the Noahic, Abrahamic, Mosaic, and Davidic covenants — each with unique purposes and character. It does not flatten them all into one works-covenant.',
+    fact: '1689 Federalism distinguishes the Noahic, Abrahamic, Mosaic, and Davidic covenants, each with unique purposes and character. It does not flatten them all into one works-covenant.',
     icon: (
       <svg viewBox="0 0 42 42" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="5" width="38" height="6" rx="1"/>
@@ -194,7 +194,7 @@ const cards = [
   {
     n: '14', label: 'Obedience',
     claim: 'The Mosaic = CoW because it demands obedience',
-    fact: 'Demand alone does not make a covenant a CoW. The Mosaic demanded obedience as its national-typological structure — but obedience and a covenant of works are not the same thing.',
+    fact: 'Demand alone does not make a covenant a CoW. The Mosaic demanded obedience as its national-typological structure, but obedience and a covenant of works are not the same thing.',
     icon: (
       <svg viewBox="0 0 42 42" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="1" y="5" width="11" height="17" rx="3.5"/><rect x="14" y="5" width="11" height="17" rx="3.5"/>
@@ -211,7 +211,7 @@ const cards = [
   {
     n: '15', label: 'Presence',
     claim: 'The CoG is only "in some sense" present in the OT',
-    fact: '1689 Federalism affirms a genuine — not merely nominal — CoG in the OT. The substance of the CoG (Christ and his benefits) was truly present (mystery).',
+    fact: '1689 Federalism affirms a genuine (not merely nominal) CoG in the OT. The substance of the CoG (Christ and his benefits) was truly present (mystery).',
     icon: (
       <svg viewBox="0 0 42 42" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 10 Q4 6 8 6 Q12 6 12 10 Q12 14 8 15 L6 18"/>
@@ -226,7 +226,7 @@ const cards = [
   {
     n: '16', label: 'Origins',
     claim: 'The CoG did not begin after the Fall',
-    fact: '1689 Federalism teaches that the CoG was inaugurated after the Fall — with the protoevangelion in Gen 3:15. It does not exist in eternity or prior to sin, but was revealed immediately after it.',
+    fact: '1689 Federalism teaches that the CoG was inaugurated after the Fall, with the protoevangelion in Gen 3:15. It does not exist in eternity or prior to sin, but was revealed immediately after it.',
     icon: (
       <svg viewBox="0 0 42 42" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <line x1="4" y1="21" x2="38" y2="21"/>
