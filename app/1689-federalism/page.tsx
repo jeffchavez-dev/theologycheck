@@ -5,6 +5,7 @@ import DownloadDiagram from '@/components/DownloadDiagram'
 import AdminGate from '@/components/AdminGate'
 import Misconceptions1689 from '@/components/Misconceptions1689'
 import VennComparison from '@/components/VennComparison'
+import VennFederalismVs20thCRB from '@/components/VennFederalismVs20thCRB'
 
 export const metadata: Metadata = {
   title: '1689 Federalism',
@@ -360,6 +361,8 @@ export default function FederalismPage() {
 
       {/* ── Diagram 4b: Three Traditions Venn ── */}
       <VennComparison />
+      {/* ── Diagram 4c: 1689 vs 20th C RB ── */}
+      <VennFederalismVs20thCRB />
 
       {/* ── Diagram 5: Covenant Membership ── */}
       <section className="fed-infographic-section">

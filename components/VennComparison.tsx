@@ -1,10 +1,22 @@
-const cream = '#f5ede0'
-const cinzel = "Cinzel, Georgia, serif"
-const garamond = "'EB Garamond', Georgia, serif"
+import React from 'react'
 
-// Circle centers and radii
-// 1689: (435, 200, r=175)  Prog: (215, 440, r=175)  West: (655, 440, r=175)  20thCRB: (435, 455, r=160)
-// Progressive ↔ Westminster do NOT overlap (d=440 > 2*175=350) — theologically accurate
+// ── Layout (verified zone positions)
+// 1689:      cx=435 cy=205 r=195
+// Prog:      cx=205 cy=450 r=195
+// West:      cx=665 cy=450 r=195
+// 20th C RB: cx=435 cy=530 r=185
+//
+// Overlaps that exist:
+//  1689 ↔ Prog   : d=336  overlap≈54px
+//  1689 ↔ West   : d=336  overlap≈54px
+//  1689 ↔ 20thCRB: d=325  overlap≈55px
+//  Prog ↔ 20thCRB: d=244  overlap≈136px
+//  West ↔ 20thCRB: d=244  overlap≈136px
+//  Prog ↔ West   : d=460  NO overlap (theologically accurate)
+
+const cream  = '#f5ede0'
+const cinzel  = "Cinzel, Georgia, serif"
+const garamond = "'EB Garamond', Georgia, serif"
 
 const thStyle: React.CSSProperties = {
   padding: '0.6rem 0.75rem',
@@ -17,7 +29,6 @@ const thStyle: React.CSSProperties = {
   fontWeight: 700,
   verticalAlign: 'bottom',
 }
-
 const tdBase: React.CSSProperties = {
   padding: '0.6rem 0.75rem',
   borderBottom: '1px solid #d4c4a8',
@@ -27,7 +38,6 @@ const tdBase: React.CSSProperties = {
   lineHeight: '1.5',
   verticalAlign: 'top',
 }
-
 const tdTopic: React.CSSProperties = {
   ...tdBase,
   color: '#8b6040',
@@ -40,124 +50,128 @@ export default function VennComparison() {
     <>
       <section className="fed-infographic-section">
         <h2 className="fed-infographic-title">Four Covenant Traditions Compared</h2>
+
         <svg
-          viewBox="0 0 870 700"
+          viewBox="0 0 870 740"
           xmlns="http://www.w3.org/2000/svg"
           style={{ width: '100%', maxWidth: 870, display: 'block', margin: '1.25rem auto 0', height: 'auto' }}
-          aria-label="Venn diagram comparing 1689 Federalism, Progressive Covenantalism, Westminster Covenant Theology, and 20th Century Reformed Baptist"
+          aria-label="Venn diagram comparing four covenant traditions"
         >
-          {/* Draw order: West (back), Prog, 20th C RB, 1689 (front) */}
-          <circle cx="655" cy="440" r="175" fill="#0e1a2d" />
-          <circle cx="215" cy="440" r="175" fill="#0e2d1a" />
-          <circle cx="435" cy="455" r="160" fill="#1a0e28" />
-          <circle cx="435" cy="200" r="175" fill="#2d1808" />
+          {/* ── CIRCLES: draw order back→front: West, Prog, 20thCRB, 1689 ── */}
+          <circle cx="665" cy="450" r="195" fill="#0e1a2d" />   {/* Westminster — navy  */}
+          <circle cx="205" cy="450" r="195" fill="#0e2d1a" />   {/* Progressive  — green */}
+          <circle cx="435" cy="530" r="185" fill="#1a0e28" />   {/* 20th C RB    — indigo */}
+          <circle cx="435" cy="205" r="195" fill="#2d1808" />   {/* 1689         — sepia  */}
 
-          {/* ════ SYSTEM TITLES ════ */}
+          {/* ── SYSTEM TITLES ── */}
 
-          {/* 1689 Federalism — top of top circle */}
+          {/* 1689 Federalism */}
           <text fontFamily={cinzel} fontSize="16" fontWeight="700" fill={cream} textAnchor="middle">
-            <tspan x="435" y="34">1689</tspan>
+            <tspan x="435" y="30">1689</tspan>
             <tspan x="435" dy="19">Federalism</tspan>
           </text>
 
-          {/* Progressive Covenantalism — bottom-left */}
-          <text fontFamily={cinzel} fontSize="12" fontWeight="700" fill={cream} textAnchor="middle">
-            <tspan x="130" y="566">Progressive</tspan>
-            <tspan x="130" dy="15">Covenantalism</tspan>
-          </text>
-
-          {/* Westminster Covenant Theology — bottom-right */}
-          <text fontFamily={cinzel} fontSize="12" fontWeight="700" fill={cream} textAnchor="middle">
-            <tspan x="740" y="566">Westminster</tspan>
-            <tspan x="740" dy="15">Covenant Theology</tspan>
-          </text>
-
-          {/* 20th C. Reformed Baptist — bottom center */}
+          {/* Progressive Covenantalism */}
           <text fontFamily={cinzel} fontSize="11" fontWeight="700" fill={cream} textAnchor="middle">
-            <tspan x="435" y="590">20th C.</tspan>
+            <tspan x="120" y="596">Progressive</tspan>
+            <tspan x="120" dy="14">Covenantalism</tspan>
+          </text>
+
+          {/* Westminster Covenant Theology */}
+          <text fontFamily={cinzel} fontSize="11" fontWeight="700" fill={cream} textAnchor="middle">
+            <tspan x="748" y="596">Westminster</tspan>
+            <tspan x="748" dy="14">Covenant Theology</tspan>
+          </text>
+
+          {/* 20th C. Reformed Baptist */}
+          <text fontFamily={cinzel} fontSize="11" fontWeight="700" fill={cream} textAnchor="middle">
+            <tspan x="435" y="668">20th C.</tspan>
             <tspan x="435" dy="14">Reformed Baptist</tspan>
           </text>
 
-          {/* ════ EXCLUSIVE ZONES ════ */}
+          {/* ── EXCLUSIVE ZONE CONTENT ── */}
 
-          {/* 1689 exclusive (top of 1689 circle, verified outside all others) */}
-          <text fontFamily={garamond} fontSize="10" fill={cream} textAnchor="middle">
-            <tspan x="435" y="88">{'• NC = first formal administration of CoG'}</tspan>
-            <tspan x="435" dy="14">{'• OT covenants subservient,'}</tspan>
-            <tspan x="435" dy="13">not administrations of CoG</tspan>
-            <tspan x="435" dy="14">{'• CoG revealed but not formally'}</tspan>
-            <tspan x="435" dy="13">established in the OT</tspan>
-          </text>
-
-          {/* Progressive exclusive (far left of Prog circle) */}
+          {/* 1689 exclusive — top of 1689 circle (outside Prog, West, 20thCRB) */}
           <text fontFamily={garamond} fontSize="9.5" fill={cream} textAnchor="middle">
-            <tspan x="90" y="405">{'• No CoG promised in OT'}</tspan>
-            <tspan x="90" dy="14">{'• Covenant with Adam'}</tspan>
-            <tspan x="90" dy="13">not a CoW per se</tspan>
-            <tspan x="90" dy="14">{'• Law = old covenant'}</tspan>
+            <tspan x="435" y="72">• NC = first formal administration of CoG</tspan>
+            <tspan x="435" dy="13">• OT covenants subservient,</tspan>
+            <tspan x="435" dy="12">not administrations of CoG</tspan>
+            <tspan x="435" dy="13">• CoG revealed but not formally</tspan>
+            <tspan x="435" dy="12">established in the OT</tspan>
           </text>
 
-          {/* Westminster exclusive (far right of West circle) */}
+          {/* Progressive exclusive — far left (outside all others) */}
+          <text fontFamily={garamond} fontSize="9" fill={cream} textAnchor="middle">
+            <tspan x="78" y="425">• No CoG promised in OT</tspan>
+            <tspan x="78" dy="13">• Covenant with Adam</tspan>
+            <tspan x="78" dy="12">not a CoW per se</tspan>
+            <tspan x="78" dy="13">• Law = old covenant</tspan>
+          </text>
+
+          {/* Westminster exclusive — far right */}
+          <text fontFamily={garamond} fontSize="9" fill={cream} textAnchor="middle">
+            <tspan x="790" y="425">• Paedobaptism</tspan>
+            <tspan x="790" dy="13">• CoG administered</tspan>
+            <tspan x="790" dy="12">since Gen 3:15</tspan>
+            <tspan x="790" dy="13">• One covenant</tspan>
+            <tspan x="790" dy="12">with Abraham</tspan>
+          </text>
+
+          {/* 20th C RB exclusive — bottom (outside 1689, Prog, West) */}
           <text fontFamily={garamond} fontSize="9.5" fill={cream} textAnchor="middle">
-            <tspan x="775" y="405">{'• Paedobaptism'}</tspan>
-            <tspan x="775" dy="14">{'• CoG administered'}</tspan>
-            <tspan x="775" dy="13">since Gen 3:15</tspan>
-            <tspan x="775" dy="14">{'• One covenant'}</tspan>
-            <tspan x="775" dy="13">with Abraham</tspan>
+            <tspan x="435" y="650">• CoG begins at Gen 3:15</tspan>
+            <tspan x="435" dy="13">• Perpetuity of Moral Law</tspan>
           </text>
 
-          {/* 20th C RB exclusive (bottom of 20th C RB circle) */}
-          <text fontFamily={garamond} fontSize="9.5" fill={cream} textAnchor="middle">
-            <tspan x="435" y="535">{'• CoG begins at Gen 3:15'}</tspan>
-            <tspan x="435" dy="14">{'• Perpetuity of Moral Law'}</tspan>
+          {/* ── 2-WAY OVERLAP ZONES ── */}
+
+          {/* 1689 ∩ Progressive ONLY — top-left sliver (outside 20thCRB, West) */}
+          <text fontFamily={garamond} fontSize="8.5" fontWeight="600" fill={cream} textAnchor="middle">
+            <tspan x="284" y="291">Each covenant</tspan>
+            <tspan x="284" dy="11">truly distinct</tspan>
           </text>
 
-          {/* ════ OVERLAP ZONES ════ */}
+          {/* 1689 ∩ Westminster ONLY — top-right sliver (outside 20thCRB, Prog) */}
+          {/* Small zone — CoW/CoG belong in 3-way zone below */}
 
-          {/* 1689 ∩ Prog ONLY — top-left sliver (verified: outside 20th C RB and West) */}
-          <text fontFamily={garamond} fontSize="9" fontWeight="600" fill={cream} textAnchor="middle">
-            <tspan x="295" y="295">Each covenant</tspan>
-            <tspan x="295" dy="12">truly distinct</tspan>
-          </text>
-
-          {/* 1689 ∩ West ONLY — top-right sliver */}
-          {/* (small zone; CoW/CoG moved to 3-way zone below) */}
-
-          {/* 1689 ∩ 20th C RB — center vertical band (verified: outside Prog and West) */}
+          {/* 1689 ∩ 20th C RB — center vertical band (outside Prog, West) */}
           <text fontFamily={garamond} fontSize="9.5" fontStyle="italic" fill={cream} textAnchor="middle">
-            <tspan x="435" y="308">CoG progressively revealed</tspan>
-            <tspan x="435" dy="13">CoG fulfilled in the NC</tspan>
-            <tspan x="435" dy="13">Scripture by way of covenant</tspan>
+            <tspan x="435" y="308">CoG progressively revealed in OT</tspan>
+            <tspan x="435" dy="13">CoG fulfilled in the New Covenant</tspan>
+            <tspan x="435" dy="13">Scripture organized by covenant</tspan>
           </text>
 
-          {/* 1689 ∩ Prog ∩ 20th C RB — 3-way left zone (verified ~370, 360) */}
-          <text fontFamily={garamond} fontSize="9.5" fontWeight="700" fill={cream} textAnchor="middle">
-            <tspan x="368" y="358">Believers'</tspan>
-            <tspan x="368" dy="12">Baptism</tspan>
-          </text>
+          {/* Progressive ∩ 20th C RB — bottom-left (outside 1689, West) */}
+          {/* Content in 3-way zone below */}
 
-          {/* 1689 ∩ West ∩ 20th C RB — 3-way right zone (verified ~500, 360) */}
-          <text fontFamily={garamond} fontSize="9.5" fontWeight="700" fill={cream} textAnchor="middle">
-            <tspan x="502" y="354">Covenant</tspan>
-            <tspan x="502" dy="12">of works</tspan>
-            <tspan x="502" dy="12">Covenant</tspan>
-            <tspan x="502" dy="12">of grace</tspan>
-          </text>
-
-          {/* West ∩ 20th C RB — bottom-right 2-way (verified ~575, 490) */}
+          {/* Westminster ∩ 20th C RB — bottom-right (outside 1689, Prog) */}
           <text fontFamily={garamond} fontSize="9.5" fontWeight="600" fill={cream} textAnchor="middle">
-            <tspan x="577" y="484">OT covenants =</tspan>
-            <tspan x="577" dy="13">admin. of CoG</tspan>
+            <tspan x="566" y="514">OT covenants =</tspan>
+            <tspan x="566" dy="13">admin. of CoG</tspan>
+          </text>
+
+          {/* ── 3-WAY OVERLAP ZONES ── */}
+
+          {/* 1689 ∩ Progressive ∩ 20th C RB — Believers' Baptism */}
+          <text fontFamily={garamond} fontSize="9" fontWeight="700" fill={cream} textAnchor="middle">
+            <tspan x="389" y="386">Believers'</tspan>
+            <tspan x="389" dy="12">Baptism</tspan>
+          </text>
+
+          {/* 1689 ∩ Westminster ∩ 20th C RB — Covenant of works / Covenant of grace */}
+          <text fontFamily={garamond} fontSize="9" fontWeight="700" fill={cream} textAnchor="middle">
+            <tspan x="481" y="383">Covenant of works</tspan>
+            <tspan x="481" dy="12">Covenant of grace</tspan>
           </text>
 
         </svg>
 
         <p className="fed-infographic-footer" style={{ marginTop: '0.5rem' }}>
-          Adapted from 1689federalism.com · Progressive ↔ Westminster share no overlap zone
+          Adapted from 1689federalism.com · Progressive ↔ Westminster share no overlap
         </p>
       </section>
 
-      {/* ── Four-tradition comparison table ── */}
+      {/* ── Comparison table ── */}
       <section className="fed-infographic-section">
         <h2 className="fed-infographic-title">Four Traditions: Positions Side by Side</h2>
         <div style={{ overflowX: 'auto', marginTop: '1.25rem' }}>
@@ -234,10 +248,10 @@ const rows: { topic: string; a: string; b: string; c: string; d: string }[] = [
   },
   {
     topic: 'Baptism',
-    a: 'Believers\' baptism only — NC members are regenerate; no basis for paedobaptism',
-    b: 'Believers\' baptism only',
+    a: "Believers' baptism only — NC members are regenerate; no basis for paedobaptism",
+    b: "Believers' baptism only",
     c: 'Paedobaptism — children of believers included in the covenant of grace',
-    d: 'Believers\' baptism only — despite holding that the OT covenants are CoG administrations',
+    d: "Believers' baptism only — despite holding that the OT covenants are CoG administrations",
   },
   {
     topic: 'Perpetuity of moral law',
@@ -247,7 +261,7 @@ const rows: { topic: string; a: string; b: string; c: string; d: string }[] = [
     d: 'Perpetuity of the moral law affirmed; threefold distinction upheld',
   },
   {
-    topic: 'Scripture\'s organizing principle',
+    topic: "Scripture's organizing principle",
     a: 'Scripture is organized by way of covenant',
     b: 'Scripture is organized by way of covenant',
     c: 'Scripture is organized by way of covenant',
